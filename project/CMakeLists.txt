@@ -1,5 +1,20 @@
 cmake_minimum_required(VERSION 3.18)
 
+# Libdash
+include_directories(libxml2/include)
+include_directories(libdash/include)
+include_directories(sdl/include)
+include_directories(zlib/include)
+include_directories(iconv/include)
+
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+
+add_subdirectory(libdash)
+add_subdirectory(libdash_mcnl)
+add_subdirectory(Main)
+
 ##project(Open3DCMakeFindPackage LANGUAGES C CXX)
 
 # The options need to be the same as Open3D's default
@@ -63,16 +78,16 @@ endif()
 ##    endif()
 ##endif()
 
-# Libdash
-include_directories(libxml2/include)
-include_directories(libdash/include)
-include_directories(sdl/include)
-include_directories(zlib/include)
-include_directories(iconv/include)
+## Libdash
+#include_directories(libxml2/include)
+#include_directories(libdash/include)
+#include_directories(sdl/include)
+#include_directories(zlib/include)
+#include_directories(iconv/include)
 
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+#set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+#set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 
-add_subdirectory(libdash)
-add_subdirectory(Main)
+#add_subdirectory(libdash)
+#add_subdirectory(Main)
