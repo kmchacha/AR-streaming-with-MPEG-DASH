@@ -1,6 +1,7 @@
 /*
 	MCNL-ARstreaming Capston Project - Client
-*/
+	Created by KyungMin Cha, JiNa Choi
+ */
 
 #include <atomic>
 #include <chrono>
@@ -41,15 +42,14 @@ using namespace libdashtest;
 using namespace dash::mpd;
 
 const int WIDTH = 1024;
-const int HEIGHT = 1024; // 768
-const int PLY_COUNT_PER_BIN = 150;
+const int HEIGHT = 1024;
+const int PLY_COUNT_PER_BIN = 30;
 const int PLY_PER_DIRECTORY = 10;
+const int BIN_COUNT = 10;
 
-//std::string MPD_DATA_PATH = "/video/loot.mpd";
-std::string MPD_DATA_PATH;
-int idx = 0;
-//const Eigen::Vector3f CENTER_OFFSET(0.0f, 0.0f, -3.0f);
-//const std::string CLOUD_NAME = "points";
+std::string MPD_DATA_PATH = "/video/loot.mpd";
+const Eigen::Vector3f CENTER_OFFSET(0.0f, 0.0f, -3.0f);
+const std::string CLOUD_NAME = "points";
 
 typedef struct {
 	sem_t filled;
@@ -113,7 +113,7 @@ void download(IConnection *connection, IChunk *chunk, ofstream *file)
 	}while(ret > 0);
 }
 
-/*
+
 class MultipleWindowsApp {
 	public:
 		MultipleWindowsApp() {
@@ -183,7 +183,7 @@ class MultipleWindowsApp {
 			// update the scene or any part of the UI.
 			geometry::AxisAlignedBoundingBox bounds;
 			char * msg;	
-
+			int cnt = 0;
 			while (main_vis_) {
 				msg = bounded_buffer_dequeue(buf2);
 				std::string full_path = string(msg);
@@ -232,11 +232,18 @@ class MultipleWindowsApp {
 					}
 				}
 				
-				if(idx++ == 1) main_vis_->ResetCameraToDefault(); 
-
+				cnt++;
+				cout << "In Open3D, CNT=" << cnt << endl;
+				if(cnt == 1) main_vis_->ResetCameraToDefault(); 
+				else if(cnt == PLY_COUNT_PER_BIN * BIN_COUNT - 1) {
+					main_vis_->Close();
+					break;
+				}
+				
 				if (!main_vis_) {  // might have changed while sleeping
 					break;
 				}
+				
 
 			}
 		}
@@ -250,139 +257,58 @@ class MultipleWindowsApp {
 		int n_snapshots_ = 0;
 		gui::Point snapshot_pos_;
 };
-*/
+
+
 
 void *
 libdash_thread(void *ptr)
 {
 	cout << "Hello, Lib-dash Thread\n";
 	pthread_t tid;
-	char msg[256];
-	vector<string> v;
-
-	tid = pthread_self();
-
-	IDASHManager *manager = CreateDashManager();
-	HTTPConnection *httpconnection = new HTTPConnection();
-
-	TestChunk test1chunk("127.0.0.1", 80, MPD_DATA_PATH, 0, 0, false);
-
-	httpconnection->Init(&test1chunk);
-	httpconnection->Schedule(&test1chunk);
-
-	ofstream file;
-	cout << "*****************************************" << endl;
-	cout << "* Download files with external HTTP 1.0 *" << endl;
-	cout << "*****************************************" << endl;
-	file.open("test.mpd", ios::out | ios::binary);
-	download(httpconnection, &test1chunk, &file);
-	file.close();
-	cout << "finished!" << endl;
+	char msg[256]; 
+	vector<string> binaryFile;
 	
-	delete(httpconnection);
-
-	cout << "******************************************" << endl;
-	cout << "********** MPD Files Analysis ************" << endl;
-	cout << "******************************************" << endl;
-
-	IMPD *mpd = manager->Open("./test.mpd");
-	if(mpd == NULL) {
-		cout << "I have no idea!\n";
-		exit(0);
+	for(int frame=0;frame<10;frame++){
+		pid_t pid, waitpid;
+		int status;
+		pid = fork();
+		if(pid == 0) {
+			char command[1024];
+			sprintf(command, "./libdash_mcnl_test %d", frame);
+			system(command);
+		}else {
+			waitpid = wait(&status);
+			for(auto& p : std::experimental::filesystem::directory_iterator("/home/mcnl/mcnl/project/mcnl/source_backup/cpp/build/bin")) {
+				string Filename = p.path().string();
+				cout << Filename << endl;
+				Filename = Filename.substr(Filename.find("/bin/") + 5);
+				if(Filename.find("bin") != string::npos) {
+					binaryFile.push_back(Filename);
+					cout << Filename << endl;
+				}
+			}
+			sort(binaryFile.begin(), binaryFile.end()); // Need Modification
+		
+			for(int i=0;i<binaryFile.size();i++){
+				snprintf(msg, 256, "%s", binaryFile[i].c_str());
+				bounded_buffer_queue(buf1, strdup(msg));
+			}
+			
+			binaryFile.clear();
+		}
 	}
 
-	vector<IAdaptationSet *> adap = mpd->GetPeriods().at(0)->GetAdaptationSets();
-	vector<IRepresentation *> rep = adap.at(0)->GetRepresentation();
-	cout << "max width: " << adap.at(0)->GetMaxWidth() << "\n";
-
-
-	string baseUrl;
-	baseUrl = mpd->GetBaseUrls().at(0)->GetUrl();
-	cout << "\n\n\nbaseUrl : "<< baseUrl << endl;
-
-	cout << "BaseURL Check\n";
-
-	string high1 = mpd->GetPeriods().at(0)->GetAdaptationSets().at(0)->GetRepresentation().at(0)->GetSegmentList()->GetSegmentURLs().at(0)->GetMediaURI();
-	string high2 = mpd->GetPeriods().at(0)->GetAdaptationSets().at(0)->GetRepresentation().at(0)->GetSegmentList()->GetSegmentURLs().at(1)->GetMediaURI();
-
-	cout << "File 1 Check\n";
-	cout << high1 << endl;
-	cout << high2 << endl;
-	
-	string mid1 = mpd->GetPeriods().at(0)->GetAdaptationSets().at(0)->GetRepresentation().at(1)->GetSegmentList()->GetSegmentURLs().at(0)->GetMediaURI();
-	string mid2 = mpd->GetPeriods().at(0)->GetAdaptationSets().at(0)->GetRepresentation().at(1)->GetSegmentList()->GetSegmentURLs().at(1)->GetMediaURI();
-
-
-	string low1 = mpd->GetPeriods().at(0)->GetAdaptationSets().at(0)->GetRepresentation().at(2)->GetSegmentList()->GetSegmentURLs().at(0)->GetMediaURI();
-	string low2 = mpd->GetPeriods().at(0)->GetAdaptationSets().at(0)->GetRepresentation().at(2)->GetSegmentList()->GetSegmentURLs().at(1)->GetMediaURI();
-
-	string fileName, url;
-	int idx;
-
-	fileName = high1;
-	idx = fileName.find("/");
-	fileName = fileName.substr(idx + 1);
-	cout << "fileName : " << fileName << endl;
-	url = baseUrl + high1;
-	cout << "url : " << url << endl;
-
-	cout << "*****************************************\n";
-	cout << "* Download files with external HTTP 1.0 *\n";
-	cout << "*****************************************\n";
-	TestChunk test2chunk("127.0.0.1", 80, url, 0, 0, false);
-	httpconnection = new HTTPConnection();
-	httpconnection->Init(&test2chunk);
-	httpconnection->Schedule(&test2chunk);
-	cout << "Testing download of bin file:\t";
-	file.open(fileName, ios::out | ios::binary);
-	download(httpconnection, &test2chunk, &file);
-	file.close();
-	v.push_back(fileName);
-	cout << "finished!" << endl;
-
-
-
-	fileName = high2;
-	idx = fileName.find("/");
-	fileName = fileName.substr(idx + 1);
-	cout << "fileName : " << fileName << endl;
-	url = baseUrl + high2;
-	cout << "url : " << url << endl;
-
-	cout << "*****************************************\n";
-	cout << "* Download files with external HTTP 1.0 *\n";
-	cout << "*****************************************\n";
-	TestChunk test3chunk("127.0.0.1", 80, url, 0, 0, false);
-	httpconnection = new HTTPConnection();
-	httpconnection->Init(&test3chunk);
-	httpconnection->Schedule(&test3chunk);
-	cout << "Testing download of bin file:\t";
-	file.open(fileName, ios::out | ios::binary);
-	download(httpconnection, &test3chunk, &file);
-	file.close();
-	v.push_back(fileName);
-	cout << "finished!" << endl;
-
-	sort(v.begin(), v.end());
-	for(int i = 0 ; i < v.size() ; i++) {
-		//snprintf(msg, 256, "[%ld, %s]", (unsigned long) tid, v[i].c_str());
-		snprintf(msg, v[i].size()+1, "%s", v[i].c_str());
-		cout << msg << endl;
-		bounded_buffer_queue(buf1, strdup(msg));
-	}
-	
-	delete(mpd);
-	delete(manager);
-	
 	return 0x0;
 }
+
+
 void * 
 mpeg_vpcc_thread(void *ptr)
 {
 	cout << "Hello, MPEG-VPCC Thraed\n";
 	pthread_t tid;
 	char * msg;
-	char line[1001] = {0, };
+	char line[1024] = {0, };
 	vector<string> opt;
 	ifstream f1("/home/mcnl/mcnl/project/mcnl/source_backup/cpp/Main/decOpt.txt");
 	if(!f1) {
@@ -393,16 +319,16 @@ mpeg_vpcc_thread(void *ptr)
 	}
 
 	tid = pthread_self();
-	for(int i = 0 ; i < 5 ; i++) {
+	for(int i = 0 ; i < 10 ; i++) {  /// fixing
 		msg = bounded_buffer_dequeue(buf1);
 		if(msg != 0x0) {
 			printf("MPEG-VPCC Thread [%ld] read %s\n", (unsigned long) tid, msg);
 
-			char path[1001], comprename[1001], reconname[1001];
-			sprintf(path, "../../../../../mpeg-vpcc/mpeg-pcc-tmc2/bin/%s", "PccAppDecoder");
+			char path[1024], comprename[1024], reconname[1024];
+			sprintf(path, "../../bin/%s", "PccAppDecoder");
 			
 			msg[strlen(msg)-4] = 0x0;
-			char dir_path[101];
+			char dir_path[1024];
 			sprintf(dir_path, "./../../dec_test/%s",msg);
 			cout << "dir_path : " << dir_path << endl;
 			
@@ -411,30 +337,33 @@ mpeg_vpcc_thread(void *ptr)
 			pid = fork();
 			if(pid == 0) {
 				cout << "1" << endl;
-				sprintf(comprename,"--compressedStreamPath=%s.bin", msg);	
 				mkdir(dir_path, 0755);
-				sprintf(reconname,"--reconstructedDataPath=../../dec_test/%s/%s_dec_%%04d.ply", msg ,msg);
+				sprintf(comprename,"--compressedStreamPath=%s.bin", msg);	
+				sprintf(reconname,"--reconstructedDataPath=./../../dec_test/%s/%s_dec_%%04d.ply", msg ,msg);				
+				cout << "comprename :" << comprename << endl;
+				cout << "reconname :" << reconname << endl;
+				
 				execl(path, "PccAppDecoder", comprename, opt[0].c_str(), opt[1].c_str(), opt[2].c_str(), reconname, NULL);
 			}else {
 				char ply_count[101];
 				char dir[256];
 				int cnt = 0;
-				char command[101];
-				char ply_path[101];
+				char command[1024];
+				char ply_path[1024];
 	
 				sprintf(ply_path, "ls -l /home/mcnl/mcnl/project/mcnl/source_backup/cpp/dec_test/%s/*.ply | wc -l", msg);
 				while(1) {
 					FILE *fp = popen(ply_path, "r");
-					fgets(ply_count, 10, fp);
-					cout << "\n" << ply_count << endl;
+					if(fgets(ply_count, 10, fp) == NULL) break;
+					cout << "cnt :" << ply_count << " msg : " << msg <<  " " << atoi(ply_count) << endl;
 					if(atoi(ply_count) == 10) {
 						sprintf(dir, "/home/mcnl/mcnl/project/mcnl/source_backup/cpp/dec_test/%s/ply%02d", msg ,cnt++);
 						mkdir(dir, 0755);
-						sprintf(command, "mv %s/*.ply %s", dir_path, dir);
-						
+						sprintf(command, "mv %s/*.ply %s", dir_path,dir);
+						cout << ">>>>>>>>>>>>>>>>>>>>>>>>> Command :" << command << endl;
 						system(command);
 						
-						cout << "\n\n\n\n\nPUSH :" << dir << endl;
+						cout << "PUSH :" << dir << endl;
 				
 						string directory_path;
 						directory_path = string(dir); 
@@ -444,7 +373,6 @@ mpeg_vpcc_thread(void *ptr)
 						{
 							string filepath = string(dir) + "/" + p.path().filename().string();
 							files.push_back(filepath);
-							//cout << filepath << endl;
 						}
 						sort(files.begin(), files.end());
 						
@@ -455,8 +383,12 @@ mpeg_vpcc_thread(void *ptr)
 						}
 					}
 					pclose(fp);
-					if(cnt == (PLY_COUNT_PER_BIN / PLY_PER_DIRECTORY)) break;
-					//printf("cnt : %d, WEXITSTATUS: %d\n", cnt, WEXITSTATUS(status));
+					if(cnt == (PLY_COUNT_PER_BIN / PLY_PER_DIRECTORY)) {
+						sprintf(command, "rm -rf %s.bin *.ofl *.opcl *.trc *.txt *.otl", msg);
+						system(command);
+						break;
+					}
+					printf("cnt : %d, WEXITSTATUS: %d\n", cnt, WEXITSTATUS(status));
 				}
 				
 				waitpid = wait(&status);
@@ -477,7 +409,7 @@ open3d_thread(void *ptr)
 	char * msg;
 
 	tid = pthread_self();
-	//MultipleWindowsApp().Run();
+	MultipleWindowsApp().Run();
 	cout << "Bye, Open3d Thread\n";
 	return 0x0;
 }
@@ -488,24 +420,22 @@ int main(int argc, char *argv[]) {
 	pthread_t thread2;
 	pthread_t thread3;
 
-	cout << "ex) /video/loot.mpd" << endl;
-	cin >>  MPD_DATA_PATH;
 	cout << MPD_DATA_PATH << endl;
 	buf1 = (bounded_buffer *)malloc(sizeof(bounded_buffer));
-	bounded_buffer_init(buf1, 10);
+	bounded_buffer_init(buf1, 100);
 	
 	buf2 = (bounded_buffer *)malloc(sizeof(bounded_buffer));
 	bounded_buffer_init(buf2, 100);
-
+		
 	pthread_create(&thread1, 0x0, libdash_thread, 0x0);
-//	pthread_create(&thread2, 0x0, mpeg_vpcc_thread, 0x0);
-//	pthread_create(&thread3, 0x0, open3d_thread, 0x0);
+	pthread_create(&thread2, 0x0, mpeg_vpcc_thread, 0x0);
+	pthread_create(&thread3, 0x0, open3d_thread, 0x0);
 	
 	cout << "CHECK" << endl;
 	
 	pthread_join(thread1, 0x0);
-//	pthread_join(thread2, 0x0);
-//	pthread_join(thread3, 0x0);
+	pthread_join(thread2, 0x0);
+	pthread_join(thread3, 0x0);
 	cout << "END\n";
 
 	return 0;
