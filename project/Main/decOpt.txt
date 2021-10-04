@@ -1,3 +1,3 @@
---videoDecoderOccupancyPath=../../mpeg-vpcc/mpeg-pcc-tmc2/dependencies/external/HM/bin/TappDecoderStatic
---colorSpaceConversionPath=../../mpeg-vpcc/mpeg-pcc-tmc2/dependencies/external/HDRTools/build/bin/HDRConvert
---inverseColorSpaceConversionConfig=../../../mpeg-vpcc/mpeg-pcc-tmc2/cfg/hdrconvert/yuv420toyuv444_16bit.cfg
+--videoDecoderOccupancyPath=../../dependencies/external/HM/bin/TappDecoderStatic
+--colorSpaceConversionPath=../../dependencies/external/HDRTools/build/bin/HDRConvert
+--inverseColorSpaceConversionConfig=../../cfg/hdrconvert/yuv420toyuv444_16bit.cfg
