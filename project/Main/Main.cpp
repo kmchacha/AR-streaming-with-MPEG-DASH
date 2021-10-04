@@ -15,8 +15,6 @@
 #include <algorithm>
 #include "open3d/Open3D.h"
 #include "libdash.h"
-//#include "../../include/libdash_networkpart/TestChunk.h"
-//#include "../../include/libdash_networkpart/PersistentHTTPConnection.h"
 #include "TestChunk.h"
 #include "PersistentHTTPConnection.h"
 
@@ -187,7 +185,8 @@ class MultipleWindowsApp {
 			while (main_vis_) {
 				msg = bounded_buffer_dequeue(buf2);
 				std::string full_path = string(msg);
-
+				std::chrono::system_clock::time_point start = std::chrono::system_clock::now();
+				
 				Eigen::Vector3d extent;
 				{
 					std::lock_guard<std::mutex> lock(cloud_lock_);
@@ -244,6 +243,8 @@ class MultipleWindowsApp {
 					break;
 				}
 				
+				std::chrono::duration<double> sec = std::chrono::system_clock::now() - start;
+				cout << "OPEN-3D Time(sec) : " << sec.count() <<"seconds" <<'\n';
 
 			}
 		}
@@ -265,37 +266,32 @@ libdash_thread(void *ptr)
 {
 	cout << "Hello, Lib-dash Thread\n";
 	pthread_t tid;
-	char msg[256]; 
+	char msg[256], command[1024];
 	vector<string> binaryFile;
-	
+	char highfile[128], midfile[128], lowfile[128];	
+
 	for(int frame=0;frame<10;frame++){
-		pid_t pid, waitpid;
-		int status;
-		pid = fork();
-		if(pid == 0) {
-			char command[1024];
-			sprintf(command, "./libdash_mcnl_test %d", frame);
-			system(command);
-		}else {
-			waitpid = wait(&status);
-			for(auto& p : std::experimental::filesystem::directory_iterator("/home/mcnl/mcnl/project/mcnl/source_backup/cpp/build/bin")) {
-				string Filename = p.path().string();
-				cout << Filename << endl;
-				Filename = Filename.substr(Filename.find("/bin/") + 5);
-				if(Filename.find("bin") != string::npos) {
-					binaryFile.push_back(Filename);
-					cout << Filename << endl;
-				}
-			}
-			sort(binaryFile.begin(), binaryFile.end()); // Need Modification
+		std::chrono::system_clock::time_point start = std::chrono::system_clock::now();
 		
-			for(int i=0;i<binaryFile.size();i++){
-				snprintf(msg, 256, "%s", binaryFile[i].c_str());
-				bounded_buffer_queue(buf1, strdup(msg));
-			}
+		sprintf(command, "./libdash_mcnl_test %d", frame);
+		system(command);
 			
-			binaryFile.clear();
+		for(auto& p : std::experimental::filesystem::directory_iterator("/home/mcnl/mcnl/project/mcnl/source/cpp/build/bin")) {
+			string Filename = p.path().string();
+			cout << Filename << endl;
+			Filename = Filename.substr(Filename.find("/bin/") + 5);
+
+			sprintf(highfile ,"high_s%d", frame);
+			sprintf(midfile ,"mid_s%d", frame);
+			sprintf(lowfile ,"low_s%d", frame);
+			if(Filename.find(highfile) != string::npos || Filename.find(midfile) != string::npos || Filename.find(lowfile) != string::npos) {
+				snprintf(msg, 256, "%s", Filename.c_str());
+				bounded_buffer_queue(buf1, strdup(msg));
+				cout << Filename << endl;
+			}
 		}
+		std::chrono::duration<double> sec = std::chrono::system_clock::now() - start;
+		cout << "Lib-DASH Time(sec) : " << sec.count() <<"seconds" <<'\n';
 	}
 
 	return 0x0;
@@ -310,7 +306,7 @@ mpeg_vpcc_thread(void *ptr)
 	char * msg;
 	char line[1024] = {0, };
 	vector<string> opt;
-	ifstream f1("/home/mcnl/mcnl/project/mcnl/source_backup/cpp/Main/decOpt.txt");
+	ifstream f1("/home/mcnl/mcnl/project/mcnl/source/cpp/Main/decOpt.txt");
 	if(!f1) {
 		cerr << "file open error\n";
 	}
@@ -322,8 +318,9 @@ mpeg_vpcc_thread(void *ptr)
 	for(int i = 0 ; i < 10 ; i++) {  /// fixing
 		msg = bounded_buffer_dequeue(buf1);
 		if(msg != 0x0) {
-			printf("MPEG-VPCC Thread [%ld] read %s\n", (unsigned long) tid, msg);
+			std::chrono::system_clock::time_point start = std::chrono::system_clock::now();
 
+			printf("MPEG-VPCC Thread [%ld] read %s\n", (unsigned long) tid, msg);
 			char path[1024], comprename[1024], reconname[1024];
 			sprintf(path, "../../bin/%s", "PccAppDecoder");
 			
@@ -336,13 +333,9 @@ mpeg_vpcc_thread(void *ptr)
 			int status;
 			pid = fork();
 			if(pid == 0) {
-				cout << "1" << endl;
 				mkdir(dir_path, 0755);
 				sprintf(comprename,"--compressedStreamPath=%s.bin", msg);	
 				sprintf(reconname,"--reconstructedDataPath=./../../dec_test/%s/%s_dec_%%04d.ply", msg ,msg);				
-				cout << "comprename :" << comprename << endl;
-				cout << "reconname :" << reconname << endl;
-				
 				execl(path, "PccAppDecoder", comprename, opt[0].c_str(), opt[1].c_str(), opt[2].c_str(), reconname, NULL);
 			}else {
 				char ply_count[101];
@@ -351,20 +344,19 @@ mpeg_vpcc_thread(void *ptr)
 				char command[1024];
 				char ply_path[1024];
 	
-				sprintf(ply_path, "ls -l /home/mcnl/mcnl/project/mcnl/source_backup/cpp/dec_test/%s/*.ply | wc -l", msg);
+				sprintf(ply_path, "ls -l /home/mcnl/mcnl/project/mcnl/source/cpp/dec_test/%s/*.ply | wc -l", msg);
 				while(1) {
 					FILE *fp = popen(ply_path, "r");
 					if(fgets(ply_count, 10, fp) == NULL) break;
 					cout << "cnt :" << ply_count << " msg : " << msg <<  " " << atoi(ply_count) << endl;
 					if(atoi(ply_count) == 10) {
-						sprintf(dir, "/home/mcnl/mcnl/project/mcnl/source_backup/cpp/dec_test/%s/ply%02d", msg ,cnt++);
+						sprintf(dir, "/home/mcnl/mcnl/project/mcnl/source/cpp/dec_test/%s/ply%02d", msg ,cnt++);
 						mkdir(dir, 0755);
 						sprintf(command, "mv %s/*.ply %s", dir_path,dir);
-						cout << ">>>>>>>>>>>>>>>>>>>>>>>>> Command :" << command << endl;
+						cout << "Command :" << command << endl;
 						system(command);
 						
-						cout << "PUSH :" << dir << endl;
-				
+						cout << "PUSH Directory:" << dir << endl;
 						string directory_path;
 						directory_path = string(dir); 
 						
@@ -395,9 +387,13 @@ mpeg_vpcc_thread(void *ptr)
 				free(msg);
 				kill(pid, SIGKILL);
 			}
+
+			std::chrono::duration<double> sec = std::chrono::system_clock::now() - start;
+			cout << "MPEG-VPCC Time(sec) : " << sec.count() <<"seconds" <<'\n';
 		}
 
 	}
+	
 	return 0x0;
 }
 
