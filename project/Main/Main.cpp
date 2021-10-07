@@ -48,6 +48,7 @@ const int BIN_COUNT = 10;
 std::string MPD_DATA_PATH = "/video/loot.mpd";
 const Eigen::Vector3f CENTER_OFFSET(0.0f, 0.0f, -3.0f);
 const std::string CLOUD_NAME = "points";
+string rootPath ="";
 
 typedef struct {
 	sem_t filled;
@@ -275,8 +276,9 @@ libdash_thread(void *ptr)
 		
 		sprintf(command, "./libdash_mcnl_test %d", frame);
 		system(command);
-			
-		for(auto& p : std::experimental::filesystem::directory_iterator("/home/mcnl/mcnl/project/mcnl/source/cpp/build/bin")) {
+		
+		string buildBin_path = rootPath + "/AR-streaming-with-MPEG-DASH/project/build/bin";
+		for(auto& p : std::experimental::filesystem::directory_iterator(buildBin_path)) {
 			string Filename = p.path().string();
 			cout << Filename << endl;
 			Filename = Filename.substr(Filename.find("/bin/") + 5);
@@ -306,7 +308,9 @@ mpeg_vpcc_thread(void *ptr)
 	char * msg;
 	char line[1024] = {0, };
 	vector<string> opt;
-	ifstream f1("/home/mcnl/mcnl/project/mcnl/source/cpp/Main/decOpt.txt");
+	string decOpt_path= rootPath + "/AR-streaming-with-MPEG-DASH/project/Main/decOpt.txt";
+	string dectest_path = rootPath + "/AR-streaming-with-MPEG-DASH/project/dec_test";
+	ifstream f1(decOpt_path);
 	if(!f1) {
 		cerr << "file open error\n";
 	}
@@ -344,13 +348,13 @@ mpeg_vpcc_thread(void *ptr)
 				char command[1024];
 				char ply_path[1024];
 	
-				sprintf(ply_path, "ls -l /home/mcnl/mcnl/project/mcnl/source/cpp/dec_test/%s/*.ply | wc -l", msg);
+				sprintf(ply_path, "ls -l %s/%s/*.ply | wc -l", dectest_path, msg);
 				while(1) {
 					FILE *fp = popen(ply_path, "r");
 					if(fgets(ply_count, 10, fp) == NULL) break;
 					cout << "cnt :" << ply_count << " msg : " << msg <<  " " << atoi(ply_count) << endl;
 					if(atoi(ply_count) == 10) {
-						sprintf(dir, "/home/mcnl/mcnl/project/mcnl/source/cpp/dec_test/%s/ply%02d", msg ,cnt++);
+						sprintf(dir, "dectest_path/%s/ply%02d", msg ,cnt++);
 						mkdir(dir, 0755);
 						sprintf(command, "mv %s/*.ply %s", dir_path,dir);
 						cout << "Command :" << command << endl;
@@ -411,6 +415,9 @@ open3d_thread(void *ptr)
 }
 
 int main(int argc, char *argv[]) {
+	
+	cout << "Enter a git dir Path (ex) /home/mcnl/mcnl/project/mcnl/gitTest) : ";
+	cin >> rootPath;
 	
 	pthread_t thread1;
 	pthread_t thread2;
