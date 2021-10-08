@@ -6,7 +6,7 @@ geometry3dCoordinatesBitdepth: 10
 geometryNominal2dBitdepth: 8
 #frameCount: 30
 #startFrameNumber: 1000
-groupOfFramesSize: 1
+#groupOfFramesSize: 32
 voxelDimensionRefineSegmentation: 2
 minNormSumOfInvDist4MPSelection: 0.46
 partialAdditionalProjectionPlane: 0.17
@@ -21,7 +21,7 @@ roiBoundingBoxMinY: 0,256,512,768
 roiBoundingBoxMaxY: 255,511,767,1023
 roiBoundingBoxMinZ: 0,0,0,0
 roiBoundingBoxMaxZ: 1023,1023,1023,1023
-numTilesHor: 4
+numTilesHor: 2
 tileHeightToWidthRatio: 1
 numCutsAlong1stLongestAxis: 2
 numCutsAlong2ndLongestAxis: 1
