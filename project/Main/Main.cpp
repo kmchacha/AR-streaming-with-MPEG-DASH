@@ -419,7 +419,7 @@ open3d_thread(void *ptr)
 }
 
 int main(int argc, char *argv[]) {
-	cout << "Enter your git directory path (ex)/home/mcnl/mcnl/project/mcnl/gitTest/ : ";	
+	cout << "Enter your git directory path (ex)/home/mcnl/mcnl/project/mcnl/gitTest : ";	
 	cin >> rootPath;
 
 	pthread_t thread1;
