@@ -35,8 +35,8 @@ mkdir $STREAM_PATH/$CONTENTS_NAME/high
 mkdir $STREAM_PATH/$CONTENTS_NAME/mid
 mkdir $STREAM_PATH/$CONTENTS_NAME/low
 
-touch ""$CONTENTS_NAME".log"
-chmod 644 ""$CONTENTS_NAME".log"
+touch "$CONTENTS_NAME.log"
+chmod 644 "$CONTENTS_NAME.log"
 
 #####################################
 ### Frame Sampling for adjust FPS ###
@@ -146,9 +146,9 @@ then
 	LOW_BANDWIDTH=$LOW_TEMP
 fi
 
-echo "==========$id-th Frame was created==========" >> "$STREAM_PATH/$CONTENTS_NAME.log"
-echo "Size(kb) | OUTPUT" >> ""$CONTENTS_NAME".log"
-du -sk $LOW_OUT $MID_OUT $HIGH_OUT >> ""$CONTENTS_NAME".log"
+echo "==========$id-th Frame was created==========" >> "$CONTENTS_NAME.log"
+echo "Size(kb) | OUTPUT" >> "$CONTENTS_NAME.log"
+du -sk $LOW_OUT $MID_OUT $HIGH_OUT >> "$CONTENTS_NAME.log"
 
 echo $LOW_BANDWIDTH $MID_BANDWIDTH $HIGH_BANDWIDTH >> $STREAM_PATH/$CONTENTS_NAME/bandwidth.txt
 
