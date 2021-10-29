@@ -43,19 +43,25 @@ chmod 644 ""$CONTENTS_NAME".log"
 
 mkdir $DATA_PATH/${FPS}fr
 
-ORIGIN_N_FRAMES=$(ls $DATA_PATH | wc -l)
+ORIGIN_N_FRAMES=$(ls $DATA_PATH/*.ply | wc -l)
 
 target_d="$DATA_PATH/${FPS}fr"
 sampling_term=$((30 / $FPS))
 
 idx=$START_FRAME
-echo $sampling_term
+echo smpling term: $sampling_term
 for((f_idx = $START_FRAME; f_idx < $((START_FRAME + ORIGIN_N_FRAMES)); f_idx += $sampling_term ))
 do
 	target_f="*$f_idx*.ply"
 
 	cp $DATA_PATH/$target_f $target_d
-	mv $target_d/$target_f $target_d/${idx}.ply
+	mv $target_d/$target_f $target_d/${idx}.ply 2> /dev/null
+	if [ $? -ne 0 ]
+	then
+		echo "Sampling Err: Already Sampled Frame exists or Somthing wrong"
+		break
+	fi
+	
 	idx=$(($idx + 1))
 done
 
@@ -117,36 +123,39 @@ $TMC2_DIR/bin/PccAppEncoder \
 
 
 ### calc minimum bandwidth ###
-$LOW_OUT = "$STREAM_PATH/$CONTENTS_NAME/low/low_s$id.bin"
-$MID_OUT = "$STREAM_PATH/$CONTENTS_NAME/mid/mid_s$id.bin"
-$HIGH_OUT = "$STREAM_PATH/$CONTENTS_NAME/high/high_s$id.bin"
+LOW_OUT=$STREAM_PATH/$CONTENTS_NAME/low/low_s$id.bin
+MID_OUT=$STREAM_PATH/$CONTENTS_NAME/mid/mid_s$id.bin
+HIGH_OUT=$STREAM_PATH/$CONTENTS_NAME/high/high_s$id.bin
 
-HIGH_TEMP=$(du $HIGH_OUT | cut -f1)
-MID_TEMP=$(du $MID_OUT | cut -f1)
-LOW_TEMP=$(du $LOW_OUT | cut -f1)
+HIGH_TEMP=$(du -sk $HIGH_OUT | cut -f1)
+MID_TEMP=$(du -sk $MID_OUT | cut -f1)
+LOW_TEMP=$(du -sk $LOW_OUT | cut -f1)
 
 if [ $HIGH_TEMP -gt $HIGH_BANDWIDTH ]
 then
-	HIGH_BANDWIDTH = $HIGH_TEMP
+	HIGH_BANDWIDTH=$HIGH_TEMP
 fi
 
 if [ $MID_TEMP -gt $MID_BANDWIDTH ]
 then
-	MID_BANDWIDTH = $MID_TEMP
+	MID_BANDWIDTH=$MID_TEMP
 fi
 
 if [ $LOW_TEMP -gt $LOW_BANDWIDTH ]
 then
-	LOW_BANDWIDTH = $LOW_TEMP
+	LOW_BANDWIDTH=$LOW_TEMP
 fi
 
-echo "==========$id-th Frame was created==========" >> ""$CONTENTS_NAME".log"
+echo "==========$id-th Frame was created==========" >> "$STREAM_PATH/$CONTENTS_NAME.log"
 echo "Size(kb) | OUTPUT" >> ""$CONTENTS_NAME".log"
 du -sk $LOW_OUT $MID_OUT $HIGH_OUT >> ""$CONTENTS_NAME".log"
+
+echo $LOW_BANDWIDTH $MID_BANDWIDTH $HIGH_BANDWIDTH >> $STREAM_PATH/$CONTENTS_NAME/bandwidth.txt
 
 START_FRAME=$((START_FRAME + FRAME_COUNT))
 
 done
+
 
 #### Generate MPD ####
 dur_H=$(($(($NUM_OF_SEG * $SEG_TS))/3600))
@@ -157,11 +166,14 @@ minBufferTime=$SEG_TS
 presentation_dur="PT${dur_H}H${dur_M}M${dur_S}.000S"
 baseURL="http://203.252.121.219/video/$CONTENTS_NAME/"
 
+HIGH_BANDWIDTH=$(($HIGH_BANDWIDTH*1000))
+MID_BANDWIDTH=$(($MID_BANDWIDTH*1000))
+LOW_BANDWIDTH=$(($LOW_BANDWIDTH*1000))
 
 echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" >> $STREAM_PATH/$CONTENTS_NAME/$CONTENTS_NAME.mpd
-echo "<MPD xmlns=\"urn:mpeg:dash:schema:mpd:2011\" minBufferTime=\"PTS0H0M$SEG_TSS.000\" type=\"static\" mediaPresentationDuration=\"$presentation_dur\" maxSegmentDuration=\"PT0H0M$SEG_TS.000S\" profiles=\"urn:mpeg:dash:profile:full:2011\">" >> $STREAM_PATH/$CONTENTS_NAME/$CONTENTS_NAME.mpd
-echo "  <BaseURL>$basURL</BaseURL>" >> $STREAM_PATH/$CONTENTS_NAME/$CONTENTS_NAME.mpd
-echo "    <Priod duration=\"$presetation_dur\">" >> $STREAM_PATH/$CONTENTS_NAME/$CONTENTS_NAME.mpd
+echo "<MPD xmlns=\"urn:mpeg:dash:schema:mpd:2011\" minBufferTime=\"PTS0H0M$SEG_TS.000\" type=\"static\" mediaPresentationDuration=\"$presentation_dur\" maxSegmentDuration=\"PT0H0M$SEG_TS.000S\" profiles=\"urn:mpeg:dash:profile:full:2011\">" >> $STREAM_PATH/$CONTENTS_NAME/$CONTENTS_NAME.mpd
+echo "  <BaseURL>$baseURL</BaseURL>" >> $STREAM_PATH/$CONTENTS_NAME/$CONTENTS_NAME.mpd
+echo "    <Priod duration=\"$presentation_dur\">" >> $STREAM_PATH/$CONTENTS_NAME/$CONTENTS_NAME.mpd
 echo "      <AdaptationSet sgmentAlignment=\"true\" maxWidth=\"1024\" maxHeight=\"1024\" maxFrameRate=\"30\">" >> $STREAM_PATH/$CONTENTS_NAME/$CONTENTS_NAME.mpd
 
 ## HIGH ##
