@@ -58,7 +58,8 @@ do
 	mv $target_d/$target_f $target_d/${idx}.ply 2> /dev/null
 	if [ $? -ne 0 ]
 	then
-		echo "Sampling Err: Already Sampled Frame exists or Somthing wrong"
+		echo "Sampling MSG: Already Sampled Frame exists or Somthing wrong"
+		rm -rf ls $DATA_PATH/$target_d/!\([0-9][0-9][0-9][0-9].ply\)
 		break
 	fi
 	
