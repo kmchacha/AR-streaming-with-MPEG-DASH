@@ -39,16 +39,15 @@ using namespace dash::network;
 using namespace libdashtest;
 using namespace dash::mpd;
 
+const string PATH;
 const int WIDTH = 1024;
 const int HEIGHT = 1024;
-const int PLY_COUNT_PER_BIN = 15; 	//30 or 15
-const int PLY_PER_DIRECTORY = 5; 	//10 or 5
-const int BIN_COUNT = 10;			//10
+const int PLY_COUNT_PER_BIN = 10; // 10 15 30 = frame
+const int PLY_PER_DIRECTORY = 10; // 10 or 15
+const int BIN_COUNT = 10; // 10 Fix
 
-std::string MPD_DATA_PATH = "/video/loot.mpd";
 const Eigen::Vector3f CENTER_OFFSET(0.0f, 0.0f, -3.0f);
 const std::string CLOUD_NAME = "points";
-string rootPath;
 
 typedef struct {
 	sem_t filled;
@@ -151,7 +150,7 @@ class MultipleWindowsApp {
 			geometry::AxisAlignedBoundingBox bounds;
 			{
 				std::lock_guard<std::mutex> lock(cloud_lock_);
-				auto mat = rendering::Material();
+				auto mat = rendering::MaterialRecord();
 				mat.shader = "defaultUnlit";
 				new_vis->AddGeometry(
 						CLOUD_NAME + " #" + std::to_string(n_snapshots_), cloud_,
@@ -183,6 +182,9 @@ class MultipleWindowsApp {
 			geometry::AxisAlignedBoundingBox bounds;
 			char * msg;	
 			int cnt = 0;
+			std::ofstream writeFile;
+			writeFile.open("./timeLog/open3d.txt");
+			
 			while (main_vis_) {
 				msg = bounded_buffer_dequeue(buf2);
 				std::string full_path = string(msg);
@@ -198,7 +200,7 @@ class MultipleWindowsApp {
 				}
 
 				
-				auto mat = rendering::Material();
+				auto mat = rendering::MaterialRecord();
 				mat.shader = "defaultUnlit";
 
 				gui::Application::GetInstance().PostToMainThread(
@@ -234,19 +236,20 @@ class MultipleWindowsApp {
 				
 				cnt++;
 				cout << "In Open3D, CNT=" << cnt << endl;
+				std::chrono::duration<double> sec = std::chrono::system_clock::now() - start;
+				cout << "OPEN-3D Time(sec) : " << sec.count() <<"seconds" <<'\n';
+				writeFile << "OPEN-3D Time(sec) : " << sec.count() << "seconds\n";
+				
 				if(cnt == 1) main_vis_->ResetCameraToDefault(); 
 				else if(cnt == PLY_COUNT_PER_BIN * BIN_COUNT - 1) {
 					main_vis_->Close();
+					writeFile.close();
 					break;
 				}
 				
 				if (!main_vis_) {  // might have changed while sleeping
 					break;
 				}
-				
-				std::chrono::duration<double> sec = std::chrono::system_clock::now() - start;
-				cout << "OPEN-3D Time(sec) : " << sec.count() <<"seconds" <<'\n';
-
 			}
 		}
 
@@ -267,20 +270,22 @@ libdash_thread(void *ptr)
 {
 	cout << "Hello, Lib-dash Thread\n";
 	pthread_t tid;
-	char msg[256], command[1024];
+	char msg[256], command[1024], filepath[1024];
 	vector<string> binaryFile;
 	char highfile[128], midfile[128], lowfile[128];	
 	int ret = 0;
+	std::ofstream writeFile;
+	writeFile.open("./timeLog/libdash.txt");
 
-	for(int frame=0;frame<10;frame++){
+	for(int frame=0;frame<BIN_COUNT;frame++){
 		std::chrono::system_clock::time_point start = std::chrono::system_clock::now();
 		
 		sprintf(command, "./libdash_mcnl_test %d %d", frame, ret);
 		ret = system(command);
 		cout << "RET: " << ret << endl;
-
-		string buildBin_path = rootPath + "/AR-streaming-with-MPEG-DASH/project/build/bin";
-		for(auto& p : std::experimental::filesystem::directory_iterator(buildBin_path)) {
+		string buildpath = PATH + "/AR-streaming-with-MPEG-DASH/project";
+		sprintf(filepath, "%s/build/bin", buildpath.c_str());
+		for(auto& p : std::experimental::filesystem::directory_iterator(filepath)) {
 			string Filename = p.path().string();
 			cout << Filename << endl;
 			Filename = Filename.substr(Filename.find("/bin/") + 5);
@@ -295,8 +300,10 @@ libdash_thread(void *ptr)
 			}
 		}
 		std::chrono::duration<double> sec = std::chrono::system_clock::now() - start;
-		cout << "Lib-DASH Time(sec) : " << sec.count() <<"seconds" <<'\n';
+		writeFile << "Lib-Dash Time(sec) : " << sec.count() << "seconds\n";
+		//cout << "Lib-DASH Time(sec) : " << sec.count() <<"seconds" <<'\n';
 	}
+	writeFile.close();
 
 	return 0x0;
 }
@@ -307,20 +314,22 @@ mpeg_vpcc_thread(void *ptr)
 {
 	cout << "Hello, MPEG-VPCC Thraed\n";
 	pthread_t tid;
+	tid = pthread_self();
+	
 	char * msg;
 	char line[1024] = {0, };
 	vector<string> opt;
-	string decOpt_path= rootPath + "/AR-streaming-with-MPEG-DASH/project/Main/decOpt.txt";
-	string decTest_path = rootPath + "/AR-streaming-with-MPEG-DASH/project/dec_test";
-	ifstream f1(decOpt_path);
+	decOptpath = PATH + "/AR-streaming-with-MPEG-DASH/project/Main/decOpt.txt";
+	ifstream f1(decOptpath);
 	if(!f1) {
 		cerr << "file open error\n";
 	}
 	while(f1.getline(line, 1001)) {
 		opt.push_back(line);
 	}
-
-	tid = pthread_self();
+	std::ofstream writeFile;
+	writeFile.open("./timeLog/mpeg-vpcc.txt");
+	
 	for(int i = 0 ; i < BIN_COUNT ; i++) {  /// fixing
 		msg = bounded_buffer_dequeue(buf1);
 		if(msg != 0x0) {
@@ -349,22 +358,20 @@ mpeg_vpcc_thread(void *ptr)
 				int cnt = 0;
 				char command[1024];
 				char ply_path[1024];
-
-				const char* decTest_path_c = decTest_path.c_str();
+				string decTestpath = PATH + "/AR-straming-with-MPEG-DASH/project/dec_test";
 	
-				sprintf(ply_path, "ls -l %s/%s/*.ply | wc -l", decTest_path_c, msg);
+				sprintf(ply_path, "ls -l %s/%s/*.ply | wc -l", decTestpath.c_str(), msg);
 				while(1) {
 					FILE *fp = popen(ply_path, "r");
 					if(fgets(ply_count, 10, fp) == NULL) break;
-					cout << "cnt :" << ply_count << " msg : " << msg <<  " " << atoi(ply_count) << endl;
-					if(atoi(ply_count) == PLY_PER_DIRECTORY) {
-						sprintf(dir, "%s/%s/ply%02d", decTest_path_c, msg ,cnt++);
+					//cout << "cnt :" << ply_count << " msg : " << msg <<  " " << atoi(ply_count) << endl;
+					if(atoi(ply_count) == PLY_PER_DIRECTORY) { // 10
+						sprintf(dir, "%s/%s/ply%02d", decTestpath.c_str() ,msg ,cnt++);
 						mkdir(dir, 0755);
 						sprintf(command, "mv %s/*.ply %s", dir_path,dir);
-						cout << "Command :" << command << endl;
+						//cout << "Command :" << command << endl;
 						system(command);
 						
-						cout << "PUSH Directory:" << dir << endl;
 						string directory_path;
 						directory_path = string(dir); 
 						
@@ -378,7 +385,7 @@ mpeg_vpcc_thread(void *ptr)
 						
 						for(int i = 0 ; i < files.size() ; i++) {
 							string filepath = files[i];
-							cout << "PUSH: " << filepath << endl;
+							//cout << "PUSH: " << filepath << endl;
 							bounded_buffer_queue(buf2, strdup(filepath.c_str()));
 						}
 					}
@@ -397,11 +404,13 @@ mpeg_vpcc_thread(void *ptr)
 			}
 
 			std::chrono::duration<double> sec = std::chrono::system_clock::now() - start;
+			writeFile << "MPEG-VPCC Time(sec) : " << sec.count() << "seconds\n";
 			cout << "MPEG-VPCC Time(sec) : " << sec.count() <<"seconds" <<'\n';
 		}
 
 	}
-	
+
+	writeFile.close();
 	return 0x0;
 }
 
@@ -419,14 +428,14 @@ open3d_thread(void *ptr)
 }
 
 int main(int argc, char *argv[]) {
-	cout << "Enter your git directory path (ex)/home/mcnl/mcnl/project/mcnl/gitTest : ";	
-	cin >> rootPath;
 
+	cout << "your git dir path (ex)/home/mcnl/mcnl/project/mcnl/gitdir : ";
+	cin >> PATH;
+	
 	pthread_t thread1;
 	pthread_t thread2;
 	pthread_t thread3;
 
-	cout << MPD_DATA_PATH << endl;
 	buf1 = (bounded_buffer *)malloc(sizeof(bounded_buffer));
 	bounded_buffer_init(buf1, 100);
 	
