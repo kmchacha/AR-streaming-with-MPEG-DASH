@@ -29,6 +29,7 @@ using namespace std;
 using namespace dash::mpd;
 
 const string filepath = "/video/loot.mpd";
+const int BIN_COUNT = 10;
 
 void download(IConnection *connection, IChunk *chunk, ofstream *file)
 {
@@ -77,8 +78,8 @@ int main(int argc, char*argv[])
 	IMPD *mpd = manager->Open("loot.mpd");
 	std::string baseUrl;
 	baseUrl = mpd->GetBaseUrls().at(0)->GetUrl();
-	string high[10], mid[10], low[10];
-	for(int i=0;i<10;i++){
+	string high[BIN_COUNT], mid[BIN_COUNT], low[BIN_COUNT];
+	for(int i=0;i<BIN_COUNT;i++){
 		high[i] = mpd->GetPeriods().at(0)->GetAdaptationSets().at(0)->GetRepresentation().at(0)->GetSegmentList()->GetSegmentURLs().at(i)->GetMediaURI();
 		mid[i] = mpd->GetPeriods().at(0)->GetAdaptationSets().at(0)->GetRepresentation().at(1)->GetSegmentList()->GetSegmentURLs().at(i)->GetMediaURI();
 		low[i] = mpd->GetPeriods().at(0)->GetAdaptationSets().at(0)->GetRepresentation().at(2)->GetSegmentList()->GetSegmentURLs().at(i)->GetMediaURI();
@@ -104,7 +105,7 @@ int main(int argc, char*argv[])
 	cout << "*****************************************" << endl;
 	cout << "* Download files with external HTTP 1.0 *" << endl;
 	cout << "*****************************************" << endl;
-	TestChunk test2chunk("127.0.0.1", 80, urls, 0, 0, false);
+	TestChunk test2chunk("203.252.121.219", 80, urls, 0, 0, false);
 	httpconnection = new HTTPConnection();
 	httpconnection->Init(&test2chunk);
 	httpconnection->Schedule(&test2chunk);

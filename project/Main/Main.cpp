@@ -39,7 +39,7 @@ using namespace dash::network;
 using namespace libdashtest;
 using namespace dash::mpd;
 
-const string PATH;
+const string PATH = "/home/mcnl/mcnl/project/mcnl/gitTest2";
 const int WIDTH = 1024;
 const int HEIGHT = 1024;
 const int PLY_COUNT_PER_BIN = 10; // 10 15 30 = frame
@@ -270,7 +270,7 @@ libdash_thread(void *ptr)
 {
 	cout << "Hello, Lib-dash Thread\n";
 	pthread_t tid;
-	char msg[256], command[1024], filepath[1024];
+	char msg[256], command[1024];
 	vector<string> binaryFile;
 	char highfile[128], midfile[128], lowfile[128];	
 	int ret = 0;
@@ -283,9 +283,8 @@ libdash_thread(void *ptr)
 		sprintf(command, "./libdash_mcnl_test %d %d", frame, ret);
 		ret = system(command);
 		cout << "RET: " << ret << endl;
-		string buildpath = PATH + "/AR-streaming-with-MPEG-DASH/project";
-		sprintf(filepath, "%s/build/bin", buildpath.c_str());
-		for(auto& p : std::experimental::filesystem::directory_iterator(filepath)) {
+		string buildbinpath = PATH + "/AR-streaming-with-MPEG-DASH/project/build/bin";
+		for(auto& p : std::experimental::filesystem::directory_iterator(buildbinpath)) {
 			string Filename = p.path().string();
 			cout << Filename << endl;
 			Filename = Filename.substr(Filename.find("/bin/") + 5);
@@ -319,7 +318,7 @@ mpeg_vpcc_thread(void *ptr)
 	char * msg;
 	char line[1024] = {0, };
 	vector<string> opt;
-	decOptpath = PATH + "/AR-streaming-with-MPEG-DASH/project/Main/decOpt.txt";
+	string decOptpath = PATH + "/AR-streaming-with-MPEG-DASH/project/Main/decOpt.txt";
 	ifstream f1(decOptpath);
 	if(!f1) {
 		cerr << "file open error\n";
@@ -358,8 +357,8 @@ mpeg_vpcc_thread(void *ptr)
 				int cnt = 0;
 				char command[1024];
 				char ply_path[1024];
-				string decTestpath = PATH + "/AR-straming-with-MPEG-DASH/project/dec_test";
 	
+				string decTestpath = PATH + "/AR-streaming-with-MPEG-DASH/project/dec_test";
 				sprintf(ply_path, "ls -l %s/%s/*.ply | wc -l", decTestpath.c_str(), msg);
 				while(1) {
 					FILE *fp = popen(ply_path, "r");
@@ -428,9 +427,6 @@ open3d_thread(void *ptr)
 }
 
 int main(int argc, char *argv[]) {
-
-	cout << "your git dir path (ex)/home/mcnl/mcnl/project/mcnl/gitdir : ";
-	cin >> PATH;
 	
 	pthread_t thread1;
 	pthread_t thread2;
