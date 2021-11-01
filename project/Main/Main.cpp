@@ -39,7 +39,7 @@ using namespace dash::network;
 using namespace libdashtest;
 using namespace dash::mpd;
 
-const string PATH = "/home/mcnl/mcnl/project/mcnl/gitTest2";
+string PATH;
 const int WIDTH = 1024;
 const int HEIGHT = 1024;
 const int PLY_COUNT_PER_BIN = 10; // 10 15 30 = frame
@@ -427,7 +427,9 @@ open3d_thread(void *ptr)
 }
 
 int main(int argc, char *argv[]) {
-	
+
+	cout << "Your git dir path: (ex)/home/mcnl/mcnl/project/mcnl/YourGitDirName : ";
+	cin >> PATH;
 	pthread_t thread1;
 	pthread_t thread2;
 	pthread_t thread3;
