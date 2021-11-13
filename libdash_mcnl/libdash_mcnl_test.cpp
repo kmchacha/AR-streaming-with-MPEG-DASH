@@ -65,7 +65,8 @@ int main(int argc, char*argv[])
 
 	memset(&serv_adr, 0, sizeof(serv_adr));
 	serv_adr.sin_family = AF_INET;
-	serv_adr.sin_addr.s_addr = inet_addr("203.252.121.219");
+	// serv_adr.sin_addr.s_addr = inet_addr("203.252.121.219");
+	serv_adr.sin_addr.s_addr = inet_addr("127.0.0.1");
 	serv_adr.sin_port = htons(atoi(argv[3]));
 
     IDASHManager    *manager        = CreateDashManager();
