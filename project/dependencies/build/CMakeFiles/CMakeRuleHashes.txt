@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+b65c686f4b146ebfdc3f2e5cdb1e371e tbb/CMakeFiles/tbb_def_files
+e2625d09de071e1a0db8484cf65bfa18 tbb/tbb.def
+af2b62df2d3006c6642618002370212c tbb/tbbmalloc.def
