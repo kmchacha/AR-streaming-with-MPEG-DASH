@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/GamutTest.dir/src/GamutTest.cpp.o CMakeFiles/GamutTest.dir/src/GamutTestFrame.cpp.o CMakeFiles/GamutTest.dir/src/ProjectParameters.cpp.o  -o ../../bin/GamutTest  ../../lib/libHDRLib.a 

@@ -1,7 +1,0 @@
-add_subdirectory( tbb )
-IF( NOT USE_HM_VIDEO_CODEC )
-  add_subdirectory( PccLibHevcParser )
-ENDIF()
-IF( USE_JMAPP_VIDEO_CODEC )
-  add_subdirectory( PccLibAvcParser )
-ENDIF()

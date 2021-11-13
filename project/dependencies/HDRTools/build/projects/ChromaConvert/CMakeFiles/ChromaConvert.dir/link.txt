@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o -o ../../bin/ChromaConvert  ../../lib/libHDRLib.a 

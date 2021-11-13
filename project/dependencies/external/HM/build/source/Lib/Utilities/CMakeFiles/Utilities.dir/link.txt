@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../../lib/umake/gcc-9.3/x86_64/release/libUtilities.a CMakeFiles/Utilities.dir/TVideoIOYuv.cpp.o CMakeFiles/Utilities.dir/program_options_lite.cpp.o
-/usr/bin/ranlib ../../../../lib/umake/gcc-9.3/x86_64/release/libUtilities.a

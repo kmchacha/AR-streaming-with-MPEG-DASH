@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/HDRVQM.dir/src/HDRVQM.cpp.o CMakeFiles/HDRVQM.dir/src/HDRVQMFrame.cpp.o CMakeFiles/HDRVQM.dir/src/ProjectParameters.cpp.o  -o ../../bin/HDRVQM  ../../lib/libHDRLib.a 

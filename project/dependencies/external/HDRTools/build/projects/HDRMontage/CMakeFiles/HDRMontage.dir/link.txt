@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/HDRMontage.dir/src/HDRMontage.cpp.o CMakeFiles/HDRMontage.dir/src/HDRMontageFrame.cpp.o CMakeFiles/HDRMontage.dir/src/ProjectParameters.cpp.o  -o ../../bin/HDRMontage  ../../lib/libHDRLib.a 
