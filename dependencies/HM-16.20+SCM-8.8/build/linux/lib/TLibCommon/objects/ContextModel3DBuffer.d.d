@@ -1,0 +1,7 @@
+objects/ContextModel3DBuffer.d.o: \
+ /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/ContextModel3DBuffer.cpp \
+ /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/ContextModel3DBuffer.h \
+ /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/CommonDef.h \
+ /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/TypeDef.h \
+ /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/ContextModel.h \
+ /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/TComRom.h
