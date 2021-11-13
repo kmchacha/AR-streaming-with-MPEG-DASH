@@ -5,7 +5,7 @@
 
 
 # TMC2 DIRECTORY
-TMC2_DIR="/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2"
+TMC2_DIR=".."
 
 # Compressed Stream Path
 STREAM_PATH="/var/www/html/video"

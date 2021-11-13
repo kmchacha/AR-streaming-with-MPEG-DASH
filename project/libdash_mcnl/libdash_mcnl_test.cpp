@@ -17,6 +17,13 @@
 #include <fstream>
 #include <string>
 #include <chrono>
+#include <cstdlib>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+
+#define BUF_SIZE 10
+void error_handling(char *message);
 
 #if defined _WIN32 || defined _WIN64
     #include <Windows.h>
@@ -47,12 +54,26 @@ void download(IConnection *connection, IChunk *chunk, ofstream *file)
 
 int main(int argc, char*argv[])
 {
+	int sock;
+	char ret[BUF_SIZE];
+	socklen_t adr_sz;
+	struct sockaddr_in serv_adr, from_adr;
+
+	sock = socket(PF_INET, SOCK_DGRAM, 0);
+	if(sock == -1)
+		error_handling("socket() error");
+
+	memset(&serv_adr, 0, sizeof(serv_adr));
+	serv_adr.sin_family = AF_INET;
+	serv_adr.sin_addr.s_addr = inet_addr("203.252.121.219");
+	serv_adr.sin_port = htons(atoi(argv[3]));
+
     IDASHManager    *manager        = CreateDashManager();
     HTTPConnection  *httpconnection = new HTTPConnection();
 	
     ofstream file;
 	int number = atoi(argv[1]);
-	int quality = atoi(argv[2]);
+	char *quality = argv[2];
 
 	if(number == 0) {
     	TestChunk test1chunk("203.252.121.219", 80, filepath, 0, 0, false);
@@ -90,22 +111,22 @@ int main(int argc, char*argv[])
 	double LOW_QUALITY = mpd->GetPeriods().at(0)->GetAdaptationSets().at(0)->GetRepresentation().at(2)->GetBandwidth();
 
 	std::string  fileName, urls;
-	if(quality == 0) fileName = high[number];
-	else if(quality == 1) fileName = mid[number];
+	if(!strcmp(quality,"High")) fileName = high[number];
+	else if(!strcmp(quality,"Mid")) fileName = mid[number];
 	else fileName = low[number];
 
 	int idx = fileName.find("/");
 	fileName= fileName.substr(idx + 1);
 	cout << "fileName : " << fileName << endl;
 
-	if(quality == 0) urls = baseUrl + high[number];
-	else if(quality == 1) urls = baseUrl + mid[number];
+	if(!strcmp(quality,"High")) urls = baseUrl + high[number];
+	else if(!strcmp(quality,"Mid")) urls = baseUrl + mid[number];
 	else urls = baseUrl + low[number];
 
 	cout << "*****************************************" << endl;
 	cout << "* Download files with external HTTP 1.0 *" << endl;
 	cout << "*****************************************" << endl;
-	TestChunk test2chunk("203.252.121.219", 80, urls, 0, 0, false);
+	TestChunk test2chunk("127.0.0.1", 80, urls, 0, 0, false);
 	httpconnection = new HTTPConnection();
 	httpconnection->Init(&test2chunk);
 	httpconnection->Schedule(&test2chunk);
@@ -127,9 +148,22 @@ int main(int argc, char*argv[])
 	double T = sec.count();
 	cout << "Time : " << T << " file_size/time: " << (file_size * 8) / T <<  endl;
 	double Bandwidth = (file_size * 8) / T;
-	if(Bandwidth >= HIGH_QUALITY) return 0;
-	else if(Bandwidth >= MID_QUALITY) return 1;
-	else return 2;
+	
+	if(Bandwidth >= HIGH_QUALITY) strcpy(ret, "High");
+	else if(Bandwidth >= MID_QUALITY) strcpy(ret, "Mid");
+	else strcpy(ret, "Low");
+	
+	cout << "JINA: " << ret << endl;
 
-	return -1;
+	sendto(sock, ret, strlen(ret), 0, (struct sockaddr*)&serv_adr, sizeof(serv_adr));
+	adr_sz = sizeof(from_adr);
+
+	close(sock);
+	return 0;
+}
+
+void error_handling(char *message) {
+	fputs(message, stderr);
+	fputc('\n', stderr);
+	exit(1);
 }

@@ -27,10 +27,14 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <signal.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <sys/socket.h>
 
 #include "IMPD.h"
 #include "INode.h"
 
+#define BUF_SIZE 10
 using namespace open3d;
 using namespace open3d::visualization;
 using namespace std;
@@ -48,6 +52,7 @@ const int BIN_COUNT = 10; // 10 Fix
 
 const Eigen::Vector3f CENTER_OFFSET(0.0f, 0.0f, -3.0f);
 const std::string CLOUD_NAME = "points";
+void error_handling(char* message);
 
 typedef struct {
 	sem_t filled;
@@ -150,7 +155,7 @@ class MultipleWindowsApp {
 			geometry::AxisAlignedBoundingBox bounds;
 			{
 				std::lock_guard<std::mutex> lock(cloud_lock_);
-				auto mat = rendering::MaterialRecord();
+				auto mat = rendering::Material();
 				mat.shader = "defaultUnlit";
 				new_vis->AddGeometry(
 						CLOUD_NAME + " #" + std::to_string(n_snapshots_), cloud_,
@@ -200,7 +205,7 @@ class MultipleWindowsApp {
 				}
 
 				
-				auto mat = rendering::MaterialRecord();
+				auto mat = rendering::Material();
 				mat.shader = "defaultUnlit";
 
 				gui::Application::GetInstance().PostToMainThread(
@@ -273,15 +278,37 @@ libdash_thread(void *ptr)
 	char msg[256], command[1024];
 	vector<string> binaryFile;
 	char highfile[128], midfile[128], lowfile[128];	
-	int ret = 0;
+	int serv_sock;
+	char ret[BUF_SIZE] = "High";
+	int str_len;
+	socklen_t clnt_adr_sz;
+	struct sockaddr_in serv_adr, clnt_adr;
+	int port = *((int*)ptr);
+	
+	serv_sock = socket(PF_INET, SOCK_DGRAM, 0);
+	if(serv_sock == -1)
+		error_handling("UDP socket creation error");
+	
+	memset(&serv_adr, 0, sizeof(serv_adr));
+	serv_adr.sin_family = AF_INET;
+	serv_adr.sin_addr.s_addr = htonl(INADDR_ANY);
+	//strcpy(port, (char*)ptr);
+	cout << "PORT: " << port <<"\n";
+	serv_adr.sin_port = htons(port);
+
+	if(bind(serv_sock, (struct sockaddr*)&serv_adr, sizeof(serv_adr)) == -1)
+		error_handling("bind() error");
+
 	std::ofstream writeFile;
 	writeFile.open("./timeLog/libdash.txt");
 
 	for(int frame=0;frame<BIN_COUNT;frame++){
 		std::chrono::system_clock::time_point start = std::chrono::system_clock::now();
 		
-		sprintf(command, "./libdash_mcnl_test %d %d", frame, ret);
-		ret = system(command);
+		sprintf(command, "./libdash_mcnl_test %d %s %d", frame, ret, port);
+		system(command);
+		clnt_adr_sz = sizeof(clnt_adr);
+		str_len = recvfrom(serv_sock, ret, BUF_SIZE, 0, (struct sockaddr*)&clnt_adr, &clnt_adr_sz);
 		cout << "RET: " << ret << endl;
 		string buildbinpath = PATH + "/AR-streaming-with-MPEG-DASH/project/build/bin";
 		for(auto& p : std::experimental::filesystem::directory_iterator(buildbinpath)) {
@@ -303,6 +330,7 @@ libdash_thread(void *ptr)
 		//cout << "Lib-DASH Time(sec) : " << sec.count() <<"seconds" <<'\n';
 	}
 	writeFile.close();
+	close(serv_sock);
 
 	return 0x0;
 }
@@ -329,7 +357,7 @@ mpeg_vpcc_thread(void *ptr)
 	std::ofstream writeFile;
 	writeFile.open("./timeLog/mpeg-vpcc.txt");
 	
-	for(int i = 0 ; i < BIN_COUNT ; i++) {  /// fixing
+	for(int i = 0 ; i < BIN_COUNT ; i++) {  /// To do
 		msg = bounded_buffer_dequeue(buf1);
 		if(msg != 0x0) {
 			std::chrono::system_clock::time_point start = std::chrono::system_clock::now();
@@ -350,22 +378,22 @@ mpeg_vpcc_thread(void *ptr)
 				mkdir(dir_path, 0755);
 				sprintf(comprename,"--compressedStreamPath=%s.bin", msg);	
 				sprintf(reconname,"--reconstructedDataPath=./../../dec_test/%s/%s_dec_%%04d.ply", msg ,msg);				
-				execl(path, "PccAppDecoder", comprename, opt[0].c_str(), opt[1].c_str(), opt[2].c_str(), reconname, NULL);
+				execl(path, "PccAppDecoder", comprename, opt[0].c_str(), opt[1].c_str(), opt[2].c_str(), reconname, opt[3].c_str(), NULL);
 			}else {
 				char ply_count[101];
 				char dir[256];
 				int cnt = 0;
 				char command[1024];
 				char ply_path[1024];
-	
+				
 				string decTestpath = PATH + "/AR-streaming-with-MPEG-DASH/project/dec_test";
 				sprintf(ply_path, "ls -l %s/%s/*.ply | wc -l", decTestpath.c_str(), msg);
 				while(1) {
 					FILE *fp = popen(ply_path, "r");
 					if(fgets(ply_count, 10, fp) == NULL) break;
-					//cout << "cnt :" << ply_count << " msg : " << msg <<  " " << atoi(ply_count) << endl;
+					cout << "cnt :" << ply_count << " msg : " << msg <<  " " << atoi(ply_count) << endl;
 					if(atoi(ply_count) == PLY_PER_DIRECTORY) { // 10
-						sprintf(dir, "%s/%s/ply%02d", decTestpath.c_str() ,msg ,cnt++);
+						sprintf(dir, "%s/%s/ply%02d", decTestpath.c_str(), msg, cnt++);
 						mkdir(dir, 0755);
 						sprintf(command, "mv %s/*.ply %s", dir_path,dir);
 						//cout << "Command :" << command << endl;
@@ -427,8 +455,8 @@ open3d_thread(void *ptr)
 }
 
 int main(int argc, char *argv[]) {
-
-	cout << "Your git dir path: (ex)/home/mcnl/mcnl/project/mcnl/YourGitDirName : ";
+	
+	cout << "Your Git directory Path: (ex)/home/mcnl/mcnl/project/mcnl/YourGitDirName : ";
 	cin >> PATH;
 	pthread_t thread1;
 	pthread_t thread2;
@@ -440,7 +468,8 @@ int main(int argc, char *argv[]) {
 	buf2 = (bounded_buffer *)malloc(sizeof(bounded_buffer));
 	bounded_buffer_init(buf2, 100);
 		
-	pthread_create(&thread1, 0x0, libdash_thread, 0x0);
+	int port = atoi(argv[1]);
+	pthread_create(&thread1, 0x0, libdash_thread, (void*)&port);
 	pthread_create(&thread2, 0x0, mpeg_vpcc_thread, 0x0);
 	pthread_create(&thread3, 0x0, open3d_thread, 0x0);
 	
@@ -452,4 +481,10 @@ int main(int argc, char *argv[]) {
 	cout << "END\n";
 
 	return 0;
+}
+
+void error_handling(char *message) {
+	fputs(message, stderr);
+	fputc('\n', stderr);
+	exit(1);
 }
