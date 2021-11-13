@@ -43,11 +43,7 @@ using namespace dash::network;
 using namespace libdashtest;
 using namespace dash::mpd;
 
-<<<<<<< HEAD
 string PATH;
-=======
-const string PATH = "/home/mcnl/project/Test";
->>>>>>> 8ef45cc165f961b8785a3a8fefdc6ca38593f8e6
 const int WIDTH = 1024;
 const int HEIGHT = 1024;
 const int PLY_COUNT_PER_BIN = 10; // 10 15 30 = frame
@@ -314,13 +310,8 @@ libdash_thread(void *ptr)
 		clnt_adr_sz = sizeof(clnt_adr);
 		str_len = recvfrom(serv_sock, ret, BUF_SIZE, 0, (struct sockaddr*)&clnt_adr, &clnt_adr_sz);
 		cout << "RET: " << ret << endl;
-<<<<<<< HEAD
 		string buildbinpath = PATH + "/AR-streaming-with-MPEG-DASH/project/build/bin";
 		for(auto& p : std::experimental::filesystem::directory_iterator(buildbinpath)) {
-=======
-		sprintf(filepath, "%s/build/bin", PATH.c_str());
-		for(auto& p : std::experimental::filesystem::directory_iterator(filepath)) {
->>>>>>> 8ef45cc165f961b8785a3a8fefdc6ca38593f8e6
 			string Filename = p.path().string();
 			cout << Filename << endl;
 			Filename = Filename.substr(Filename.find("/bin/") + 5);
@@ -355,12 +346,8 @@ mpeg_vpcc_thread(void *ptr)
 	char * msg;
 	char line[1024] = {0, };
 	vector<string> opt;
-<<<<<<< HEAD
 	string decOptpath = PATH + "/AR-streaming-with-MPEG-DASH/project/Main/decOpt.txt";
 	ifstream f1(decOptpath);
-=======
-	ifstream f1(PATH + "/Main/decOpt.txt");
->>>>>>> 8ef45cc165f961b8785a3a8fefdc6ca38593f8e6
 	if(!f1) {
 		cerr << "file open error\n";
 	}
@@ -398,24 +385,14 @@ mpeg_vpcc_thread(void *ptr)
 				int cnt = 0;
 				char command[1024];
 				char ply_path[1024];
-<<<<<<< HEAD
-				
 				string decTestpath = PATH + "/AR-streaming-with-MPEG-DASH/project/dec_test";
 				sprintf(ply_path, "ls -l %s/%s/*.ply | wc -l", decTestpath.c_str(), msg);
-=======
-	
-				sprintf(ply_path, "ls -l %s/dec_test/%s/*.ply | wc -l", PATH.c_str(), msg);
->>>>>>> 8ef45cc165f961b8785a3a8fefdc6ca38593f8e6
 				while(1) {
 					FILE *fp = popen(ply_path, "r");
 					if(fgets(ply_count, 10, fp) == NULL) break;
 					cout << "cnt :" << ply_count << " msg : " << msg <<  " " << atoi(ply_count) << endl;
 					if(atoi(ply_count) == PLY_PER_DIRECTORY) { // 10
-<<<<<<< HEAD
 						sprintf(dir, "%s/%s/ply%02d", decTestpath.c_str(), msg, cnt++);
-=======
-						sprintf(dir, "%s/dec_test/%s/ply%02d", PATH.c_str() ,msg ,cnt++);
->>>>>>> 8ef45cc165f961b8785a3a8fefdc6ca38593f8e6
 						mkdir(dir, 0755);
 						sprintf(command, "mv %s/*.ply %s", dir_path,dir);
 						//cout << "Command :" << command << endl;
