@@ -1,0 +1,2 @@
+/usr/bin/ar qc libPccLibHevcParser.a CMakeFiles/PccLibHevcParser.dir/source/PccHevcDebug.cpp.o CMakeFiles/PccLibHevcParser.dir/source/PccHevcParser.cpp.o CMakeFiles/PccLibHevcParser.dir/source/PccHevcSEI.cpp.o CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComBitStream.cpp.o CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComRom.cpp.o CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComSlice.cpp.o CMakeFiles/PccLibHevcParser.dir/source/PccHevcTDecCAVLC.cpp.o
+/usr/bin/ranlib libPccLibHevcParser.a
