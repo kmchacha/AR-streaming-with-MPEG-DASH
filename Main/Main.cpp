@@ -309,6 +309,7 @@ libdash_thread(void *ptr)
 		system(command);
 		clnt_adr_sz = sizeof(clnt_adr);
 		str_len = recvfrom(serv_sock, ret, BUF_SIZE, 0, (struct sockaddr*)&clnt_adr, &clnt_adr_sz);
+		ret[str_len] = 0;
 		cout << "RET: " << ret << endl;
 		string buildbinpath = PATH + "/AR-streaming-with-MPEG-DASH/build/bin";
 		for(auto& p : std::experimental::filesystem::directory_iterator(buildbinpath)) {
