@@ -1,5 +1,5 @@
 projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/ProjectParameters.cpp.o: \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRVQM/src/ProjectParameters.cpp \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRVQM/src/ProjectParameters.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/math.h \
  /usr/include/c++/9/cmath \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
@@ -64,8 +64,8 @@ projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/ProjectParameters.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/c++/9/stdlib.h /usr/include/c++/9/cstdlib \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRVQM/./inc/ProjectParameters.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRVQM/./inc/ProjectParameters.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
  /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
@@ -160,7 +160,7 @@ projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/ProjectParameters.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Win32.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Win32.H \
  /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -173,9 +173,9 @@ projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/ProjectParameters.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Defines.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TypeDefs.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IFunctions.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Defines.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TypeDefs.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IFunctions.H \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -184,15 +184,15 @@ projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/ProjectParameters.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Parameters.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IOVideo.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/FrameFormat.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetric.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Parameters.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Frame.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Parameters.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IOVideo.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/FrameFormat.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetric.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Parameters.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Frame.H \
  /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_construct.h \
  /usr/include/c++/9/bits/stl_uninitialized.h \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IOFunctions.H
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IOFunctions.H

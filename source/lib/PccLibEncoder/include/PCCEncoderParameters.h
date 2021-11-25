@@ -43,11 +43,13 @@ class PCCEncoderParameters {
  public:
   PCCEncoderParameters();
   ~PCCEncoderParameters();
-  void              print();
-  bool              check();
-  void              completePath();
-  static void       constructAspsRefListStruct( PCCContext& context, size_t aspsIdx, size_t afpsIdx );
-  void              initializeContext( PCCContext& context );
+  void        print();
+  bool        check();
+  void        completePath();
+  static void constructAspsRefListStruct( PCCContext& context, size_t aspsIdx, size_t afpsIdx );
+  void        initializeContext( PCCContext& context );
+  uint8_t     getCodecIdIndex( PCCCodecId codecId );
+
   size_t            startFrameNumber_;
   std::string       configurationFolder_;
   std::string       uncompressedDataFolder_;
@@ -61,23 +63,43 @@ class PCCEncoderParameters {
   PCCCodecId        videoEncoderOccupancyCodecId_;
   PCCCodecId        videoEncoderGeometryCodecId_;
   PCCCodecId        videoEncoderAttributeCodecId_;
+  bool              byteStreamVideoCoderOccupancy_;
+  bool              byteStreamVideoCoderGeometry_;
+  bool              byteStreamVideoCoderAttribute_;
   bool              use3dmc_;
+  bool              usePccRDO_;
   std::string       colorSpaceConversionConfig_;
   std::string       inverseColorSpaceConversionConfig_;
   size_t            nbThread_;
   size_t            frameCount_;
   size_t            groupOfFramesSize_;
   std::string       uncompressedDataPath_;
+  uint32_t          forcedSsvhUnitSizePrecisionBytes_;
 
   // packing
   size_t minimumImageWidth_;
   size_t minimumImageHeight_;
 
   // video encoding
-  int geometryQP_;
-  int textureQP_;
+  int         geometryQP_;
+  int         attributeQP_;
+  int         deltaQPD0_;
+  int         deltaQPD1_;
+  int         deltaQPT0_;
+  int         deltaQPT1_;
+  int         auxGeometryQP_;
+  int         auxAttributeQP_;
+  std::string geometryConfig_;
+  std::string geometry0Config_;
+  std::string geometry1Config_;
+  std::string attributeConfig_;
+  std::string attribute0Config_;
+  std::string attribute1Config_;
+  bool        multipleStreams_;
 
   // segmentation
+  bool   gridBasedSegmentation_;
+  size_t voxelDimensionGridBasedSegmentation_;
   size_t nnNormalEstimation_;
   size_t normalOrientation_;
   bool   gridBasedRefineSegmentation_;
@@ -102,7 +124,7 @@ class PCCEncoderParameters {
   // occupancy map encoding
   size_t      maxCandidateCount_;
   size_t      occupancyPrecision_;
-  std::string occupancyMapVideoEncoderConfig_;
+  std::string occupancyMapConfig_;
   size_t      occupancyMapQP_;
   size_t      EOMFixBitCount_;
   bool        occupancyMapRefinement_;
@@ -118,7 +140,6 @@ class PCCEncoderParameters {
   bool   gridSmoothing_;
   size_t gridSize_;
   bool   flagGeometrySmoothing_;
-  size_t postprocessSmoothingFilter_;
 
   // Patch Expansion (m47772, CE2.12)
   bool patchExpansion_;
@@ -158,38 +179,28 @@ class PCCEncoderParameters {
 
   // lossless
   bool noAttributes_;
-  bool losslessGeo_;
-  bool losslessGeo444_;
+  bool rawPointsPatch_;
+  bool attributeVideo444_;
 
   // raw points video
   bool        useRawPointsSeparateVideo_;
   std::string geometryAuxVideoConfig_;
-  std::string textureAuxVideoConfig_;
+  std::string attributeAuxVideoConfig_;
 
   // scale and bias
   float             modelScale_;
   PCCVector3<float> modelOrigin_;
 
   // patch sampling resolution
-  size_t      levelOfDetailX_;
-  size_t      levelOfDetailY_;
-  std::string geometryConfig_;
-  std::string geometryD0Config_;
-  std::string geometryD1Config_;
-  std::string textureConfig_;
-  std::string textureT0Config_;
-  std::string textureT1Config_;
-  bool        keepIntermediateFiles_;
-  bool        absoluteD1_;
-  int         qpAdjD1_;
-  bool        absoluteT1_;
-  int         qpAdjT1_;
-  bool        multipleStreams_;
-  bool        constrainedPack_;
+  size_t levelOfDetailX_;
+  size_t levelOfDetailY_;
+  bool   keepIntermediateFiles_;
+  bool   absoluteD1_;
+  bool   absoluteT1_;
+  bool   constrainedPack_;
 
   // dilation
   bool groupDilation_;
-  bool textureDilationOffLossless_;
 
   // EOM
   bool enhancedOccupancyMapCode_;
@@ -215,14 +226,13 @@ class PCCEncoderParameters {
 
   // Flexible Patch Packing
   size_t packingStrategy_;
-  size_t textureBGFill_;
+  size_t attributeBGFill_;
   size_t safeGuardDistance_;
   bool   useEightOrientations_;
 
   // Lossy raw points Patch
   bool   lossyRawPointsPatch_;
   double minNormSumOfInvDist4MPSelection_;
-  int    lossyRawPointPatchGeoQP_;
 
   // GPA
   int globalPatchAllocation_;
@@ -264,7 +274,7 @@ class PCCEncoderParameters {
 
   // Sort raw points by Morton code
   bool   mortonOrderSortRawPoints_;
-  size_t textureRawSeparateVideoWidth_;
+  size_t attributeRawSeparateVideoWidth_;
 
   // Patch block filtering
   bool    pbfEnableFlag_;
@@ -277,12 +287,53 @@ class PCCEncoderParameters {
   size_t maxNumRefAtlasList_;
   size_t maxNumRefAtlasFrame_;
 
-  size_t log2MaxAtlasFrameOrderCntLsb_;
-  size_t tileSegmentationType_;
-  size_t numMaxTilePerFrame_;
-  bool   uniformPartitionSpacing_;
-  size_t tilePartitionWidth_;
-  size_t tilePartitionHeight_;
+  size_t               log2MaxAtlasFrameOrderCntLsb_;
+  size_t               tileSegmentationType_;
+  size_t               numMaxTilePerFrame_;
+  bool                 uniformPartitionSpacing_;
+  size_t               tilePartitionWidth_;
+  size_t               tilePartitionHeight_;
+  std::vector<int32_t> tilePartitionWidthList_;
+  std::vector<int32_t> tilePartitionHeightList_;
+
+  // Profile tier level
+  bool   tierFlag_;
+  size_t profileCodecGroupIdc_;
+  size_t profileToolsetIdc_;
+  size_t profileReconstructionIdc_;
+  size_t levelIdc_;
+  size_t avcCodecIdIndex_;
+  size_t hevcCodecIdIndex_;
+  size_t shvcCodecIdIndex_;
+  size_t vvcCodecIdIndex_;
+
+  // Profile toolset constraints information
+  bool   oneV3CFrameOnlyFlag_;
+  bool   EOMContraintFlag_;
+  size_t maxMapCountMinus1_;
+  size_t maxAtlasCountMinus1_;
+  bool   multipleMapStreamsConstraintFlag_;
+  bool   PLRConstraintFlag_;
+  size_t attributeMaxDimensionMinus1_;
+  size_t attributeMaxDimensionPartitionsMinus1_;
+  bool   noEightOrientationsConstraintFlag_;
+  bool   no45DegreeProjectionPatchConstraintFlag_;
+
+  // reconstruction options : 0. ignore 1. use indicated syntaxes 2. open
+  size_t pixelDeinterleavingType_;
+  size_t pointLocalReconstructionType_;
+  size_t reconstructEomType_;
+  size_t duplicatedPointRemovalType_;
+  size_t reconstructRawType_;
+  size_t applyGeoSmoothingType_;
+  size_t applyAttrSmoothingType_;
+  size_t attrTransferFilterType_;
+  size_t applyOccupanySynthesisType_;
+
+  // SHVC
+  size_t shvcLayerIndex_;
+  size_t shvcRateX_;
+  size_t shvcRateY_;
 };
 
 };  // namespace pcc

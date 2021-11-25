@@ -72,6 +72,11 @@ private:
   hdrtoolslib::Frame                *m_oFrameStore;            // picture storage for output frames
   hdrtoolslib::Frame                *m_iFrameStore;            // picture storage for input frames
   hdrtoolslib::Frame                *m_croppedFrameStore;      // cropped frame store
+  hdrtoolslib::Frame                *m_convertFrameStore;      // pixel type conversion frame store
+
+  
+  hdrtoolslib::Convert              *m_convertBitDepth;       // Initial Conversion process
+
   
   hdrtoolslib::Frame                *m_scaledFrame;
   hdrtoolslib::FrameScale           *m_frameScale;

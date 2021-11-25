@@ -47,7 +47,6 @@
 #include "TLibDecoder/NALread.h"
 #include "TLibEncoder/NALwrite.h"
 #include "TLibCommon/SEI.h"
-namespace pcc_hm {
 
 #if MCTS_EXTRACTION
   //! \ingroup TAppMctsExt
@@ -407,6 +406,3 @@ Void TAppMctsExtTop::xWriteOutput(std::ostream& bitstreamFile, const AccessUnit 
   }
 }
 #endif
-
-
-} // namespace pcc_hm

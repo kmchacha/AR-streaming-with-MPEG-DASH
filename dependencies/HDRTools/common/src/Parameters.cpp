@@ -287,7 +287,7 @@ int Parameters::readConfigFile(char *filename) {
   for (i = 0; doubleParameterList[i].ptr != NULL; i++)
     printf("%s = %10.8f\n", doubleParameterList[i].name, *(doubleParameterList[i].ptr));
   for (i = 0; stringParameterList[i].ptr != NULL; i++)
-    printf("%s = %d\n", stringParameterList[i].name, *(stringParameterList[i].ptr));
+    printf("%s = %s\n", stringParameterList[i].name, (stringParameterList[i].ptr));
 #endif
   setFormatSpecifiedFlagsFromCFG( filename );
   return ONE;

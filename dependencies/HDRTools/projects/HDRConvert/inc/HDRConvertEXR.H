@@ -125,6 +125,7 @@ private:
   bool                  m_bUse2DSepFiltering;
   bool                  m_bUseNLMeansFiltering;
   bool                  m_b2DSepMode;
+  int                   m_startFrameOut;
 
   
 public:

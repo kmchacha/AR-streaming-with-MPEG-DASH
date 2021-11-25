@@ -1,7 +1,7 @@
 common/CMakeFiles/HDRLib.dir/src/DistortionMetric.cpp.o: \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/src/DistortionMetric.cpp \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/src/DistortionMetric.cpp \
  /usr/include/stdc-predef.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -157,7 +157,7 @@ common/CMakeFiles/HDRLib.dir/src/DistortionMetric.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Win32.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Win32.H \
  /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -170,9 +170,9 @@ common/CMakeFiles/HDRLib.dir/src/DistortionMetric.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Defines.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TypeDefs.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IFunctions.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Defines.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TypeDefs.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IFunctions.H \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -181,46 +181,46 @@ common/CMakeFiles/HDRLib.dir/src/DistortionMetric.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetric.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Parameters.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IOVideo.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/FrameFormat.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Frame.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetric.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Parameters.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IOVideo.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/FrameFormat.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Frame.H \
  /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_construct.h \
  /usr/include/c++/9/bits/stl_uninitialized.h \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricPSNR.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetric.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricPSNR.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetric.H \
  /usr/include/c++/9/cinttypes /usr/include/inttypes.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricTFPSNR.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionTransferFunction.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricmPSNR.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricmPSNRfast.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricMSSSIM.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricJVETMSSSIM.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricSSIM.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricGSSIM.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/GaussianFilter.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricDeltaE.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricSigmaCompare.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricRegionPSNR.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricRegionTFPSNR.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricTFPSNR.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricTFMSSSIM.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricTFSSIM.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricBlockinessJ341.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricBlockAct.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricVQM.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/FFT.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/ResizeBiCubic.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricVIF.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunction.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/LookUpTable.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricTFPSNR.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionTransferFunction.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricmPSNR.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricmPSNRfast.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricMSSSIM.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricJVETMSSSIM.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricSSIM.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricGSSIM.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/GaussianFilter.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricDeltaE.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricSigmaCompare.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricRegionPSNR.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricRegionTFPSNR.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricTFPSNR.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricTFMSSSIM.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricTFSSIM.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricBlockinessJ341.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricBlockAct.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricVQM.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/FFT.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/ResizeBiCubic.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricVIF.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunction.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/LookUpTable.H \
  /usr/include/c++/9/functional /usr/include/c++/9/tuple \
  /usr/include/c++/9/utility /usr/include/c++/9/bits/stl_relops.h \
  /usr/include/c++/9/array /usr/include/c++/9/bits/uses_allocator.h \
  /usr/include/c++/9/bits/invoke.h /usr/include/c++/9/bits/refwrap.h \
  /usr/include/c++/9/bits/std_function.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricWTPSNR.H
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetricWTPSNR.H

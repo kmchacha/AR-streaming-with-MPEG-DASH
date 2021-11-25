@@ -1,0 +1,23 @@
+objects/TAppDecCfg.d.o: \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/App/TAppDecoder/TAppDecCfg.cpp \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/App/TAppDecoder/TAppDecCfg.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/CommonDef.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/TypeDef.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TAppCommon/program_options_lite.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/TComChromaFormat.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/CommonDef.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/TComRectangle.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/ContextTables.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/TComRom.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/Debug.h
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/App/TAppDecoder/TAppDecCfg.cpp :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/App/TAppDecoder/TAppDecCfg.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/CommonDef.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/TypeDef.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TAppCommon/program_options_lite.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/TComChromaFormat.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/CommonDef.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/TComRectangle.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/ContextTables.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/TComRom.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/app/TAppDecoder/../../../../source/Lib/TLibCommon/Debug.h :

@@ -57,10 +57,10 @@ RM = /home/mcnl/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools
+CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build
+CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRVQM//CMakeFiles/progress.marks
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRVQM/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRVQM//CMakeFiles/progress.marks
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRVQM/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRVQM/clean
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRVQM/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRVQM/preinstall
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRVQM/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRVQM/preinstall
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRVQM/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 projects/HDRVQM/CMakeFiles/HDRVQM.dir/rule:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRVQM/CMakeFiles/HDRVQM.dir/rule
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRVQM/CMakeFiles/HDRVQM.dir/rule
 .PHONY : projects/HDRVQM/CMakeFiles/HDRVQM.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ HDRVQM: projects/HDRVQM/CMakeFiles/HDRVQM.dir/rule
 
 # fast build rule for target.
 HDRVQM/fast:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/build
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/build
 .PHONY : HDRVQM/fast
 
 src/HDRVQM.o: src/HDRVQM.cpp.o
@@ -135,7 +135,7 @@ src/HDRVQM.o: src/HDRVQM.cpp.o
 
 # target to build an object file
 src/HDRVQM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/HDRVQM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/HDRVQM.cpp.o
 .PHONY : src/HDRVQM.cpp.o
 
 src/HDRVQM.i: src/HDRVQM.cpp.i
@@ -143,7 +143,7 @@ src/HDRVQM.i: src/HDRVQM.cpp.i
 
 # target to preprocess a source file
 src/HDRVQM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/HDRVQM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/HDRVQM.cpp.i
 .PHONY : src/HDRVQM.cpp.i
 
 src/HDRVQM.s: src/HDRVQM.cpp.s
@@ -151,7 +151,7 @@ src/HDRVQM.s: src/HDRVQM.cpp.s
 
 # target to generate assembly for a file
 src/HDRVQM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/HDRVQM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/HDRVQM.cpp.s
 .PHONY : src/HDRVQM.cpp.s
 
 src/HDRVQMFrame.o: src/HDRVQMFrame.cpp.o
@@ -159,7 +159,7 @@ src/HDRVQMFrame.o: src/HDRVQMFrame.cpp.o
 
 # target to build an object file
 src/HDRVQMFrame.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/HDRVQMFrame.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/HDRVQMFrame.cpp.o
 .PHONY : src/HDRVQMFrame.cpp.o
 
 src/HDRVQMFrame.i: src/HDRVQMFrame.cpp.i
@@ -167,7 +167,7 @@ src/HDRVQMFrame.i: src/HDRVQMFrame.cpp.i
 
 # target to preprocess a source file
 src/HDRVQMFrame.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/HDRVQMFrame.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/HDRVQMFrame.cpp.i
 .PHONY : src/HDRVQMFrame.cpp.i
 
 src/HDRVQMFrame.s: src/HDRVQMFrame.cpp.s
@@ -175,7 +175,7 @@ src/HDRVQMFrame.s: src/HDRVQMFrame.cpp.s
 
 # target to generate assembly for a file
 src/HDRVQMFrame.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/HDRVQMFrame.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/HDRVQMFrame.cpp.s
 .PHONY : src/HDRVQMFrame.cpp.s
 
 src/ProjectParameters.o: src/ProjectParameters.cpp.o
@@ -183,7 +183,7 @@ src/ProjectParameters.o: src/ProjectParameters.cpp.o
 
 # target to build an object file
 src/ProjectParameters.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/ProjectParameters.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/ProjectParameters.cpp.o
 .PHONY : src/ProjectParameters.cpp.o
 
 src/ProjectParameters.i: src/ProjectParameters.cpp.i
@@ -191,7 +191,7 @@ src/ProjectParameters.i: src/ProjectParameters.cpp.i
 
 # target to preprocess a source file
 src/ProjectParameters.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/ProjectParameters.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/ProjectParameters.cpp.i
 .PHONY : src/ProjectParameters.cpp.i
 
 src/ProjectParameters.s: src/ProjectParameters.cpp.s
@@ -199,7 +199,7 @@ src/ProjectParameters.s: src/ProjectParameters.cpp.s
 
 # target to generate assembly for a file
 src/ProjectParameters.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/ProjectParameters.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/src/ProjectParameters.cpp.s
 .PHONY : src/ProjectParameters.cpp.s
 
 # Help Target
@@ -231,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

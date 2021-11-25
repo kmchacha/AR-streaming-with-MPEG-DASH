@@ -30,40 +30,19 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
-#include "PccAppNormalGenerator.h"
+#ifndef _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+#include "PCCCommon.h"
+#include "PCCMath.h"
+#include "PCCKdTree.h"
+#include "PCCGroupOfFrames.h"
+#include "PCCNormalsGenerator.h"
+#include <program_options_lite.h>
+#include <tbb/tbb.h>
 
 using namespace std;
 using namespace pcc;
-
-int main( int argc, char* argv[] ) {
-  std::cout << "PccAppNormalGenerator v" << TMC2_VERSION_MAJOR << "." << TMC2_VERSION_MINOR << std::endl << std::endl;
-  std::string                    uncompressedDataPath;
-  std::string                    reconstructedDataPath;
-  size_t                         startFrameNumber;
-  size_t                         frameCount;
-  size_t                         nbThread     = 0;
-  PCCNormalsGenerator3Parameters normalParams = {PCCVector3D( 0.0 ),
-                                                 ( std::numeric_limits<double>::max )(),
-                                                 ( std::numeric_limits<double>::max )(),
-                                                 ( std::numeric_limits<double>::max )(),
-                                                 ( std::numeric_limits<double>::max )(),
-                                                 16,
-                                                 16,
-                                                 16,
-                                                 0,
-                                                 PCC_NORMALS_GENERATOR_ORIENTATION_SPANNING_TREE,
-                                                 false,
-                                                 false,
-                                                 false};  // default values
-  if ( !parseParameters( argc, argv, uncompressedDataPath, reconstructedDataPath, startFrameNumber, frameCount,
-                         nbThread, normalParams ) ) {
-    return -1;
-  }
-  if ( nbThread > 0 ) { tbb::task_scheduler_init init( static_cast<int>( nbThread ) ); }
-  int ret = generateNormal( uncompressedDataPath, reconstructedDataPath, startFrameNumber, frameCount, nbThread,
-                            normalParams );
-  return ret;
-}
 
 //---------------------------------------------------------------------------
 // :: Command line / config parsing helpers
@@ -104,11 +83,20 @@ bool parseParameters( int                             argc,
   std::string uncompressedDataPath;
   size_t tmp = 0;
   opts.addOptions()
-    ("help", print_help, false,"This help text")
+    ( "help", print_help, false,"This help text" )
     ( "c,config", po::parseConfigFile, "Configuration file name" )
-    ( "configurationFolder",configurationFolder,configurationFolder, "Folder where the configuration files are stored,use for cfg relative paths." )
-    ( "uncompressedDataFolder",uncompressedDataFolder,uncompressedDataFolder,"Folder where the uncompress input data are stored, use for cfg relative paths." )
-    ( "uncompressedDataPath",uncompressedDataPath,uncompressedDataPath,"Input pointcloud to encode. Multi-frame sequences may be represented by %04i" )
+    ( "configurationFolder",
+      configurationFolder,
+      configurationFolder, 
+      "Folder where the configuration files are stored,use for cfg relative paths." )
+    ( "uncompressedDataFolder",
+      uncompressedDataFolder,
+      uncompressedDataFolder,
+      "Folder where the uncompress input data are stored, use for cfg relative paths." )
+    ( "uncompressedDataPath",
+      uncompressedDataPath,
+      uncompressedDataPath,
+      "Input pointcloud to encode. Multi-frame sequences may be represented by %04i" )
     //parameters not used, but in the configuration files, so we add them here
     ( "geometry3dCoordinatesBitdepth",tmp,tmp,"UNUSED" )
     ( "geometryNominal2dBitdepth",tmp,tmp,"UNUSED" )
@@ -136,36 +124,93 @@ bool parseParameters( int                             argc,
     ( "enhancedProjectionPlane",tmp,tmp,"UNUSED" )
     ( "skipAvgIfIdenticalSourcePointPresentBwd",tmp,tmp,"UNUSED" )
     // i/o
-    ("srcPlyPath",srcPlyPath,srcPlyPath,"Input pointcloud to encode. Multi-frame sequences may be represented by %04i")
-    ("dstPlyPath",dstPlyPath,dstPlyPath,"Output decoded pointcloud. Multi-frame sequences may be represented by %04i")
+    ( "srcPlyPath",
+      srcPlyPath,
+      srcPlyPath,
+      "Input pointcloud to encode. Multi-frame sequences may be represented by %04i" )
+    ( "dstPlyPath",
+      dstPlyPath,
+      dstPlyPath,
+      "Output decoded pointcloud. Multi-frame sequences may be represented by %04i" )
     // sequence configuration
-    ("startFrameNumber",startFrame,startFrame,"First frame number in sequence to encode/decode")
-    ("frameCount",numFrames,numFrames,"Number of frames to encode")
+    ( "startFrameNumber",
+      startFrame,
+      startFrame,
+      "First frame number in sequence to encode/decode" )
+    ( "frameCount",
+      numFrames,
+      numFrames,
+      "Number of frames to encode" )
     // etc
-    ("nbThread",numThread,numThread,"Number of thread used for parallel processing")
+    ( "nbThread",
+      numThread,
+      numThread,
+      "Number of thread used for parallel processing" )
     // Normal generation parameters
-    ("viewPointX",normalParams.viewPoint_[0],normalParams.viewPoint_[0],"View Point X")
-    ("viewPointY",normalParams.viewPoint_[1],normalParams.viewPoint_[1],"View Point Y")
-    ("viewPointZ",normalParams.viewPoint_[2],normalParams.viewPoint_[2],"View Point Z")
-    ("radiusNormalSmoothing",normalParams.radiusNormalSmoothing_,normalParams.radiusNormalSmoothing_,"Radius Normal Smoothing (default:MAX_VAL)")
-    ("radiusNormalEstimation",normalParams.radiusNormalEstimation_,normalParams.radiusNormalEstimation_,"Radius Normal Estimation (default:MAX_VAL)")
-    ("radiusNormalOrientation",normalParams.radiusNormalOrientation_,normalParams.radiusNormalOrientation_,"Radius Normal Orientation (default:MAX_VAL)")
-    ("weightNormalSmoothing",normalParams.weightNormalSmoothing_,normalParams.weightNormalSmoothing_,"Weight Normal Smoothing (default:MAX_VAL)")
-    ("numberOfNearestNeighborsInNormalSmoothing",normalParams.numberOfNearestNeighborsInNormalSmoothing_,normalParams.numberOfNearestNeighborsInNormalSmoothing_,"Number Of Nearest Neighbors In Normal Smoothing (default:16)")
-    ("numberOfNearestNeighborsInNormalEstimation",normalParams.numberOfNearestNeighborsInNormalEstimation_,normalParams.numberOfNearestNeighborsInNormalEstimation_,"Number Of Nearest Neighbors In Normal Estimation (default:16)")
-    ("numberOfNearestNeighborsInNormalOrientation",normalParams.numberOfNearestNeighborsInNormalOrientation_,normalParams.numberOfNearestNeighborsInNormalOrientation_,"Number Of Nearest Neighbors In Normal Orientation (default:16)")
-    ("numberOfIterationsInNormalSmoothing",normalParams.numberOfIterationsInNormalSmoothing_,normalParams.numberOfIterationsInNormalSmoothing_,"Number Of Iterations In Normal Smoothing (default:0)")
-    ("orientationStrategy",normalParams.orientationStrategy_,normalParams.orientationStrategy_,"(0)NONE, (1)SPANNING TREE, (2)VIEWPOINT, (3)CUBEMAP PROJECTION")
-    ("storeEigenvalues",normalParams.storeEigenvalues_,normalParams.storeEigenvalues_,"Store Eigenvalues (0)false/(1)true")
-    ("storeNumberOfNearestNeighborsInNormalEstimation",normalParams.storeNumberOfNearestNeighborsInNormalEstimation_,normalParams.storeNumberOfNearestNeighborsInNormalEstimation_,"Store Number Of Nearest Neighbors In Normal Estimation (0)false/(1)true")
-    ("storeCentroids",normalParams.storeCentroids_,normalParams.storeCentroids_,"Store Centroids (0)false/(1)true")
+    ( "viewPointX",
+      normalParams.viewPoint_[0],
+      
+      normalParams.viewPoint_[0],"View Point X" )
+    ( "viewPointY",
+      normalParams.viewPoint_[1],
+      normalParams.viewPoint_[1],
+      "View Point Y" )
+    ( "viewPointZ",
+      normalParams.viewPoint_[2],
+      normalParams.viewPoint_[2],
+      "View Point Z" )
+    ( "radiusNormalSmoothing",normalParams.radiusNormalSmoothing_,
+      normalParams.radiusNormalSmoothing_,
+      "Radius Normal Smoothing (default:MAX_VAL)" )
+    ( "radiusNormalEstimation",
+      normalParams.radiusNormalEstimation_,
+      normalParams.radiusNormalEstimation_,
+      "Radius Normal Estimation (default:MAX_VAL)" )
+    ( "radiusNormalOrientation",
+      normalParams.radiusNormalOrientation_,
+      normalParams.radiusNormalOrientation_,
+      "Radius Normal Orientation (default:MAX_VAL)" )
+    ( "weightNormalSmoothing",
+      normalParams.weightNormalSmoothing_,
+      normalParams.weightNormalSmoothing_,
+      "Weight Normal Smoothing (default:MAX_VAL)" )
+    ( "numberOfNearestNeighborsInNormalSmoothing",
+      normalParams.numberOfNearestNeighborsInNormalSmoothing_,
+      normalParams.numberOfNearestNeighborsInNormalSmoothing_,
+      "Number Of Nearest Neighbors In Normal Smoothing (default:16)" )
+    ( "numberOfNearestNeighborsInNormalEstimation",
+      normalParams.numberOfNearestNeighborsInNormalEstimation_,
+      normalParams.numberOfNearestNeighborsInNormalEstimation_,
+      "Number Of Nearest Neighbors In Normal Estimation (default:16)" )
+    ( "numberOfNearestNeighborsInNormalOrientation",
+      normalParams.numberOfNearestNeighborsInNormalOrientation_,
+      normalParams.numberOfNearestNeighborsInNormalOrientation_,
+      "Number Of Nearest Neighbors In Normal Orientation (default:16)" )
+    ( "numberOfIterationsInNormalSmoothing",
+      normalParams.numberOfIterationsInNormalSmoothing_,
+      normalParams.numberOfIterationsInNormalSmoothing_,
+      "Number Of Iterations In Normal Smoothing (default:0)" )
+    ( "orientationStrategy",
+      normalParams.orientationStrategy_,
+      normalParams.orientationStrategy_,
+      "(0)NONE, (1)SPANNING TREE, (2)VIEWPOINT, (3)CUBEMAP PROJECTION" )
+    ( "storeEigenvalues",normalParams.storeEigenvalues_,
+      normalParams.storeEigenvalues_,
+      "Store Eigenvalues (0)false/(1)true" )
+    ( "storeNumberOfNearestNeighborsInNormalEstimation",
+      normalParams.storeNumberOfNearestNeighborsInNormalEstimation_,
+      normalParams.storeNumberOfNearestNeighborsInNormalEstimation_,
+      "Store Number Of Nearest Neighbors In Normal Estimation (0)false/(1)true" )
+    ( "storeCentroids",
+      normalParams.storeCentroids_,
+      normalParams.storeCentroids_,
+      "Store Centroids (0)false/(1)true" )
     ;
   opts.addOptions();
   // clang-format on
   po::setDefaults( opts );
   po::ErrorReporter        err;
   const list<const char*>& argv_unhandled = po::scanArgv( opts, argc, (const char**)argv, err );
-
   for ( const auto arg : argv_unhandled ) { printf( "Unhandled argument ignored: %s \n", arg ); }
 
   if ( argc == 1 || print_help ) {
@@ -212,8 +257,8 @@ bool parseParameters( int                             argc,
   return true;
 }
 
-int generateNormal( const std::string                     uncompressedDataPath,
-                    const std::string                     reconstructedDataPath,
+int generateNormal( const std::string&                    uncompressedDataPath,
+                    const std::string&                    reconstructedDataPath,
                     const size_t                          startFrameNumber,
                     const size_t                          frameCount,
                     const size_t                          nbThread,
@@ -245,4 +290,34 @@ int generateNormal( const std::string                     uncompressedDataPath,
   if ( !reconstructedDataPath.empty() ) { sources.write( reconstructedDataPath, startFrame ); }
   sources.clear();
   return 0;
+}
+
+int main( int argc, char* argv[] ) {
+  std::cout << "PccAppNormalGenerator v" << TMC2_VERSION_MAJOR << "." << TMC2_VERSION_MINOR << std::endl << std::endl;
+  std::string                    uncompressedDataPath;
+  std::string                    reconstructedDataPath;
+  size_t                         startFrameNumber;
+  size_t                         frameCount;
+  size_t                         nbThread     = 0;
+  PCCNormalsGenerator3Parameters normalParams = {PCCVector3D( 0.0 ),
+                                                 ( std::numeric_limits<double>::max )(),
+                                                 ( std::numeric_limits<double>::max )(),
+                                                 ( std::numeric_limits<double>::max )(),
+                                                 ( std::numeric_limits<double>::max )(),
+                                                 16,
+                                                 16,
+                                                 16,
+                                                 0,
+                                                 PCC_NORMALS_GENERATOR_ORIENTATION_SPANNING_TREE,
+                                                 false,
+                                                 false,
+                                                 false};  // default values
+  if ( !parseParameters( argc, argv, uncompressedDataPath, reconstructedDataPath, startFrameNumber, frameCount,
+                         nbThread, normalParams ) ) {
+    return -1;
+  }
+  if ( nbThread > 0 ) { tbb::task_scheduler_init init( static_cast<int>( nbThread ) ); }
+  int ret = generateNormal( uncompressedDataPath, reconstructedDataPath, startFrameNumber, frameCount, nbThread,
+                            normalParams );
+  return ret;
 }

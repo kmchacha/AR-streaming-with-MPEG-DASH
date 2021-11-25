@@ -57,10 +57,10 @@ RM = /home/mcnl/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools
+CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build
+CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert//CMakeFiles/progress.marks
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRConvert/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert//CMakeFiles/progress.marks
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRConvert/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRConvert/clean
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRConvert/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRConvert/preinstall
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRConvert/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRConvert/preinstall
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRConvert/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/rule:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRConvert/CMakeFiles/HDRConvert.dir/rule
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRConvert/CMakeFiles/HDRConvert.dir/rule
 .PHONY : projects/HDRConvert/CMakeFiles/HDRConvert.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ HDRConvert: projects/HDRConvert/CMakeFiles/HDRConvert.dir/rule
 
 # fast build rule for target.
 HDRConvert/fast:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/build
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/build
 .PHONY : HDRConvert/fast
 
 src/HDRConvert.o: src/HDRConvert.cpp.o
@@ -135,7 +135,7 @@ src/HDRConvert.o: src/HDRConvert.cpp.o
 
 # target to build an object file
 src/HDRConvert.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o
 .PHONY : src/HDRConvert.cpp.o
 
 src/HDRConvert.i: src/HDRConvert.cpp.i
@@ -143,7 +143,7 @@ src/HDRConvert.i: src/HDRConvert.cpp.i
 
 # target to preprocess a source file
 src/HDRConvert.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.i
 .PHONY : src/HDRConvert.cpp.i
 
 src/HDRConvert.s: src/HDRConvert.cpp.s
@@ -151,7 +151,7 @@ src/HDRConvert.s: src/HDRConvert.cpp.s
 
 # target to generate assembly for a file
 src/HDRConvert.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.s
 .PHONY : src/HDRConvert.cpp.s
 
 src/HDRConvertEXR.o: src/HDRConvertEXR.cpp.o
@@ -159,7 +159,7 @@ src/HDRConvertEXR.o: src/HDRConvertEXR.cpp.o
 
 # target to build an object file
 src/HDRConvertEXR.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o
 .PHONY : src/HDRConvertEXR.cpp.o
 
 src/HDRConvertEXR.i: src/HDRConvertEXR.cpp.i
@@ -167,7 +167,7 @@ src/HDRConvertEXR.i: src/HDRConvertEXR.cpp.i
 
 # target to preprocess a source file
 src/HDRConvertEXR.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.i
 .PHONY : src/HDRConvertEXR.cpp.i
 
 src/HDRConvertEXR.s: src/HDRConvertEXR.cpp.s
@@ -175,7 +175,7 @@ src/HDRConvertEXR.s: src/HDRConvertEXR.cpp.s
 
 # target to generate assembly for a file
 src/HDRConvertEXR.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.s
 .PHONY : src/HDRConvertEXR.cpp.s
 
 src/HDRConvertScale.o: src/HDRConvertScale.cpp.o
@@ -183,7 +183,7 @@ src/HDRConvertScale.o: src/HDRConvertScale.cpp.o
 
 # target to build an object file
 src/HDRConvertScale.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o
 .PHONY : src/HDRConvertScale.cpp.o
 
 src/HDRConvertScale.i: src/HDRConvertScale.cpp.i
@@ -191,7 +191,7 @@ src/HDRConvertScale.i: src/HDRConvertScale.cpp.i
 
 # target to preprocess a source file
 src/HDRConvertScale.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.i
 .PHONY : src/HDRConvertScale.cpp.i
 
 src/HDRConvertScale.s: src/HDRConvertScale.cpp.s
@@ -199,7 +199,7 @@ src/HDRConvertScale.s: src/HDRConvertScale.cpp.s
 
 # target to generate assembly for a file
 src/HDRConvertScale.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.s
 .PHONY : src/HDRConvertScale.cpp.s
 
 src/HDRConvertScaleTIFF.o: src/HDRConvertScaleTIFF.cpp.o
@@ -207,7 +207,7 @@ src/HDRConvertScaleTIFF.o: src/HDRConvertScaleTIFF.cpp.o
 
 # target to build an object file
 src/HDRConvertScaleTIFF.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o
 .PHONY : src/HDRConvertScaleTIFF.cpp.o
 
 src/HDRConvertScaleTIFF.i: src/HDRConvertScaleTIFF.cpp.i
@@ -215,7 +215,7 @@ src/HDRConvertScaleTIFF.i: src/HDRConvertScaleTIFF.cpp.i
 
 # target to preprocess a source file
 src/HDRConvertScaleTIFF.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.i
 .PHONY : src/HDRConvertScaleTIFF.cpp.i
 
 src/HDRConvertScaleTIFF.s: src/HDRConvertScaleTIFF.cpp.s
@@ -223,7 +223,7 @@ src/HDRConvertScaleTIFF.s: src/HDRConvertScaleTIFF.cpp.s
 
 # target to generate assembly for a file
 src/HDRConvertScaleTIFF.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.s
 .PHONY : src/HDRConvertScaleTIFF.cpp.s
 
 src/HDRConvertTIFF.o: src/HDRConvertTIFF.cpp.o
@@ -231,7 +231,7 @@ src/HDRConvertTIFF.o: src/HDRConvertTIFF.cpp.o
 
 # target to build an object file
 src/HDRConvertTIFF.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o
 .PHONY : src/HDRConvertTIFF.cpp.o
 
 src/HDRConvertTIFF.i: src/HDRConvertTIFF.cpp.i
@@ -239,7 +239,7 @@ src/HDRConvertTIFF.i: src/HDRConvertTIFF.cpp.i
 
 # target to preprocess a source file
 src/HDRConvertTIFF.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.i
 .PHONY : src/HDRConvertTIFF.cpp.i
 
 src/HDRConvertTIFF.s: src/HDRConvertTIFF.cpp.s
@@ -247,7 +247,7 @@ src/HDRConvertTIFF.s: src/HDRConvertTIFF.cpp.s
 
 # target to generate assembly for a file
 src/HDRConvertTIFF.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.s
 .PHONY : src/HDRConvertTIFF.cpp.s
 
 src/HDRConvertYUV.o: src/HDRConvertYUV.cpp.o
@@ -255,7 +255,7 @@ src/HDRConvertYUV.o: src/HDRConvertYUV.cpp.o
 
 # target to build an object file
 src/HDRConvertYUV.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o
 .PHONY : src/HDRConvertYUV.cpp.o
 
 src/HDRConvertYUV.i: src/HDRConvertYUV.cpp.i
@@ -263,7 +263,7 @@ src/HDRConvertYUV.i: src/HDRConvertYUV.cpp.i
 
 # target to preprocess a source file
 src/HDRConvertYUV.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.i
 .PHONY : src/HDRConvertYUV.cpp.i
 
 src/HDRConvertYUV.s: src/HDRConvertYUV.cpp.s
@@ -271,7 +271,7 @@ src/HDRConvertYUV.s: src/HDRConvertYUV.cpp.s
 
 # target to generate assembly for a file
 src/HDRConvertYUV.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.s
 .PHONY : src/HDRConvertYUV.cpp.s
 
 src/ProjectParameters.o: src/ProjectParameters.cpp.o
@@ -279,7 +279,7 @@ src/ProjectParameters.o: src/ProjectParameters.cpp.o
 
 # target to build an object file
 src/ProjectParameters.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o
 .PHONY : src/ProjectParameters.cpp.o
 
 src/ProjectParameters.i: src/ProjectParameters.cpp.i
@@ -287,7 +287,7 @@ src/ProjectParameters.i: src/ProjectParameters.cpp.i
 
 # target to preprocess a source file
 src/ProjectParameters.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.i
 .PHONY : src/ProjectParameters.cpp.i
 
 src/ProjectParameters.s: src/ProjectParameters.cpp.s
@@ -295,7 +295,7 @@ src/ProjectParameters.s: src/ProjectParameters.cpp.s
 
 # target to generate assembly for a file
 src/ProjectParameters.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.s
 .PHONY : src/ProjectParameters.cpp.s
 
 # Help Target
@@ -339,6 +339,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

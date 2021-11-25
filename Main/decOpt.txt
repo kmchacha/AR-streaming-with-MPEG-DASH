@@ -1,4 +1,4 @@
---videoDecoderOccupancyPath=../../dependencies/external/HM/bin/TappDecoderStatic
---colorSpaceConversionPath=../../dependencies/external/HDRTools/build/bin/HDRConvert
+--videoDecoderOccupancyPath=../../dependencies/HM/bin/TAppDecoderStatic
+--colorSpaceConversionPath=../../dependencies/HDRTools/build/bin/HDRConvert
 --inverseColorSpaceConversionConfig=../../cfg/hdrconvert/yuv420toyuv444_16bit.cfg
 --nbThread=4

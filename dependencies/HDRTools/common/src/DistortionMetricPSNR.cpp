@@ -347,6 +347,8 @@ void DistortionMetricPSNR::computeMetric (Frame* inp0, Frame* inp1)
             m_metric[c] = m_sse[c] ? psnr(m_maxValue[c], inp0->m_compSize[c], m_sse[c]) : 999.99;
           else  
             m_metric[c] = psnr(m_maxValue[c], inp0->m_compSize[c], m_sse[c]);
+          //printf("value %10.7f %10.7f\n", m_metric[c], m_maxValue[c]);
+
           m_metricStats[c].updateStats(m_metric[c]);
         }
       }

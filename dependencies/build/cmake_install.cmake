@@ -1,4 +1,4 @@
-# Install script for directory: /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies
+# Install script for directory: /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/tbb/cmake_install.cmake")
-  include("/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/PccLibHevcParser/cmake_install.cmake")
+  include("/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/tbb/cmake_install.cmake")
+  include("/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/PccLibHevcParser/cmake_install.cmake")
 
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

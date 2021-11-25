@@ -4,7 +4,6 @@
 #endif
 #if _MSC_VER > 1500
 #error local C99 type definition should only be used in Visual C++ before 2010
-} // namespace pcc_hm
 #endif
 
 /* a minimal set of C99 types for use with MSVC */
@@ -18,4 +17,3 @@ typedef unsigned char uint8_t;
 typedef unsigned short int uint16_t;
 typedef unsigned int uint32_t;
 typedef unsigned __int64 uint64_t;
-

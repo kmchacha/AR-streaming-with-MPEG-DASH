@@ -39,7 +39,6 @@
 #include <stdio.h>
 #include <time.h>
 #include "TAppMctsExtTop.h"
-namespace pcc_hm {
 
   //! \ingroup TAppMctsExt
   //! \{
@@ -91,6 +90,3 @@ int main(int argc, char* argv[])
   return returnCode;
 }
 //! \}
-
-
-} // namespace pcc_hm

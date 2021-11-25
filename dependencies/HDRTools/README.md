@@ -49,17 +49,28 @@ macOS Xcode:
 cmake .. -G "Xcode"
 ```
 
-If you want to enable PNG support:
+The binaries are being build in the binary tree. In case you want them to appear
+directly in the source tree set `-DBINARIES_IN_SOURCETREE=1`
 
-[libpng](https://github.com/glennrp/libpng) requires [zlib](https://zlib.net) to be installed on your system.
+For more details, refer to the [CMake documentation](https://cmake.org/cmake/help/latest/).
+
+### PNG support
+
+If you want to enable PNG support you can use the `LIBPNG` option which enables [libpng](https://github.com/glennrp/libpng) for your build. Note that [libpng](https://github.com/glennrp/libpng) requires [zlib](https://zlib.net) to be installed on your system.
 
 ```shell
 cmake .. -DLIBPNG=ON
 ```
 
-Note that currently Xcode generator `-G "Xcode"` can not be used together with `-DLIBPNG=ON` without modifying the `libs/libpng/CMakeLists.txt` file as described in [libpng issue#344](https://github.com/glennrp/libpng/issues/344).
+#### Known issue with libpng and Xcode
 
-The binaries are being build in the binary tree. In case you want them to appear
-directly in the source tree set `-DBINARIES_IN_SOURCETREE=1`
+At the moment the Xcode generator `-G "Xcode"` can not be used together with `-DLIBPNG=ON` without modifying the `libs/libpng/CMakeLists.txt` file as described in [libpng issue#344](https://github.com/glennrp/libpng/issues/344).
+If you want to use Xcode together with libpng follow these steps:
 
-For more details, refer to the [CMake documentation](https://cmake.org/cmake/help/latest/).
+- `git clone https://gitlab.com/standards/HDRTools.git`
+- `cd HDRTools`
+- `git submodule update --init` (usually cmake does it for you, but if you didn't run cmake you can do it yourself)
+- open `libs/libpng/CMakeLists.txt` in your text editor and remove this line `find_program(AWK NAMES gawk awk)`
+- `mkdir xcodebuild && cd xcodebuild`
+- `cmake .. -DLIBPNG=ON -G "Xcode"`
+- Open `HDRTools.xcodeproj` and you are done

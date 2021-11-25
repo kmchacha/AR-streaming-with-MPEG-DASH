@@ -43,6 +43,7 @@ class PCCDecoderParameters {
   ~PCCDecoderParameters();
   void print();
   bool check();
+  void setReconstructionParameters( size_t profileReconstructionIdc );
   void completePath();
 
   size_t            startFrameNumber_;
@@ -51,13 +52,15 @@ class PCCDecoderParameters {
   std::string       videoDecoderOccupancyPath_;
   std::string       videoDecoderGeometryPath_;
   std::string       videoDecoderAttributePath_;
+  bool              byteStreamVideoCoderOccupancy_;
+  bool              byteStreamVideoCoderGeometry_;
+  bool              byteStreamVideoCoderAttribute_;
   PCCColorTransform colorTransform_;
   std::string       colorSpaceConversionPath_;
   std::string       inverseColorSpaceConversionConfig_;
   size_t            nbThread_;
   bool              keepIntermediateFiles_;
   bool              patchColorSubsampling_;
-  size_t            postprocessSmoothingFilter_;
   size_t            bestColorSearchRange_;
   int               numNeighborsColorTransferFwd_;
   int               numNeighborsColorTransferBwd_;
@@ -71,6 +74,19 @@ class PCCDecoderParameters {
   double            maxGeometryDist2Bwd_;
   double            maxColorDist2Fwd_;
   double            maxColorDist2Bwd_;
+
+  // reconstruction options
+  int pixelDeinterleavingType_;
+  int pointLocalReconstructionType_;
+  int reconstructEomType_;
+  int duplicatedPointRemovalType_;
+  int reconstructRawType_;
+  int applyGeoSmoothingType_;
+  int applyAttrSmoothingType_;
+  int attrTransferFilterType_;
+  int applyOccupanySynthesisType_;
+
+  size_t shvcLayerIndex_;
 };
 
 };  // namespace pcc

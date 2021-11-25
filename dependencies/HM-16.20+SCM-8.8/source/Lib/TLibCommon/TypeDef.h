@@ -52,7 +52,8 @@ namespace pcc_hm {
 //! \ingroup TLibCommon
 //! \{
 
-#define PCC_ME_EXT                                        1
+#define PCC_ME_EXT                                         1
+#define PCC_RDO_EXT                                        1
 
 #if PCC_ME_EXT
 #define PCC_ME_EXT_MAX_NUM_FRAMES                         600

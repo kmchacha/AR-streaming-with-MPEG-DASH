@@ -73,6 +73,7 @@ private:
   int                                m_useMinMax;
   bool                               m_filterInFloat;
   int                                m_startFrame;
+  int                                m_startFrameOut;
   int                                m_noOfFrameStores;
 
   hdrtoolslib::Frame                *m_oFrameStore;            // picture storage for output frames

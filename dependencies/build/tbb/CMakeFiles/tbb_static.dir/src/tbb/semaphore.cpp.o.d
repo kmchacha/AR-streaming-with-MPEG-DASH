@@ -1,9 +1,9 @@
 tbb/CMakeFiles/tbb_static.dir/src/tbb/semaphore.cpp.o: \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/tbb/src/tbb/semaphore.cpp \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/tbb/src/tbb/semaphore.cpp \
  /usr/include/stdc-predef.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/tbb/src/tbb/semaphore.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/tbb/include/tbb/tbb_stddef.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/tbb/include/tbb/tbb_config.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/tbb/src/tbb/semaphore.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/tbb/include/tbb/tbb_stddef.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/tbb/include/tbb/tbb_config.h \
  /usr/include/c++/9/cstddef \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \

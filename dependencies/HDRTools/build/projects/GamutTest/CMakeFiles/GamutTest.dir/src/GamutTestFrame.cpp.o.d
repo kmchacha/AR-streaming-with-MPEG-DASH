@@ -1,5 +1,5 @@
 projects/GamutTest/CMakeFiles/GamutTest.dir/src/GamutTestFrame.cpp.o: \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/GamutTest/src/GamutTestFrame.cpp \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/GamutTest/src/GamutTestFrame.cpp \
  /usr/include/stdc-predef.h /usr/include/time.h /usr/include/features.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -98,8 +98,8 @@ projects/GamutTest/CMakeFiles/GamutTest.dir/src/GamutTestFrame.cpp.o: \
  /usr/include/c++/9/bits/functional_hash.h \
  /usr/include/c++/9/bits/range_access.h \
  /usr/include/c++/9/bits/vector.tcc \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/GamutTest/./inc/GamutTestFrame.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/GamutTest/./inc/GamutTestFrame.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
  /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
@@ -165,7 +165,7 @@ projects/GamutTest/CMakeFiles/GamutTest.dir/src/GamutTestFrame.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Win32.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Win32.H \
  /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -178,9 +178,9 @@ projects/GamutTest/CMakeFiles/GamutTest.dir/src/GamutTestFrame.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Defines.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TypeDefs.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IFunctions.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Defines.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TypeDefs.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IFunctions.H \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -189,21 +189,21 @@ projects/GamutTest/CMakeFiles/GamutTest.dir/src/GamutTestFrame.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/GamutTest/./inc/GamutTest.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/GamutTest/./inc/ProjectParameters.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Parameters.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IOVideo.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/FrameFormat.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetric.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Parameters.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Frame.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/AnalyzeGamut.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetric.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionTransferFunction.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Input.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/BufToImg.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Output.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/ImgToBuf.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Frame.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IOFunctions.H
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/GamutTest/./inc/GamutTest.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/GamutTest/./inc/ProjectParameters.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Parameters.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IOVideo.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/FrameFormat.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetric.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Parameters.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Frame.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/AnalyzeGamut.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionMetric.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/DistortionTransferFunction.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Input.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/BufToImg.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Output.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/ImgToBuf.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Frame.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IOFunctions.H

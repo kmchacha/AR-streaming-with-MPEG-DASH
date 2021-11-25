@@ -53,10 +53,10 @@ RM = /home/mcnl/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools
+CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build
+CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build
 
 # Include any dependencies generated for this target.
 include projects/HDRConvert/CMakeFiles/HDRConvert.dir/depend.make
@@ -72,100 +72,100 @@ include projects/HDRConvert/CMakeFiles/HDRConvert.dir/flags.make
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/flags.make
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o: ../projects/HDRConvert/src/HDRConvert.cpp
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o -MF CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvert.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o -MF CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvert.cpp
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvert.cpp > CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvert.cpp > CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.i
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvert.cpp -o CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvert.cpp -o CMakeFiles/HDRConvert.dir/src/HDRConvert.cpp.s
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/flags.make
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o: ../projects/HDRConvert/src/HDRConvertEXR.cpp
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o -MF CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertEXR.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o -MF CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertEXR.cpp
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertEXR.cpp > CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertEXR.cpp > CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.i
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertEXR.cpp -o CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertEXR.cpp -o CMakeFiles/HDRConvert.dir/src/HDRConvertEXR.cpp.s
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/flags.make
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o: ../projects/HDRConvert/src/HDRConvertScale.cpp
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o -MF CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertScale.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o -MF CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertScale.cpp
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertScale.cpp > CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertScale.cpp > CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.i
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertScale.cpp -o CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertScale.cpp -o CMakeFiles/HDRConvert.dir/src/HDRConvertScale.cpp.s
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/flags.make
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o: ../projects/HDRConvert/src/HDRConvertScaleTIFF.cpp
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o -MF CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertScaleTIFF.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o -MF CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertScaleTIFF.cpp
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertScaleTIFF.cpp > CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertScaleTIFF.cpp > CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.i
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertScaleTIFF.cpp -o CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertScaleTIFF.cpp -o CMakeFiles/HDRConvert.dir/src/HDRConvertScaleTIFF.cpp.s
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/flags.make
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o: ../projects/HDRConvert/src/HDRConvertTIFF.cpp
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o -MF CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertTIFF.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o -MF CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertTIFF.cpp
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertTIFF.cpp > CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertTIFF.cpp > CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.i
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertTIFF.cpp -o CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertTIFF.cpp -o CMakeFiles/HDRConvert.dir/src/HDRConvertTIFF.cpp.s
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/flags.make
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o: ../projects/HDRConvert/src/HDRConvertYUV.cpp
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o -MF CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertYUV.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o -MF CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertYUV.cpp
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertYUV.cpp > CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertYUV.cpp > CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.i
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertYUV.cpp -o CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/HDRConvertYUV.cpp -o CMakeFiles/HDRConvert.dir/src/HDRConvertYUV.cpp.s
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/flags.make
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o: ../projects/HDRConvert/src/ProjectParameters.cpp
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o: projects/HDRConvert/CMakeFiles/HDRConvert.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o -MF CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/ProjectParameters.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o -MF CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o.d -o CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/ProjectParameters.cpp
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/ProjectParameters.cpp > CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/ProjectParameters.cpp > CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.i
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/ProjectParameters.cpp -o CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert/src/ProjectParameters.cpp -o CMakeFiles/HDRConvert.dir/src/ProjectParameters.cpp.s
 
 # Object files for target HDRConvert
 HDRConvert_OBJECTS = \
@@ -190,18 +190,18 @@ bin/HDRConvert: projects/HDRConvert/CMakeFiles/HDRConvert.dir/src/ProjectParamet
 bin/HDRConvert: projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make
 bin/HDRConvert: lib/libHDRLib.a
 bin/HDRConvert: projects/HDRConvert/CMakeFiles/HDRConvert.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../../bin/HDRConvert"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HDRConvert.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../../bin/HDRConvert"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HDRConvert.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/build: bin/HDRConvert
 .PHONY : projects/HDRConvert/CMakeFiles/HDRConvert.dir/build
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/clean:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && $(CMAKE_COMMAND) -P CMakeFiles/HDRConvert.dir/cmake_clean.cmake
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert && $(CMAKE_COMMAND) -P CMakeFiles/HDRConvert.dir/cmake_clean.cmake
 .PHONY : projects/HDRConvert/CMakeFiles/HDRConvert.dir/clean
 
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/depend:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert/CMakeFiles/HDRConvert.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRConvert/CMakeFiles/HDRConvert.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : projects/HDRConvert/CMakeFiles/HDRConvert.dir/depend
 

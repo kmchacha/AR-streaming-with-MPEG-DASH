@@ -67,7 +67,6 @@ class DistortionMetricJVETMSSSIM : public DistortionMetric {
 private:
   ColorSpace        m_colorSpace;
   double            m_maxValue[T_COMP];
-  double            m_bias;
   
   int  m_blockDistance;
   int  m_blockSizeX;

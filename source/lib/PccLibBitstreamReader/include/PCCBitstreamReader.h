@@ -107,9 +107,15 @@ class PCCBitstreamReader {
   static void v3cUnitHeader( PCCHighLevelSyntax& syntax, PCCBitstream& bitstream, V3CUnitType& V3CUnitType );
 
   // 8.3.2.3 V3C unit payload syntax
-  void v3cUnitPayload( PCCHighLevelSyntax& syntax, PCCBitstream& bitstream, V3CUnitType& V3CUnitType );
+  void v3cUnitPayload( PCCHighLevelSyntax& syntax,
+                       PCCBitstream&       bitstream,
+                       V3CUnitType&        V3CUnitType,
+                       size_t              V3CUnitSize );
 
-  static void videoSubStream( PCCHighLevelSyntax& syntax, PCCBitstream& bitstream, V3CUnitType& V3CUnitType );
+  static void videoSubStream( PCCHighLevelSyntax& syntax,
+                              PCCBitstream&       bitstream,
+                              V3CUnitType&        V3CUnitType,
+                              size_t              V3CPayloadSize );
 
   // 8.3.3 Byte alignment syntax
   static void byteAlignment( PCCBitstream& bitstream );
@@ -175,7 +181,7 @@ class PCCBitstreamReader {
   void atlasAdaptationParameterSetRbsp( AtlasAdaptationParameterSetRbsp& aaps, PCCBitstream& bitstream );
 
   // 8.3.6.4  Supplemental enhancement information Rbsp
-  void seiRbsp( PCCHighLevelSyntax& syntax, PCCBitstream& bitstream, NalUnitType nalUnitType );
+  void seiRbsp( PCCHighLevelSyntax& syntax, PCCBitstream& bitstream, NalUnitType nalUnitType, PCCSEI& sei );
 
   // 8.3.6.5  Access unit delimiter Rbsp syntax
   void accessUnitDelimiterRbsp( AccessUnitDelimiterRbsp& aud, PCCHighLevelSyntax& syntax, PCCBitstream& bitstream );
@@ -261,7 +267,7 @@ class PCCBitstreamReader {
                        PCCBitstream&                  bitstream );
 
   // 8.3.8 Supplemental enhancement information message syntax
-  static void seiMessage( PCCBitstream& bitstream, PCCHighLevelSyntax& syntax, NalUnitType nalUnitType );
+  static void seiMessage( PCCBitstream& bitstream, PCCHighLevelSyntax& syntax, NalUnitType nalUnitType, PCCSEI& sei );
 
   // 8.3.5.1 General patch data group unit syntax
   // 8.3.2.4 Atlas sub-bitstream syntax
@@ -379,7 +385,8 @@ class PCCBitstreamReader {
   void sampleStreamNalUnit( PCCHighLevelSyntax&  syntax,
                             PCCBitstream&        bitstream,
                             SampleStreamNalUnit& ssnu,
-                            size_t               index );
+                            size_t               index,
+                            PCCSEI&              prefixSEI );
 
   // F.2  SEI payload syntax
   // F.2.1  General SEI message syntax
@@ -387,7 +394,8 @@ class PCCBitstreamReader {
                           PCCHighLevelSyntax& syntax,
                           NalUnitType         nalUnitType,
                           SeiPayloadType      payloadType,
-                          size_t              payloadSize );
+                          size_t              payloadSize,
+                          PCCSEI&             sei );
   // F.2.2  Filler payload SEI message syntax
   static void fillerPayload( PCCBitstream& bitstream, SEI& sei, size_t payloadSize );
   // F.2.3  User data registered by Recommendation ITU-T T.35 SEI message syntax

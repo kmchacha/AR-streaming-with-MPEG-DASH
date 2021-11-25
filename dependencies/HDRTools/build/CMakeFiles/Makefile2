@@ -54,10 +54,10 @@ RM = /home/mcnl/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools
+CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build
+CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -222,14 +222,14 @@ projects/HDRVQM/clean: projects/HDRVQM/CMakeFiles/HDRVQM.dir/clean
 common/CMakeFiles/HDRLib.dir/all:
 	$(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/depend
 	$(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94 "Built target HDRLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94 "Built target HDRLib"
 .PHONY : common/CMakeFiles/HDRLib.dir/all
 
 # Build rule for subdir invocation for target.
 common/CMakeFiles/HDRLib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 84
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 84
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common/CMakeFiles/HDRLib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : common/CMakeFiles/HDRLib.dir/rule
 
 # Convenience name for target.
@@ -248,14 +248,14 @@ common/CMakeFiles/HDRLib.dir/clean:
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/all: common/CMakeFiles/HDRLib.dir/all
 	$(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/depend
 	$(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=1 "Built target ChromaConvert"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=1 "Built target ChromaConvert"
 .PHONY : projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/all
 
 # Build rule for subdir invocation for target.
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 85
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 85
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/rule
 
 # Convenience name for target.
@@ -274,14 +274,14 @@ projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/clean:
 projects/GamutTest/CMakeFiles/GamutTest.dir/all: common/CMakeFiles/HDRLib.dir/all
 	$(MAKE) $(MAKESILENT) -f projects/GamutTest/CMakeFiles/GamutTest.dir/build.make projects/GamutTest/CMakeFiles/GamutTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f projects/GamutTest/CMakeFiles/GamutTest.dir/build.make projects/GamutTest/CMakeFiles/GamutTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=2,3 "Built target GamutTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=2,3 "Built target GamutTest"
 .PHONY : projects/GamutTest/CMakeFiles/GamutTest.dir/all
 
 # Build rule for subdir invocation for target.
 projects/GamutTest/CMakeFiles/GamutTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 86
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 86
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/GamutTest/CMakeFiles/GamutTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : projects/GamutTest/CMakeFiles/GamutTest.dir/rule
 
 # Convenience name for target.
@@ -300,14 +300,14 @@ projects/GamutTest/CMakeFiles/GamutTest.dir/clean:
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/all: common/CMakeFiles/HDRLib.dir/all
 	$(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/depend
 	$(MAKE) $(MAKESILENT) -f projects/HDRConvert/CMakeFiles/HDRConvert.dir/build.make projects/HDRConvert/CMakeFiles/HDRConvert.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=7,8,9,10 "Built target HDRConvert"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=7,8,9,10 "Built target HDRConvert"
 .PHONY : projects/HDRConvert/CMakeFiles/HDRConvert.dir/all
 
 # Build rule for subdir invocation for target.
 projects/HDRConvert/CMakeFiles/HDRConvert.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 88
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 88
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRConvert/CMakeFiles/HDRConvert.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : projects/HDRConvert/CMakeFiles/HDRConvert.dir/rule
 
 # Convenience name for target.
@@ -326,14 +326,14 @@ projects/HDRConvert/CMakeFiles/HDRConvert.dir/clean:
 projects/HDRConvScaler/CMakeFiles/HDRConvScaler.dir/all: common/CMakeFiles/HDRLib.dir/all
 	$(MAKE) $(MAKESILENT) -f projects/HDRConvScaler/CMakeFiles/HDRConvScaler.dir/build.make projects/HDRConvScaler/CMakeFiles/HDRConvScaler.dir/depend
 	$(MAKE) $(MAKESILENT) -f projects/HDRConvScaler/CMakeFiles/HDRConvScaler.dir/build.make projects/HDRConvScaler/CMakeFiles/HDRConvScaler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=4,5,6 "Built target HDRConvScaler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=4,5,6 "Built target HDRConvScaler"
 .PHONY : projects/HDRConvScaler/CMakeFiles/HDRConvScaler.dir/all
 
 # Build rule for subdir invocation for target.
 projects/HDRConvScaler/CMakeFiles/HDRConvScaler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 87
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 87
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRConvScaler/CMakeFiles/HDRConvScaler.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : projects/HDRConvScaler/CMakeFiles/HDRConvScaler.dir/rule
 
 # Convenience name for target.
@@ -352,14 +352,14 @@ projects/HDRConvScaler/CMakeFiles/HDRConvScaler.dir/clean:
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/all: common/CMakeFiles/HDRLib.dir/all
 	$(MAKE) $(MAKESILENT) -f projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/build.make projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/depend
 	$(MAKE) $(MAKESILENT) -f projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/build.make projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=95,96 "Built target HDRMetrics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=95,96 "Built target HDRMetrics"
 .PHONY : projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/all
 
 # Build rule for subdir invocation for target.
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 86
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 86
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/rule
 
 # Convenience name for target.
@@ -378,14 +378,14 @@ projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/clean:
 projects/HDRMontage/CMakeFiles/HDRMontage.dir/all: common/CMakeFiles/HDRLib.dir/all
 	$(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/depend
 	$(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=97,98 "Built target HDRMontage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=97,98 "Built target HDRMontage"
 .PHONY : projects/HDRMontage/CMakeFiles/HDRMontage.dir/all
 
 # Build rule for subdir invocation for target.
 projects/HDRMontage/CMakeFiles/HDRMontage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 86
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 86
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRMontage/CMakeFiles/HDRMontage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : projects/HDRMontage/CMakeFiles/HDRMontage.dir/rule
 
 # Convenience name for target.
@@ -404,14 +404,14 @@ projects/HDRMontage/CMakeFiles/HDRMontage.dir/clean:
 projects/HDRVQM/CMakeFiles/HDRVQM.dir/all: common/CMakeFiles/HDRLib.dir/all
 	$(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/depend
 	$(MAKE) $(MAKESILENT) -f projects/HDRVQM/CMakeFiles/HDRVQM.dir/build.make projects/HDRVQM/CMakeFiles/HDRVQM.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=99,100 "Built target HDRVQM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=99,100 "Built target HDRVQM"
 .PHONY : projects/HDRVQM/CMakeFiles/HDRVQM.dir/all
 
 # Build rule for subdir invocation for target.
 projects/HDRVQM/CMakeFiles/HDRVQM.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 86
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 86
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRVQM/CMakeFiles/HDRVQM.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : projects/HDRVQM/CMakeFiles/HDRVQM.dir/rule
 
 # Convenience name for target.

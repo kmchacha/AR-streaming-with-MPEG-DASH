@@ -1,3 +1,11 @@
+Changes in HDRTools Version 0.23 (since 0.22)
+--------------------------------------------
+- Add fix to support integer N->M bitdepth conversion.
+- Also add support for log conversion of MSSSIM (JVET module))
+- Add start frame number CLI option
+- clean up old project files
+- add a few guidelines on how to use libpng with Xcode
+
 Changes in HDRTools Version 0.22 (since 0.21)
 --------------------------------------------
 - Add PNG reading and writing (using libpng)

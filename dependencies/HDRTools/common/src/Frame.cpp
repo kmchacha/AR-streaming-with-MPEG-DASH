@@ -110,7 +110,7 @@ Frame::Frame(int width, int height,  bool isFloat, ColorSpace colorSpace, ColorP
   }
 
   m_size =  m_compSize[ZERO] + m_compSize[ONE] + m_compSize[TWO];
-
+  
   // Set current pixel limits.
     m_bitDepth = bitDepth;
     for (c = ZERO; c < 3; c++) {

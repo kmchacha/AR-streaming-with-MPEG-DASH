@@ -1,0 +1,13 @@
+objects/TComCABACTables.d.o: \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/TComCABACTables.cpp \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/TComCABACTables.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/CommonDef.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/TypeDef.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/TComRom.h \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/CommonDef.h
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/TComCABACTables.cpp :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/TComCABACTables.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/CommonDef.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/TypeDef.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/TComRom.h :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TLibCommon/../../../../source/Lib/TLibCommon/CommonDef.h :

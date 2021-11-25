@@ -35,7 +35,7 @@ using namespace libdashtest;
 using namespace std;
 using namespace dash::mpd;
 
-const string filepath = "/video/loot.mpd";
+//const string filepath = "/video/loot.mpd";
 const int BIN_COUNT = 10;
 
 void download(IConnection *connection, IChunk *chunk, ofstream *file)
@@ -85,7 +85,7 @@ int main(int argc, char*argv[])
     	cout << "* Download files with external HTTP 1.0 *" << endl;
     	cout << "*****************************************" << endl;
     	cout << "Testing download of MPD file:\t";
-    	file.open("loot.mpd", ios::out | ios::binary);
+    	file.open("mcnl.mpd", ios::out | ios::binary);
     	download(httpconnection, &test1chunk, &file);
 		file.close();
     	cout << "finished!" << endl;
@@ -96,7 +96,7 @@ int main(int argc, char*argv[])
     cout << "*********  MPD  files  Anaysis **********" << endl;
     cout << "*****************************************" << endl;	
 		
-	IMPD *mpd = manager->Open("loot.mpd");
+	IMPD *mpd = manager->Open("mcnl.mpd");
 	std::string baseUrl;
 	baseUrl = mpd->GetBaseUrls().at(0)->GetUrl();
 	string high[BIN_COUNT], mid[BIN_COUNT], low[BIN_COUNT];

@@ -92,12 +92,6 @@ DistortionMetricJVETMSSSIM::DistortionMetricJVETMSSSIM(const FrameFormat *format
   m_blockSizeY      = params->m_blockSizeY;
   m_useLogSSIM      = params->m_useLog;
   m_enableHexMetric = enableHexMetric;
-  
-#ifdef UNBIASED_VARIANCE
-  m_bias = 1;
-#else
-  m_bias = 0;
-#endif
 
   m_colorSpace    = format->m_colorSpace;
     
@@ -260,7 +254,10 @@ float DistortionMetricJVETMSSSIM::compute(uint8 *inp0Data, uint8 *inp1Data, int 
     finalMSSSIM *= pow(meanSSIM, exponentWeights[maxScale-1][scale]);
   }
 
-  return finalMSSSIM;
+  if (m_useLogSSIM)
+    return (float) ssimSNR(finalMSSSIM);
+  else
+    return finalMSSSIM;
 }
 
 
@@ -406,6 +403,9 @@ float DistortionMetricJVETMSSSIM::compute(uint16 *inp0Data, uint16 *inp1Data, in
     finalMSSSIM *= pow(meanSSIM, exponentWeights[maxScale-1][scale]);
   }
 
+  if (m_useLogSSIM)
+    return (float) ssimSNR(finalMSSSIM);
+  else  
   return finalMSSSIM;
 }
 
@@ -551,7 +551,10 @@ float DistortionMetricJVETMSSSIM::compute(float *inp0Data, float *inp1Data, int 
     finalMSSSIM *= pow(meanSSIM, exponentWeights[maxScale-1][scale]);
   }
 
-  return finalMSSSIM;
+  if (m_useLogSSIM)
+    return (float) ssimSNR(finalMSSSIM);
+  else
+    return finalMSSSIM;
 }
 
 //-----------------------------------------------------------------------------
@@ -615,7 +618,10 @@ void DistortionMetricJVETMSSSIM::computeMetric (Frame* inp0, Frame* inp1, int co
 
 void DistortionMetricJVETMSSSIM::reportMetric  ()
 {
-  printf("%10.5f %10.5f %10.5f ", m_metric[Y_COMP], m_metric[U_COMP], m_metric[V_COMP]);
+  if (m_useLogSSIM)
+    printf("%10.3f %10.3f %10.3f ", m_metric[Y_COMP], m_metric[U_COMP], m_metric[V_COMP]);
+  else
+    printf("%10.5f %10.5f %10.5f ", m_metric[Y_COMP], m_metric[U_COMP], m_metric[V_COMP]);
   if (m_enableHexMetric == TRUE) {
     for (int c = 0; c < T_COMP; c++) {
       std::copy(reinterpret_cast<uint8_t *>(&m_metric[c]),
@@ -628,6 +634,9 @@ void DistortionMetricJVETMSSSIM::reportMetric  ()
 
 void DistortionMetricJVETMSSSIM::reportSummary  ()
 {
+  if (m_useLogSSIM)
+    printf("%10.3f %10.3f %10.3f ", m_metricStats[Y_COMP].getAverage(), m_metricStats[U_COMP].getAverage(), m_metricStats[V_COMP].getAverage());
+  else
   printf("%10.5f %10.5f %10.5f ", m_metricStats[Y_COMP].getAverage(), m_metricStats[U_COMP].getAverage(), m_metricStats[V_COMP].getAverage());
   if (m_enableHexMetric == TRUE) {
     for (int c = 0; c < T_COMP; c++) {
@@ -642,7 +651,10 @@ void DistortionMetricJVETMSSSIM::reportSummary  ()
 
 void DistortionMetricJVETMSSSIM::reportMinimum  ()
 {
-  printf("%10.5f %10.5f %10.5f ", m_metricStats[Y_COMP].minimum, m_metricStats[U_COMP].minimum, m_metricStats[V_COMP].minimum);
+  if (m_useLogSSIM)
+    printf("%10.3f %10.3f %10.3f ", m_metricStats[Y_COMP].minimum, m_metricStats[U_COMP].minimum, m_metricStats[V_COMP].minimum);
+  else
+    printf("%10.5f %10.5f %10.5f ", m_metricStats[Y_COMP].minimum, m_metricStats[U_COMP].minimum, m_metricStats[V_COMP].minimum);
   if (m_enableHexMetric == TRUE) {
     for (int c = 0; c < T_COMP; c++) {
       std::copy(reinterpret_cast<uint8_t *>(&m_metricStats[c].minimum),
@@ -655,6 +667,9 @@ void DistortionMetricJVETMSSSIM::reportMinimum  ()
 
 void DistortionMetricJVETMSSSIM::reportMaximum  ()
 {
+  if (m_useLogSSIM)
+    printf("%10.3f %10.3f %10.3f ", m_metricStats[Y_COMP].maximum, m_metricStats[U_COMP].maximum, m_metricStats[V_COMP].maximum);
+else
   printf("%10.5f %10.5f %10.5f ", m_metricStats[Y_COMP].maximum, m_metricStats[U_COMP].maximum, m_metricStats[V_COMP].maximum);
   if (m_enableHexMetric == TRUE) {
     for (int c = 0; c < T_COMP; c++) {

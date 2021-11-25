@@ -48,7 +48,6 @@
 
 #if MCTS_EXTRACTION
 #include "TAppMctsExtCfg.h"
-namespace pcc_hm {
 
   //! \ingroup TAppMctsExt
   //! \{
@@ -95,6 +94,4 @@ protected:
 //! \}
 
 #endif
-} // namespace pcc_hm
 #endif
-

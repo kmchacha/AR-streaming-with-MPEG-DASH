@@ -57,10 +57,10 @@ RM = /home/mcnl/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies
+CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build
+CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/CMakeFiles /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/PccLibHevcParser//CMakeFiles/progress.marks
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PccLibHevcParser/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/CMakeFiles 0
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/CMakeFiles /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/PccLibHevcParser//CMakeFiles/progress.marks
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PccLibHevcParser/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PccLibHevcParser/clean
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PccLibHevcParser/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PccLibHevcParser/preinstall
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PccLibHevcParser/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PccLibHevcParser/preinstall
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PccLibHevcParser/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/rule:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/rule
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/rule
 .PHONY : PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ PccLibHevcParser: PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/rule
 
 # fast build rule for target.
 PccLibHevcParser/fast:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build
 .PHONY : PccLibHevcParser/fast
 
 source/PccHevcDebug.o: source/PccHevcDebug.cpp.o
@@ -180,7 +180,7 @@ source/PccHevcDebug.o: source/PccHevcDebug.cpp.o
 
 # target to build an object file
 source/PccHevcDebug.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcDebug.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcDebug.cpp.o
 .PHONY : source/PccHevcDebug.cpp.o
 
 source/PccHevcDebug.i: source/PccHevcDebug.cpp.i
@@ -188,7 +188,7 @@ source/PccHevcDebug.i: source/PccHevcDebug.cpp.i
 
 # target to preprocess a source file
 source/PccHevcDebug.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcDebug.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcDebug.cpp.i
 .PHONY : source/PccHevcDebug.cpp.i
 
 source/PccHevcDebug.s: source/PccHevcDebug.cpp.s
@@ -196,7 +196,7 @@ source/PccHevcDebug.s: source/PccHevcDebug.cpp.s
 
 # target to generate assembly for a file
 source/PccHevcDebug.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcDebug.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcDebug.cpp.s
 .PHONY : source/PccHevcDebug.cpp.s
 
 source/PccHevcParser.o: source/PccHevcParser.cpp.o
@@ -204,7 +204,7 @@ source/PccHevcParser.o: source/PccHevcParser.cpp.o
 
 # target to build an object file
 source/PccHevcParser.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcParser.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcParser.cpp.o
 .PHONY : source/PccHevcParser.cpp.o
 
 source/PccHevcParser.i: source/PccHevcParser.cpp.i
@@ -212,7 +212,7 @@ source/PccHevcParser.i: source/PccHevcParser.cpp.i
 
 # target to preprocess a source file
 source/PccHevcParser.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcParser.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcParser.cpp.i
 .PHONY : source/PccHevcParser.cpp.i
 
 source/PccHevcParser.s: source/PccHevcParser.cpp.s
@@ -220,7 +220,7 @@ source/PccHevcParser.s: source/PccHevcParser.cpp.s
 
 # target to generate assembly for a file
 source/PccHevcParser.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcParser.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcParser.cpp.s
 .PHONY : source/PccHevcParser.cpp.s
 
 source/PccHevcSEI.o: source/PccHevcSEI.cpp.o
@@ -228,7 +228,7 @@ source/PccHevcSEI.o: source/PccHevcSEI.cpp.o
 
 # target to build an object file
 source/PccHevcSEI.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcSEI.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcSEI.cpp.o
 .PHONY : source/PccHevcSEI.cpp.o
 
 source/PccHevcSEI.i: source/PccHevcSEI.cpp.i
@@ -236,7 +236,7 @@ source/PccHevcSEI.i: source/PccHevcSEI.cpp.i
 
 # target to preprocess a source file
 source/PccHevcSEI.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcSEI.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcSEI.cpp.i
 .PHONY : source/PccHevcSEI.cpp.i
 
 source/PccHevcSEI.s: source/PccHevcSEI.cpp.s
@@ -244,7 +244,7 @@ source/PccHevcSEI.s: source/PccHevcSEI.cpp.s
 
 # target to generate assembly for a file
 source/PccHevcSEI.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcSEI.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcSEI.cpp.s
 .PHONY : source/PccHevcSEI.cpp.s
 
 source/PccHevcTComBitStream.o: source/PccHevcTComBitStream.cpp.o
@@ -252,7 +252,7 @@ source/PccHevcTComBitStream.o: source/PccHevcTComBitStream.cpp.o
 
 # target to build an object file
 source/PccHevcTComBitStream.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComBitStream.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComBitStream.cpp.o
 .PHONY : source/PccHevcTComBitStream.cpp.o
 
 source/PccHevcTComBitStream.i: source/PccHevcTComBitStream.cpp.i
@@ -260,7 +260,7 @@ source/PccHevcTComBitStream.i: source/PccHevcTComBitStream.cpp.i
 
 # target to preprocess a source file
 source/PccHevcTComBitStream.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComBitStream.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComBitStream.cpp.i
 .PHONY : source/PccHevcTComBitStream.cpp.i
 
 source/PccHevcTComBitStream.s: source/PccHevcTComBitStream.cpp.s
@@ -268,7 +268,7 @@ source/PccHevcTComBitStream.s: source/PccHevcTComBitStream.cpp.s
 
 # target to generate assembly for a file
 source/PccHevcTComBitStream.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComBitStream.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComBitStream.cpp.s
 .PHONY : source/PccHevcTComBitStream.cpp.s
 
 source/PccHevcTComRom.o: source/PccHevcTComRom.cpp.o
@@ -276,7 +276,7 @@ source/PccHevcTComRom.o: source/PccHevcTComRom.cpp.o
 
 # target to build an object file
 source/PccHevcTComRom.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComRom.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComRom.cpp.o
 .PHONY : source/PccHevcTComRom.cpp.o
 
 source/PccHevcTComRom.i: source/PccHevcTComRom.cpp.i
@@ -284,7 +284,7 @@ source/PccHevcTComRom.i: source/PccHevcTComRom.cpp.i
 
 # target to preprocess a source file
 source/PccHevcTComRom.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComRom.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComRom.cpp.i
 .PHONY : source/PccHevcTComRom.cpp.i
 
 source/PccHevcTComRom.s: source/PccHevcTComRom.cpp.s
@@ -292,7 +292,7 @@ source/PccHevcTComRom.s: source/PccHevcTComRom.cpp.s
 
 # target to generate assembly for a file
 source/PccHevcTComRom.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComRom.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComRom.cpp.s
 .PHONY : source/PccHevcTComRom.cpp.s
 
 source/PccHevcTComSlice.o: source/PccHevcTComSlice.cpp.o
@@ -300,7 +300,7 @@ source/PccHevcTComSlice.o: source/PccHevcTComSlice.cpp.o
 
 # target to build an object file
 source/PccHevcTComSlice.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComSlice.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComSlice.cpp.o
 .PHONY : source/PccHevcTComSlice.cpp.o
 
 source/PccHevcTComSlice.i: source/PccHevcTComSlice.cpp.i
@@ -308,7 +308,7 @@ source/PccHevcTComSlice.i: source/PccHevcTComSlice.cpp.i
 
 # target to preprocess a source file
 source/PccHevcTComSlice.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComSlice.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComSlice.cpp.i
 .PHONY : source/PccHevcTComSlice.cpp.i
 
 source/PccHevcTComSlice.s: source/PccHevcTComSlice.cpp.s
@@ -316,7 +316,7 @@ source/PccHevcTComSlice.s: source/PccHevcTComSlice.cpp.s
 
 # target to generate assembly for a file
 source/PccHevcTComSlice.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComSlice.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTComSlice.cpp.s
 .PHONY : source/PccHevcTComSlice.cpp.s
 
 source/PccHevcTDecCAVLC.o: source/PccHevcTDecCAVLC.cpp.o
@@ -324,7 +324,7 @@ source/PccHevcTDecCAVLC.o: source/PccHevcTDecCAVLC.cpp.o
 
 # target to build an object file
 source/PccHevcTDecCAVLC.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTDecCAVLC.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTDecCAVLC.cpp.o
 .PHONY : source/PccHevcTDecCAVLC.cpp.o
 
 source/PccHevcTDecCAVLC.i: source/PccHevcTDecCAVLC.cpp.i
@@ -332,7 +332,7 @@ source/PccHevcTDecCAVLC.i: source/PccHevcTDecCAVLC.cpp.i
 
 # target to preprocess a source file
 source/PccHevcTDecCAVLC.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTDecCAVLC.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTDecCAVLC.cpp.i
 .PHONY : source/PccHevcTDecCAVLC.cpp.i
 
 source/PccHevcTDecCAVLC.s: source/PccHevcTDecCAVLC.cpp.s
@@ -340,7 +340,7 @@ source/PccHevcTDecCAVLC.s: source/PccHevcTDecCAVLC.cpp.s
 
 # target to generate assembly for a file
 source/PccHevcTDecCAVLC.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTDecCAVLC.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(MAKE) $(MAKESILENT) -f PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/build.make PccLibHevcParser/CMakeFiles/PccLibHevcParser.dir/source/PccHevcTDecCAVLC.cpp.s
 .PHONY : source/PccHevcTDecCAVLC.cpp.s
 
 # Help Target
@@ -388,6 +388,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

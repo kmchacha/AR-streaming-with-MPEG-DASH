@@ -244,6 +244,9 @@ protected:
 public:
   Void  estIntraPredLumaQT      ( TComDataCU* pcCU,
                                   TComYuv*    pcOrgYuv,
+#if PCC_RDO_EXT
+                                  TComYuv*    pcOccupancyYuv,
+#endif
                                   TComYuv*    pcPredYuv,
                                   TComYuv*    pcResiYuv,
                                   TComYuv*    pcRecoYuv,
@@ -252,6 +255,9 @@ public:
 
   Void  estIntraPredChromaQT    ( TComDataCU* pcCU,
                                   TComYuv*    pcOrgYuv,
+#if PCC_RDO_EXT
+                                  TComYuv*    pcOccupancyYuv,
+#endif
                                   TComYuv*    pcPredYuv,
                                   TComYuv*    pcResiYuv,
                                   TComYuv*    pcRecoYuv,
@@ -282,7 +288,12 @@ public:
                                   Bool        bSkipResidual,
                                   TComYuv*    pcYuvNoCorrResi,
                                   ACTRDTestTypes eACTRDTestType
+#if PCC_RDO_EXT
+                                  DEBUG_STRING_FN_DECLARE(sDebug),
+                                  TComYuv*    pcYuvOccupancy = NULL);
+#else
                                   DEBUG_STRING_FN_DECLARE(sDebug) );
+#endif
 
   /// set ME search range
   Void setAdaptiveSearchRange   ( Int iDir, Int iRefIdx, Int iSearchRange) { assert(iDir < MAX_NUM_REF_LIST_ADAPT_SR && iRefIdx<Int(MAX_IDX_ADAPT_SR)); m_aaiAdaptSR[iDir][iRefIdx] = iSearchRange; }
@@ -298,6 +309,9 @@ public:
                                   ACTRDTestTypes eACTRDTestType,
                                   Bool           bReuseIntraMode
                                   DEBUG_STRING_FN_DECLARE(sDebug)
+#if PCC_RDO_EXT
+                                 ,TComYuv*      pcYuvOccupancy
+#endif
                                  );
 
   Void  estIntraPredLumaQTWithModeReuse ( TComDataCU* pcCU,
@@ -306,6 +320,9 @@ public:
                                           TComYuv*    pcResiYuv,
                                           TComYuv*    pcRecoYuv,
                                           Pel         resiLuma[NUMBER_OF_STORED_RESIDUAL_TYPES][MAX_CU_SIZE * MAX_CU_SIZE]
+#if PCC_RDO_EXT
+                                         ,TComYuv*      pcYuvOccupancy
+#endif
                                     );
 
   Void  estIntraPredChromaQTWithModeReuse ( TComDataCU* pcCU,
@@ -314,6 +331,9 @@ public:
                                             TComYuv*    pcResiYuv,
                                             TComYuv*    pcRecoYuv,
                                             Pel         resiLuma[NUMBER_OF_STORED_RESIDUAL_TYPES][MAX_CU_SIZE * MAX_CU_SIZE]
+#if PCC_RDO_EXT
+                                           ,TComYuv*      pcYuvOccupancy
+#endif
                                           );
 
   Bool isBlockVectorValid( Int xPos, Int yPos, Int width, Int height, TComDataCU *pcCU,
@@ -480,7 +500,11 @@ public:
 
   Void updateBVMergeCandLists(int roiWidth, int roiHeight, TComMv* mvCand);
 
-  UInt paletteSearch  (TComDataCU* pcCU, TComYuv* pcOrgYuv, TComYuv*& rpcPredYuv, TComYuv*& rpcResiYuv, TComYuv*& rpcRecoYuv, Bool forcePalettePrediction, UInt iterNumber, UInt *paletteSize);
+  UInt paletteSearch  (TComDataCU* pcCU, TComYuv* pcOrgYuv, TComYuv*& rpcPredYuv, TComYuv*& rpcResiYuv, TComYuv*& rpcRecoYuv, Bool forcePalettePrediction, UInt iterNumber, UInt *paletteSize
+#if PCC_RDO_EXT
+    , TComYuv* pcYuvOccupancy
+#endif
+    );
 
   Void deriveRunAndCalcBits( TComDataCU* pcCU, TComYuv* pcOrgYuv, TComYuv* pcRecoYuv, UInt& minBits, Bool bReset, PaletteScanMode paletteScanMode);
 
@@ -542,6 +566,9 @@ protected:
                                    Bool          bRealCoeff );
 
   Void  xIntraCodingTUBlock       (       TComYuv*      pcOrgYuv,
+#if PCC_RDO_EXT
+                                          TComYuv*      pcOccupancyYuv,
+#endif
                                           TComYuv*      pcPredYuv,
                                           TComYuv*      pcResiYuv,
                                           Pel           resiLuma[NUMBER_OF_STORED_RESIDUAL_TYPES][MAX_CU_SIZE * MAX_CU_SIZE],
@@ -563,7 +590,12 @@ protected:
 #endif
                                     Double&      dRDCost,
                                     TComTU      &rTu
+#if PCC_RDO_EXT
+                                    DEBUG_STRING_FN_DECLARE(sDebug),
+                                    TComYuv*     pcOccupancyYuv = NULL);
+#else
                                     DEBUG_STRING_FN_DECLARE(sDebug));
+#endif
 
   Void  xSetIntraResultLumaQT     ( TComYuv*     pcRecoYuv,
                                     TComTU &rTu);
@@ -591,7 +623,12 @@ protected:
                                     Pel         resiLuma[NUMBER_OF_STORED_RESIDUAL_TYPES][MAX_CU_SIZE * MAX_CU_SIZE],
                                     Distortion& ruiDist,
                                     TComTU      &rTu
+#if PCC_RDO_EXT
+                                    DEBUG_STRING_FN_DECLARE(sDebug),
+                                    TComYuv*    pcOccupancyYuv = NULL);
+#else
                                     DEBUG_STRING_FN_DECLARE(sDebug));
+#endif
 
   Void  xSetIntraResultChromaQT   ( TComYuv*    pcRecoYuv, TComTU &rTu);
 
@@ -752,7 +789,11 @@ protected:
 
 
   Void xEncodeInterResidualQT( const ComponentID compID, TComTU &rTu );
-  Void xEstimateInterResidualQT( TComYuv* pcResi, Double &rdCost, UInt &ruiBits, Distortion &ruiDist, Distortion *puiZeroDist, TComTU &rTu DEBUG_STRING_FN_DECLARE(sDebug), TComYuv* pcOrgResi = NULL );
+#if PCC_RDO_EXT
+  Void xEstimateInterResidualQT(TComYuv* pcResi, Double &rdCost, UInt &ruiBits, Distortion &ruiDist, Distortion *puiZeroDist, TComTU &rTu DEBUG_STRING_FN_DECLARE(sDebug), TComYuv* pcOrgResi = NULL, TComYuv* pcOccupancy = NULL);
+#else
+  Void xEstimateInterResidualQT(TComYuv* pcResi, Double &rdCost, UInt &ruiBits, Distortion &ruiDist, Distortion *puiZeroDist, TComTU &rTu DEBUG_STRING_FN_DECLARE(sDebug), TComYuv* pcOrgResi = NULL);
+#endif
   Void xSetInterResidualQTData( TComYuv* pcResi, Bool bSpatial, TComTU &rTu  );
 
   UInt  xModeBitsIntra ( TComDataCU* pcCU, UInt uiMode, UInt uiPartOffset, UInt uiDepth, const ChannelType compID );
@@ -790,6 +831,9 @@ protected:
                                     Bool           bTestMaxTUSize,
                                     ACTRDTestTypes eACTRDTestType
                                     DEBUG_STRING_FN_DECLARE(sDebug)
+#if PCC_RDO_EXT
+                                  , TComYuv* pcOccupancyYuv
+#endif
                                    );
 
   Void  xRecurIntraCodingQTCSC    ( TComYuv*     pcOrgYuv,
@@ -801,9 +845,16 @@ protected:
                                     TComTU&      rTu,
                                     Bool         bTestMaxTUSize
                                     DEBUG_STRING_FN_DECLARE(sDebug)
+#if PCC_RDO_EXT
+                                   ,TComYuv*    pcOccupancyYuv
+#endif
                                   );
 
-  Void xEstimateInterResidualQTTUCSC( TComYuv* pcResi, Double &rdCost, UInt &bits, Distortion &dist, TComTU &rTu, TComYuv* pcOrgResi, ACTRDTestTypes eACTRDtype DEBUG_STRING_FN_DECLARE(sDebug) );
+  Void xEstimateInterResidualQTTUCSC( TComYuv* pcResi, Double &rdCost, UInt &bits, Distortion &dist, TComTU &rTu, TComYuv* pcOrgResi, ACTRDTestTypes eACTRDtype DEBUG_STRING_FN_DECLARE(sDebug)
+#if PCC_RDO_EXT
+                                   ,TComYuv*    pcOccupancyYuv
+#endif
+  );
 
   // Palette related functions
   Void  xInitTBCTable();

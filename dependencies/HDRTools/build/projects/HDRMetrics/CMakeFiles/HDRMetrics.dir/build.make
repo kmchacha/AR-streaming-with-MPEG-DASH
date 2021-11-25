@@ -53,10 +53,10 @@ RM = /home/mcnl/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools
+CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build
+CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build
 
 # Include any dependencies generated for this target.
 include projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/depend.make
@@ -72,44 +72,44 @@ include projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/flags.make
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.o: projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/flags.make
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.o: ../projects/HDRMetrics/src/HDRMetrics.cpp
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.o: projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.o -MF CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.o.d -o CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/HDRMetrics.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.o -MF CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.o.d -o CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/HDRMetrics.cpp
 
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/HDRMetrics.cpp > CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/HDRMetrics.cpp > CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.i
 
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/HDRMetrics.cpp -o CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/HDRMetrics.cpp -o CMakeFiles/HDRMetrics.dir/src/HDRMetrics.cpp.s
 
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.o: projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/flags.make
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.o: ../projects/HDRMetrics/src/HDRMetricsFrame.cpp
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.o: projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.o -MF CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.o.d -o CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/HDRMetricsFrame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.o -MF CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.o.d -o CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/HDRMetricsFrame.cpp
 
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/HDRMetricsFrame.cpp > CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/HDRMetricsFrame.cpp > CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.i
 
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/HDRMetricsFrame.cpp -o CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/HDRMetricsFrame.cpp -o CMakeFiles/HDRMetrics.dir/src/HDRMetricsFrame.cpp.s
 
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.o: projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/flags.make
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.o: ../projects/HDRMetrics/src/ProjectParameters.cpp
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.o: projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.o -MF CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.o.d -o CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/ProjectParameters.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.o -MF CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.o.d -o CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/ProjectParameters.cpp
 
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/ProjectParameters.cpp > CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/ProjectParameters.cpp > CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.i
 
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/ProjectParameters.cpp -o CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics/src/ProjectParameters.cpp -o CMakeFiles/HDRMetrics.dir/src/ProjectParameters.cpp.s
 
 # Object files for target HDRMetrics
 HDRMetrics_OBJECTS = \
@@ -126,18 +126,18 @@ bin/HDRMetrics: projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/src/ProjectParamet
 bin/HDRMetrics: projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/build.make
 bin/HDRMetrics: lib/libHDRLib.a
 bin/HDRMetrics: projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../../bin/HDRMetrics"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HDRMetrics.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../../bin/HDRMetrics"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HDRMetrics.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/build: bin/HDRMetrics
 .PHONY : projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/build
 
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/clean:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && $(CMAKE_COMMAND) -P CMakeFiles/HDRMetrics.dir/cmake_clean.cmake
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics && $(CMAKE_COMMAND) -P CMakeFiles/HDRMetrics.dir/cmake_clean.cmake
 .PHONY : projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/clean
 
 projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/depend:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRMetrics /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : projects/HDRMetrics/CMakeFiles/HDRMetrics.dir/depend
 

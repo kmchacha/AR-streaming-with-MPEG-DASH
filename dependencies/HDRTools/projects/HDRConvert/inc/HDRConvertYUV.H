@@ -107,6 +107,7 @@ private:
   
   bool                               m_useSingleTransferStep;
   int                                m_startFrame;
+  int                                m_startFrameOut;
   int                                m_filterInFloat;
   
   bool                               m_changeColorPrimaries;

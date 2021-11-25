@@ -801,6 +801,12 @@ Bool TAppEncCfg::parseCfg( Int argc, TChar* argv[] )
 	  ("OccupancyMapFile",                            m_occupancyMapFileName,                      string(""), "Input occupancy map file name")
 	  ("PatchInfoFile",                               m_patchInfoFileName,                         string(""), "Input patch info file name")
 #endif
+#if PCC_RDO_EXT
+  ("UsePccRDO",                                       m_usePCCRDO,                                      false, "Use modified RDO for PCC content")
+#endif
+#if PCC_RDO_EXT && !PCC_ME_EXT
+  ("OccupancyMapFile",                                m_occupancyMapFileName,                      string(""), "Input occupancy map file name")
+#endif
   ("SourceWidth,-wdt",                                m_iSourceWidth,                                       0, "Source picture width")
   ("SourceHeight,-hgt",                               m_iSourceHeight,                                      0, "Source picture height")
   ("InputBitDepth",                                   m_inputBitDepth[CHANNEL_TYPE_LUMA],                   8, "Bit-depth of input file")
@@ -3108,6 +3114,15 @@ Void TAppEncCfg::xPrintParameter()
 	  printf("BlockToPatch   File                    : %s\n", (m_blockToPatchFileName.c_str()));
 	  printf("OccupancyMap   File                    : %s\n", (m_occupancyMapFileName.c_str()));
 	  printf("PatchInfo      File                    : %s\n", (m_patchInfoFileName.c_str()));
+  }
+#endif
+#if PCC_RDO_EXT
+  printf("PCCRDO                                 : %s\n", (m_usePCCRDO ? "Enabled" : "Disabled"));
+#endif
+#if PCC_RDO_EXT && !PCC_ME_EXT
+  if (m_usePCCRDO)
+  {
+    printf("OccupancyMap   File                  : %s\n", (m_occupancyMapFileName.c_str()));
   }
 #endif
   printf("Real     Format                        : %dx%d %gHz\n", m_iSourceWidth - m_confWinLeft - m_confWinRight, m_iSourceHeight - m_confWinTop - m_confWinBottom, (Double)m_iFrameRate/m_temporalSubsampleRatio );

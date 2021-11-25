@@ -57,10 +57,10 @@ RM = /home/mcnl/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools
+CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build
+CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/common//CMakeFiles/progress.marks
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/common//CMakeFiles/progress.marks
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common/clean
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common/preinstall
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common/preinstall
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 common/CMakeFiles/HDRLib.dir/rule:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common/CMakeFiles/HDRLib.dir/rule
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common/CMakeFiles/HDRLib.dir/rule
 .PHONY : common/CMakeFiles/HDRLib.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ HDRLib: common/CMakeFiles/HDRLib.dir/rule
 
 # fast build rule for target.
 HDRLib/fast:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/build
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/build
 .PHONY : HDRLib/fast
 
 src/AddAV1FilmGrain.o: src/AddAV1FilmGrain.cpp.o
@@ -135,7 +135,7 @@ src/AddAV1FilmGrain.o: src/AddAV1FilmGrain.cpp.o
 
 # target to build an object file
 src/AddAV1FilmGrain.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddAV1FilmGrain.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddAV1FilmGrain.cpp.o
 .PHONY : src/AddAV1FilmGrain.cpp.o
 
 src/AddAV1FilmGrain.i: src/AddAV1FilmGrain.cpp.i
@@ -143,7 +143,7 @@ src/AddAV1FilmGrain.i: src/AddAV1FilmGrain.cpp.i
 
 # target to preprocess a source file
 src/AddAV1FilmGrain.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddAV1FilmGrain.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddAV1FilmGrain.cpp.i
 .PHONY : src/AddAV1FilmGrain.cpp.i
 
 src/AddAV1FilmGrain.s: src/AddAV1FilmGrain.cpp.s
@@ -151,7 +151,7 @@ src/AddAV1FilmGrain.s: src/AddAV1FilmGrain.cpp.s
 
 # target to generate assembly for a file
 src/AddAV1FilmGrain.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddAV1FilmGrain.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddAV1FilmGrain.cpp.s
 .PHONY : src/AddAV1FilmGrain.cpp.s
 
 src/AddNoise.o: src/AddNoise.cpp.o
@@ -159,7 +159,7 @@ src/AddNoise.o: src/AddNoise.cpp.o
 
 # target to build an object file
 src/AddNoise.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoise.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoise.cpp.o
 .PHONY : src/AddNoise.cpp.o
 
 src/AddNoise.i: src/AddNoise.cpp.i
@@ -167,7 +167,7 @@ src/AddNoise.i: src/AddNoise.cpp.i
 
 # target to preprocess a source file
 src/AddNoise.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoise.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoise.cpp.i
 .PHONY : src/AddNoise.cpp.i
 
 src/AddNoise.s: src/AddNoise.cpp.s
@@ -175,7 +175,7 @@ src/AddNoise.s: src/AddNoise.cpp.s
 
 # target to generate assembly for a file
 src/AddNoise.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoise.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoise.cpp.s
 .PHONY : src/AddNoise.cpp.s
 
 src/AddNoiseNormal.o: src/AddNoiseNormal.cpp.o
@@ -183,7 +183,7 @@ src/AddNoiseNormal.o: src/AddNoiseNormal.cpp.o
 
 # target to build an object file
 src/AddNoiseNormal.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoiseNormal.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoiseNormal.cpp.o
 .PHONY : src/AddNoiseNormal.cpp.o
 
 src/AddNoiseNormal.i: src/AddNoiseNormal.cpp.i
@@ -191,7 +191,7 @@ src/AddNoiseNormal.i: src/AddNoiseNormal.cpp.i
 
 # target to preprocess a source file
 src/AddNoiseNormal.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoiseNormal.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoiseNormal.cpp.i
 .PHONY : src/AddNoiseNormal.cpp.i
 
 src/AddNoiseNormal.s: src/AddNoiseNormal.cpp.s
@@ -199,7 +199,7 @@ src/AddNoiseNormal.s: src/AddNoiseNormal.cpp.s
 
 # target to generate assembly for a file
 src/AddNoiseNormal.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoiseNormal.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoiseNormal.cpp.s
 .PHONY : src/AddNoiseNormal.cpp.s
 
 src/AddNoiseNull.o: src/AddNoiseNull.cpp.o
@@ -207,7 +207,7 @@ src/AddNoiseNull.o: src/AddNoiseNull.cpp.o
 
 # target to build an object file
 src/AddNoiseNull.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoiseNull.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoiseNull.cpp.o
 .PHONY : src/AddNoiseNull.cpp.o
 
 src/AddNoiseNull.i: src/AddNoiseNull.cpp.i
@@ -215,7 +215,7 @@ src/AddNoiseNull.i: src/AddNoiseNull.cpp.i
 
 # target to preprocess a source file
 src/AddNoiseNull.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoiseNull.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoiseNull.cpp.i
 .PHONY : src/AddNoiseNull.cpp.i
 
 src/AddNoiseNull.s: src/AddNoiseNull.cpp.s
@@ -223,7 +223,7 @@ src/AddNoiseNull.s: src/AddNoiseNull.cpp.s
 
 # target to generate assembly for a file
 src/AddNoiseNull.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoiseNull.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AddNoiseNull.cpp.s
 .PHONY : src/AddNoiseNull.cpp.s
 
 src/AnalyzeGamut.o: src/AnalyzeGamut.cpp.o
@@ -231,7 +231,7 @@ src/AnalyzeGamut.o: src/AnalyzeGamut.cpp.o
 
 # target to build an object file
 src/AnalyzeGamut.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AnalyzeGamut.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AnalyzeGamut.cpp.o
 .PHONY : src/AnalyzeGamut.cpp.o
 
 src/AnalyzeGamut.i: src/AnalyzeGamut.cpp.i
@@ -239,7 +239,7 @@ src/AnalyzeGamut.i: src/AnalyzeGamut.cpp.i
 
 # target to preprocess a source file
 src/AnalyzeGamut.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AnalyzeGamut.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AnalyzeGamut.cpp.i
 .PHONY : src/AnalyzeGamut.cpp.i
 
 src/AnalyzeGamut.s: src/AnalyzeGamut.cpp.s
@@ -247,7 +247,7 @@ src/AnalyzeGamut.s: src/AnalyzeGamut.cpp.s
 
 # target to generate assembly for a file
 src/AnalyzeGamut.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AnalyzeGamut.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/AnalyzeGamut.cpp.s
 .PHONY : src/AnalyzeGamut.cpp.s
 
 src/BufToImg.o: src/BufToImg.cpp.o
@@ -255,7 +255,7 @@ src/BufToImg.o: src/BufToImg.cpp.o
 
 # target to build an object file
 src/BufToImg.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImg.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImg.cpp.o
 .PHONY : src/BufToImg.cpp.o
 
 src/BufToImg.i: src/BufToImg.cpp.i
@@ -263,7 +263,7 @@ src/BufToImg.i: src/BufToImg.cpp.i
 
 # target to preprocess a source file
 src/BufToImg.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImg.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImg.cpp.i
 .PHONY : src/BufToImg.cpp.i
 
 src/BufToImg.s: src/BufToImg.cpp.s
@@ -271,7 +271,7 @@ src/BufToImg.s: src/BufToImg.cpp.s
 
 # target to generate assembly for a file
 src/BufToImg.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImg.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImg.cpp.s
 .PHONY : src/BufToImg.cpp.s
 
 src/BufToImgBasic.o: src/BufToImgBasic.cpp.o
@@ -279,7 +279,7 @@ src/BufToImgBasic.o: src/BufToImgBasic.cpp.o
 
 # target to build an object file
 src/BufToImgBasic.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImgBasic.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImgBasic.cpp.o
 .PHONY : src/BufToImgBasic.cpp.o
 
 src/BufToImgBasic.i: src/BufToImgBasic.cpp.i
@@ -287,7 +287,7 @@ src/BufToImgBasic.i: src/BufToImgBasic.cpp.i
 
 # target to preprocess a source file
 src/BufToImgBasic.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImgBasic.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImgBasic.cpp.i
 .PHONY : src/BufToImgBasic.cpp.i
 
 src/BufToImgBasic.s: src/BufToImgBasic.cpp.s
@@ -295,7 +295,7 @@ src/BufToImgBasic.s: src/BufToImgBasic.cpp.s
 
 # target to generate assembly for a file
 src/BufToImgBasic.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImgBasic.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImgBasic.cpp.s
 .PHONY : src/BufToImgBasic.cpp.s
 
 src/BufToImgEndian.o: src/BufToImgEndian.cpp.o
@@ -303,7 +303,7 @@ src/BufToImgEndian.o: src/BufToImgEndian.cpp.o
 
 # target to build an object file
 src/BufToImgEndian.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImgEndian.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImgEndian.cpp.o
 .PHONY : src/BufToImgEndian.cpp.o
 
 src/BufToImgEndian.i: src/BufToImgEndian.cpp.i
@@ -311,7 +311,7 @@ src/BufToImgEndian.i: src/BufToImgEndian.cpp.i
 
 # target to preprocess a source file
 src/BufToImgEndian.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImgEndian.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImgEndian.cpp.i
 .PHONY : src/BufToImgEndian.cpp.i
 
 src/BufToImgEndian.s: src/BufToImgEndian.cpp.s
@@ -319,7 +319,7 @@ src/BufToImgEndian.s: src/BufToImgEndian.cpp.s
 
 # target to generate assembly for a file
 src/BufToImgEndian.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImgEndian.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/BufToImgEndian.cpp.s
 .PHONY : src/BufToImgEndian.cpp.s
 
 src/ColorTransform.o: src/ColorTransform.cpp.o
@@ -327,7 +327,7 @@ src/ColorTransform.o: src/ColorTransform.cpp.o
 
 # target to build an object file
 src/ColorTransform.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransform.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransform.cpp.o
 .PHONY : src/ColorTransform.cpp.o
 
 src/ColorTransform.i: src/ColorTransform.cpp.i
@@ -335,7 +335,7 @@ src/ColorTransform.i: src/ColorTransform.cpp.i
 
 # target to preprocess a source file
 src/ColorTransform.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransform.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransform.cpp.i
 .PHONY : src/ColorTransform.cpp.i
 
 src/ColorTransform.s: src/ColorTransform.cpp.s
@@ -343,7 +343,7 @@ src/ColorTransform.s: src/ColorTransform.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransform.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransform.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransform.cpp.s
 .PHONY : src/ColorTransform.cpp.s
 
 src/ColorTransformCL.o: src/ColorTransformCL.cpp.o
@@ -351,7 +351,7 @@ src/ColorTransformCL.o: src/ColorTransformCL.cpp.o
 
 # target to build an object file
 src/ColorTransformCL.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformCL.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformCL.cpp.o
 .PHONY : src/ColorTransformCL.cpp.o
 
 src/ColorTransformCL.i: src/ColorTransformCL.cpp.i
@@ -359,7 +359,7 @@ src/ColorTransformCL.i: src/ColorTransformCL.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformCL.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformCL.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformCL.cpp.i
 .PHONY : src/ColorTransformCL.cpp.i
 
 src/ColorTransformCL.s: src/ColorTransformCL.cpp.s
@@ -367,7 +367,7 @@ src/ColorTransformCL.s: src/ColorTransformCL.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformCL.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformCL.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformCL.cpp.s
 .PHONY : src/ColorTransformCL.cpp.s
 
 src/ColorTransformClosedLoop.o: src/ColorTransformClosedLoop.cpp.o
@@ -375,7 +375,7 @@ src/ColorTransformClosedLoop.o: src/ColorTransformClosedLoop.cpp.o
 
 # target to build an object file
 src/ColorTransformClosedLoop.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoop.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoop.cpp.o
 .PHONY : src/ColorTransformClosedLoop.cpp.o
 
 src/ColorTransformClosedLoop.i: src/ColorTransformClosedLoop.cpp.i
@@ -383,7 +383,7 @@ src/ColorTransformClosedLoop.i: src/ColorTransformClosedLoop.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformClosedLoop.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoop.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoop.cpp.i
 .PHONY : src/ColorTransformClosedLoop.cpp.i
 
 src/ColorTransformClosedLoop.s: src/ColorTransformClosedLoop.cpp.s
@@ -391,7 +391,7 @@ src/ColorTransformClosedLoop.s: src/ColorTransformClosedLoop.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformClosedLoop.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoop.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoop.cpp.s
 .PHONY : src/ColorTransformClosedLoop.cpp.s
 
 src/ColorTransformClosedLoopCr.o: src/ColorTransformClosedLoopCr.cpp.o
@@ -399,7 +399,7 @@ src/ColorTransformClosedLoopCr.o: src/ColorTransformClosedLoopCr.cpp.o
 
 # target to build an object file
 src/ColorTransformClosedLoopCr.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopCr.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopCr.cpp.o
 .PHONY : src/ColorTransformClosedLoopCr.cpp.o
 
 src/ColorTransformClosedLoopCr.i: src/ColorTransformClosedLoopCr.cpp.i
@@ -407,7 +407,7 @@ src/ColorTransformClosedLoopCr.i: src/ColorTransformClosedLoopCr.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformClosedLoopCr.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopCr.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopCr.cpp.i
 .PHONY : src/ColorTransformClosedLoopCr.cpp.i
 
 src/ColorTransformClosedLoopCr.s: src/ColorTransformClosedLoopCr.cpp.s
@@ -415,7 +415,7 @@ src/ColorTransformClosedLoopCr.s: src/ColorTransformClosedLoopCr.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformClosedLoopCr.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopCr.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopCr.cpp.s
 .PHONY : src/ColorTransformClosedLoopCr.cpp.s
 
 src/ColorTransformClosedLoopFRGB.o: src/ColorTransformClosedLoopFRGB.cpp.o
@@ -423,7 +423,7 @@ src/ColorTransformClosedLoopFRGB.o: src/ColorTransformClosedLoopFRGB.cpp.o
 
 # target to build an object file
 src/ColorTransformClosedLoopFRGB.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopFRGB.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopFRGB.cpp.o
 .PHONY : src/ColorTransformClosedLoopFRGB.cpp.o
 
 src/ColorTransformClosedLoopFRGB.i: src/ColorTransformClosedLoopFRGB.cpp.i
@@ -431,7 +431,7 @@ src/ColorTransformClosedLoopFRGB.i: src/ColorTransformClosedLoopFRGB.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformClosedLoopFRGB.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopFRGB.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopFRGB.cpp.i
 .PHONY : src/ColorTransformClosedLoopFRGB.cpp.i
 
 src/ColorTransformClosedLoopFRGB.s: src/ColorTransformClosedLoopFRGB.cpp.s
@@ -439,7 +439,7 @@ src/ColorTransformClosedLoopFRGB.s: src/ColorTransformClosedLoopFRGB.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformClosedLoopFRGB.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopFRGB.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopFRGB.cpp.s
 .PHONY : src/ColorTransformClosedLoopFRGB.cpp.s
 
 src/ColorTransformClosedLoopRGB.o: src/ColorTransformClosedLoopRGB.cpp.o
@@ -447,7 +447,7 @@ src/ColorTransformClosedLoopRGB.o: src/ColorTransformClosedLoopRGB.cpp.o
 
 # target to build an object file
 src/ColorTransformClosedLoopRGB.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopRGB.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopRGB.cpp.o
 .PHONY : src/ColorTransformClosedLoopRGB.cpp.o
 
 src/ColorTransformClosedLoopRGB.i: src/ColorTransformClosedLoopRGB.cpp.i
@@ -455,7 +455,7 @@ src/ColorTransformClosedLoopRGB.i: src/ColorTransformClosedLoopRGB.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformClosedLoopRGB.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopRGB.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopRGB.cpp.i
 .PHONY : src/ColorTransformClosedLoopRGB.cpp.i
 
 src/ColorTransformClosedLoopRGB.s: src/ColorTransformClosedLoopRGB.cpp.s
@@ -463,7 +463,7 @@ src/ColorTransformClosedLoopRGB.s: src/ColorTransformClosedLoopRGB.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformClosedLoopRGB.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopRGB.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopRGB.cpp.s
 .PHONY : src/ColorTransformClosedLoopRGB.cpp.s
 
 src/ColorTransformClosedLoopY.o: src/ColorTransformClosedLoopY.cpp.o
@@ -471,7 +471,7 @@ src/ColorTransformClosedLoopY.o: src/ColorTransformClosedLoopY.cpp.o
 
 # target to build an object file
 src/ColorTransformClosedLoopY.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopY.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopY.cpp.o
 .PHONY : src/ColorTransformClosedLoopY.cpp.o
 
 src/ColorTransformClosedLoopY.i: src/ColorTransformClosedLoopY.cpp.i
@@ -479,7 +479,7 @@ src/ColorTransformClosedLoopY.i: src/ColorTransformClosedLoopY.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformClosedLoopY.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopY.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopY.cpp.i
 .PHONY : src/ColorTransformClosedLoopY.cpp.i
 
 src/ColorTransformClosedLoopY.s: src/ColorTransformClosedLoopY.cpp.s
@@ -487,7 +487,7 @@ src/ColorTransformClosedLoopY.s: src/ColorTransformClosedLoopY.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformClosedLoopY.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopY.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformClosedLoopY.cpp.s
 .PHONY : src/ColorTransformClosedLoopY.cpp.s
 
 src/ColorTransformFVDO.o: src/ColorTransformFVDO.cpp.o
@@ -495,7 +495,7 @@ src/ColorTransformFVDO.o: src/ColorTransformFVDO.cpp.o
 
 # target to build an object file
 src/ColorTransformFVDO.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformFVDO.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformFVDO.cpp.o
 .PHONY : src/ColorTransformFVDO.cpp.o
 
 src/ColorTransformFVDO.i: src/ColorTransformFVDO.cpp.i
@@ -503,7 +503,7 @@ src/ColorTransformFVDO.i: src/ColorTransformFVDO.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformFVDO.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformFVDO.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformFVDO.cpp.i
 .PHONY : src/ColorTransformFVDO.cpp.i
 
 src/ColorTransformFVDO.s: src/ColorTransformFVDO.cpp.s
@@ -511,7 +511,7 @@ src/ColorTransformFVDO.s: src/ColorTransformFVDO.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformFVDO.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformFVDO.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformFVDO.cpp.s
 .PHONY : src/ColorTransformFVDO.cpp.s
 
 src/ColorTransformGeneric.o: src/ColorTransformGeneric.cpp.o
@@ -519,7 +519,7 @@ src/ColorTransformGeneric.o: src/ColorTransformGeneric.cpp.o
 
 # target to build an object file
 src/ColorTransformGeneric.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformGeneric.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformGeneric.cpp.o
 .PHONY : src/ColorTransformGeneric.cpp.o
 
 src/ColorTransformGeneric.i: src/ColorTransformGeneric.cpp.i
@@ -527,7 +527,7 @@ src/ColorTransformGeneric.i: src/ColorTransformGeneric.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformGeneric.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformGeneric.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformGeneric.cpp.i
 .PHONY : src/ColorTransformGeneric.cpp.i
 
 src/ColorTransformGeneric.s: src/ColorTransformGeneric.cpp.s
@@ -535,7 +535,7 @@ src/ColorTransformGeneric.s: src/ColorTransformGeneric.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformGeneric.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformGeneric.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformGeneric.cpp.s
 .PHONY : src/ColorTransformGeneric.cpp.s
 
 src/ColorTransformNull.o: src/ColorTransformNull.cpp.o
@@ -543,7 +543,7 @@ src/ColorTransformNull.o: src/ColorTransformNull.cpp.o
 
 # target to build an object file
 src/ColorTransformNull.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformNull.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformNull.cpp.o
 .PHONY : src/ColorTransformNull.cpp.o
 
 src/ColorTransformNull.i: src/ColorTransformNull.cpp.i
@@ -551,7 +551,7 @@ src/ColorTransformNull.i: src/ColorTransformNull.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformNull.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformNull.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformNull.cpp.i
 .PHONY : src/ColorTransformNull.cpp.i
 
 src/ColorTransformNull.s: src/ColorTransformNull.cpp.s
@@ -559,7 +559,7 @@ src/ColorTransformNull.s: src/ColorTransformNull.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformNull.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformNull.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformNull.cpp.s
 .PHONY : src/ColorTransformNull.cpp.s
 
 src/ColorTransformRGBAdjust.o: src/ColorTransformRGBAdjust.cpp.o
@@ -567,7 +567,7 @@ src/ColorTransformRGBAdjust.o: src/ColorTransformRGBAdjust.cpp.o
 
 # target to build an object file
 src/ColorTransformRGBAdjust.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformRGBAdjust.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformRGBAdjust.cpp.o
 .PHONY : src/ColorTransformRGBAdjust.cpp.o
 
 src/ColorTransformRGBAdjust.i: src/ColorTransformRGBAdjust.cpp.i
@@ -575,7 +575,7 @@ src/ColorTransformRGBAdjust.i: src/ColorTransformRGBAdjust.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformRGBAdjust.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformRGBAdjust.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformRGBAdjust.cpp.i
 .PHONY : src/ColorTransformRGBAdjust.cpp.i
 
 src/ColorTransformRGBAdjust.s: src/ColorTransformRGBAdjust.cpp.s
@@ -583,7 +583,7 @@ src/ColorTransformRGBAdjust.s: src/ColorTransformRGBAdjust.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformRGBAdjust.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformRGBAdjust.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformRGBAdjust.cpp.s
 .PHONY : src/ColorTransformRGBAdjust.cpp.s
 
 src/ColorTransformXYZ2YUpVp.o: src/ColorTransformXYZ2YUpVp.cpp.o
@@ -591,7 +591,7 @@ src/ColorTransformXYZ2YUpVp.o: src/ColorTransformXYZ2YUpVp.cpp.o
 
 # target to build an object file
 src/ColorTransformXYZ2YUpVp.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformXYZ2YUpVp.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformXYZ2YUpVp.cpp.o
 .PHONY : src/ColorTransformXYZ2YUpVp.cpp.o
 
 src/ColorTransformXYZ2YUpVp.i: src/ColorTransformXYZ2YUpVp.cpp.i
@@ -599,7 +599,7 @@ src/ColorTransformXYZ2YUpVp.i: src/ColorTransformXYZ2YUpVp.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformXYZ2YUpVp.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformXYZ2YUpVp.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformXYZ2YUpVp.cpp.i
 .PHONY : src/ColorTransformXYZ2YUpVp.cpp.i
 
 src/ColorTransformXYZ2YUpVp.s: src/ColorTransformXYZ2YUpVp.cpp.s
@@ -607,7 +607,7 @@ src/ColorTransformXYZ2YUpVp.s: src/ColorTransformXYZ2YUpVp.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformXYZ2YUpVp.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformXYZ2YUpVp.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformXYZ2YUpVp.cpp.s
 .PHONY : src/ColorTransformXYZ2YUpVp.cpp.s
 
 src/ColorTransformYAdjust.o: src/ColorTransformYAdjust.cpp.o
@@ -615,7 +615,7 @@ src/ColorTransformYAdjust.o: src/ColorTransformYAdjust.cpp.o
 
 # target to build an object file
 src/ColorTransformYAdjust.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjust.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjust.cpp.o
 .PHONY : src/ColorTransformYAdjust.cpp.o
 
 src/ColorTransformYAdjust.i: src/ColorTransformYAdjust.cpp.i
@@ -623,7 +623,7 @@ src/ColorTransformYAdjust.i: src/ColorTransformYAdjust.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYAdjust.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjust.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjust.cpp.i
 .PHONY : src/ColorTransformYAdjust.cpp.i
 
 src/ColorTransformYAdjust.s: src/ColorTransformYAdjust.cpp.s
@@ -631,7 +631,7 @@ src/ColorTransformYAdjust.s: src/ColorTransformYAdjust.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYAdjust.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjust.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjust.cpp.s
 .PHONY : src/ColorTransformYAdjust.cpp.s
 
 src/ColorTransformYAdjust2ndOrder.o: src/ColorTransformYAdjust2ndOrder.cpp.o
@@ -639,7 +639,7 @@ src/ColorTransformYAdjust2ndOrder.o: src/ColorTransformYAdjust2ndOrder.cpp.o
 
 # target to build an object file
 src/ColorTransformYAdjust2ndOrder.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjust2ndOrder.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjust2ndOrder.cpp.o
 .PHONY : src/ColorTransformYAdjust2ndOrder.cpp.o
 
 src/ColorTransformYAdjust2ndOrder.i: src/ColorTransformYAdjust2ndOrder.cpp.i
@@ -647,7 +647,7 @@ src/ColorTransformYAdjust2ndOrder.i: src/ColorTransformYAdjust2ndOrder.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYAdjust2ndOrder.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjust2ndOrder.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjust2ndOrder.cpp.i
 .PHONY : src/ColorTransformYAdjust2ndOrder.cpp.i
 
 src/ColorTransformYAdjust2ndOrder.s: src/ColorTransformYAdjust2ndOrder.cpp.s
@@ -655,7 +655,7 @@ src/ColorTransformYAdjust2ndOrder.s: src/ColorTransformYAdjust2ndOrder.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYAdjust2ndOrder.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjust2ndOrder.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjust2ndOrder.cpp.s
 .PHONY : src/ColorTransformYAdjust2ndOrder.cpp.s
 
 src/ColorTransformYAdjustAlt.o: src/ColorTransformYAdjustAlt.cpp.o
@@ -663,7 +663,7 @@ src/ColorTransformYAdjustAlt.o: src/ColorTransformYAdjustAlt.cpp.o
 
 # target to build an object file
 src/ColorTransformYAdjustAlt.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustAlt.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustAlt.cpp.o
 .PHONY : src/ColorTransformYAdjustAlt.cpp.o
 
 src/ColorTransformYAdjustAlt.i: src/ColorTransformYAdjustAlt.cpp.i
@@ -671,7 +671,7 @@ src/ColorTransformYAdjustAlt.i: src/ColorTransformYAdjustAlt.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYAdjustAlt.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustAlt.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustAlt.cpp.i
 .PHONY : src/ColorTransformYAdjustAlt.cpp.i
 
 src/ColorTransformYAdjustAlt.s: src/ColorTransformYAdjustAlt.cpp.s
@@ -679,7 +679,7 @@ src/ColorTransformYAdjustAlt.s: src/ColorTransformYAdjustAlt.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYAdjustAlt.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustAlt.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustAlt.cpp.s
 .PHONY : src/ColorTransformYAdjustAlt.cpp.s
 
 src/ColorTransformYAdjustFast.o: src/ColorTransformYAdjustFast.cpp.o
@@ -687,7 +687,7 @@ src/ColorTransformYAdjustFast.o: src/ColorTransformYAdjustFast.cpp.o
 
 # target to build an object file
 src/ColorTransformYAdjustFast.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustFast.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustFast.cpp.o
 .PHONY : src/ColorTransformYAdjustFast.cpp.o
 
 src/ColorTransformYAdjustFast.i: src/ColorTransformYAdjustFast.cpp.i
@@ -695,7 +695,7 @@ src/ColorTransformYAdjustFast.i: src/ColorTransformYAdjustFast.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYAdjustFast.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustFast.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustFast.cpp.i
 .PHONY : src/ColorTransformYAdjustFast.cpp.i
 
 src/ColorTransformYAdjustFast.s: src/ColorTransformYAdjustFast.cpp.s
@@ -703,7 +703,7 @@ src/ColorTransformYAdjustFast.s: src/ColorTransformYAdjustFast.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYAdjustFast.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustFast.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustFast.cpp.s
 .PHONY : src/ColorTransformYAdjustFast.cpp.s
 
 src/ColorTransformYAdjustFull.o: src/ColorTransformYAdjustFull.cpp.o
@@ -711,7 +711,7 @@ src/ColorTransformYAdjustFull.o: src/ColorTransformYAdjustFull.cpp.o
 
 # target to build an object file
 src/ColorTransformYAdjustFull.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustFull.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustFull.cpp.o
 .PHONY : src/ColorTransformYAdjustFull.cpp.o
 
 src/ColorTransformYAdjustFull.i: src/ColorTransformYAdjustFull.cpp.i
@@ -719,7 +719,7 @@ src/ColorTransformYAdjustFull.i: src/ColorTransformYAdjustFull.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYAdjustFull.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustFull.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustFull.cpp.i
 .PHONY : src/ColorTransformYAdjustFull.cpp.i
 
 src/ColorTransformYAdjustFull.s: src/ColorTransformYAdjustFull.cpp.s
@@ -727,7 +727,7 @@ src/ColorTransformYAdjustFull.s: src/ColorTransformYAdjustFull.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYAdjustFull.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustFull.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustFull.cpp.s
 .PHONY : src/ColorTransformYAdjustFull.cpp.s
 
 src/ColorTransformYAdjustHLG.o: src/ColorTransformYAdjustHLG.cpp.o
@@ -735,7 +735,7 @@ src/ColorTransformYAdjustHLG.o: src/ColorTransformYAdjustHLG.cpp.o
 
 # target to build an object file
 src/ColorTransformYAdjustHLG.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustHLG.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustHLG.cpp.o
 .PHONY : src/ColorTransformYAdjustHLG.cpp.o
 
 src/ColorTransformYAdjustHLG.i: src/ColorTransformYAdjustHLG.cpp.i
@@ -743,7 +743,7 @@ src/ColorTransformYAdjustHLG.i: src/ColorTransformYAdjustHLG.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYAdjustHLG.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustHLG.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustHLG.cpp.i
 .PHONY : src/ColorTransformYAdjustHLG.cpp.i
 
 src/ColorTransformYAdjustHLG.s: src/ColorTransformYAdjustHLG.cpp.s
@@ -751,7 +751,7 @@ src/ColorTransformYAdjustHLG.s: src/ColorTransformYAdjustHLG.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYAdjustHLG.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustHLG.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustHLG.cpp.s
 .PHONY : src/ColorTransformYAdjustHLG.cpp.s
 
 src/ColorTransformYAdjustLFast.o: src/ColorTransformYAdjustLFast.cpp.o
@@ -759,7 +759,7 @@ src/ColorTransformYAdjustLFast.o: src/ColorTransformYAdjustLFast.cpp.o
 
 # target to build an object file
 src/ColorTransformYAdjustLFast.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustLFast.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustLFast.cpp.o
 .PHONY : src/ColorTransformYAdjustLFast.cpp.o
 
 src/ColorTransformYAdjustLFast.i: src/ColorTransformYAdjustLFast.cpp.i
@@ -767,7 +767,7 @@ src/ColorTransformYAdjustLFast.i: src/ColorTransformYAdjustLFast.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYAdjustLFast.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustLFast.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustLFast.cpp.i
 .PHONY : src/ColorTransformYAdjustLFast.cpp.i
 
 src/ColorTransformYAdjustLFast.s: src/ColorTransformYAdjustLFast.cpp.s
@@ -775,7 +775,7 @@ src/ColorTransformYAdjustLFast.s: src/ColorTransformYAdjustLFast.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYAdjustLFast.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustLFast.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustLFast.cpp.s
 .PHONY : src/ColorTransformYAdjustLFast.cpp.s
 
 src/ColorTransformYAdjustTele.o: src/ColorTransformYAdjustTele.cpp.o
@@ -783,7 +783,7 @@ src/ColorTransformYAdjustTele.o: src/ColorTransformYAdjustTele.cpp.o
 
 # target to build an object file
 src/ColorTransformYAdjustTele.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustTele.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustTele.cpp.o
 .PHONY : src/ColorTransformYAdjustTele.cpp.o
 
 src/ColorTransformYAdjustTele.i: src/ColorTransformYAdjustTele.cpp.i
@@ -791,7 +791,7 @@ src/ColorTransformYAdjustTele.i: src/ColorTransformYAdjustTele.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYAdjustTele.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustTele.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustTele.cpp.i
 .PHONY : src/ColorTransformYAdjustTele.cpp.i
 
 src/ColorTransformYAdjustTele.s: src/ColorTransformYAdjustTele.cpp.s
@@ -799,7 +799,7 @@ src/ColorTransformYAdjustTele.s: src/ColorTransformYAdjustTele.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYAdjustTele.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustTele.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustTele.cpp.s
 .PHONY : src/ColorTransformYAdjustTele.cpp.s
 
 src/ColorTransformYAdjustXYZ.o: src/ColorTransformYAdjustXYZ.cpp.o
@@ -807,7 +807,7 @@ src/ColorTransformYAdjustXYZ.o: src/ColorTransformYAdjustXYZ.cpp.o
 
 # target to build an object file
 src/ColorTransformYAdjustXYZ.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustXYZ.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustXYZ.cpp.o
 .PHONY : src/ColorTransformYAdjustXYZ.cpp.o
 
 src/ColorTransformYAdjustXYZ.i: src/ColorTransformYAdjustXYZ.cpp.i
@@ -815,7 +815,7 @@ src/ColorTransformYAdjustXYZ.i: src/ColorTransformYAdjustXYZ.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYAdjustXYZ.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustXYZ.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustXYZ.cpp.i
 .PHONY : src/ColorTransformYAdjustXYZ.cpp.i
 
 src/ColorTransformYAdjustXYZ.s: src/ColorTransformYAdjustXYZ.cpp.s
@@ -823,7 +823,7 @@ src/ColorTransformYAdjustXYZ.s: src/ColorTransformYAdjustXYZ.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYAdjustXYZ.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustXYZ.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYAdjustXYZ.cpp.s
 .PHONY : src/ColorTransformYAdjustXYZ.cpp.s
 
 src/ColorTransformYInter.o: src/ColorTransformYInter.cpp.o
@@ -831,7 +831,7 @@ src/ColorTransformYInter.o: src/ColorTransformYInter.cpp.o
 
 # target to build an object file
 src/ColorTransformYInter.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYInter.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYInter.cpp.o
 .PHONY : src/ColorTransformYInter.cpp.o
 
 src/ColorTransformYInter.i: src/ColorTransformYInter.cpp.i
@@ -839,7 +839,7 @@ src/ColorTransformYInter.i: src/ColorTransformYInter.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYInter.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYInter.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYInter.cpp.i
 .PHONY : src/ColorTransformYInter.cpp.i
 
 src/ColorTransformYInter.s: src/ColorTransformYInter.cpp.s
@@ -847,7 +847,7 @@ src/ColorTransformYInter.s: src/ColorTransformYInter.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYInter.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYInter.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYInter.cpp.s
 .PHONY : src/ColorTransformYInter.cpp.s
 
 src/ColorTransformYLin.o: src/ColorTransformYLin.cpp.o
@@ -855,7 +855,7 @@ src/ColorTransformYLin.o: src/ColorTransformYLin.cpp.o
 
 # target to build an object file
 src/ColorTransformYLin.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYLin.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYLin.cpp.o
 .PHONY : src/ColorTransformYLin.cpp.o
 
 src/ColorTransformYLin.i: src/ColorTransformYLin.cpp.i
@@ -863,7 +863,7 @@ src/ColorTransformYLin.i: src/ColorTransformYLin.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYLin.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYLin.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYLin.cpp.i
 .PHONY : src/ColorTransformYLin.cpp.i
 
 src/ColorTransformYLin.s: src/ColorTransformYLin.cpp.s
@@ -871,7 +871,7 @@ src/ColorTransformYLin.s: src/ColorTransformYLin.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYLin.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYLin.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYLin.cpp.s
 .PHONY : src/ColorTransformYLin.cpp.s
 
 src/ColorTransformYLuma.o: src/ColorTransformYLuma.cpp.o
@@ -879,7 +879,7 @@ src/ColorTransformYLuma.o: src/ColorTransformYLuma.cpp.o
 
 # target to build an object file
 src/ColorTransformYLuma.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYLuma.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYLuma.cpp.o
 .PHONY : src/ColorTransformYLuma.cpp.o
 
 src/ColorTransformYLuma.i: src/ColorTransformYLuma.cpp.i
@@ -887,7 +887,7 @@ src/ColorTransformYLuma.i: src/ColorTransformYLuma.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYLuma.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYLuma.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYLuma.cpp.i
 .PHONY : src/ColorTransformYLuma.cpp.i
 
 src/ColorTransformYLuma.s: src/ColorTransformYLuma.cpp.s
@@ -895,7 +895,7 @@ src/ColorTransformYLuma.s: src/ColorTransformYLuma.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYLuma.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYLuma.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYLuma.cpp.s
 .PHONY : src/ColorTransformYLuma.cpp.s
 
 src/ColorTransformYMul.o: src/ColorTransformYMul.cpp.o
@@ -903,7 +903,7 @@ src/ColorTransformYMul.o: src/ColorTransformYMul.cpp.o
 
 # target to build an object file
 src/ColorTransformYMul.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYMul.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYMul.cpp.o
 .PHONY : src/ColorTransformYMul.cpp.o
 
 src/ColorTransformYMul.i: src/ColorTransformYMul.cpp.i
@@ -911,7 +911,7 @@ src/ColorTransformYMul.i: src/ColorTransformYMul.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYMul.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYMul.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYMul.cpp.i
 .PHONY : src/ColorTransformYMul.cpp.i
 
 src/ColorTransformYMul.s: src/ColorTransformYMul.cpp.s
@@ -919,7 +919,7 @@ src/ColorTransformYMul.s: src/ColorTransformYMul.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYMul.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYMul.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYMul.cpp.s
 .PHONY : src/ColorTransformYMul.cpp.s
 
 src/ColorTransformYPlus.o: src/ColorTransformYPlus.cpp.o
@@ -927,7 +927,7 @@ src/ColorTransformYPlus.o: src/ColorTransformYPlus.cpp.o
 
 # target to build an object file
 src/ColorTransformYPlus.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYPlus.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYPlus.cpp.o
 .PHONY : src/ColorTransformYPlus.cpp.o
 
 src/ColorTransformYPlus.i: src/ColorTransformYPlus.cpp.i
@@ -935,7 +935,7 @@ src/ColorTransformYPlus.i: src/ColorTransformYPlus.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYPlus.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYPlus.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYPlus.cpp.i
 .PHONY : src/ColorTransformYPlus.cpp.i
 
 src/ColorTransformYPlus.s: src/ColorTransformYPlus.cpp.s
@@ -943,7 +943,7 @@ src/ColorTransformYPlus.s: src/ColorTransformYPlus.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYPlus.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYPlus.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYPlus.cpp.s
 .PHONY : src/ColorTransformYPlus.cpp.s
 
 src/ColorTransformYSumLin.o: src/ColorTransformYSumLin.cpp.o
@@ -951,7 +951,7 @@ src/ColorTransformYSumLin.o: src/ColorTransformYSumLin.cpp.o
 
 # target to build an object file
 src/ColorTransformYSumLin.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYSumLin.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYSumLin.cpp.o
 .PHONY : src/ColorTransformYSumLin.cpp.o
 
 src/ColorTransformYSumLin.i: src/ColorTransformYSumLin.cpp.i
@@ -959,7 +959,7 @@ src/ColorTransformYSumLin.i: src/ColorTransformYSumLin.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYSumLin.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYSumLin.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYSumLin.cpp.i
 .PHONY : src/ColorTransformYSumLin.cpp.i
 
 src/ColorTransformYSumLin.s: src/ColorTransformYSumLin.cpp.s
@@ -967,7 +967,7 @@ src/ColorTransformYSumLin.s: src/ColorTransformYSumLin.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYSumLin.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYSumLin.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYSumLin.cpp.s
 .PHONY : src/ColorTransformYSumLin.cpp.s
 
 src/ColorTransformYUV.o: src/ColorTransformYUV.cpp.o
@@ -975,7 +975,7 @@ src/ColorTransformYUV.o: src/ColorTransformYUV.cpp.o
 
 # target to build an object file
 src/ColorTransformYUV.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYUV.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYUV.cpp.o
 .PHONY : src/ColorTransformYUV.cpp.o
 
 src/ColorTransformYUV.i: src/ColorTransformYUV.cpp.i
@@ -983,7 +983,7 @@ src/ColorTransformYUV.i: src/ColorTransformYUV.cpp.i
 
 # target to preprocess a source file
 src/ColorTransformYUV.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYUV.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYUV.cpp.i
 .PHONY : src/ColorTransformYUV.cpp.i
 
 src/ColorTransformYUV.s: src/ColorTransformYUV.cpp.s
@@ -991,7 +991,7 @@ src/ColorTransformYUV.s: src/ColorTransformYUV.cpp.s
 
 # target to generate assembly for a file
 src/ColorTransformYUV.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYUV.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ColorTransformYUV.cpp.s
 .PHONY : src/ColorTransformYUV.cpp.s
 
 src/Conv400Generic.o: src/Conv400Generic.cpp.o
@@ -999,7 +999,7 @@ src/Conv400Generic.o: src/Conv400Generic.cpp.o
 
 # target to build an object file
 src/Conv400Generic.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv400Generic.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv400Generic.cpp.o
 .PHONY : src/Conv400Generic.cpp.o
 
 src/Conv400Generic.i: src/Conv400Generic.cpp.i
@@ -1007,7 +1007,7 @@ src/Conv400Generic.i: src/Conv400Generic.cpp.i
 
 # target to preprocess a source file
 src/Conv400Generic.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv400Generic.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv400Generic.cpp.i
 .PHONY : src/Conv400Generic.cpp.i
 
 src/Conv400Generic.s: src/Conv400Generic.cpp.s
@@ -1015,7 +1015,7 @@ src/Conv400Generic.s: src/Conv400Generic.cpp.s
 
 # target to generate assembly for a file
 src/Conv400Generic.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv400Generic.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv400Generic.cpp.s
 .PHONY : src/Conv400Generic.cpp.s
 
 src/Conv420to422Generic.o: src/Conv420to422Generic.cpp.o
@@ -1023,7 +1023,7 @@ src/Conv420to422Generic.o: src/Conv420to422Generic.cpp.o
 
 # target to build an object file
 src/Conv420to422Generic.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to422Generic.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to422Generic.cpp.o
 .PHONY : src/Conv420to422Generic.cpp.o
 
 src/Conv420to422Generic.i: src/Conv420to422Generic.cpp.i
@@ -1031,7 +1031,7 @@ src/Conv420to422Generic.i: src/Conv420to422Generic.cpp.i
 
 # target to preprocess a source file
 src/Conv420to422Generic.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to422Generic.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to422Generic.cpp.i
 .PHONY : src/Conv420to422Generic.cpp.i
 
 src/Conv420to422Generic.s: src/Conv420to422Generic.cpp.s
@@ -1039,7 +1039,7 @@ src/Conv420to422Generic.s: src/Conv420to422Generic.cpp.s
 
 # target to generate assembly for a file
 src/Conv420to422Generic.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to422Generic.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to422Generic.cpp.s
 .PHONY : src/Conv420to422Generic.cpp.s
 
 src/Conv420to444Adaptive.o: src/Conv420to444Adaptive.cpp.o
@@ -1047,7 +1047,7 @@ src/Conv420to444Adaptive.o: src/Conv420to444Adaptive.cpp.o
 
 # target to build an object file
 src/Conv420to444Adaptive.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444Adaptive.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444Adaptive.cpp.o
 .PHONY : src/Conv420to444Adaptive.cpp.o
 
 src/Conv420to444Adaptive.i: src/Conv420to444Adaptive.cpp.i
@@ -1055,7 +1055,7 @@ src/Conv420to444Adaptive.i: src/Conv420to444Adaptive.cpp.i
 
 # target to preprocess a source file
 src/Conv420to444Adaptive.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444Adaptive.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444Adaptive.cpp.i
 .PHONY : src/Conv420to444Adaptive.cpp.i
 
 src/Conv420to444Adaptive.s: src/Conv420to444Adaptive.cpp.s
@@ -1063,7 +1063,7 @@ src/Conv420to444Adaptive.s: src/Conv420to444Adaptive.cpp.s
 
 # target to generate assembly for a file
 src/Conv420to444Adaptive.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444Adaptive.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444Adaptive.cpp.s
 .PHONY : src/Conv420to444Adaptive.cpp.s
 
 src/Conv420to444CrBounds.o: src/Conv420to444CrBounds.cpp.o
@@ -1071,7 +1071,7 @@ src/Conv420to444CrBounds.o: src/Conv420to444CrBounds.cpp.o
 
 # target to build an object file
 src/Conv420to444CrBounds.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444CrBounds.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444CrBounds.cpp.o
 .PHONY : src/Conv420to444CrBounds.cpp.o
 
 src/Conv420to444CrBounds.i: src/Conv420to444CrBounds.cpp.i
@@ -1079,7 +1079,7 @@ src/Conv420to444CrBounds.i: src/Conv420to444CrBounds.cpp.i
 
 # target to preprocess a source file
 src/Conv420to444CrBounds.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444CrBounds.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444CrBounds.cpp.i
 .PHONY : src/Conv420to444CrBounds.cpp.i
 
 src/Conv420to444CrBounds.s: src/Conv420to444CrBounds.cpp.s
@@ -1087,7 +1087,7 @@ src/Conv420to444CrBounds.s: src/Conv420to444CrBounds.cpp.s
 
 # target to generate assembly for a file
 src/Conv420to444CrBounds.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444CrBounds.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444CrBounds.cpp.s
 .PHONY : src/Conv420to444CrBounds.cpp.s
 
 src/Conv420to444Generic.o: src/Conv420to444Generic.cpp.o
@@ -1095,7 +1095,7 @@ src/Conv420to444Generic.o: src/Conv420to444Generic.cpp.o
 
 # target to build an object file
 src/Conv420to444Generic.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444Generic.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444Generic.cpp.o
 .PHONY : src/Conv420to444Generic.cpp.o
 
 src/Conv420to444Generic.i: src/Conv420to444Generic.cpp.i
@@ -1103,7 +1103,7 @@ src/Conv420to444Generic.i: src/Conv420to444Generic.cpp.i
 
 # target to preprocess a source file
 src/Conv420to444Generic.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444Generic.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444Generic.cpp.i
 .PHONY : src/Conv420to444Generic.cpp.i
 
 src/Conv420to444Generic.s: src/Conv420to444Generic.cpp.s
@@ -1111,7 +1111,7 @@ src/Conv420to444Generic.s: src/Conv420to444Generic.cpp.s
 
 # target to generate assembly for a file
 src/Conv420to444Generic.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444Generic.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444Generic.cpp.s
 .PHONY : src/Conv420to444Generic.cpp.s
 
 src/Conv420to444NN.o: src/Conv420to444NN.cpp.o
@@ -1119,7 +1119,7 @@ src/Conv420to444NN.o: src/Conv420to444NN.cpp.o
 
 # target to build an object file
 src/Conv420to444NN.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444NN.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444NN.cpp.o
 .PHONY : src/Conv420to444NN.cpp.o
 
 src/Conv420to444NN.i: src/Conv420to444NN.cpp.i
@@ -1127,7 +1127,7 @@ src/Conv420to444NN.i: src/Conv420to444NN.cpp.i
 
 # target to preprocess a source file
 src/Conv420to444NN.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444NN.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444NN.cpp.i
 .PHONY : src/Conv420to444NN.cpp.i
 
 src/Conv420to444NN.s: src/Conv420to444NN.cpp.s
@@ -1135,7 +1135,7 @@ src/Conv420to444NN.s: src/Conv420to444NN.cpp.s
 
 # target to generate assembly for a file
 src/Conv420to444NN.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444NN.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv420to444NN.cpp.s
 .PHONY : src/Conv420to444NN.cpp.s
 
 src/Conv422to420Generic.o: src/Conv422to420Generic.cpp.o
@@ -1143,7 +1143,7 @@ src/Conv422to420Generic.o: src/Conv422to420Generic.cpp.o
 
 # target to build an object file
 src/Conv422to420Generic.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to420Generic.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to420Generic.cpp.o
 .PHONY : src/Conv422to420Generic.cpp.o
 
 src/Conv422to420Generic.i: src/Conv422to420Generic.cpp.i
@@ -1151,7 +1151,7 @@ src/Conv422to420Generic.i: src/Conv422to420Generic.cpp.i
 
 # target to preprocess a source file
 src/Conv422to420Generic.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to420Generic.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to420Generic.cpp.i
 .PHONY : src/Conv422to420Generic.cpp.i
 
 src/Conv422to420Generic.s: src/Conv422to420Generic.cpp.s
@@ -1159,7 +1159,7 @@ src/Conv422to420Generic.s: src/Conv422to420Generic.cpp.s
 
 # target to generate assembly for a file
 src/Conv422to420Generic.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to420Generic.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to420Generic.cpp.s
 .PHONY : src/Conv422to420Generic.cpp.s
 
 src/Conv422to444Generic.o: src/Conv422to444Generic.cpp.o
@@ -1167,7 +1167,7 @@ src/Conv422to444Generic.o: src/Conv422to444Generic.cpp.o
 
 # target to build an object file
 src/Conv422to444Generic.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to444Generic.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to444Generic.cpp.o
 .PHONY : src/Conv422to444Generic.cpp.o
 
 src/Conv422to444Generic.i: src/Conv422to444Generic.cpp.i
@@ -1175,7 +1175,7 @@ src/Conv422to444Generic.i: src/Conv422to444Generic.cpp.i
 
 # target to preprocess a source file
 src/Conv422to444Generic.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to444Generic.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to444Generic.cpp.i
 .PHONY : src/Conv422to444Generic.cpp.i
 
 src/Conv422to444Generic.s: src/Conv422to444Generic.cpp.s
@@ -1183,7 +1183,7 @@ src/Conv422to444Generic.s: src/Conv422to444Generic.cpp.s
 
 # target to generate assembly for a file
 src/Conv422to444Generic.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to444Generic.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to444Generic.cpp.s
 .PHONY : src/Conv422to444Generic.cpp.s
 
 src/Conv422to444NN.o: src/Conv422to444NN.cpp.o
@@ -1191,7 +1191,7 @@ src/Conv422to444NN.o: src/Conv422to444NN.cpp.o
 
 # target to build an object file
 src/Conv422to444NN.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to444NN.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to444NN.cpp.o
 .PHONY : src/Conv422to444NN.cpp.o
 
 src/Conv422to444NN.i: src/Conv422to444NN.cpp.i
@@ -1199,7 +1199,7 @@ src/Conv422to444NN.i: src/Conv422to444NN.cpp.i
 
 # target to preprocess a source file
 src/Conv422to444NN.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to444NN.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to444NN.cpp.i
 .PHONY : src/Conv422to444NN.cpp.i
 
 src/Conv422to444NN.s: src/Conv422to444NN.cpp.s
@@ -1207,7 +1207,7 @@ src/Conv422to444NN.s: src/Conv422to444NN.cpp.s
 
 # target to generate assembly for a file
 src/Conv422to444NN.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to444NN.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv422to444NN.cpp.s
 .PHONY : src/Conv422to444NN.cpp.s
 
 src/Conv444to420Adaptive.o: src/Conv444to420Adaptive.cpp.o
@@ -1215,7 +1215,7 @@ src/Conv444to420Adaptive.o: src/Conv444to420Adaptive.cpp.o
 
 # target to build an object file
 src/Conv444to420Adaptive.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420Adaptive.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420Adaptive.cpp.o
 .PHONY : src/Conv444to420Adaptive.cpp.o
 
 src/Conv444to420Adaptive.i: src/Conv444to420Adaptive.cpp.i
@@ -1223,7 +1223,7 @@ src/Conv444to420Adaptive.i: src/Conv444to420Adaptive.cpp.i
 
 # target to preprocess a source file
 src/Conv444to420Adaptive.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420Adaptive.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420Adaptive.cpp.i
 .PHONY : src/Conv444to420Adaptive.cpp.i
 
 src/Conv444to420Adaptive.s: src/Conv444to420Adaptive.cpp.s
@@ -1231,7 +1231,7 @@ src/Conv444to420Adaptive.s: src/Conv444to420Adaptive.cpp.s
 
 # target to generate assembly for a file
 src/Conv444to420Adaptive.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420Adaptive.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420Adaptive.cpp.s
 .PHONY : src/Conv444to420Adaptive.cpp.s
 
 src/Conv444to420BI.o: src/Conv444to420BI.cpp.o
@@ -1239,7 +1239,7 @@ src/Conv444to420BI.o: src/Conv444to420BI.cpp.o
 
 # target to build an object file
 src/Conv444to420BI.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420BI.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420BI.cpp.o
 .PHONY : src/Conv444to420BI.cpp.o
 
 src/Conv444to420BI.i: src/Conv444to420BI.cpp.i
@@ -1247,7 +1247,7 @@ src/Conv444to420BI.i: src/Conv444to420BI.cpp.i
 
 # target to preprocess a source file
 src/Conv444to420BI.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420BI.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420BI.cpp.i
 .PHONY : src/Conv444to420BI.cpp.i
 
 src/Conv444to420BI.s: src/Conv444to420BI.cpp.s
@@ -1255,7 +1255,7 @@ src/Conv444to420BI.s: src/Conv444to420BI.cpp.s
 
 # target to generate assembly for a file
 src/Conv444to420BI.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420BI.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420BI.cpp.s
 .PHONY : src/Conv444to420BI.cpp.s
 
 src/Conv444to420CrBounds.o: src/Conv444to420CrBounds.cpp.o
@@ -1263,7 +1263,7 @@ src/Conv444to420CrBounds.o: src/Conv444to420CrBounds.cpp.o
 
 # target to build an object file
 src/Conv444to420CrBounds.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrBounds.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrBounds.cpp.o
 .PHONY : src/Conv444to420CrBounds.cpp.o
 
 src/Conv444to420CrBounds.i: src/Conv444to420CrBounds.cpp.i
@@ -1271,7 +1271,7 @@ src/Conv444to420CrBounds.i: src/Conv444to420CrBounds.cpp.i
 
 # target to preprocess a source file
 src/Conv444to420CrBounds.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrBounds.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrBounds.cpp.i
 .PHONY : src/Conv444to420CrBounds.cpp.i
 
 src/Conv444to420CrBounds.s: src/Conv444to420CrBounds.cpp.s
@@ -1279,7 +1279,7 @@ src/Conv444to420CrBounds.s: src/Conv444to420CrBounds.cpp.s
 
 # target to generate assembly for a file
 src/Conv444to420CrBounds.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrBounds.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrBounds.cpp.s
 .PHONY : src/Conv444to420CrBounds.cpp.s
 
 src/Conv444to420CrEdge.o: src/Conv444to420CrEdge.cpp.o
@@ -1287,7 +1287,7 @@ src/Conv444to420CrEdge.o: src/Conv444to420CrEdge.cpp.o
 
 # target to build an object file
 src/Conv444to420CrEdge.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrEdge.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrEdge.cpp.o
 .PHONY : src/Conv444to420CrEdge.cpp.o
 
 src/Conv444to420CrEdge.i: src/Conv444to420CrEdge.cpp.i
@@ -1295,7 +1295,7 @@ src/Conv444to420CrEdge.i: src/Conv444to420CrEdge.cpp.i
 
 # target to preprocess a source file
 src/Conv444to420CrEdge.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrEdge.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrEdge.cpp.i
 .PHONY : src/Conv444to420CrEdge.cpp.i
 
 src/Conv444to420CrEdge.s: src/Conv444to420CrEdge.cpp.s
@@ -1303,7 +1303,7 @@ src/Conv444to420CrEdge.s: src/Conv444to420CrEdge.cpp.s
 
 # target to generate assembly for a file
 src/Conv444to420CrEdge.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrEdge.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrEdge.cpp.s
 .PHONY : src/Conv444to420CrEdge.cpp.s
 
 src/Conv444to420CrFBounds.o: src/Conv444to420CrFBounds.cpp.o
@@ -1311,7 +1311,7 @@ src/Conv444to420CrFBounds.o: src/Conv444to420CrFBounds.cpp.o
 
 # target to build an object file
 src/Conv444to420CrFBounds.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrFBounds.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrFBounds.cpp.o
 .PHONY : src/Conv444to420CrFBounds.cpp.o
 
 src/Conv444to420CrFBounds.i: src/Conv444to420CrFBounds.cpp.i
@@ -1319,7 +1319,7 @@ src/Conv444to420CrFBounds.i: src/Conv444to420CrFBounds.cpp.i
 
 # target to preprocess a source file
 src/Conv444to420CrFBounds.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrFBounds.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrFBounds.cpp.i
 .PHONY : src/Conv444to420CrFBounds.cpp.i
 
 src/Conv444to420CrFBounds.s: src/Conv444to420CrFBounds.cpp.s
@@ -1327,7 +1327,7 @@ src/Conv444to420CrFBounds.s: src/Conv444to420CrFBounds.cpp.s
 
 # target to generate assembly for a file
 src/Conv444to420CrFBounds.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrFBounds.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420CrFBounds.cpp.s
 .PHONY : src/Conv444to420CrFBounds.cpp.s
 
 src/Conv444to420Generic.o: src/Conv444to420Generic.cpp.o
@@ -1335,7 +1335,7 @@ src/Conv444to420Generic.o: src/Conv444to420Generic.cpp.o
 
 # target to build an object file
 src/Conv444to420Generic.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420Generic.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420Generic.cpp.o
 .PHONY : src/Conv444to420Generic.cpp.o
 
 src/Conv444to420Generic.i: src/Conv444to420Generic.cpp.i
@@ -1343,7 +1343,7 @@ src/Conv444to420Generic.i: src/Conv444to420Generic.cpp.i
 
 # target to preprocess a source file
 src/Conv444to420Generic.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420Generic.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420Generic.cpp.i
 .PHONY : src/Conv444to420Generic.cpp.i
 
 src/Conv444to420Generic.s: src/Conv444to420Generic.cpp.s
@@ -1351,7 +1351,7 @@ src/Conv444to420Generic.s: src/Conv444to420Generic.cpp.s
 
 # target to generate assembly for a file
 src/Conv444to420Generic.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420Generic.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420Generic.cpp.s
 .PHONY : src/Conv444to420Generic.cpp.s
 
 src/Conv444to420NN.o: src/Conv444to420NN.cpp.o
@@ -1359,7 +1359,7 @@ src/Conv444to420NN.o: src/Conv444to420NN.cpp.o
 
 # target to build an object file
 src/Conv444to420NN.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420NN.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420NN.cpp.o
 .PHONY : src/Conv444to420NN.cpp.o
 
 src/Conv444to420NN.i: src/Conv444to420NN.cpp.i
@@ -1367,7 +1367,7 @@ src/Conv444to420NN.i: src/Conv444to420NN.cpp.i
 
 # target to preprocess a source file
 src/Conv444to420NN.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420NN.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420NN.cpp.i
 .PHONY : src/Conv444to420NN.cpp.i
 
 src/Conv444to420NN.s: src/Conv444to420NN.cpp.s
@@ -1375,7 +1375,7 @@ src/Conv444to420NN.s: src/Conv444to420NN.cpp.s
 
 # target to generate assembly for a file
 src/Conv444to420NN.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420NN.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to420NN.cpp.s
 .PHONY : src/Conv444to420NN.cpp.s
 
 src/Conv444to422Generic.o: src/Conv444to422Generic.cpp.o
@@ -1383,7 +1383,7 @@ src/Conv444to422Generic.o: src/Conv444to422Generic.cpp.o
 
 # target to build an object file
 src/Conv444to422Generic.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422Generic.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422Generic.cpp.o
 .PHONY : src/Conv444to422Generic.cpp.o
 
 src/Conv444to422Generic.i: src/Conv444to422Generic.cpp.i
@@ -1391,7 +1391,7 @@ src/Conv444to422Generic.i: src/Conv444to422Generic.cpp.i
 
 # target to preprocess a source file
 src/Conv444to422Generic.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422Generic.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422Generic.cpp.i
 .PHONY : src/Conv444to422Generic.cpp.i
 
 src/Conv444to422Generic.s: src/Conv444to422Generic.cpp.s
@@ -1399,7 +1399,7 @@ src/Conv444to422Generic.s: src/Conv444to422Generic.cpp.s
 
 # target to generate assembly for a file
 src/Conv444to422Generic.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422Generic.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422Generic.cpp.s
 .PHONY : src/Conv444to422Generic.cpp.s
 
 src/Conv444to422GenericOld.o: src/Conv444to422GenericOld.cpp.o
@@ -1407,7 +1407,7 @@ src/Conv444to422GenericOld.o: src/Conv444to422GenericOld.cpp.o
 
 # target to build an object file
 src/Conv444to422GenericOld.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422GenericOld.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422GenericOld.cpp.o
 .PHONY : src/Conv444to422GenericOld.cpp.o
 
 src/Conv444to422GenericOld.i: src/Conv444to422GenericOld.cpp.i
@@ -1415,7 +1415,7 @@ src/Conv444to422GenericOld.i: src/Conv444to422GenericOld.cpp.i
 
 # target to preprocess a source file
 src/Conv444to422GenericOld.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422GenericOld.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422GenericOld.cpp.i
 .PHONY : src/Conv444to422GenericOld.cpp.i
 
 src/Conv444to422GenericOld.s: src/Conv444to422GenericOld.cpp.s
@@ -1423,7 +1423,7 @@ src/Conv444to422GenericOld.s: src/Conv444to422GenericOld.cpp.s
 
 # target to generate assembly for a file
 src/Conv444to422GenericOld.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422GenericOld.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422GenericOld.cpp.s
 .PHONY : src/Conv444to422GenericOld.cpp.s
 
 src/Conv444to422NN.o: src/Conv444to422NN.cpp.o
@@ -1431,7 +1431,7 @@ src/Conv444to422NN.o: src/Conv444to422NN.cpp.o
 
 # target to build an object file
 src/Conv444to422NN.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422NN.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422NN.cpp.o
 .PHONY : src/Conv444to422NN.cpp.o
 
 src/Conv444to422NN.i: src/Conv444to422NN.cpp.i
@@ -1439,7 +1439,7 @@ src/Conv444to422NN.i: src/Conv444to422NN.cpp.i
 
 # target to preprocess a source file
 src/Conv444to422NN.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422NN.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422NN.cpp.i
 .PHONY : src/Conv444to422NN.cpp.i
 
 src/Conv444to422NN.s: src/Conv444to422NN.cpp.s
@@ -1447,7 +1447,7 @@ src/Conv444to422NN.s: src/Conv444to422NN.cpp.s
 
 # target to generate assembly for a file
 src/Conv444to422NN.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422NN.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Conv444to422NN.cpp.s
 .PHONY : src/Conv444to422NN.cpp.s
 
 src/ConvFixedToFloat.o: src/ConvFixedToFloat.cpp.o
@@ -1455,7 +1455,7 @@ src/ConvFixedToFloat.o: src/ConvFixedToFloat.cpp.o
 
 # target to build an object file
 src/ConvFixedToFloat.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvFixedToFloat.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvFixedToFloat.cpp.o
 .PHONY : src/ConvFixedToFloat.cpp.o
 
 src/ConvFixedToFloat.i: src/ConvFixedToFloat.cpp.i
@@ -1463,7 +1463,7 @@ src/ConvFixedToFloat.i: src/ConvFixedToFloat.cpp.i
 
 # target to preprocess a source file
 src/ConvFixedToFloat.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvFixedToFloat.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvFixedToFloat.cpp.i
 .PHONY : src/ConvFixedToFloat.cpp.i
 
 src/ConvFixedToFloat.s: src/ConvFixedToFloat.cpp.s
@@ -1471,7 +1471,7 @@ src/ConvFixedToFloat.s: src/ConvFixedToFloat.cpp.s
 
 # target to generate assembly for a file
 src/ConvFixedToFloat.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvFixedToFloat.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvFixedToFloat.cpp.s
 .PHONY : src/ConvFixedToFloat.cpp.s
 
 src/ConvFloatToFixed.o: src/ConvFloatToFixed.cpp.o
@@ -1479,7 +1479,7 @@ src/ConvFloatToFixed.o: src/ConvFloatToFixed.cpp.o
 
 # target to build an object file
 src/ConvFloatToFixed.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvFloatToFixed.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvFloatToFixed.cpp.o
 .PHONY : src/ConvFloatToFixed.cpp.o
 
 src/ConvFloatToFixed.i: src/ConvFloatToFixed.cpp.i
@@ -1487,7 +1487,7 @@ src/ConvFloatToFixed.i: src/ConvFloatToFixed.cpp.i
 
 # target to preprocess a source file
 src/ConvFloatToFixed.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvFloatToFixed.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvFloatToFixed.cpp.i
 .PHONY : src/ConvFloatToFixed.cpp.i
 
 src/ConvFloatToFixed.s: src/ConvFloatToFixed.cpp.s
@@ -1495,7 +1495,7 @@ src/ConvFloatToFixed.s: src/ConvFloatToFixed.cpp.s
 
 # target to generate assembly for a file
 src/ConvFloatToFixed.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvFloatToFixed.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvFloatToFixed.cpp.s
 .PHONY : src/ConvFloatToFixed.cpp.s
 
 src/Convert.o: src/Convert.cpp.o
@@ -1503,7 +1503,7 @@ src/Convert.o: src/Convert.cpp.o
 
 # target to build an object file
 src/Convert.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Convert.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Convert.cpp.o
 .PHONY : src/Convert.cpp.o
 
 src/Convert.i: src/Convert.cpp.i
@@ -1511,7 +1511,7 @@ src/Convert.i: src/Convert.cpp.i
 
 # target to preprocess a source file
 src/Convert.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Convert.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Convert.cpp.i
 .PHONY : src/Convert.cpp.i
 
 src/Convert.s: src/Convert.cpp.s
@@ -1519,7 +1519,7 @@ src/Convert.s: src/Convert.cpp.s
 
 # target to generate assembly for a file
 src/Convert.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Convert.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Convert.cpp.s
 .PHONY : src/Convert.cpp.s
 
 src/ConvertBitDepth.o: src/ConvertBitDepth.cpp.o
@@ -1527,7 +1527,7 @@ src/ConvertBitDepth.o: src/ConvertBitDepth.cpp.o
 
 # target to build an object file
 src/ConvertBitDepth.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertBitDepth.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertBitDepth.cpp.o
 .PHONY : src/ConvertBitDepth.cpp.o
 
 src/ConvertBitDepth.i: src/ConvertBitDepth.cpp.i
@@ -1535,7 +1535,7 @@ src/ConvertBitDepth.i: src/ConvertBitDepth.cpp.i
 
 # target to preprocess a source file
 src/ConvertBitDepth.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertBitDepth.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertBitDepth.cpp.i
 .PHONY : src/ConvertBitDepth.cpp.i
 
 src/ConvertBitDepth.s: src/ConvertBitDepth.cpp.s
@@ -1543,7 +1543,7 @@ src/ConvertBitDepth.s: src/ConvertBitDepth.cpp.s
 
 # target to generate assembly for a file
 src/ConvertBitDepth.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertBitDepth.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertBitDepth.cpp.s
 .PHONY : src/ConvertBitDepth.cpp.s
 
 src/ConvertColorFormat.o: src/ConvertColorFormat.cpp.o
@@ -1551,7 +1551,7 @@ src/ConvertColorFormat.o: src/ConvertColorFormat.cpp.o
 
 # target to build an object file
 src/ConvertColorFormat.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertColorFormat.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertColorFormat.cpp.o
 .PHONY : src/ConvertColorFormat.cpp.o
 
 src/ConvertColorFormat.i: src/ConvertColorFormat.cpp.i
@@ -1559,7 +1559,7 @@ src/ConvertColorFormat.i: src/ConvertColorFormat.cpp.i
 
 # target to preprocess a source file
 src/ConvertColorFormat.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertColorFormat.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertColorFormat.cpp.i
 .PHONY : src/ConvertColorFormat.cpp.i
 
 src/ConvertColorFormat.s: src/ConvertColorFormat.cpp.s
@@ -1567,7 +1567,7 @@ src/ConvertColorFormat.s: src/ConvertColorFormat.cpp.s
 
 # target to generate assembly for a file
 src/ConvertColorFormat.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertColorFormat.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertColorFormat.cpp.s
 .PHONY : src/ConvertColorFormat.cpp.s
 
 src/ConvertColorFormatNull.o: src/ConvertColorFormatNull.cpp.o
@@ -1575,7 +1575,7 @@ src/ConvertColorFormatNull.o: src/ConvertColorFormatNull.cpp.o
 
 # target to build an object file
 src/ConvertColorFormatNull.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertColorFormatNull.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertColorFormatNull.cpp.o
 .PHONY : src/ConvertColorFormatNull.cpp.o
 
 src/ConvertColorFormatNull.i: src/ConvertColorFormatNull.cpp.i
@@ -1583,7 +1583,7 @@ src/ConvertColorFormatNull.i: src/ConvertColorFormatNull.cpp.i
 
 # target to preprocess a source file
 src/ConvertColorFormatNull.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertColorFormatNull.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertColorFormatNull.cpp.i
 .PHONY : src/ConvertColorFormatNull.cpp.i
 
 src/ConvertColorFormatNull.s: src/ConvertColorFormatNull.cpp.s
@@ -1591,7 +1591,7 @@ src/ConvertColorFormatNull.s: src/ConvertColorFormatNull.cpp.s
 
 # target to generate assembly for a file
 src/ConvertColorFormatNull.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertColorFormatNull.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertColorFormatNull.cpp.s
 .PHONY : src/ConvertColorFormatNull.cpp.s
 
 src/ConvertNull.o: src/ConvertNull.cpp.o
@@ -1599,7 +1599,7 @@ src/ConvertNull.o: src/ConvertNull.cpp.o
 
 # target to build an object file
 src/ConvertNull.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertNull.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertNull.cpp.o
 .PHONY : src/ConvertNull.cpp.o
 
 src/ConvertNull.i: src/ConvertNull.cpp.i
@@ -1607,7 +1607,7 @@ src/ConvertNull.i: src/ConvertNull.cpp.i
 
 # target to preprocess a source file
 src/ConvertNull.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertNull.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertNull.cpp.i
 .PHONY : src/ConvertNull.cpp.i
 
 src/ConvertNull.s: src/ConvertNull.cpp.s
@@ -1615,7 +1615,7 @@ src/ConvertNull.s: src/ConvertNull.cpp.s
 
 # target to generate assembly for a file
 src/ConvertNull.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertNull.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ConvertNull.cpp.s
 .PHONY : src/ConvertNull.cpp.s
 
 src/DisplayGammaAdjust.o: src/DisplayGammaAdjust.cpp.o
@@ -1623,7 +1623,7 @@ src/DisplayGammaAdjust.o: src/DisplayGammaAdjust.cpp.o
 
 # target to build an object file
 src/DisplayGammaAdjust.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjust.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjust.cpp.o
 .PHONY : src/DisplayGammaAdjust.cpp.o
 
 src/DisplayGammaAdjust.i: src/DisplayGammaAdjust.cpp.i
@@ -1631,7 +1631,7 @@ src/DisplayGammaAdjust.i: src/DisplayGammaAdjust.cpp.i
 
 # target to preprocess a source file
 src/DisplayGammaAdjust.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjust.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjust.cpp.i
 .PHONY : src/DisplayGammaAdjust.cpp.i
 
 src/DisplayGammaAdjust.s: src/DisplayGammaAdjust.cpp.s
@@ -1639,7 +1639,7 @@ src/DisplayGammaAdjust.s: src/DisplayGammaAdjust.cpp.s
 
 # target to generate assembly for a file
 src/DisplayGammaAdjust.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjust.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjust.cpp.s
 .PHONY : src/DisplayGammaAdjust.cpp.s
 
 src/DisplayGammaAdjustHLG.o: src/DisplayGammaAdjustHLG.cpp.o
@@ -1647,7 +1647,7 @@ src/DisplayGammaAdjustHLG.o: src/DisplayGammaAdjustHLG.cpp.o
 
 # target to build an object file
 src/DisplayGammaAdjustHLG.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjustHLG.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjustHLG.cpp.o
 .PHONY : src/DisplayGammaAdjustHLG.cpp.o
 
 src/DisplayGammaAdjustHLG.i: src/DisplayGammaAdjustHLG.cpp.i
@@ -1655,7 +1655,7 @@ src/DisplayGammaAdjustHLG.i: src/DisplayGammaAdjustHLG.cpp.i
 
 # target to preprocess a source file
 src/DisplayGammaAdjustHLG.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjustHLG.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjustHLG.cpp.i
 .PHONY : src/DisplayGammaAdjustHLG.cpp.i
 
 src/DisplayGammaAdjustHLG.s: src/DisplayGammaAdjustHLG.cpp.s
@@ -1663,7 +1663,7 @@ src/DisplayGammaAdjustHLG.s: src/DisplayGammaAdjustHLG.cpp.s
 
 # target to generate assembly for a file
 src/DisplayGammaAdjustHLG.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjustHLG.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjustHLG.cpp.s
 .PHONY : src/DisplayGammaAdjustHLG.cpp.s
 
 src/DisplayGammaAdjustNull.o: src/DisplayGammaAdjustNull.cpp.o
@@ -1671,7 +1671,7 @@ src/DisplayGammaAdjustNull.o: src/DisplayGammaAdjustNull.cpp.o
 
 # target to build an object file
 src/DisplayGammaAdjustNull.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjustNull.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjustNull.cpp.o
 .PHONY : src/DisplayGammaAdjustNull.cpp.o
 
 src/DisplayGammaAdjustNull.i: src/DisplayGammaAdjustNull.cpp.i
@@ -1679,7 +1679,7 @@ src/DisplayGammaAdjustNull.i: src/DisplayGammaAdjustNull.cpp.i
 
 # target to preprocess a source file
 src/DisplayGammaAdjustNull.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjustNull.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjustNull.cpp.i
 .PHONY : src/DisplayGammaAdjustNull.cpp.i
 
 src/DisplayGammaAdjustNull.s: src/DisplayGammaAdjustNull.cpp.s
@@ -1687,7 +1687,7 @@ src/DisplayGammaAdjustNull.s: src/DisplayGammaAdjustNull.cpp.s
 
 # target to generate assembly for a file
 src/DisplayGammaAdjustNull.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjustNull.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DisplayGammaAdjustNull.cpp.s
 .PHONY : src/DisplayGammaAdjustNull.cpp.s
 
 src/DistortionMetric.o: src/DistortionMetric.cpp.o
@@ -1695,7 +1695,7 @@ src/DistortionMetric.o: src/DistortionMetric.cpp.o
 
 # target to build an object file
 src/DistortionMetric.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetric.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetric.cpp.o
 .PHONY : src/DistortionMetric.cpp.o
 
 src/DistortionMetric.i: src/DistortionMetric.cpp.i
@@ -1703,7 +1703,7 @@ src/DistortionMetric.i: src/DistortionMetric.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetric.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetric.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetric.cpp.i
 .PHONY : src/DistortionMetric.cpp.i
 
 src/DistortionMetric.s: src/DistortionMetric.cpp.s
@@ -1711,7 +1711,7 @@ src/DistortionMetric.s: src/DistortionMetric.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetric.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetric.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetric.cpp.s
 .PHONY : src/DistortionMetric.cpp.s
 
 src/DistortionMetricBlockAct.o: src/DistortionMetricBlockAct.cpp.o
@@ -1719,7 +1719,7 @@ src/DistortionMetricBlockAct.o: src/DistortionMetricBlockAct.cpp.o
 
 # target to build an object file
 src/DistortionMetricBlockAct.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricBlockAct.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricBlockAct.cpp.o
 .PHONY : src/DistortionMetricBlockAct.cpp.o
 
 src/DistortionMetricBlockAct.i: src/DistortionMetricBlockAct.cpp.i
@@ -1727,7 +1727,7 @@ src/DistortionMetricBlockAct.i: src/DistortionMetricBlockAct.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricBlockAct.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricBlockAct.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricBlockAct.cpp.i
 .PHONY : src/DistortionMetricBlockAct.cpp.i
 
 src/DistortionMetricBlockAct.s: src/DistortionMetricBlockAct.cpp.s
@@ -1735,7 +1735,7 @@ src/DistortionMetricBlockAct.s: src/DistortionMetricBlockAct.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricBlockAct.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricBlockAct.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricBlockAct.cpp.s
 .PHONY : src/DistortionMetricBlockAct.cpp.s
 
 src/DistortionMetricBlockinessJ341.o: src/DistortionMetricBlockinessJ341.cpp.o
@@ -1743,7 +1743,7 @@ src/DistortionMetricBlockinessJ341.o: src/DistortionMetricBlockinessJ341.cpp.o
 
 # target to build an object file
 src/DistortionMetricBlockinessJ341.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricBlockinessJ341.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricBlockinessJ341.cpp.o
 .PHONY : src/DistortionMetricBlockinessJ341.cpp.o
 
 src/DistortionMetricBlockinessJ341.i: src/DistortionMetricBlockinessJ341.cpp.i
@@ -1751,7 +1751,7 @@ src/DistortionMetricBlockinessJ341.i: src/DistortionMetricBlockinessJ341.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricBlockinessJ341.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricBlockinessJ341.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricBlockinessJ341.cpp.i
 .PHONY : src/DistortionMetricBlockinessJ341.cpp.i
 
 src/DistortionMetricBlockinessJ341.s: src/DistortionMetricBlockinessJ341.cpp.s
@@ -1759,7 +1759,7 @@ src/DistortionMetricBlockinessJ341.s: src/DistortionMetricBlockinessJ341.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricBlockinessJ341.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricBlockinessJ341.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricBlockinessJ341.cpp.s
 .PHONY : src/DistortionMetricBlockinessJ341.cpp.s
 
 src/DistortionMetricDeltaE.o: src/DistortionMetricDeltaE.cpp.o
@@ -1767,7 +1767,7 @@ src/DistortionMetricDeltaE.o: src/DistortionMetricDeltaE.cpp.o
 
 # target to build an object file
 src/DistortionMetricDeltaE.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricDeltaE.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricDeltaE.cpp.o
 .PHONY : src/DistortionMetricDeltaE.cpp.o
 
 src/DistortionMetricDeltaE.i: src/DistortionMetricDeltaE.cpp.i
@@ -1775,7 +1775,7 @@ src/DistortionMetricDeltaE.i: src/DistortionMetricDeltaE.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricDeltaE.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricDeltaE.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricDeltaE.cpp.i
 .PHONY : src/DistortionMetricDeltaE.cpp.i
 
 src/DistortionMetricDeltaE.s: src/DistortionMetricDeltaE.cpp.s
@@ -1783,7 +1783,7 @@ src/DistortionMetricDeltaE.s: src/DistortionMetricDeltaE.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricDeltaE.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricDeltaE.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricDeltaE.cpp.s
 .PHONY : src/DistortionMetricDeltaE.cpp.s
 
 src/DistortionMetricGSSIM.o: src/DistortionMetricGSSIM.cpp.o
@@ -1791,7 +1791,7 @@ src/DistortionMetricGSSIM.o: src/DistortionMetricGSSIM.cpp.o
 
 # target to build an object file
 src/DistortionMetricGSSIM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricGSSIM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricGSSIM.cpp.o
 .PHONY : src/DistortionMetricGSSIM.cpp.o
 
 src/DistortionMetricGSSIM.i: src/DistortionMetricGSSIM.cpp.i
@@ -1799,7 +1799,7 @@ src/DistortionMetricGSSIM.i: src/DistortionMetricGSSIM.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricGSSIM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricGSSIM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricGSSIM.cpp.i
 .PHONY : src/DistortionMetricGSSIM.cpp.i
 
 src/DistortionMetricGSSIM.s: src/DistortionMetricGSSIM.cpp.s
@@ -1807,7 +1807,7 @@ src/DistortionMetricGSSIM.s: src/DistortionMetricGSSIM.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricGSSIM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricGSSIM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricGSSIM.cpp.s
 .PHONY : src/DistortionMetricGSSIM.cpp.s
 
 src/DistortionMetricJVETMSSSIM.o: src/DistortionMetricJVETMSSSIM.cpp.o
@@ -1815,7 +1815,7 @@ src/DistortionMetricJVETMSSSIM.o: src/DistortionMetricJVETMSSSIM.cpp.o
 
 # target to build an object file
 src/DistortionMetricJVETMSSSIM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricJVETMSSSIM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricJVETMSSSIM.cpp.o
 .PHONY : src/DistortionMetricJVETMSSSIM.cpp.o
 
 src/DistortionMetricJVETMSSSIM.i: src/DistortionMetricJVETMSSSIM.cpp.i
@@ -1823,7 +1823,7 @@ src/DistortionMetricJVETMSSSIM.i: src/DistortionMetricJVETMSSSIM.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricJVETMSSSIM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricJVETMSSSIM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricJVETMSSSIM.cpp.i
 .PHONY : src/DistortionMetricJVETMSSSIM.cpp.i
 
 src/DistortionMetricJVETMSSSIM.s: src/DistortionMetricJVETMSSSIM.cpp.s
@@ -1831,7 +1831,7 @@ src/DistortionMetricJVETMSSSIM.s: src/DistortionMetricJVETMSSSIM.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricJVETMSSSIM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricJVETMSSSIM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricJVETMSSSIM.cpp.s
 .PHONY : src/DistortionMetricJVETMSSSIM.cpp.s
 
 src/DistortionMetricMSSSIM.o: src/DistortionMetricMSSSIM.cpp.o
@@ -1839,7 +1839,7 @@ src/DistortionMetricMSSSIM.o: src/DistortionMetricMSSSIM.cpp.o
 
 # target to build an object file
 src/DistortionMetricMSSSIM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricMSSSIM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricMSSSIM.cpp.o
 .PHONY : src/DistortionMetricMSSSIM.cpp.o
 
 src/DistortionMetricMSSSIM.i: src/DistortionMetricMSSSIM.cpp.i
@@ -1847,7 +1847,7 @@ src/DistortionMetricMSSSIM.i: src/DistortionMetricMSSSIM.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricMSSSIM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricMSSSIM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricMSSSIM.cpp.i
 .PHONY : src/DistortionMetricMSSSIM.cpp.i
 
 src/DistortionMetricMSSSIM.s: src/DistortionMetricMSSSIM.cpp.s
@@ -1855,7 +1855,7 @@ src/DistortionMetricMSSSIM.s: src/DistortionMetricMSSSIM.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricMSSSIM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricMSSSIM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricMSSSIM.cpp.s
 .PHONY : src/DistortionMetricMSSSIM.cpp.s
 
 src/DistortionMetricPSNR.o: src/DistortionMetricPSNR.cpp.o
@@ -1863,7 +1863,7 @@ src/DistortionMetricPSNR.o: src/DistortionMetricPSNR.cpp.o
 
 # target to build an object file
 src/DistortionMetricPSNR.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricPSNR.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricPSNR.cpp.o
 .PHONY : src/DistortionMetricPSNR.cpp.o
 
 src/DistortionMetricPSNR.i: src/DistortionMetricPSNR.cpp.i
@@ -1871,7 +1871,7 @@ src/DistortionMetricPSNR.i: src/DistortionMetricPSNR.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricPSNR.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricPSNR.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricPSNR.cpp.i
 .PHONY : src/DistortionMetricPSNR.cpp.i
 
 src/DistortionMetricPSNR.s: src/DistortionMetricPSNR.cpp.s
@@ -1879,7 +1879,7 @@ src/DistortionMetricPSNR.s: src/DistortionMetricPSNR.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricPSNR.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricPSNR.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricPSNR.cpp.s
 .PHONY : src/DistortionMetricPSNR.cpp.s
 
 src/DistortionMetricRegionPSNR.o: src/DistortionMetricRegionPSNR.cpp.o
@@ -1887,7 +1887,7 @@ src/DistortionMetricRegionPSNR.o: src/DistortionMetricRegionPSNR.cpp.o
 
 # target to build an object file
 src/DistortionMetricRegionPSNR.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricRegionPSNR.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricRegionPSNR.cpp.o
 .PHONY : src/DistortionMetricRegionPSNR.cpp.o
 
 src/DistortionMetricRegionPSNR.i: src/DistortionMetricRegionPSNR.cpp.i
@@ -1895,7 +1895,7 @@ src/DistortionMetricRegionPSNR.i: src/DistortionMetricRegionPSNR.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricRegionPSNR.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricRegionPSNR.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricRegionPSNR.cpp.i
 .PHONY : src/DistortionMetricRegionPSNR.cpp.i
 
 src/DistortionMetricRegionPSNR.s: src/DistortionMetricRegionPSNR.cpp.s
@@ -1903,7 +1903,7 @@ src/DistortionMetricRegionPSNR.s: src/DistortionMetricRegionPSNR.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricRegionPSNR.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricRegionPSNR.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricRegionPSNR.cpp.s
 .PHONY : src/DistortionMetricRegionPSNR.cpp.s
 
 src/DistortionMetricRegionTFPSNR.o: src/DistortionMetricRegionTFPSNR.cpp.o
@@ -1911,7 +1911,7 @@ src/DistortionMetricRegionTFPSNR.o: src/DistortionMetricRegionTFPSNR.cpp.o
 
 # target to build an object file
 src/DistortionMetricRegionTFPSNR.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricRegionTFPSNR.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricRegionTFPSNR.cpp.o
 .PHONY : src/DistortionMetricRegionTFPSNR.cpp.o
 
 src/DistortionMetricRegionTFPSNR.i: src/DistortionMetricRegionTFPSNR.cpp.i
@@ -1919,7 +1919,7 @@ src/DistortionMetricRegionTFPSNR.i: src/DistortionMetricRegionTFPSNR.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricRegionTFPSNR.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricRegionTFPSNR.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricRegionTFPSNR.cpp.i
 .PHONY : src/DistortionMetricRegionTFPSNR.cpp.i
 
 src/DistortionMetricRegionTFPSNR.s: src/DistortionMetricRegionTFPSNR.cpp.s
@@ -1927,7 +1927,7 @@ src/DistortionMetricRegionTFPSNR.s: src/DistortionMetricRegionTFPSNR.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricRegionTFPSNR.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricRegionTFPSNR.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricRegionTFPSNR.cpp.s
 .PHONY : src/DistortionMetricRegionTFPSNR.cpp.s
 
 src/DistortionMetricSSIM.o: src/DistortionMetricSSIM.cpp.o
@@ -1935,7 +1935,7 @@ src/DistortionMetricSSIM.o: src/DistortionMetricSSIM.cpp.o
 
 # target to build an object file
 src/DistortionMetricSSIM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricSSIM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricSSIM.cpp.o
 .PHONY : src/DistortionMetricSSIM.cpp.o
 
 src/DistortionMetricSSIM.i: src/DistortionMetricSSIM.cpp.i
@@ -1943,7 +1943,7 @@ src/DistortionMetricSSIM.i: src/DistortionMetricSSIM.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricSSIM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricSSIM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricSSIM.cpp.i
 .PHONY : src/DistortionMetricSSIM.cpp.i
 
 src/DistortionMetricSSIM.s: src/DistortionMetricSSIM.cpp.s
@@ -1951,7 +1951,7 @@ src/DistortionMetricSSIM.s: src/DistortionMetricSSIM.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricSSIM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricSSIM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricSSIM.cpp.s
 .PHONY : src/DistortionMetricSSIM.cpp.s
 
 src/DistortionMetricSigmaCompare.o: src/DistortionMetricSigmaCompare.cpp.o
@@ -1959,7 +1959,7 @@ src/DistortionMetricSigmaCompare.o: src/DistortionMetricSigmaCompare.cpp.o
 
 # target to build an object file
 src/DistortionMetricSigmaCompare.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricSigmaCompare.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricSigmaCompare.cpp.o
 .PHONY : src/DistortionMetricSigmaCompare.cpp.o
 
 src/DistortionMetricSigmaCompare.i: src/DistortionMetricSigmaCompare.cpp.i
@@ -1967,7 +1967,7 @@ src/DistortionMetricSigmaCompare.i: src/DistortionMetricSigmaCompare.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricSigmaCompare.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricSigmaCompare.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricSigmaCompare.cpp.i
 .PHONY : src/DistortionMetricSigmaCompare.cpp.i
 
 src/DistortionMetricSigmaCompare.s: src/DistortionMetricSigmaCompare.cpp.s
@@ -1975,7 +1975,7 @@ src/DistortionMetricSigmaCompare.s: src/DistortionMetricSigmaCompare.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricSigmaCompare.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricSigmaCompare.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricSigmaCompare.cpp.s
 .PHONY : src/DistortionMetricSigmaCompare.cpp.s
 
 src/DistortionMetricTFMSSSIM.o: src/DistortionMetricTFMSSSIM.cpp.o
@@ -1983,7 +1983,7 @@ src/DistortionMetricTFMSSSIM.o: src/DistortionMetricTFMSSSIM.cpp.o
 
 # target to build an object file
 src/DistortionMetricTFMSSSIM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFMSSSIM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFMSSSIM.cpp.o
 .PHONY : src/DistortionMetricTFMSSSIM.cpp.o
 
 src/DistortionMetricTFMSSSIM.i: src/DistortionMetricTFMSSSIM.cpp.i
@@ -1991,7 +1991,7 @@ src/DistortionMetricTFMSSSIM.i: src/DistortionMetricTFMSSSIM.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricTFMSSSIM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFMSSSIM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFMSSSIM.cpp.i
 .PHONY : src/DistortionMetricTFMSSSIM.cpp.i
 
 src/DistortionMetricTFMSSSIM.s: src/DistortionMetricTFMSSSIM.cpp.s
@@ -1999,7 +1999,7 @@ src/DistortionMetricTFMSSSIM.s: src/DistortionMetricTFMSSSIM.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricTFMSSSIM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFMSSSIM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFMSSSIM.cpp.s
 .PHONY : src/DistortionMetricTFMSSSIM.cpp.s
 
 src/DistortionMetricTFPSNR.o: src/DistortionMetricTFPSNR.cpp.o
@@ -2007,7 +2007,7 @@ src/DistortionMetricTFPSNR.o: src/DistortionMetricTFPSNR.cpp.o
 
 # target to build an object file
 src/DistortionMetricTFPSNR.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFPSNR.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFPSNR.cpp.o
 .PHONY : src/DistortionMetricTFPSNR.cpp.o
 
 src/DistortionMetricTFPSNR.i: src/DistortionMetricTFPSNR.cpp.i
@@ -2015,7 +2015,7 @@ src/DistortionMetricTFPSNR.i: src/DistortionMetricTFPSNR.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricTFPSNR.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFPSNR.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFPSNR.cpp.i
 .PHONY : src/DistortionMetricTFPSNR.cpp.i
 
 src/DistortionMetricTFPSNR.s: src/DistortionMetricTFPSNR.cpp.s
@@ -2023,7 +2023,7 @@ src/DistortionMetricTFPSNR.s: src/DistortionMetricTFPSNR.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricTFPSNR.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFPSNR.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFPSNR.cpp.s
 .PHONY : src/DistortionMetricTFPSNR.cpp.s
 
 src/DistortionMetricTFSSIM.o: src/DistortionMetricTFSSIM.cpp.o
@@ -2031,7 +2031,7 @@ src/DistortionMetricTFSSIM.o: src/DistortionMetricTFSSIM.cpp.o
 
 # target to build an object file
 src/DistortionMetricTFSSIM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFSSIM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFSSIM.cpp.o
 .PHONY : src/DistortionMetricTFSSIM.cpp.o
 
 src/DistortionMetricTFSSIM.i: src/DistortionMetricTFSSIM.cpp.i
@@ -2039,7 +2039,7 @@ src/DistortionMetricTFSSIM.i: src/DistortionMetricTFSSIM.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricTFSSIM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFSSIM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFSSIM.cpp.i
 .PHONY : src/DistortionMetricTFSSIM.cpp.i
 
 src/DistortionMetricTFSSIM.s: src/DistortionMetricTFSSIM.cpp.s
@@ -2047,7 +2047,7 @@ src/DistortionMetricTFSSIM.s: src/DistortionMetricTFSSIM.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricTFSSIM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFSSIM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricTFSSIM.cpp.s
 .PHONY : src/DistortionMetricTFSSIM.cpp.s
 
 src/DistortionMetricVIF.o: src/DistortionMetricVIF.cpp.o
@@ -2055,7 +2055,7 @@ src/DistortionMetricVIF.o: src/DistortionMetricVIF.cpp.o
 
 # target to build an object file
 src/DistortionMetricVIF.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricVIF.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricVIF.cpp.o
 .PHONY : src/DistortionMetricVIF.cpp.o
 
 src/DistortionMetricVIF.i: src/DistortionMetricVIF.cpp.i
@@ -2063,7 +2063,7 @@ src/DistortionMetricVIF.i: src/DistortionMetricVIF.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricVIF.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricVIF.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricVIF.cpp.i
 .PHONY : src/DistortionMetricVIF.cpp.i
 
 src/DistortionMetricVIF.s: src/DistortionMetricVIF.cpp.s
@@ -2071,7 +2071,7 @@ src/DistortionMetricVIF.s: src/DistortionMetricVIF.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricVIF.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricVIF.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricVIF.cpp.s
 .PHONY : src/DistortionMetricVIF.cpp.s
 
 src/DistortionMetricVQM.o: src/DistortionMetricVQM.cpp.o
@@ -2079,7 +2079,7 @@ src/DistortionMetricVQM.o: src/DistortionMetricVQM.cpp.o
 
 # target to build an object file
 src/DistortionMetricVQM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricVQM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricVQM.cpp.o
 .PHONY : src/DistortionMetricVQM.cpp.o
 
 src/DistortionMetricVQM.i: src/DistortionMetricVQM.cpp.i
@@ -2087,7 +2087,7 @@ src/DistortionMetricVQM.i: src/DistortionMetricVQM.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricVQM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricVQM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricVQM.cpp.i
 .PHONY : src/DistortionMetricVQM.cpp.i
 
 src/DistortionMetricVQM.s: src/DistortionMetricVQM.cpp.s
@@ -2095,7 +2095,7 @@ src/DistortionMetricVQM.s: src/DistortionMetricVQM.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricVQM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricVQM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricVQM.cpp.s
 .PHONY : src/DistortionMetricVQM.cpp.s
 
 src/DistortionMetricWTPSNR.o: src/DistortionMetricWTPSNR.cpp.o
@@ -2103,7 +2103,7 @@ src/DistortionMetricWTPSNR.o: src/DistortionMetricWTPSNR.cpp.o
 
 # target to build an object file
 src/DistortionMetricWTPSNR.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricWTPSNR.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricWTPSNR.cpp.o
 .PHONY : src/DistortionMetricWTPSNR.cpp.o
 
 src/DistortionMetricWTPSNR.i: src/DistortionMetricWTPSNR.cpp.i
@@ -2111,7 +2111,7 @@ src/DistortionMetricWTPSNR.i: src/DistortionMetricWTPSNR.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricWTPSNR.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricWTPSNR.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricWTPSNR.cpp.i
 .PHONY : src/DistortionMetricWTPSNR.cpp.i
 
 src/DistortionMetricWTPSNR.s: src/DistortionMetricWTPSNR.cpp.s
@@ -2119,7 +2119,7 @@ src/DistortionMetricWTPSNR.s: src/DistortionMetricWTPSNR.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricWTPSNR.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricWTPSNR.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricWTPSNR.cpp.s
 .PHONY : src/DistortionMetricWTPSNR.cpp.s
 
 src/DistortionMetricmPSNR.o: src/DistortionMetricmPSNR.cpp.o
@@ -2127,7 +2127,7 @@ src/DistortionMetricmPSNR.o: src/DistortionMetricmPSNR.cpp.o
 
 # target to build an object file
 src/DistortionMetricmPSNR.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricmPSNR.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricmPSNR.cpp.o
 .PHONY : src/DistortionMetricmPSNR.cpp.o
 
 src/DistortionMetricmPSNR.i: src/DistortionMetricmPSNR.cpp.i
@@ -2135,7 +2135,7 @@ src/DistortionMetricmPSNR.i: src/DistortionMetricmPSNR.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricmPSNR.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricmPSNR.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricmPSNR.cpp.i
 .PHONY : src/DistortionMetricmPSNR.cpp.i
 
 src/DistortionMetricmPSNR.s: src/DistortionMetricmPSNR.cpp.s
@@ -2143,7 +2143,7 @@ src/DistortionMetricmPSNR.s: src/DistortionMetricmPSNR.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricmPSNR.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricmPSNR.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricmPSNR.cpp.s
 .PHONY : src/DistortionMetricmPSNR.cpp.s
 
 src/DistortionMetricmPSNRfast.o: src/DistortionMetricmPSNRfast.cpp.o
@@ -2151,7 +2151,7 @@ src/DistortionMetricmPSNRfast.o: src/DistortionMetricmPSNRfast.cpp.o
 
 # target to build an object file
 src/DistortionMetricmPSNRfast.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricmPSNRfast.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricmPSNRfast.cpp.o
 .PHONY : src/DistortionMetricmPSNRfast.cpp.o
 
 src/DistortionMetricmPSNRfast.i: src/DistortionMetricmPSNRfast.cpp.i
@@ -2159,7 +2159,7 @@ src/DistortionMetricmPSNRfast.i: src/DistortionMetricmPSNRfast.cpp.i
 
 # target to preprocess a source file
 src/DistortionMetricmPSNRfast.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricmPSNRfast.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricmPSNRfast.cpp.i
 .PHONY : src/DistortionMetricmPSNRfast.cpp.i
 
 src/DistortionMetricmPSNRfast.s: src/DistortionMetricmPSNRfast.cpp.s
@@ -2167,7 +2167,7 @@ src/DistortionMetricmPSNRfast.s: src/DistortionMetricmPSNRfast.cpp.s
 
 # target to generate assembly for a file
 src/DistortionMetricmPSNRfast.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricmPSNRfast.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionMetricmPSNRfast.cpp.s
 .PHONY : src/DistortionMetricmPSNRfast.cpp.s
 
 src/DistortionTransferFunction.o: src/DistortionTransferFunction.cpp.o
@@ -2175,7 +2175,7 @@ src/DistortionTransferFunction.o: src/DistortionTransferFunction.cpp.o
 
 # target to build an object file
 src/DistortionTransferFunction.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionTransferFunction.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionTransferFunction.cpp.o
 .PHONY : src/DistortionTransferFunction.cpp.o
 
 src/DistortionTransferFunction.i: src/DistortionTransferFunction.cpp.i
@@ -2183,7 +2183,7 @@ src/DistortionTransferFunction.i: src/DistortionTransferFunction.cpp.i
 
 # target to preprocess a source file
 src/DistortionTransferFunction.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionTransferFunction.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionTransferFunction.cpp.i
 .PHONY : src/DistortionTransferFunction.cpp.i
 
 src/DistortionTransferFunction.s: src/DistortionTransferFunction.cpp.s
@@ -2191,7 +2191,7 @@ src/DistortionTransferFunction.s: src/DistortionTransferFunction.cpp.s
 
 # target to generate assembly for a file
 src/DistortionTransferFunction.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionTransferFunction.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/DistortionTransferFunction.cpp.s
 .PHONY : src/DistortionTransferFunction.cpp.s
 
 src/Eigenvalue.o: src/Eigenvalue.cpp.o
@@ -2199,7 +2199,7 @@ src/Eigenvalue.o: src/Eigenvalue.cpp.o
 
 # target to build an object file
 src/Eigenvalue.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Eigenvalue.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Eigenvalue.cpp.o
 .PHONY : src/Eigenvalue.cpp.o
 
 src/Eigenvalue.i: src/Eigenvalue.cpp.i
@@ -2207,7 +2207,7 @@ src/Eigenvalue.i: src/Eigenvalue.cpp.i
 
 # target to preprocess a source file
 src/Eigenvalue.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Eigenvalue.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Eigenvalue.cpp.i
 .PHONY : src/Eigenvalue.cpp.i
 
 src/Eigenvalue.s: src/Eigenvalue.cpp.s
@@ -2215,7 +2215,7 @@ src/Eigenvalue.s: src/Eigenvalue.cpp.s
 
 # target to generate assembly for a file
 src/Eigenvalue.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Eigenvalue.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Eigenvalue.cpp.s
 .PHONY : src/Eigenvalue.cpp.s
 
 src/FFT.o: src/FFT.cpp.o
@@ -2223,7 +2223,7 @@ src/FFT.o: src/FFT.cpp.o
 
 # target to build an object file
 src/FFT.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FFT.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FFT.cpp.o
 .PHONY : src/FFT.cpp.o
 
 src/FFT.i: src/FFT.cpp.i
@@ -2231,7 +2231,7 @@ src/FFT.i: src/FFT.cpp.i
 
 # target to preprocess a source file
 src/FFT.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FFT.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FFT.cpp.i
 .PHONY : src/FFT.cpp.i
 
 src/FFT.s: src/FFT.cpp.s
@@ -2239,7 +2239,7 @@ src/FFT.s: src/FFT.cpp.s
 
 # target to generate assembly for a file
 src/FFT.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FFT.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FFT.cpp.s
 .PHONY : src/FFT.cpp.s
 
 src/Filter1D.o: src/Filter1D.cpp.o
@@ -2247,7 +2247,7 @@ src/Filter1D.o: src/Filter1D.cpp.o
 
 # target to build an object file
 src/Filter1D.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Filter1D.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Filter1D.cpp.o
 .PHONY : src/Filter1D.cpp.o
 
 src/Filter1D.i: src/Filter1D.cpp.i
@@ -2255,7 +2255,7 @@ src/Filter1D.i: src/Filter1D.cpp.i
 
 # target to preprocess a source file
 src/Filter1D.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Filter1D.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Filter1D.cpp.i
 .PHONY : src/Filter1D.cpp.i
 
 src/Filter1D.s: src/Filter1D.cpp.s
@@ -2263,7 +2263,7 @@ src/Filter1D.s: src/Filter1D.cpp.s
 
 # target to generate assembly for a file
 src/Filter1D.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Filter1D.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Filter1D.cpp.s
 .PHONY : src/Filter1D.cpp.s
 
 src/Frame.o: src/Frame.cpp.o
@@ -2271,7 +2271,7 @@ src/Frame.o: src/Frame.cpp.o
 
 # target to build an object file
 src/Frame.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Frame.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Frame.cpp.o
 .PHONY : src/Frame.cpp.o
 
 src/Frame.i: src/Frame.cpp.i
@@ -2279,7 +2279,7 @@ src/Frame.i: src/Frame.cpp.i
 
 # target to preprocess a source file
 src/Frame.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Frame.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Frame.cpp.i
 .PHONY : src/Frame.cpp.i
 
 src/Frame.s: src/Frame.cpp.s
@@ -2287,7 +2287,7 @@ src/Frame.s: src/Frame.cpp.s
 
 # target to generate assembly for a file
 src/Frame.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Frame.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Frame.cpp.s
 .PHONY : src/Frame.cpp.s
 
 src/FrameFilter.o: src/FrameFilter.cpp.o
@@ -2295,7 +2295,7 @@ src/FrameFilter.o: src/FrameFilter.cpp.o
 
 # target to build an object file
 src/FrameFilter.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilter.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilter.cpp.o
 .PHONY : src/FrameFilter.cpp.o
 
 src/FrameFilter.i: src/FrameFilter.cpp.i
@@ -2303,7 +2303,7 @@ src/FrameFilter.i: src/FrameFilter.cpp.i
 
 # target to preprocess a source file
 src/FrameFilter.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilter.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilter.cpp.i
 .PHONY : src/FrameFilter.cpp.i
 
 src/FrameFilter.s: src/FrameFilter.cpp.s
@@ -2311,7 +2311,7 @@ src/FrameFilter.s: src/FrameFilter.cpp.s
 
 # target to generate assembly for a file
 src/FrameFilter.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilter.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilter.cpp.s
 .PHONY : src/FrameFilter.cpp.s
 
 src/FrameFilter2DSep.o: src/FrameFilter2DSep.cpp.o
@@ -2319,7 +2319,7 @@ src/FrameFilter2DSep.o: src/FrameFilter2DSep.cpp.o
 
 # target to build an object file
 src/FrameFilter2DSep.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilter2DSep.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilter2DSep.cpp.o
 .PHONY : src/FrameFilter2DSep.cpp.o
 
 src/FrameFilter2DSep.i: src/FrameFilter2DSep.cpp.i
@@ -2327,7 +2327,7 @@ src/FrameFilter2DSep.i: src/FrameFilter2DSep.cpp.i
 
 # target to preprocess a source file
 src/FrameFilter2DSep.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilter2DSep.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilter2DSep.cpp.i
 .PHONY : src/FrameFilter2DSep.cpp.i
 
 src/FrameFilter2DSep.s: src/FrameFilter2DSep.cpp.s
@@ -2335,7 +2335,7 @@ src/FrameFilter2DSep.s: src/FrameFilter2DSep.cpp.s
 
 # target to generate assembly for a file
 src/FrameFilter2DSep.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilter2DSep.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilter2DSep.cpp.s
 .PHONY : src/FrameFilter2DSep.cpp.s
 
 src/FrameFilterDeblock.o: src/FrameFilterDeblock.cpp.o
@@ -2343,7 +2343,7 @@ src/FrameFilterDeblock.o: src/FrameFilterDeblock.cpp.o
 
 # target to build an object file
 src/FrameFilterDeblock.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterDeblock.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterDeblock.cpp.o
 .PHONY : src/FrameFilterDeblock.cpp.o
 
 src/FrameFilterDeblock.i: src/FrameFilterDeblock.cpp.i
@@ -2351,7 +2351,7 @@ src/FrameFilterDeblock.i: src/FrameFilterDeblock.cpp.i
 
 # target to preprocess a source file
 src/FrameFilterDeblock.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterDeblock.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterDeblock.cpp.i
 .PHONY : src/FrameFilterDeblock.cpp.i
 
 src/FrameFilterDeblock.s: src/FrameFilterDeblock.cpp.s
@@ -2359,7 +2359,7 @@ src/FrameFilterDeblock.s: src/FrameFilterDeblock.cpp.s
 
 # target to generate assembly for a file
 src/FrameFilterDeblock.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterDeblock.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterDeblock.cpp.s
 .PHONY : src/FrameFilterDeblock.cpp.s
 
 src/FrameFilterNLMeans.o: src/FrameFilterNLMeans.cpp.o
@@ -2367,7 +2367,7 @@ src/FrameFilterNLMeans.o: src/FrameFilterNLMeans.cpp.o
 
 # target to build an object file
 src/FrameFilterNLMeans.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterNLMeans.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterNLMeans.cpp.o
 .PHONY : src/FrameFilterNLMeans.cpp.o
 
 src/FrameFilterNLMeans.i: src/FrameFilterNLMeans.cpp.i
@@ -2375,7 +2375,7 @@ src/FrameFilterNLMeans.i: src/FrameFilterNLMeans.cpp.i
 
 # target to preprocess a source file
 src/FrameFilterNLMeans.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterNLMeans.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterNLMeans.cpp.i
 .PHONY : src/FrameFilterNLMeans.cpp.i
 
 src/FrameFilterNLMeans.s: src/FrameFilterNLMeans.cpp.s
@@ -2383,7 +2383,7 @@ src/FrameFilterNLMeans.s: src/FrameFilterNLMeans.cpp.s
 
 # target to generate assembly for a file
 src/FrameFilterNLMeans.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterNLMeans.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterNLMeans.cpp.s
 .PHONY : src/FrameFilterNLMeans.cpp.s
 
 src/FrameFilterNull.o: src/FrameFilterNull.cpp.o
@@ -2391,7 +2391,7 @@ src/FrameFilterNull.o: src/FrameFilterNull.cpp.o
 
 # target to build an object file
 src/FrameFilterNull.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterNull.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterNull.cpp.o
 .PHONY : src/FrameFilterNull.cpp.o
 
 src/FrameFilterNull.i: src/FrameFilterNull.cpp.i
@@ -2399,7 +2399,7 @@ src/FrameFilterNull.i: src/FrameFilterNull.cpp.i
 
 # target to preprocess a source file
 src/FrameFilterNull.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterNull.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterNull.cpp.i
 .PHONY : src/FrameFilterNull.cpp.i
 
 src/FrameFilterNull.s: src/FrameFilterNull.cpp.s
@@ -2407,7 +2407,7 @@ src/FrameFilterNull.s: src/FrameFilterNull.cpp.s
 
 # target to generate assembly for a file
 src/FrameFilterNull.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterNull.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterNull.cpp.s
 .PHONY : src/FrameFilterNull.cpp.s
 
 src/FrameFilterWiener2D.o: src/FrameFilterWiener2D.cpp.o
@@ -2415,7 +2415,7 @@ src/FrameFilterWiener2D.o: src/FrameFilterWiener2D.cpp.o
 
 # target to build an object file
 src/FrameFilterWiener2D.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterWiener2D.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterWiener2D.cpp.o
 .PHONY : src/FrameFilterWiener2D.cpp.o
 
 src/FrameFilterWiener2D.i: src/FrameFilterWiener2D.cpp.i
@@ -2423,7 +2423,7 @@ src/FrameFilterWiener2D.i: src/FrameFilterWiener2D.cpp.i
 
 # target to preprocess a source file
 src/FrameFilterWiener2D.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterWiener2D.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterWiener2D.cpp.i
 .PHONY : src/FrameFilterWiener2D.cpp.i
 
 src/FrameFilterWiener2D.s: src/FrameFilterWiener2D.cpp.s
@@ -2431,7 +2431,7 @@ src/FrameFilterWiener2D.s: src/FrameFilterWiener2D.cpp.s
 
 # target to generate assembly for a file
 src/FrameFilterWiener2D.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterWiener2D.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterWiener2D.cpp.s
 .PHONY : src/FrameFilterWiener2D.cpp.s
 
 src/FrameFilterWiener2DDark.o: src/FrameFilterWiener2DDark.cpp.o
@@ -2439,7 +2439,7 @@ src/FrameFilterWiener2DDark.o: src/FrameFilterWiener2DDark.cpp.o
 
 # target to build an object file
 src/FrameFilterWiener2DDark.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterWiener2DDark.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterWiener2DDark.cpp.o
 .PHONY : src/FrameFilterWiener2DDark.cpp.o
 
 src/FrameFilterWiener2DDark.i: src/FrameFilterWiener2DDark.cpp.i
@@ -2447,7 +2447,7 @@ src/FrameFilterWiener2DDark.i: src/FrameFilterWiener2DDark.cpp.i
 
 # target to preprocess a source file
 src/FrameFilterWiener2DDark.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterWiener2DDark.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterWiener2DDark.cpp.i
 .PHONY : src/FrameFilterWiener2DDark.cpp.i
 
 src/FrameFilterWiener2DDark.s: src/FrameFilterWiener2DDark.cpp.s
@@ -2455,7 +2455,7 @@ src/FrameFilterWiener2DDark.s: src/FrameFilterWiener2DDark.cpp.s
 
 # target to generate assembly for a file
 src/FrameFilterWiener2DDark.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterWiener2DDark.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameFilterWiener2DDark.cpp.s
 .PHONY : src/FrameFilterWiener2DDark.cpp.s
 
 src/FrameScale.o: src/FrameScale.cpp.o
@@ -2463,7 +2463,7 @@ src/FrameScale.o: src/FrameScale.cpp.o
 
 # target to build an object file
 src/FrameScale.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScale.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScale.cpp.o
 .PHONY : src/FrameScale.cpp.o
 
 src/FrameScale.i: src/FrameScale.cpp.i
@@ -2471,7 +2471,7 @@ src/FrameScale.i: src/FrameScale.cpp.i
 
 # target to preprocess a source file
 src/FrameScale.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScale.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScale.cpp.i
 .PHONY : src/FrameScale.cpp.i
 
 src/FrameScale.s: src/FrameScale.cpp.s
@@ -2479,7 +2479,7 @@ src/FrameScale.s: src/FrameScale.cpp.s
 
 # target to generate assembly for a file
 src/FrameScale.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScale.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScale.cpp.s
 .PHONY : src/FrameScale.cpp.s
 
 src/FrameScaleBiCubic.o: src/FrameScaleBiCubic.cpp.o
@@ -2487,7 +2487,7 @@ src/FrameScaleBiCubic.o: src/FrameScaleBiCubic.cpp.o
 
 # target to build an object file
 src/FrameScaleBiCubic.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleBiCubic.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleBiCubic.cpp.o
 .PHONY : src/FrameScaleBiCubic.cpp.o
 
 src/FrameScaleBiCubic.i: src/FrameScaleBiCubic.cpp.i
@@ -2495,7 +2495,7 @@ src/FrameScaleBiCubic.i: src/FrameScaleBiCubic.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleBiCubic.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleBiCubic.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleBiCubic.cpp.i
 .PHONY : src/FrameScaleBiCubic.cpp.i
 
 src/FrameScaleBiCubic.s: src/FrameScaleBiCubic.cpp.s
@@ -2503,7 +2503,7 @@ src/FrameScaleBiCubic.s: src/FrameScaleBiCubic.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleBiCubic.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleBiCubic.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleBiCubic.cpp.s
 .PHONY : src/FrameScaleBiCubic.cpp.s
 
 src/FrameScaleBilinear.o: src/FrameScaleBilinear.cpp.o
@@ -2511,7 +2511,7 @@ src/FrameScaleBilinear.o: src/FrameScaleBilinear.cpp.o
 
 # target to build an object file
 src/FrameScaleBilinear.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleBilinear.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleBilinear.cpp.o
 .PHONY : src/FrameScaleBilinear.cpp.o
 
 src/FrameScaleBilinear.i: src/FrameScaleBilinear.cpp.i
@@ -2519,7 +2519,7 @@ src/FrameScaleBilinear.i: src/FrameScaleBilinear.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleBilinear.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleBilinear.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleBilinear.cpp.i
 .PHONY : src/FrameScaleBilinear.cpp.i
 
 src/FrameScaleBilinear.s: src/FrameScaleBilinear.cpp.s
@@ -2527,7 +2527,7 @@ src/FrameScaleBilinear.s: src/FrameScaleBilinear.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleBilinear.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleBilinear.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleBilinear.cpp.s
 .PHONY : src/FrameScaleBilinear.cpp.s
 
 src/FrameScaleCopy.o: src/FrameScaleCopy.cpp.o
@@ -2535,7 +2535,7 @@ src/FrameScaleCopy.o: src/FrameScaleCopy.cpp.o
 
 # target to build an object file
 src/FrameScaleCopy.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleCopy.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleCopy.cpp.o
 .PHONY : src/FrameScaleCopy.cpp.o
 
 src/FrameScaleCopy.i: src/FrameScaleCopy.cpp.i
@@ -2543,7 +2543,7 @@ src/FrameScaleCopy.i: src/FrameScaleCopy.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleCopy.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleCopy.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleCopy.cpp.i
 .PHONY : src/FrameScaleCopy.cpp.i
 
 src/FrameScaleCopy.s: src/FrameScaleCopy.cpp.s
@@ -2551,7 +2551,7 @@ src/FrameScaleCopy.s: src/FrameScaleCopy.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleCopy.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleCopy.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleCopy.cpp.s
 .PHONY : src/FrameScaleCopy.cpp.s
 
 src/FrameScaleGaussian.o: src/FrameScaleGaussian.cpp.o
@@ -2559,7 +2559,7 @@ src/FrameScaleGaussian.o: src/FrameScaleGaussian.cpp.o
 
 # target to build an object file
 src/FrameScaleGaussian.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleGaussian.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleGaussian.cpp.o
 .PHONY : src/FrameScaleGaussian.cpp.o
 
 src/FrameScaleGaussian.i: src/FrameScaleGaussian.cpp.i
@@ -2567,7 +2567,7 @@ src/FrameScaleGaussian.i: src/FrameScaleGaussian.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleGaussian.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleGaussian.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleGaussian.cpp.i
 .PHONY : src/FrameScaleGaussian.cpp.i
 
 src/FrameScaleGaussian.s: src/FrameScaleGaussian.cpp.s
@@ -2575,7 +2575,7 @@ src/FrameScaleGaussian.s: src/FrameScaleGaussian.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleGaussian.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleGaussian.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleGaussian.cpp.s
 .PHONY : src/FrameScaleGaussian.cpp.s
 
 src/FrameScaleHalf.o: src/FrameScaleHalf.cpp.o
@@ -2583,7 +2583,7 @@ src/FrameScaleHalf.o: src/FrameScaleHalf.cpp.o
 
 # target to build an object file
 src/FrameScaleHalf.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHalf.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHalf.cpp.o
 .PHONY : src/FrameScaleHalf.cpp.o
 
 src/FrameScaleHalf.i: src/FrameScaleHalf.cpp.i
@@ -2591,7 +2591,7 @@ src/FrameScaleHalf.i: src/FrameScaleHalf.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleHalf.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHalf.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHalf.cpp.i
 .PHONY : src/FrameScaleHalf.cpp.i
 
 src/FrameScaleHalf.s: src/FrameScaleHalf.cpp.s
@@ -2599,7 +2599,7 @@ src/FrameScaleHalf.s: src/FrameScaleHalf.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleHalf.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHalf.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHalf.cpp.s
 .PHONY : src/FrameScaleHalf.cpp.s
 
 src/FrameScaleHamming.o: src/FrameScaleHamming.cpp.o
@@ -2607,7 +2607,7 @@ src/FrameScaleHamming.o: src/FrameScaleHamming.cpp.o
 
 # target to build an object file
 src/FrameScaleHamming.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHamming.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHamming.cpp.o
 .PHONY : src/FrameScaleHamming.cpp.o
 
 src/FrameScaleHamming.i: src/FrameScaleHamming.cpp.i
@@ -2615,7 +2615,7 @@ src/FrameScaleHamming.i: src/FrameScaleHamming.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleHamming.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHamming.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHamming.cpp.i
 .PHONY : src/FrameScaleHamming.cpp.i
 
 src/FrameScaleHamming.s: src/FrameScaleHamming.cpp.s
@@ -2623,7 +2623,7 @@ src/FrameScaleHamming.s: src/FrameScaleHamming.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleHamming.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHamming.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHamming.cpp.s
 .PHONY : src/FrameScaleHamming.cpp.s
 
 src/FrameScaleHanning.o: src/FrameScaleHanning.cpp.o
@@ -2631,7 +2631,7 @@ src/FrameScaleHanning.o: src/FrameScaleHanning.cpp.o
 
 # target to build an object file
 src/FrameScaleHanning.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHanning.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHanning.cpp.o
 .PHONY : src/FrameScaleHanning.cpp.o
 
 src/FrameScaleHanning.i: src/FrameScaleHanning.cpp.i
@@ -2639,7 +2639,7 @@ src/FrameScaleHanning.i: src/FrameScaleHanning.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleHanning.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHanning.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHanning.cpp.i
 .PHONY : src/FrameScaleHanning.cpp.i
 
 src/FrameScaleHanning.s: src/FrameScaleHanning.cpp.s
@@ -2647,7 +2647,7 @@ src/FrameScaleHanning.s: src/FrameScaleHanning.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleHanning.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHanning.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleHanning.cpp.s
 .PHONY : src/FrameScaleHanning.cpp.s
 
 src/FrameScaleLanczos.o: src/FrameScaleLanczos.cpp.o
@@ -2655,7 +2655,7 @@ src/FrameScaleLanczos.o: src/FrameScaleLanczos.cpp.o
 
 # target to build an object file
 src/FrameScaleLanczos.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczos.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczos.cpp.o
 .PHONY : src/FrameScaleLanczos.cpp.o
 
 src/FrameScaleLanczos.i: src/FrameScaleLanczos.cpp.i
@@ -2663,7 +2663,7 @@ src/FrameScaleLanczos.i: src/FrameScaleLanczos.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleLanczos.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczos.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczos.cpp.i
 .PHONY : src/FrameScaleLanczos.cpp.i
 
 src/FrameScaleLanczos.s: src/FrameScaleLanczos.cpp.s
@@ -2671,7 +2671,7 @@ src/FrameScaleLanczos.s: src/FrameScaleLanczos.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleLanczos.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczos.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczos.cpp.s
 .PHONY : src/FrameScaleLanczos.cpp.s
 
 src/FrameScaleLanczosCTC.o: src/FrameScaleLanczosCTC.cpp.o
@@ -2679,7 +2679,7 @@ src/FrameScaleLanczosCTC.o: src/FrameScaleLanczosCTC.cpp.o
 
 # target to build an object file
 src/FrameScaleLanczosCTC.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczosCTC.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczosCTC.cpp.o
 .PHONY : src/FrameScaleLanczosCTC.cpp.o
 
 src/FrameScaleLanczosCTC.i: src/FrameScaleLanczosCTC.cpp.i
@@ -2687,7 +2687,7 @@ src/FrameScaleLanczosCTC.i: src/FrameScaleLanczosCTC.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleLanczosCTC.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczosCTC.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczosCTC.cpp.i
 .PHONY : src/FrameScaleLanczosCTC.cpp.i
 
 src/FrameScaleLanczosCTC.s: src/FrameScaleLanczosCTC.cpp.s
@@ -2695,7 +2695,7 @@ src/FrameScaleLanczosCTC.s: src/FrameScaleLanczosCTC.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleLanczosCTC.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczosCTC.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczosCTC.cpp.s
 .PHONY : src/FrameScaleLanczosCTC.cpp.s
 
 src/FrameScaleLanczosInt.o: src/FrameScaleLanczosInt.cpp.o
@@ -2703,7 +2703,7 @@ src/FrameScaleLanczosInt.o: src/FrameScaleLanczosInt.cpp.o
 
 # target to build an object file
 src/FrameScaleLanczosInt.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczosInt.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczosInt.cpp.o
 .PHONY : src/FrameScaleLanczosInt.cpp.o
 
 src/FrameScaleLanczosInt.i: src/FrameScaleLanczosInt.cpp.i
@@ -2711,7 +2711,7 @@ src/FrameScaleLanczosInt.i: src/FrameScaleLanczosInt.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleLanczosInt.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczosInt.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczosInt.cpp.i
 .PHONY : src/FrameScaleLanczosInt.cpp.i
 
 src/FrameScaleLanczosInt.s: src/FrameScaleLanczosInt.cpp.s
@@ -2719,7 +2719,7 @@ src/FrameScaleLanczosInt.s: src/FrameScaleLanczosInt.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleLanczosInt.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczosInt.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleLanczosInt.cpp.s
 .PHONY : src/FrameScaleLanczosInt.cpp.s
 
 src/FrameScaleNN.o: src/FrameScaleNN.cpp.o
@@ -2727,7 +2727,7 @@ src/FrameScaleNN.o: src/FrameScaleNN.cpp.o
 
 # target to build an object file
 src/FrameScaleNN.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleNN.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleNN.cpp.o
 .PHONY : src/FrameScaleNN.cpp.o
 
 src/FrameScaleNN.i: src/FrameScaleNN.cpp.i
@@ -2735,7 +2735,7 @@ src/FrameScaleNN.i: src/FrameScaleNN.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleNN.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleNN.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleNN.cpp.i
 .PHONY : src/FrameScaleNN.cpp.i
 
 src/FrameScaleNN.s: src/FrameScaleNN.cpp.s
@@ -2743,7 +2743,7 @@ src/FrameScaleNN.s: src/FrameScaleNN.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleNN.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleNN.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleNN.cpp.s
 .PHONY : src/FrameScaleNN.cpp.s
 
 src/FrameScaleNull.o: src/FrameScaleNull.cpp.o
@@ -2751,7 +2751,7 @@ src/FrameScaleNull.o: src/FrameScaleNull.cpp.o
 
 # target to build an object file
 src/FrameScaleNull.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleNull.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleNull.cpp.o
 .PHONY : src/FrameScaleNull.cpp.o
 
 src/FrameScaleNull.i: src/FrameScaleNull.cpp.i
@@ -2759,7 +2759,7 @@ src/FrameScaleNull.i: src/FrameScaleNull.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleNull.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleNull.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleNull.cpp.i
 .PHONY : src/FrameScaleNull.cpp.i
 
 src/FrameScaleNull.s: src/FrameScaleNull.cpp.s
@@ -2767,7 +2767,7 @@ src/FrameScaleNull.s: src/FrameScaleNull.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleNull.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleNull.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleNull.cpp.s
 .PHONY : src/FrameScaleNull.cpp.s
 
 src/FrameScaleSHVC.o: src/FrameScaleSHVC.cpp.o
@@ -2775,7 +2775,7 @@ src/FrameScaleSHVC.o: src/FrameScaleSHVC.cpp.o
 
 # target to build an object file
 src/FrameScaleSHVC.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleSHVC.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleSHVC.cpp.o
 .PHONY : src/FrameScaleSHVC.cpp.o
 
 src/FrameScaleSHVC.i: src/FrameScaleSHVC.cpp.i
@@ -2783,7 +2783,7 @@ src/FrameScaleSHVC.i: src/FrameScaleSHVC.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleSHVC.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleSHVC.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleSHVC.cpp.i
 .PHONY : src/FrameScaleSHVC.cpp.i
 
 src/FrameScaleSHVC.s: src/FrameScaleSHVC.cpp.s
@@ -2791,7 +2791,7 @@ src/FrameScaleSHVC.s: src/FrameScaleSHVC.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleSHVC.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleSHVC.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleSHVC.cpp.s
 .PHONY : src/FrameScaleSHVC.cpp.s
 
 src/FrameScaleSineWindow.o: src/FrameScaleSineWindow.cpp.o
@@ -2799,7 +2799,7 @@ src/FrameScaleSineWindow.o: src/FrameScaleSineWindow.cpp.o
 
 # target to build an object file
 src/FrameScaleSineWindow.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleSineWindow.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleSineWindow.cpp.o
 .PHONY : src/FrameScaleSineWindow.cpp.o
 
 src/FrameScaleSineWindow.i: src/FrameScaleSineWindow.cpp.i
@@ -2807,7 +2807,7 @@ src/FrameScaleSineWindow.i: src/FrameScaleSineWindow.cpp.i
 
 # target to preprocess a source file
 src/FrameScaleSineWindow.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleSineWindow.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleSineWindow.cpp.i
 .PHONY : src/FrameScaleSineWindow.cpp.i
 
 src/FrameScaleSineWindow.s: src/FrameScaleSineWindow.cpp.s
@@ -2815,7 +2815,7 @@ src/FrameScaleSineWindow.s: src/FrameScaleSineWindow.cpp.s
 
 # target to generate assembly for a file
 src/FrameScaleSineWindow.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleSineWindow.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/FrameScaleSineWindow.cpp.s
 .PHONY : src/FrameScaleSineWindow.cpp.s
 
 src/GaussianFilter.o: src/GaussianFilter.cpp.o
@@ -2823,7 +2823,7 @@ src/GaussianFilter.o: src/GaussianFilter.cpp.o
 
 # target to build an object file
 src/GaussianFilter.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/GaussianFilter.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/GaussianFilter.cpp.o
 .PHONY : src/GaussianFilter.cpp.o
 
 src/GaussianFilter.i: src/GaussianFilter.cpp.i
@@ -2831,7 +2831,7 @@ src/GaussianFilter.i: src/GaussianFilter.cpp.i
 
 # target to preprocess a source file
 src/GaussianFilter.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/GaussianFilter.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/GaussianFilter.cpp.i
 .PHONY : src/GaussianFilter.cpp.i
 
 src/GaussianFilter.s: src/GaussianFilter.cpp.s
@@ -2839,7 +2839,7 @@ src/GaussianFilter.s: src/GaussianFilter.cpp.s
 
 # target to generate assembly for a file
 src/GaussianFilter.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/GaussianFilter.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/GaussianFilter.cpp.s
 .PHONY : src/GaussianFilter.cpp.s
 
 src/IOFunctions.o: src/IOFunctions.cpp.o
@@ -2847,7 +2847,7 @@ src/IOFunctions.o: src/IOFunctions.cpp.o
 
 # target to build an object file
 src/IOFunctions.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/IOFunctions.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/IOFunctions.cpp.o
 .PHONY : src/IOFunctions.cpp.o
 
 src/IOFunctions.i: src/IOFunctions.cpp.i
@@ -2855,7 +2855,7 @@ src/IOFunctions.i: src/IOFunctions.cpp.i
 
 # target to preprocess a source file
 src/IOFunctions.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/IOFunctions.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/IOFunctions.cpp.i
 .PHONY : src/IOFunctions.cpp.i
 
 src/IOFunctions.s: src/IOFunctions.cpp.s
@@ -2863,7 +2863,7 @@ src/IOFunctions.s: src/IOFunctions.cpp.s
 
 # target to generate assembly for a file
 src/IOFunctions.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/IOFunctions.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/IOFunctions.cpp.s
 .PHONY : src/IOFunctions.cpp.s
 
 src/ImgToBuf.o: src/ImgToBuf.cpp.o
@@ -2871,7 +2871,7 @@ src/ImgToBuf.o: src/ImgToBuf.cpp.o
 
 # target to build an object file
 src/ImgToBuf.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBuf.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBuf.cpp.o
 .PHONY : src/ImgToBuf.cpp.o
 
 src/ImgToBuf.i: src/ImgToBuf.cpp.i
@@ -2879,7 +2879,7 @@ src/ImgToBuf.i: src/ImgToBuf.cpp.i
 
 # target to preprocess a source file
 src/ImgToBuf.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBuf.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBuf.cpp.i
 .PHONY : src/ImgToBuf.cpp.i
 
 src/ImgToBuf.s: src/ImgToBuf.cpp.s
@@ -2887,7 +2887,7 @@ src/ImgToBuf.s: src/ImgToBuf.cpp.s
 
 # target to generate assembly for a file
 src/ImgToBuf.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBuf.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBuf.cpp.s
 .PHONY : src/ImgToBuf.cpp.s
 
 src/ImgToBufBasic.o: src/ImgToBufBasic.cpp.o
@@ -2895,7 +2895,7 @@ src/ImgToBufBasic.o: src/ImgToBufBasic.cpp.o
 
 # target to build an object file
 src/ImgToBufBasic.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBufBasic.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBufBasic.cpp.o
 .PHONY : src/ImgToBufBasic.cpp.o
 
 src/ImgToBufBasic.i: src/ImgToBufBasic.cpp.i
@@ -2903,7 +2903,7 @@ src/ImgToBufBasic.i: src/ImgToBufBasic.cpp.i
 
 # target to preprocess a source file
 src/ImgToBufBasic.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBufBasic.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBufBasic.cpp.i
 .PHONY : src/ImgToBufBasic.cpp.i
 
 src/ImgToBufBasic.s: src/ImgToBufBasic.cpp.s
@@ -2911,7 +2911,7 @@ src/ImgToBufBasic.s: src/ImgToBufBasic.cpp.s
 
 # target to generate assembly for a file
 src/ImgToBufBasic.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBufBasic.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBufBasic.cpp.s
 .PHONY : src/ImgToBufBasic.cpp.s
 
 src/ImgToBufEndian.o: src/ImgToBufEndian.cpp.o
@@ -2919,7 +2919,7 @@ src/ImgToBufEndian.o: src/ImgToBufEndian.cpp.o
 
 # target to build an object file
 src/ImgToBufEndian.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBufEndian.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBufEndian.cpp.o
 .PHONY : src/ImgToBufEndian.cpp.o
 
 src/ImgToBufEndian.i: src/ImgToBufEndian.cpp.i
@@ -2927,7 +2927,7 @@ src/ImgToBufEndian.i: src/ImgToBufEndian.cpp.i
 
 # target to preprocess a source file
 src/ImgToBufEndian.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBufEndian.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBufEndian.cpp.i
 .PHONY : src/ImgToBufEndian.cpp.i
 
 src/ImgToBufEndian.s: src/ImgToBufEndian.cpp.s
@@ -2935,7 +2935,7 @@ src/ImgToBufEndian.s: src/ImgToBufEndian.cpp.s
 
 # target to generate assembly for a file
 src/ImgToBufEndian.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBufEndian.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ImgToBufEndian.cpp.s
 .PHONY : src/ImgToBufEndian.cpp.s
 
 src/Input.o: src/Input.cpp.o
@@ -2943,7 +2943,7 @@ src/Input.o: src/Input.cpp.o
 
 # target to build an object file
 src/Input.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Input.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Input.cpp.o
 .PHONY : src/Input.cpp.o
 
 src/Input.i: src/Input.cpp.i
@@ -2951,7 +2951,7 @@ src/Input.i: src/Input.cpp.i
 
 # target to preprocess a source file
 src/Input.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Input.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Input.cpp.i
 .PHONY : src/Input.cpp.i
 
 src/Input.s: src/Input.cpp.s
@@ -2959,7 +2959,7 @@ src/Input.s: src/Input.cpp.s
 
 # target to generate assembly for a file
 src/Input.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Input.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Input.cpp.s
 .PHONY : src/Input.cpp.s
 
 src/InputDPX.o: src/InputDPX.cpp.o
@@ -2967,7 +2967,7 @@ src/InputDPX.o: src/InputDPX.cpp.o
 
 # target to build an object file
 src/InputDPX.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputDPX.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputDPX.cpp.o
 .PHONY : src/InputDPX.cpp.o
 
 src/InputDPX.i: src/InputDPX.cpp.i
@@ -2975,7 +2975,7 @@ src/InputDPX.i: src/InputDPX.cpp.i
 
 # target to preprocess a source file
 src/InputDPX.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputDPX.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputDPX.cpp.i
 .PHONY : src/InputDPX.cpp.i
 
 src/InputDPX.s: src/InputDPX.cpp.s
@@ -2983,7 +2983,7 @@ src/InputDPX.s: src/InputDPX.cpp.s
 
 # target to generate assembly for a file
 src/InputDPX.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputDPX.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputDPX.cpp.s
 .PHONY : src/InputDPX.cpp.s
 
 src/InputEXR.o: src/InputEXR.cpp.o
@@ -2991,7 +2991,7 @@ src/InputEXR.o: src/InputEXR.cpp.o
 
 # target to build an object file
 src/InputEXR.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputEXR.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputEXR.cpp.o
 .PHONY : src/InputEXR.cpp.o
 
 src/InputEXR.i: src/InputEXR.cpp.i
@@ -2999,7 +2999,7 @@ src/InputEXR.i: src/InputEXR.cpp.i
 
 # target to preprocess a source file
 src/InputEXR.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputEXR.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputEXR.cpp.i
 .PHONY : src/InputEXR.cpp.i
 
 src/InputEXR.s: src/InputEXR.cpp.s
@@ -3007,7 +3007,7 @@ src/InputEXR.s: src/InputEXR.cpp.s
 
 # target to generate assembly for a file
 src/InputEXR.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputEXR.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputEXR.cpp.s
 .PHONY : src/InputEXR.cpp.s
 
 src/InputPFM.o: src/InputPFM.cpp.o
@@ -3015,7 +3015,7 @@ src/InputPFM.o: src/InputPFM.cpp.o
 
 # target to build an object file
 src/InputPFM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPFM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPFM.cpp.o
 .PHONY : src/InputPFM.cpp.o
 
 src/InputPFM.i: src/InputPFM.cpp.i
@@ -3023,7 +3023,7 @@ src/InputPFM.i: src/InputPFM.cpp.i
 
 # target to preprocess a source file
 src/InputPFM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPFM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPFM.cpp.i
 .PHONY : src/InputPFM.cpp.i
 
 src/InputPFM.s: src/InputPFM.cpp.s
@@ -3031,7 +3031,7 @@ src/InputPFM.s: src/InputPFM.cpp.s
 
 # target to generate assembly for a file
 src/InputPFM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPFM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPFM.cpp.s
 .PHONY : src/InputPFM.cpp.s
 
 src/InputPGM.o: src/InputPGM.cpp.o
@@ -3039,7 +3039,7 @@ src/InputPGM.o: src/InputPGM.cpp.o
 
 # target to build an object file
 src/InputPGM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPGM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPGM.cpp.o
 .PHONY : src/InputPGM.cpp.o
 
 src/InputPGM.i: src/InputPGM.cpp.i
@@ -3047,7 +3047,7 @@ src/InputPGM.i: src/InputPGM.cpp.i
 
 # target to preprocess a source file
 src/InputPGM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPGM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPGM.cpp.i
 .PHONY : src/InputPGM.cpp.i
 
 src/InputPGM.s: src/InputPGM.cpp.s
@@ -3055,7 +3055,7 @@ src/InputPGM.s: src/InputPGM.cpp.s
 
 # target to generate assembly for a file
 src/InputPGM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPGM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPGM.cpp.s
 .PHONY : src/InputPGM.cpp.s
 
 src/InputPNG.o: src/InputPNG.cpp.o
@@ -3063,7 +3063,7 @@ src/InputPNG.o: src/InputPNG.cpp.o
 
 # target to build an object file
 src/InputPNG.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPNG.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPNG.cpp.o
 .PHONY : src/InputPNG.cpp.o
 
 src/InputPNG.i: src/InputPNG.cpp.i
@@ -3071,7 +3071,7 @@ src/InputPNG.i: src/InputPNG.cpp.i
 
 # target to preprocess a source file
 src/InputPNG.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPNG.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPNG.cpp.i
 .PHONY : src/InputPNG.cpp.i
 
 src/InputPNG.s: src/InputPNG.cpp.s
@@ -3079,7 +3079,7 @@ src/InputPNG.s: src/InputPNG.cpp.s
 
 # target to generate assembly for a file
 src/InputPNG.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPNG.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPNG.cpp.s
 .PHONY : src/InputPNG.cpp.s
 
 src/InputPPM.o: src/InputPPM.cpp.o
@@ -3087,7 +3087,7 @@ src/InputPPM.o: src/InputPPM.cpp.o
 
 # target to build an object file
 src/InputPPM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPPM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPPM.cpp.o
 .PHONY : src/InputPPM.cpp.o
 
 src/InputPPM.i: src/InputPPM.cpp.i
@@ -3095,7 +3095,7 @@ src/InputPPM.i: src/InputPPM.cpp.i
 
 # target to preprocess a source file
 src/InputPPM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPPM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPPM.cpp.i
 .PHONY : src/InputPPM.cpp.i
 
 src/InputPPM.s: src/InputPPM.cpp.s
@@ -3103,7 +3103,7 @@ src/InputPPM.s: src/InputPPM.cpp.s
 
 # target to generate assembly for a file
 src/InputPPM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPPM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputPPM.cpp.s
 .PHONY : src/InputPPM.cpp.s
 
 src/InputTIFF.o: src/InputTIFF.cpp.o
@@ -3111,7 +3111,7 @@ src/InputTIFF.o: src/InputTIFF.cpp.o
 
 # target to build an object file
 src/InputTIFF.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputTIFF.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputTIFF.cpp.o
 .PHONY : src/InputTIFF.cpp.o
 
 src/InputTIFF.i: src/InputTIFF.cpp.i
@@ -3119,7 +3119,7 @@ src/InputTIFF.i: src/InputTIFF.cpp.i
 
 # target to preprocess a source file
 src/InputTIFF.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputTIFF.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputTIFF.cpp.i
 .PHONY : src/InputTIFF.cpp.i
 
 src/InputTIFF.s: src/InputTIFF.cpp.s
@@ -3127,7 +3127,7 @@ src/InputTIFF.s: src/InputTIFF.cpp.s
 
 # target to generate assembly for a file
 src/InputTIFF.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputTIFF.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputTIFF.cpp.s
 .PHONY : src/InputTIFF.cpp.s
 
 src/InputY4M.o: src/InputY4M.cpp.o
@@ -3135,7 +3135,7 @@ src/InputY4M.o: src/InputY4M.cpp.o
 
 # target to build an object file
 src/InputY4M.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputY4M.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputY4M.cpp.o
 .PHONY : src/InputY4M.cpp.o
 
 src/InputY4M.i: src/InputY4M.cpp.i
@@ -3143,7 +3143,7 @@ src/InputY4M.i: src/InputY4M.cpp.i
 
 # target to preprocess a source file
 src/InputY4M.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputY4M.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputY4M.cpp.i
 .PHONY : src/InputY4M.cpp.i
 
 src/InputY4M.s: src/InputY4M.cpp.s
@@ -3151,7 +3151,7 @@ src/InputY4M.s: src/InputY4M.cpp.s
 
 # target to generate assembly for a file
 src/InputY4M.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputY4M.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputY4M.cpp.s
 .PHONY : src/InputY4M.cpp.s
 
 src/InputYUV.o: src/InputYUV.cpp.o
@@ -3159,7 +3159,7 @@ src/InputYUV.o: src/InputYUV.cpp.o
 
 # target to build an object file
 src/InputYUV.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputYUV.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputYUV.cpp.o
 .PHONY : src/InputYUV.cpp.o
 
 src/InputYUV.i: src/InputYUV.cpp.i
@@ -3167,7 +3167,7 @@ src/InputYUV.i: src/InputYUV.cpp.i
 
 # target to preprocess a source file
 src/InputYUV.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputYUV.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputYUV.cpp.i
 .PHONY : src/InputYUV.cpp.i
 
 src/InputYUV.s: src/InputYUV.cpp.s
@@ -3175,7 +3175,7 @@ src/InputYUV.s: src/InputYUV.cpp.s
 
 # target to generate assembly for a file
 src/InputYUV.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputYUV.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/InputYUV.cpp.s
 .PHONY : src/InputYUV.cpp.s
 
 src/LookUpTable.o: src/LookUpTable.cpp.o
@@ -3183,7 +3183,7 @@ src/LookUpTable.o: src/LookUpTable.cpp.o
 
 # target to build an object file
 src/LookUpTable.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/LookUpTable.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/LookUpTable.cpp.o
 .PHONY : src/LookUpTable.cpp.o
 
 src/LookUpTable.i: src/LookUpTable.cpp.i
@@ -3191,7 +3191,7 @@ src/LookUpTable.i: src/LookUpTable.cpp.i
 
 # target to preprocess a source file
 src/LookUpTable.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/LookUpTable.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/LookUpTable.cpp.i
 .PHONY : src/LookUpTable.cpp.i
 
 src/LookUpTable.s: src/LookUpTable.cpp.s
@@ -3199,7 +3199,7 @@ src/LookUpTable.s: src/LookUpTable.cpp.s
 
 # target to generate assembly for a file
 src/LookUpTable.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/LookUpTable.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/LookUpTable.cpp.s
 .PHONY : src/LookUpTable.cpp.s
 
 src/Output.o: src/Output.cpp.o
@@ -3207,7 +3207,7 @@ src/Output.o: src/Output.cpp.o
 
 # target to build an object file
 src/Output.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Output.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Output.cpp.o
 .PHONY : src/Output.cpp.o
 
 src/Output.i: src/Output.cpp.i
@@ -3215,7 +3215,7 @@ src/Output.i: src/Output.cpp.i
 
 # target to preprocess a source file
 src/Output.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Output.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Output.cpp.i
 .PHONY : src/Output.cpp.i
 
 src/Output.s: src/Output.cpp.s
@@ -3223,7 +3223,7 @@ src/Output.s: src/Output.cpp.s
 
 # target to generate assembly for a file
 src/Output.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Output.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Output.cpp.s
 .PHONY : src/Output.cpp.s
 
 src/OutputAVI.o: src/OutputAVI.cpp.o
@@ -3231,7 +3231,7 @@ src/OutputAVI.o: src/OutputAVI.cpp.o
 
 # target to build an object file
 src/OutputAVI.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputAVI.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputAVI.cpp.o
 .PHONY : src/OutputAVI.cpp.o
 
 src/OutputAVI.i: src/OutputAVI.cpp.i
@@ -3239,7 +3239,7 @@ src/OutputAVI.i: src/OutputAVI.cpp.i
 
 # target to preprocess a source file
 src/OutputAVI.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputAVI.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputAVI.cpp.i
 .PHONY : src/OutputAVI.cpp.i
 
 src/OutputAVI.s: src/OutputAVI.cpp.s
@@ -3247,7 +3247,7 @@ src/OutputAVI.s: src/OutputAVI.cpp.s
 
 # target to generate assembly for a file
 src/OutputAVI.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputAVI.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputAVI.cpp.s
 .PHONY : src/OutputAVI.cpp.s
 
 src/OutputEXR.o: src/OutputEXR.cpp.o
@@ -3255,7 +3255,7 @@ src/OutputEXR.o: src/OutputEXR.cpp.o
 
 # target to build an object file
 src/OutputEXR.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputEXR.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputEXR.cpp.o
 .PHONY : src/OutputEXR.cpp.o
 
 src/OutputEXR.i: src/OutputEXR.cpp.i
@@ -3263,7 +3263,7 @@ src/OutputEXR.i: src/OutputEXR.cpp.i
 
 # target to preprocess a source file
 src/OutputEXR.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputEXR.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputEXR.cpp.i
 .PHONY : src/OutputEXR.cpp.i
 
 src/OutputEXR.s: src/OutputEXR.cpp.s
@@ -3271,7 +3271,7 @@ src/OutputEXR.s: src/OutputEXR.cpp.s
 
 # target to generate assembly for a file
 src/OutputEXR.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputEXR.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputEXR.cpp.s
 .PHONY : src/OutputEXR.cpp.s
 
 src/OutputPFM.o: src/OutputPFM.cpp.o
@@ -3279,7 +3279,7 @@ src/OutputPFM.o: src/OutputPFM.cpp.o
 
 # target to build an object file
 src/OutputPFM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPFM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPFM.cpp.o
 .PHONY : src/OutputPFM.cpp.o
 
 src/OutputPFM.i: src/OutputPFM.cpp.i
@@ -3287,7 +3287,7 @@ src/OutputPFM.i: src/OutputPFM.cpp.i
 
 # target to preprocess a source file
 src/OutputPFM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPFM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPFM.cpp.i
 .PHONY : src/OutputPFM.cpp.i
 
 src/OutputPFM.s: src/OutputPFM.cpp.s
@@ -3295,7 +3295,7 @@ src/OutputPFM.s: src/OutputPFM.cpp.s
 
 # target to generate assembly for a file
 src/OutputPFM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPFM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPFM.cpp.s
 .PHONY : src/OutputPFM.cpp.s
 
 src/OutputPGM.o: src/OutputPGM.cpp.o
@@ -3303,7 +3303,7 @@ src/OutputPGM.o: src/OutputPGM.cpp.o
 
 # target to build an object file
 src/OutputPGM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPGM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPGM.cpp.o
 .PHONY : src/OutputPGM.cpp.o
 
 src/OutputPGM.i: src/OutputPGM.cpp.i
@@ -3311,7 +3311,7 @@ src/OutputPGM.i: src/OutputPGM.cpp.i
 
 # target to preprocess a source file
 src/OutputPGM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPGM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPGM.cpp.i
 .PHONY : src/OutputPGM.cpp.i
 
 src/OutputPGM.s: src/OutputPGM.cpp.s
@@ -3319,7 +3319,7 @@ src/OutputPGM.s: src/OutputPGM.cpp.s
 
 # target to generate assembly for a file
 src/OutputPGM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPGM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPGM.cpp.s
 .PHONY : src/OutputPGM.cpp.s
 
 src/OutputPNG.o: src/OutputPNG.cpp.o
@@ -3327,7 +3327,7 @@ src/OutputPNG.o: src/OutputPNG.cpp.o
 
 # target to build an object file
 src/OutputPNG.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPNG.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPNG.cpp.o
 .PHONY : src/OutputPNG.cpp.o
 
 src/OutputPNG.i: src/OutputPNG.cpp.i
@@ -3335,7 +3335,7 @@ src/OutputPNG.i: src/OutputPNG.cpp.i
 
 # target to preprocess a source file
 src/OutputPNG.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPNG.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPNG.cpp.i
 .PHONY : src/OutputPNG.cpp.i
 
 src/OutputPNG.s: src/OutputPNG.cpp.s
@@ -3343,7 +3343,7 @@ src/OutputPNG.s: src/OutputPNG.cpp.s
 
 # target to generate assembly for a file
 src/OutputPNG.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPNG.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPNG.cpp.s
 .PHONY : src/OutputPNG.cpp.s
 
 src/OutputPPM.o: src/OutputPPM.cpp.o
@@ -3351,7 +3351,7 @@ src/OutputPPM.o: src/OutputPPM.cpp.o
 
 # target to build an object file
 src/OutputPPM.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPPM.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPPM.cpp.o
 .PHONY : src/OutputPPM.cpp.o
 
 src/OutputPPM.i: src/OutputPPM.cpp.i
@@ -3359,7 +3359,7 @@ src/OutputPPM.i: src/OutputPPM.cpp.i
 
 # target to preprocess a source file
 src/OutputPPM.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPPM.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPPM.cpp.i
 .PHONY : src/OutputPPM.cpp.i
 
 src/OutputPPM.s: src/OutputPPM.cpp.s
@@ -3367,7 +3367,7 @@ src/OutputPPM.s: src/OutputPPM.cpp.s
 
 # target to generate assembly for a file
 src/OutputPPM.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPPM.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputPPM.cpp.s
 .PHONY : src/OutputPPM.cpp.s
 
 src/OutputTIFF.o: src/OutputTIFF.cpp.o
@@ -3375,7 +3375,7 @@ src/OutputTIFF.o: src/OutputTIFF.cpp.o
 
 # target to build an object file
 src/OutputTIFF.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputTIFF.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputTIFF.cpp.o
 .PHONY : src/OutputTIFF.cpp.o
 
 src/OutputTIFF.i: src/OutputTIFF.cpp.i
@@ -3383,7 +3383,7 @@ src/OutputTIFF.i: src/OutputTIFF.cpp.i
 
 # target to preprocess a source file
 src/OutputTIFF.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputTIFF.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputTIFF.cpp.i
 .PHONY : src/OutputTIFF.cpp.i
 
 src/OutputTIFF.s: src/OutputTIFF.cpp.s
@@ -3391,7 +3391,7 @@ src/OutputTIFF.s: src/OutputTIFF.cpp.s
 
 # target to generate assembly for a file
 src/OutputTIFF.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputTIFF.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputTIFF.cpp.s
 .PHONY : src/OutputTIFF.cpp.s
 
 src/OutputY4M.o: src/OutputY4M.cpp.o
@@ -3399,7 +3399,7 @@ src/OutputY4M.o: src/OutputY4M.cpp.o
 
 # target to build an object file
 src/OutputY4M.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputY4M.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputY4M.cpp.o
 .PHONY : src/OutputY4M.cpp.o
 
 src/OutputY4M.i: src/OutputY4M.cpp.i
@@ -3407,7 +3407,7 @@ src/OutputY4M.i: src/OutputY4M.cpp.i
 
 # target to preprocess a source file
 src/OutputY4M.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputY4M.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputY4M.cpp.i
 .PHONY : src/OutputY4M.cpp.i
 
 src/OutputY4M.s: src/OutputY4M.cpp.s
@@ -3415,7 +3415,7 @@ src/OutputY4M.s: src/OutputY4M.cpp.s
 
 # target to generate assembly for a file
 src/OutputY4M.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputY4M.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputY4M.cpp.s
 .PHONY : src/OutputY4M.cpp.s
 
 src/OutputYUV.o: src/OutputYUV.cpp.o
@@ -3423,7 +3423,7 @@ src/OutputYUV.o: src/OutputYUV.cpp.o
 
 # target to build an object file
 src/OutputYUV.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputYUV.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputYUV.cpp.o
 .PHONY : src/OutputYUV.cpp.o
 
 src/OutputYUV.i: src/OutputYUV.cpp.i
@@ -3431,7 +3431,7 @@ src/OutputYUV.i: src/OutputYUV.cpp.i
 
 # target to preprocess a source file
 src/OutputYUV.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputYUV.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputYUV.cpp.i
 .PHONY : src/OutputYUV.cpp.i
 
 src/OutputYUV.s: src/OutputYUV.cpp.s
@@ -3439,7 +3439,7 @@ src/OutputYUV.s: src/OutputYUV.cpp.s
 
 # target to generate assembly for a file
 src/OutputYUV.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputYUV.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/OutputYUV.cpp.s
 .PHONY : src/OutputYUV.cpp.s
 
 src/Parameters.o: src/Parameters.cpp.o
@@ -3447,7 +3447,7 @@ src/Parameters.o: src/Parameters.cpp.o
 
 # target to build an object file
 src/Parameters.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Parameters.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Parameters.cpp.o
 .PHONY : src/Parameters.cpp.o
 
 src/Parameters.i: src/Parameters.cpp.i
@@ -3455,7 +3455,7 @@ src/Parameters.i: src/Parameters.cpp.i
 
 # target to preprocess a source file
 src/Parameters.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Parameters.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Parameters.cpp.i
 .PHONY : src/Parameters.cpp.i
 
 src/Parameters.s: src/Parameters.cpp.s
@@ -3463,7 +3463,7 @@ src/Parameters.s: src/Parameters.cpp.s
 
 # target to generate assembly for a file
 src/Parameters.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Parameters.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/Parameters.cpp.s
 .PHONY : src/Parameters.cpp.s
 
 src/ResizeBiCubic.o: src/ResizeBiCubic.cpp.o
@@ -3471,7 +3471,7 @@ src/ResizeBiCubic.o: src/ResizeBiCubic.cpp.o
 
 # target to build an object file
 src/ResizeBiCubic.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ResizeBiCubic.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ResizeBiCubic.cpp.o
 .PHONY : src/ResizeBiCubic.cpp.o
 
 src/ResizeBiCubic.i: src/ResizeBiCubic.cpp.i
@@ -3479,7 +3479,7 @@ src/ResizeBiCubic.i: src/ResizeBiCubic.cpp.i
 
 # target to preprocess a source file
 src/ResizeBiCubic.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ResizeBiCubic.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ResizeBiCubic.cpp.i
 .PHONY : src/ResizeBiCubic.cpp.i
 
 src/ResizeBiCubic.s: src/ResizeBiCubic.cpp.s
@@ -3487,7 +3487,7 @@ src/ResizeBiCubic.s: src/ResizeBiCubic.cpp.s
 
 # target to generate assembly for a file
 src/ResizeBiCubic.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ResizeBiCubic.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ResizeBiCubic.cpp.s
 .PHONY : src/ResizeBiCubic.cpp.s
 
 src/ScaleFilter.o: src/ScaleFilter.cpp.o
@@ -3495,7 +3495,7 @@ src/ScaleFilter.o: src/ScaleFilter.cpp.o
 
 # target to build an object file
 src/ScaleFilter.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ScaleFilter.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ScaleFilter.cpp.o
 .PHONY : src/ScaleFilter.cpp.o
 
 src/ScaleFilter.i: src/ScaleFilter.cpp.i
@@ -3503,7 +3503,7 @@ src/ScaleFilter.i: src/ScaleFilter.cpp.i
 
 # target to preprocess a source file
 src/ScaleFilter.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ScaleFilter.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ScaleFilter.cpp.i
 .PHONY : src/ScaleFilter.cpp.i
 
 src/ScaleFilter.s: src/ScaleFilter.cpp.s
@@ -3511,7 +3511,7 @@ src/ScaleFilter.s: src/ScaleFilter.cpp.s
 
 # target to generate assembly for a file
 src/ScaleFilter.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ScaleFilter.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ScaleFilter.cpp.s
 .PHONY : src/ScaleFilter.cpp.s
 
 src/ToneMapping.o: src/ToneMapping.cpp.o
@@ -3519,7 +3519,7 @@ src/ToneMapping.o: src/ToneMapping.cpp.o
 
 # target to build an object file
 src/ToneMapping.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMapping.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMapping.cpp.o
 .PHONY : src/ToneMapping.cpp.o
 
 src/ToneMapping.i: src/ToneMapping.cpp.i
@@ -3527,7 +3527,7 @@ src/ToneMapping.i: src/ToneMapping.cpp.i
 
 # target to preprocess a source file
 src/ToneMapping.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMapping.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMapping.cpp.i
 .PHONY : src/ToneMapping.cpp.i
 
 src/ToneMapping.s: src/ToneMapping.cpp.s
@@ -3535,7 +3535,7 @@ src/ToneMapping.s: src/ToneMapping.cpp.s
 
 # target to generate assembly for a file
 src/ToneMapping.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMapping.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMapping.cpp.s
 .PHONY : src/ToneMapping.cpp.s
 
 src/ToneMappingBT2390.o: src/ToneMappingBT2390.cpp.o
@@ -3543,7 +3543,7 @@ src/ToneMappingBT2390.o: src/ToneMappingBT2390.cpp.o
 
 # target to build an object file
 src/ToneMappingBT2390.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingBT2390.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingBT2390.cpp.o
 .PHONY : src/ToneMappingBT2390.cpp.o
 
 src/ToneMappingBT2390.i: src/ToneMappingBT2390.cpp.i
@@ -3551,7 +3551,7 @@ src/ToneMappingBT2390.i: src/ToneMappingBT2390.cpp.i
 
 # target to preprocess a source file
 src/ToneMappingBT2390.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingBT2390.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingBT2390.cpp.i
 .PHONY : src/ToneMappingBT2390.cpp.i
 
 src/ToneMappingBT2390.s: src/ToneMappingBT2390.cpp.s
@@ -3559,7 +3559,7 @@ src/ToneMappingBT2390.s: src/ToneMappingBT2390.cpp.s
 
 # target to generate assembly for a file
 src/ToneMappingBT2390.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingBT2390.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingBT2390.cpp.s
 .PHONY : src/ToneMappingBT2390.cpp.s
 
 src/ToneMappingBT2390IPT.o: src/ToneMappingBT2390IPT.cpp.o
@@ -3567,7 +3567,7 @@ src/ToneMappingBT2390IPT.o: src/ToneMappingBT2390IPT.cpp.o
 
 # target to build an object file
 src/ToneMappingBT2390IPT.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingBT2390IPT.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingBT2390IPT.cpp.o
 .PHONY : src/ToneMappingBT2390IPT.cpp.o
 
 src/ToneMappingBT2390IPT.i: src/ToneMappingBT2390IPT.cpp.i
@@ -3575,7 +3575,7 @@ src/ToneMappingBT2390IPT.i: src/ToneMappingBT2390IPT.cpp.i
 
 # target to preprocess a source file
 src/ToneMappingBT2390IPT.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingBT2390IPT.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingBT2390IPT.cpp.i
 .PHONY : src/ToneMappingBT2390IPT.cpp.i
 
 src/ToneMappingBT2390IPT.s: src/ToneMappingBT2390IPT.cpp.s
@@ -3583,7 +3583,7 @@ src/ToneMappingBT2390IPT.s: src/ToneMappingBT2390IPT.cpp.s
 
 # target to generate assembly for a file
 src/ToneMappingBT2390IPT.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingBT2390IPT.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingBT2390IPT.cpp.s
 .PHONY : src/ToneMappingBT2390IPT.cpp.s
 
 src/ToneMappingCIE1931.o: src/ToneMappingCIE1931.cpp.o
@@ -3591,7 +3591,7 @@ src/ToneMappingCIE1931.o: src/ToneMappingCIE1931.cpp.o
 
 # target to build an object file
 src/ToneMappingCIE1931.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingCIE1931.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingCIE1931.cpp.o
 .PHONY : src/ToneMappingCIE1931.cpp.o
 
 src/ToneMappingCIE1931.i: src/ToneMappingCIE1931.cpp.i
@@ -3599,7 +3599,7 @@ src/ToneMappingCIE1931.i: src/ToneMappingCIE1931.cpp.i
 
 # target to preprocess a source file
 src/ToneMappingCIE1931.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingCIE1931.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingCIE1931.cpp.i
 .PHONY : src/ToneMappingCIE1931.cpp.i
 
 src/ToneMappingCIE1931.s: src/ToneMappingCIE1931.cpp.s
@@ -3607,7 +3607,7 @@ src/ToneMappingCIE1931.s: src/ToneMappingCIE1931.cpp.s
 
 # target to generate assembly for a file
 src/ToneMappingCIE1931.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingCIE1931.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingCIE1931.cpp.s
 .PHONY : src/ToneMappingCIE1931.cpp.s
 
 src/ToneMappingCIE1976.o: src/ToneMappingCIE1976.cpp.o
@@ -3615,7 +3615,7 @@ src/ToneMappingCIE1976.o: src/ToneMappingCIE1976.cpp.o
 
 # target to build an object file
 src/ToneMappingCIE1976.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingCIE1976.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingCIE1976.cpp.o
 .PHONY : src/ToneMappingCIE1976.cpp.o
 
 src/ToneMappingCIE1976.i: src/ToneMappingCIE1976.cpp.i
@@ -3623,7 +3623,7 @@ src/ToneMappingCIE1976.i: src/ToneMappingCIE1976.cpp.i
 
 # target to preprocess a source file
 src/ToneMappingCIE1976.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingCIE1976.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingCIE1976.cpp.i
 .PHONY : src/ToneMappingCIE1976.cpp.i
 
 src/ToneMappingCIE1976.s: src/ToneMappingCIE1976.cpp.s
@@ -3631,7 +3631,7 @@ src/ToneMappingCIE1976.s: src/ToneMappingCIE1976.cpp.s
 
 # target to generate assembly for a file
 src/ToneMappingCIE1976.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingCIE1976.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingCIE1976.cpp.s
 .PHONY : src/ToneMappingCIE1976.cpp.s
 
 src/ToneMappingNull.o: src/ToneMappingNull.cpp.o
@@ -3639,7 +3639,7 @@ src/ToneMappingNull.o: src/ToneMappingNull.cpp.o
 
 # target to build an object file
 src/ToneMappingNull.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingNull.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingNull.cpp.o
 .PHONY : src/ToneMappingNull.cpp.o
 
 src/ToneMappingNull.i: src/ToneMappingNull.cpp.i
@@ -3647,7 +3647,7 @@ src/ToneMappingNull.i: src/ToneMappingNull.cpp.i
 
 # target to preprocess a source file
 src/ToneMappingNull.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingNull.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingNull.cpp.i
 .PHONY : src/ToneMappingNull.cpp.i
 
 src/ToneMappingNull.s: src/ToneMappingNull.cpp.s
@@ -3655,7 +3655,7 @@ src/ToneMappingNull.s: src/ToneMappingNull.cpp.s
 
 # target to generate assembly for a file
 src/ToneMappingNull.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingNull.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingNull.cpp.s
 .PHONY : src/ToneMappingNull.cpp.s
 
 src/ToneMappingRoll.o: src/ToneMappingRoll.cpp.o
@@ -3663,7 +3663,7 @@ src/ToneMappingRoll.o: src/ToneMappingRoll.cpp.o
 
 # target to build an object file
 src/ToneMappingRoll.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRoll.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRoll.cpp.o
 .PHONY : src/ToneMappingRoll.cpp.o
 
 src/ToneMappingRoll.i: src/ToneMappingRoll.cpp.i
@@ -3671,7 +3671,7 @@ src/ToneMappingRoll.i: src/ToneMappingRoll.cpp.i
 
 # target to preprocess a source file
 src/ToneMappingRoll.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRoll.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRoll.cpp.i
 .PHONY : src/ToneMappingRoll.cpp.i
 
 src/ToneMappingRoll.s: src/ToneMappingRoll.cpp.s
@@ -3679,7 +3679,7 @@ src/ToneMappingRoll.s: src/ToneMappingRoll.cpp.s
 
 # target to generate assembly for a file
 src/ToneMappingRoll.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRoll.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRoll.cpp.s
 .PHONY : src/ToneMappingRoll.cpp.s
 
 src/ToneMappingRollCIE1931.o: src/ToneMappingRollCIE1931.cpp.o
@@ -3687,7 +3687,7 @@ src/ToneMappingRollCIE1931.o: src/ToneMappingRollCIE1931.cpp.o
 
 # target to build an object file
 src/ToneMappingRollCIE1931.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRollCIE1931.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRollCIE1931.cpp.o
 .PHONY : src/ToneMappingRollCIE1931.cpp.o
 
 src/ToneMappingRollCIE1931.i: src/ToneMappingRollCIE1931.cpp.i
@@ -3695,7 +3695,7 @@ src/ToneMappingRollCIE1931.i: src/ToneMappingRollCIE1931.cpp.i
 
 # target to preprocess a source file
 src/ToneMappingRollCIE1931.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRollCIE1931.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRollCIE1931.cpp.i
 .PHONY : src/ToneMappingRollCIE1931.cpp.i
 
 src/ToneMappingRollCIE1931.s: src/ToneMappingRollCIE1931.cpp.s
@@ -3703,7 +3703,7 @@ src/ToneMappingRollCIE1931.s: src/ToneMappingRollCIE1931.cpp.s
 
 # target to generate assembly for a file
 src/ToneMappingRollCIE1931.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRollCIE1931.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRollCIE1931.cpp.s
 .PHONY : src/ToneMappingRollCIE1931.cpp.s
 
 src/ToneMappingRollICtCp.o: src/ToneMappingRollICtCp.cpp.o
@@ -3711,7 +3711,7 @@ src/ToneMappingRollICtCp.o: src/ToneMappingRollICtCp.cpp.o
 
 # target to build an object file
 src/ToneMappingRollICtCp.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRollICtCp.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRollICtCp.cpp.o
 .PHONY : src/ToneMappingRollICtCp.cpp.o
 
 src/ToneMappingRollICtCp.i: src/ToneMappingRollICtCp.cpp.i
@@ -3719,7 +3719,7 @@ src/ToneMappingRollICtCp.i: src/ToneMappingRollICtCp.cpp.i
 
 # target to preprocess a source file
 src/ToneMappingRollICtCp.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRollICtCp.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRollICtCp.cpp.i
 .PHONY : src/ToneMappingRollICtCp.cpp.i
 
 src/ToneMappingRollICtCp.s: src/ToneMappingRollICtCp.cpp.s
@@ -3727,7 +3727,7 @@ src/ToneMappingRollICtCp.s: src/ToneMappingRollICtCp.cpp.s
 
 # target to generate assembly for a file
 src/ToneMappingRollICtCp.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRollICtCp.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/ToneMappingRollICtCp.cpp.s
 .PHONY : src/ToneMappingRollICtCp.cpp.s
 
 src/TransferFunction.o: src/TransferFunction.cpp.o
@@ -3735,7 +3735,7 @@ src/TransferFunction.o: src/TransferFunction.cpp.o
 
 # target to build an object file
 src/TransferFunction.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunction.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunction.cpp.o
 .PHONY : src/TransferFunction.cpp.o
 
 src/TransferFunction.i: src/TransferFunction.cpp.i
@@ -3743,7 +3743,7 @@ src/TransferFunction.i: src/TransferFunction.cpp.i
 
 # target to preprocess a source file
 src/TransferFunction.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunction.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunction.cpp.i
 .PHONY : src/TransferFunction.cpp.i
 
 src/TransferFunction.s: src/TransferFunction.cpp.s
@@ -3751,7 +3751,7 @@ src/TransferFunction.s: src/TransferFunction.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunction.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunction.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunction.cpp.s
 .PHONY : src/TransferFunction.cpp.s
 
 src/TransferFunctionAMPQ.o: src/TransferFunctionAMPQ.cpp.o
@@ -3759,7 +3759,7 @@ src/TransferFunctionAMPQ.o: src/TransferFunctionAMPQ.cpp.o
 
 # target to build an object file
 src/TransferFunctionAMPQ.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAMPQ.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAMPQ.cpp.o
 .PHONY : src/TransferFunctionAMPQ.cpp.o
 
 src/TransferFunctionAMPQ.i: src/TransferFunctionAMPQ.cpp.i
@@ -3767,7 +3767,7 @@ src/TransferFunctionAMPQ.i: src/TransferFunctionAMPQ.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionAMPQ.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAMPQ.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAMPQ.cpp.i
 .PHONY : src/TransferFunctionAMPQ.cpp.i
 
 src/TransferFunctionAMPQ.s: src/TransferFunctionAMPQ.cpp.s
@@ -3775,7 +3775,7 @@ src/TransferFunctionAMPQ.s: src/TransferFunctionAMPQ.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionAMPQ.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAMPQ.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAMPQ.cpp.s
 .PHONY : src/TransferFunctionAMPQ.cpp.s
 
 src/TransferFunctionAPH.o: src/TransferFunctionAPH.cpp.o
@@ -3783,7 +3783,7 @@ src/TransferFunctionAPH.o: src/TransferFunctionAPH.cpp.o
 
 # target to build an object file
 src/TransferFunctionAPH.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPH.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPH.cpp.o
 .PHONY : src/TransferFunctionAPH.cpp.o
 
 src/TransferFunctionAPH.i: src/TransferFunctionAPH.cpp.i
@@ -3791,7 +3791,7 @@ src/TransferFunctionAPH.i: src/TransferFunctionAPH.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionAPH.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPH.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPH.cpp.i
 .PHONY : src/TransferFunctionAPH.cpp.i
 
 src/TransferFunctionAPH.s: src/TransferFunctionAPH.cpp.s
@@ -3799,7 +3799,7 @@ src/TransferFunctionAPH.s: src/TransferFunctionAPH.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionAPH.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPH.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPH.cpp.s
 .PHONY : src/TransferFunctionAPH.cpp.s
 
 src/TransferFunctionAPQ.o: src/TransferFunctionAPQ.cpp.o
@@ -3807,7 +3807,7 @@ src/TransferFunctionAPQ.o: src/TransferFunctionAPQ.cpp.o
 
 # target to build an object file
 src/TransferFunctionAPQ.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPQ.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPQ.cpp.o
 .PHONY : src/TransferFunctionAPQ.cpp.o
 
 src/TransferFunctionAPQ.i: src/TransferFunctionAPQ.cpp.i
@@ -3815,7 +3815,7 @@ src/TransferFunctionAPQ.i: src/TransferFunctionAPQ.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionAPQ.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPQ.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPQ.cpp.i
 .PHONY : src/TransferFunctionAPQ.cpp.i
 
 src/TransferFunctionAPQ.s: src/TransferFunctionAPQ.cpp.s
@@ -3823,7 +3823,7 @@ src/TransferFunctionAPQ.s: src/TransferFunctionAPQ.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionAPQ.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPQ.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPQ.cpp.s
 .PHONY : src/TransferFunctionAPQ.cpp.s
 
 src/TransferFunctionAPQScaled.o: src/TransferFunctionAPQScaled.cpp.o
@@ -3831,7 +3831,7 @@ src/TransferFunctionAPQScaled.o: src/TransferFunctionAPQScaled.cpp.o
 
 # target to build an object file
 src/TransferFunctionAPQScaled.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPQScaled.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPQScaled.cpp.o
 .PHONY : src/TransferFunctionAPQScaled.cpp.o
 
 src/TransferFunctionAPQScaled.i: src/TransferFunctionAPQScaled.cpp.i
@@ -3839,7 +3839,7 @@ src/TransferFunctionAPQScaled.i: src/TransferFunctionAPQScaled.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionAPQScaled.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPQScaled.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPQScaled.cpp.i
 .PHONY : src/TransferFunctionAPQScaled.cpp.i
 
 src/TransferFunctionAPQScaled.s: src/TransferFunctionAPQScaled.cpp.s
@@ -3847,7 +3847,7 @@ src/TransferFunctionAPQScaled.s: src/TransferFunctionAPQScaled.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionAPQScaled.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPQScaled.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAPQScaled.cpp.s
 .PHONY : src/TransferFunctionAPQScaled.cpp.s
 
 src/TransferFunctionAsRGB.o: src/TransferFunctionAsRGB.cpp.o
@@ -3855,7 +3855,7 @@ src/TransferFunctionAsRGB.o: src/TransferFunctionAsRGB.cpp.o
 
 # target to build an object file
 src/TransferFunctionAsRGB.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAsRGB.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAsRGB.cpp.o
 .PHONY : src/TransferFunctionAsRGB.cpp.o
 
 src/TransferFunctionAsRGB.i: src/TransferFunctionAsRGB.cpp.i
@@ -3863,7 +3863,7 @@ src/TransferFunctionAsRGB.i: src/TransferFunctionAsRGB.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionAsRGB.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAsRGB.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAsRGB.cpp.i
 .PHONY : src/TransferFunctionAsRGB.cpp.i
 
 src/TransferFunctionAsRGB.s: src/TransferFunctionAsRGB.cpp.s
@@ -3871,7 +3871,7 @@ src/TransferFunctionAsRGB.s: src/TransferFunctionAsRGB.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionAsRGB.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAsRGB.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionAsRGB.cpp.s
 .PHONY : src/TransferFunctionAsRGB.cpp.s
 
 src/TransferFunctionBT709.o: src/TransferFunctionBT709.cpp.o
@@ -3879,7 +3879,7 @@ src/TransferFunctionBT709.o: src/TransferFunctionBT709.cpp.o
 
 # target to build an object file
 src/TransferFunctionBT709.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionBT709.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionBT709.cpp.o
 .PHONY : src/TransferFunctionBT709.cpp.o
 
 src/TransferFunctionBT709.i: src/TransferFunctionBT709.cpp.i
@@ -3887,7 +3887,7 @@ src/TransferFunctionBT709.i: src/TransferFunctionBT709.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionBT709.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionBT709.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionBT709.cpp.i
 .PHONY : src/TransferFunctionBT709.cpp.i
 
 src/TransferFunctionBT709.s: src/TransferFunctionBT709.cpp.s
@@ -3895,7 +3895,7 @@ src/TransferFunctionBT709.s: src/TransferFunctionBT709.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionBT709.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionBT709.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionBT709.cpp.s
 .PHONY : src/TransferFunctionBT709.cpp.s
 
 src/TransferFunctionBiasedMPQ.o: src/TransferFunctionBiasedMPQ.cpp.o
@@ -3903,7 +3903,7 @@ src/TransferFunctionBiasedMPQ.o: src/TransferFunctionBiasedMPQ.cpp.o
 
 # target to build an object file
 src/TransferFunctionBiasedMPQ.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionBiasedMPQ.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionBiasedMPQ.cpp.o
 .PHONY : src/TransferFunctionBiasedMPQ.cpp.o
 
 src/TransferFunctionBiasedMPQ.i: src/TransferFunctionBiasedMPQ.cpp.i
@@ -3911,7 +3911,7 @@ src/TransferFunctionBiasedMPQ.i: src/TransferFunctionBiasedMPQ.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionBiasedMPQ.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionBiasedMPQ.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionBiasedMPQ.cpp.i
 .PHONY : src/TransferFunctionBiasedMPQ.cpp.i
 
 src/TransferFunctionBiasedMPQ.s: src/TransferFunctionBiasedMPQ.cpp.s
@@ -3919,7 +3919,7 @@ src/TransferFunctionBiasedMPQ.s: src/TransferFunctionBiasedMPQ.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionBiasedMPQ.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionBiasedMPQ.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionBiasedMPQ.cpp.s
 .PHONY : src/TransferFunctionBiasedMPQ.cpp.s
 
 src/TransferFunctionCineonLog.o: src/TransferFunctionCineonLog.cpp.o
@@ -3927,7 +3927,7 @@ src/TransferFunctionCineonLog.o: src/TransferFunctionCineonLog.cpp.o
 
 # target to build an object file
 src/TransferFunctionCineonLog.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionCineonLog.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionCineonLog.cpp.o
 .PHONY : src/TransferFunctionCineonLog.cpp.o
 
 src/TransferFunctionCineonLog.i: src/TransferFunctionCineonLog.cpp.i
@@ -3935,7 +3935,7 @@ src/TransferFunctionCineonLog.i: src/TransferFunctionCineonLog.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionCineonLog.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionCineonLog.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionCineonLog.cpp.i
 .PHONY : src/TransferFunctionCineonLog.cpp.i
 
 src/TransferFunctionCineonLog.s: src/TransferFunctionCineonLog.cpp.s
@@ -3943,7 +3943,7 @@ src/TransferFunctionCineonLog.s: src/TransferFunctionCineonLog.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionCineonLog.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionCineonLog.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionCineonLog.cpp.s
 .PHONY : src/TransferFunctionCineonLog.cpp.s
 
 src/TransferFunctionDPXLog.o: src/TransferFunctionDPXLog.cpp.o
@@ -3951,7 +3951,7 @@ src/TransferFunctionDPXLog.o: src/TransferFunctionDPXLog.cpp.o
 
 # target to build an object file
 src/TransferFunctionDPXLog.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionDPXLog.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionDPXLog.cpp.o
 .PHONY : src/TransferFunctionDPXLog.cpp.o
 
 src/TransferFunctionDPXLog.i: src/TransferFunctionDPXLog.cpp.i
@@ -3959,7 +3959,7 @@ src/TransferFunctionDPXLog.i: src/TransferFunctionDPXLog.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionDPXLog.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionDPXLog.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionDPXLog.cpp.i
 .PHONY : src/TransferFunctionDPXLog.cpp.i
 
 src/TransferFunctionDPXLog.s: src/TransferFunctionDPXLog.cpp.s
@@ -3967,7 +3967,7 @@ src/TransferFunctionDPXLog.s: src/TransferFunctionDPXLog.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionDPXLog.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionDPXLog.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionDPXLog.cpp.s
 .PHONY : src/TransferFunctionDPXLog.cpp.s
 
 src/TransferFunctionHGold.o: src/TransferFunctionHGold.cpp.o
@@ -3975,7 +3975,7 @@ src/TransferFunctionHGold.o: src/TransferFunctionHGold.cpp.o
 
 # target to build an object file
 src/TransferFunctionHGold.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHGold.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHGold.cpp.o
 .PHONY : src/TransferFunctionHGold.cpp.o
 
 src/TransferFunctionHGold.i: src/TransferFunctionHGold.cpp.i
@@ -3983,7 +3983,7 @@ src/TransferFunctionHGold.i: src/TransferFunctionHGold.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionHGold.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHGold.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHGold.cpp.i
 .PHONY : src/TransferFunctionHGold.cpp.i
 
 src/TransferFunctionHGold.s: src/TransferFunctionHGold.cpp.s
@@ -3991,7 +3991,7 @@ src/TransferFunctionHGold.s: src/TransferFunctionHGold.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionHGold.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHGold.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHGold.cpp.s
 .PHONY : src/TransferFunctionHGold.cpp.s
 
 src/TransferFunctionHLG.o: src/TransferFunctionHLG.cpp.o
@@ -3999,7 +3999,7 @@ src/TransferFunctionHLG.o: src/TransferFunctionHLG.cpp.o
 
 # target to build an object file
 src/TransferFunctionHLG.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHLG.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHLG.cpp.o
 .PHONY : src/TransferFunctionHLG.cpp.o
 
 src/TransferFunctionHLG.i: src/TransferFunctionHLG.cpp.i
@@ -4007,7 +4007,7 @@ src/TransferFunctionHLG.i: src/TransferFunctionHLG.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionHLG.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHLG.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHLG.cpp.i
 .PHONY : src/TransferFunctionHLG.cpp.i
 
 src/TransferFunctionHLG.s: src/TransferFunctionHLG.cpp.s
@@ -4015,7 +4015,7 @@ src/TransferFunctionHLG.s: src/TransferFunctionHLG.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionHLG.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHLG.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHLG.cpp.s
 .PHONY : src/TransferFunctionHLG.cpp.s
 
 src/TransferFunctionHPQ.o: src/TransferFunctionHPQ.cpp.o
@@ -4023,7 +4023,7 @@ src/TransferFunctionHPQ.o: src/TransferFunctionHPQ.cpp.o
 
 # target to build an object file
 src/TransferFunctionHPQ.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHPQ.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHPQ.cpp.o
 .PHONY : src/TransferFunctionHPQ.cpp.o
 
 src/TransferFunctionHPQ.i: src/TransferFunctionHPQ.cpp.i
@@ -4031,7 +4031,7 @@ src/TransferFunctionHPQ.i: src/TransferFunctionHPQ.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionHPQ.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHPQ.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHPQ.cpp.i
 .PHONY : src/TransferFunctionHPQ.cpp.i
 
 src/TransferFunctionHPQ.s: src/TransferFunctionHPQ.cpp.s
@@ -4039,7 +4039,7 @@ src/TransferFunctionHPQ.s: src/TransferFunctionHPQ.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionHPQ.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHPQ.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHPQ.cpp.s
 .PHONY : src/TransferFunctionHPQ.cpp.s
 
 src/TransferFunctionHPQ2.o: src/TransferFunctionHPQ2.cpp.o
@@ -4047,7 +4047,7 @@ src/TransferFunctionHPQ2.o: src/TransferFunctionHPQ2.cpp.o
 
 # target to build an object file
 src/TransferFunctionHPQ2.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHPQ2.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHPQ2.cpp.o
 .PHONY : src/TransferFunctionHPQ2.cpp.o
 
 src/TransferFunctionHPQ2.i: src/TransferFunctionHPQ2.cpp.i
@@ -4055,7 +4055,7 @@ src/TransferFunctionHPQ2.i: src/TransferFunctionHPQ2.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionHPQ2.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHPQ2.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHPQ2.cpp.i
 .PHONY : src/TransferFunctionHPQ2.cpp.i
 
 src/TransferFunctionHPQ2.s: src/TransferFunctionHPQ2.cpp.s
@@ -4063,7 +4063,7 @@ src/TransferFunctionHPQ2.s: src/TransferFunctionHPQ2.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionHPQ2.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHPQ2.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionHPQ2.cpp.s
 .PHONY : src/TransferFunctionHPQ2.cpp.s
 
 src/TransferFunctionMPQ.o: src/TransferFunctionMPQ.cpp.o
@@ -4071,7 +4071,7 @@ src/TransferFunctionMPQ.o: src/TransferFunctionMPQ.cpp.o
 
 # target to build an object file
 src/TransferFunctionMPQ.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionMPQ.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionMPQ.cpp.o
 .PHONY : src/TransferFunctionMPQ.cpp.o
 
 src/TransferFunctionMPQ.i: src/TransferFunctionMPQ.cpp.i
@@ -4079,7 +4079,7 @@ src/TransferFunctionMPQ.i: src/TransferFunctionMPQ.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionMPQ.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionMPQ.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionMPQ.cpp.i
 .PHONY : src/TransferFunctionMPQ.cpp.i
 
 src/TransferFunctionMPQ.s: src/TransferFunctionMPQ.cpp.s
@@ -4087,7 +4087,7 @@ src/TransferFunctionMPQ.s: src/TransferFunctionMPQ.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionMPQ.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionMPQ.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionMPQ.cpp.s
 .PHONY : src/TransferFunctionMPQ.cpp.s
 
 src/TransferFunctionNormalize.o: src/TransferFunctionNormalize.cpp.o
@@ -4095,7 +4095,7 @@ src/TransferFunctionNormalize.o: src/TransferFunctionNormalize.cpp.o
 
 # target to build an object file
 src/TransferFunctionNormalize.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionNormalize.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionNormalize.cpp.o
 .PHONY : src/TransferFunctionNormalize.cpp.o
 
 src/TransferFunctionNormalize.i: src/TransferFunctionNormalize.cpp.i
@@ -4103,7 +4103,7 @@ src/TransferFunctionNormalize.i: src/TransferFunctionNormalize.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionNormalize.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionNormalize.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionNormalize.cpp.i
 .PHONY : src/TransferFunctionNormalize.cpp.i
 
 src/TransferFunctionNormalize.s: src/TransferFunctionNormalize.cpp.s
@@ -4111,7 +4111,7 @@ src/TransferFunctionNormalize.s: src/TransferFunctionNormalize.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionNormalize.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionNormalize.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionNormalize.cpp.s
 .PHONY : src/TransferFunctionNormalize.cpp.s
 
 src/TransferFunctionNull.o: src/TransferFunctionNull.cpp.o
@@ -4119,7 +4119,7 @@ src/TransferFunctionNull.o: src/TransferFunctionNull.cpp.o
 
 # target to build an object file
 src/TransferFunctionNull.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionNull.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionNull.cpp.o
 .PHONY : src/TransferFunctionNull.cpp.o
 
 src/TransferFunctionNull.i: src/TransferFunctionNull.cpp.i
@@ -4127,7 +4127,7 @@ src/TransferFunctionNull.i: src/TransferFunctionNull.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionNull.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionNull.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionNull.cpp.i
 .PHONY : src/TransferFunctionNull.cpp.i
 
 src/TransferFunctionNull.s: src/TransferFunctionNull.cpp.s
@@ -4135,7 +4135,7 @@ src/TransferFunctionNull.s: src/TransferFunctionNull.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionNull.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionNull.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionNull.cpp.s
 .PHONY : src/TransferFunctionNull.cpp.s
 
 src/TransferFunctionOHG.o: src/TransferFunctionOHG.cpp.o
@@ -4143,7 +4143,7 @@ src/TransferFunctionOHG.o: src/TransferFunctionOHG.cpp.o
 
 # target to build an object file
 src/TransferFunctionOHG.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionOHG.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionOHG.cpp.o
 .PHONY : src/TransferFunctionOHG.cpp.o
 
 src/TransferFunctionOHG.i: src/TransferFunctionOHG.cpp.i
@@ -4151,7 +4151,7 @@ src/TransferFunctionOHG.i: src/TransferFunctionOHG.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionOHG.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionOHG.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionOHG.cpp.i
 .PHONY : src/TransferFunctionOHG.cpp.i
 
 src/TransferFunctionOHG.s: src/TransferFunctionOHG.cpp.s
@@ -4159,7 +4159,7 @@ src/TransferFunctionOHG.s: src/TransferFunctionOHG.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionOHG.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionOHG.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionOHG.cpp.s
 .PHONY : src/TransferFunctionOHG.cpp.s
 
 src/TransferFunctionPH.o: src/TransferFunctionPH.cpp.o
@@ -4167,7 +4167,7 @@ src/TransferFunctionPH.o: src/TransferFunctionPH.cpp.o
 
 # target to build an object file
 src/TransferFunctionPH.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPH.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPH.cpp.o
 .PHONY : src/TransferFunctionPH.cpp.o
 
 src/TransferFunctionPH.i: src/TransferFunctionPH.cpp.i
@@ -4175,7 +4175,7 @@ src/TransferFunctionPH.i: src/TransferFunctionPH.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionPH.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPH.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPH.cpp.i
 .PHONY : src/TransferFunctionPH.cpp.i
 
 src/TransferFunctionPH.s: src/TransferFunctionPH.cpp.s
@@ -4183,7 +4183,7 @@ src/TransferFunctionPH.s: src/TransferFunctionPH.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionPH.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPH.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPH.cpp.s
 .PHONY : src/TransferFunctionPH.cpp.s
 
 src/TransferFunctionPQ.o: src/TransferFunctionPQ.cpp.o
@@ -4191,7 +4191,7 @@ src/TransferFunctionPQ.o: src/TransferFunctionPQ.cpp.o
 
 # target to build an object file
 src/TransferFunctionPQ.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPQ.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPQ.cpp.o
 .PHONY : src/TransferFunctionPQ.cpp.o
 
 src/TransferFunctionPQ.i: src/TransferFunctionPQ.cpp.i
@@ -4199,7 +4199,7 @@ src/TransferFunctionPQ.i: src/TransferFunctionPQ.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionPQ.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPQ.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPQ.cpp.i
 .PHONY : src/TransferFunctionPQ.cpp.i
 
 src/TransferFunctionPQ.s: src/TransferFunctionPQ.cpp.s
@@ -4207,7 +4207,7 @@ src/TransferFunctionPQ.s: src/TransferFunctionPQ.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionPQ.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPQ.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPQ.cpp.s
 .PHONY : src/TransferFunctionPQ.cpp.s
 
 src/TransferFunctionPQLB.o: src/TransferFunctionPQLB.cpp.o
@@ -4215,7 +4215,7 @@ src/TransferFunctionPQLB.o: src/TransferFunctionPQLB.cpp.o
 
 # target to build an object file
 src/TransferFunctionPQLB.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPQLB.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPQLB.cpp.o
 .PHONY : src/TransferFunctionPQLB.cpp.o
 
 src/TransferFunctionPQLB.i: src/TransferFunctionPQLB.cpp.i
@@ -4223,7 +4223,7 @@ src/TransferFunctionPQLB.i: src/TransferFunctionPQLB.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionPQLB.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPQLB.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPQLB.cpp.i
 .PHONY : src/TransferFunctionPQLB.cpp.i
 
 src/TransferFunctionPQLB.s: src/TransferFunctionPQLB.cpp.s
@@ -4231,7 +4231,7 @@ src/TransferFunctionPQLB.s: src/TransferFunctionPQLB.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionPQLB.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPQLB.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPQLB.cpp.s
 .PHONY : src/TransferFunctionPQLB.cpp.s
 
 src/TransferFunctionPower.o: src/TransferFunctionPower.cpp.o
@@ -4239,7 +4239,7 @@ src/TransferFunctionPower.o: src/TransferFunctionPower.cpp.o
 
 # target to build an object file
 src/TransferFunctionPower.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPower.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPower.cpp.o
 .PHONY : src/TransferFunctionPower.cpp.o
 
 src/TransferFunctionPower.i: src/TransferFunctionPower.cpp.i
@@ -4247,7 +4247,7 @@ src/TransferFunctionPower.i: src/TransferFunctionPower.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionPower.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPower.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPower.cpp.i
 .PHONY : src/TransferFunctionPower.cpp.i
 
 src/TransferFunctionPower.s: src/TransferFunctionPower.cpp.s
@@ -4255,7 +4255,7 @@ src/TransferFunctionPower.s: src/TransferFunctionPower.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionPower.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPower.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionPower.cpp.s
 .PHONY : src/TransferFunctionPower.cpp.s
 
 src/TransferFunctionSRGB.o: src/TransferFunctionSRGB.cpp.o
@@ -4263,7 +4263,7 @@ src/TransferFunctionSRGB.o: src/TransferFunctionSRGB.cpp.o
 
 # target to build an object file
 src/TransferFunctionSRGB.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionSRGB.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionSRGB.cpp.o
 .PHONY : src/TransferFunctionSRGB.cpp.o
 
 src/TransferFunctionSRGB.i: src/TransferFunctionSRGB.cpp.i
@@ -4271,7 +4271,7 @@ src/TransferFunctionSRGB.i: src/TransferFunctionSRGB.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionSRGB.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionSRGB.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionSRGB.cpp.i
 .PHONY : src/TransferFunctionSRGB.cpp.i
 
 src/TransferFunctionSRGB.s: src/TransferFunctionSRGB.cpp.s
@@ -4279,7 +4279,7 @@ src/TransferFunctionSRGB.s: src/TransferFunctionSRGB.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionSRGB.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionSRGB.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionSRGB.cpp.s
 .PHONY : src/TransferFunctionSRGB.cpp.s
 
 src/TransferFunctionST240.o: src/TransferFunctionST240.cpp.o
@@ -4287,7 +4287,7 @@ src/TransferFunctionST240.o: src/TransferFunctionST240.cpp.o
 
 # target to build an object file
 src/TransferFunctionST240.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionST240.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionST240.cpp.o
 .PHONY : src/TransferFunctionST240.cpp.o
 
 src/TransferFunctionST240.i: src/TransferFunctionST240.cpp.i
@@ -4295,7 +4295,7 @@ src/TransferFunctionST240.i: src/TransferFunctionST240.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionST240.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionST240.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionST240.cpp.i
 .PHONY : src/TransferFunctionST240.cpp.i
 
 src/TransferFunctionST240.s: src/TransferFunctionST240.cpp.s
@@ -4303,7 +4303,7 @@ src/TransferFunctionST240.s: src/TransferFunctionST240.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionST240.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionST240.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionST240.cpp.s
 .PHONY : src/TransferFunctionST240.cpp.s
 
 src/TransferFunctionXYB.o: src/TransferFunctionXYB.cpp.o
@@ -4311,7 +4311,7 @@ src/TransferFunctionXYB.o: src/TransferFunctionXYB.cpp.o
 
 # target to build an object file
 src/TransferFunctionXYB.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionXYB.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionXYB.cpp.o
 .PHONY : src/TransferFunctionXYB.cpp.o
 
 src/TransferFunctionXYB.i: src/TransferFunctionXYB.cpp.i
@@ -4319,7 +4319,7 @@ src/TransferFunctionXYB.i: src/TransferFunctionXYB.cpp.i
 
 # target to preprocess a source file
 src/TransferFunctionXYB.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionXYB.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionXYB.cpp.i
 .PHONY : src/TransferFunctionXYB.cpp.i
 
 src/TransferFunctionXYB.s: src/TransferFunctionXYB.cpp.s
@@ -4327,7 +4327,7 @@ src/TransferFunctionXYB.s: src/TransferFunctionXYB.cpp.s
 
 # target to generate assembly for a file
 src/TransferFunctionXYB.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionXYB.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f common/CMakeFiles/HDRLib.dir/build.make common/CMakeFiles/HDRLib.dir/src/TransferFunctionXYB.cpp.s
 .PHONY : src/TransferFunctionXYB.cpp.s
 
 # Help Target
@@ -4875,6 +4875,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

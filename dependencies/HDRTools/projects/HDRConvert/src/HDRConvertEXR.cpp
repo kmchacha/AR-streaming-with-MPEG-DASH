@@ -91,6 +91,7 @@ HDRConvertEXR::HDRConvertEXR(ProjectParameters *inputParams) {
   m_inputFile                = &inputParams->m_inputFile;
   m_outputFile               = &inputParams->m_outputFile;
   m_startFrame               =  m_inputFile->m_startFrame;
+  m_startFrameOut            =  m_outputFile->m_startFrame;
   
   m_cropOffsetLeft           =  inputParams->m_cropOffsetLeft;
   m_cropOffsetTop            =  inputParams->m_cropOffsetTop;
@@ -742,7 +743,7 @@ void HDRConvertEXR::process( ProjectParameters *inputParams ) {
 
     // frame output
     m_outputFrame->copyFrame(m_oFrameStore);
-    m_outputFrame->writeOneFrame(m_outputFile, frameNumber, m_outputFile->m_fileHeader, 0);
+    m_outputFrame->writeOneFrame(m_outputFile, frameNumber, m_outputFile->m_fileHeader, m_startFrameOut);
 
     clk = clock() - clk;
     if (inputParams->m_silentMode == false){

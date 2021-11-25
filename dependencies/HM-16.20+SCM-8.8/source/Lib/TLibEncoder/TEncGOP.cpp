@@ -1199,9 +1199,17 @@ printHash(const HashType hashType, const std::string &digestStr)
 Void TEncGOP::compressGOP( Int iPOCLast, Int iNumPicRcvd, TComList<TComPic*>& rcListPic,
                            TComList<TComPicYuv*>& rcListPicYuvRecOut, std::list<AccessUnit>& accessUnitsInGOP,
 #if PCC_ME_EXT
-	                       Bool isField, Bool isTff, const InputColourSpaceConversion snr_conversion, const TEncAnalyze::OutputLogControl &outputLogCtrl, Bool usePccME)
+#if PCC_RDO_EXT
+                           Bool isField, Bool isTff, const InputColourSpaceConversion snr_conversion, const TEncAnalyze::OutputLogControl &outputLogCtrl, Bool usePccME, Bool usePCCRDO)
+#else
+                           Bool isField, Bool isTff, const InputColourSpaceConversion snr_conversion, const TEncAnalyze::OutputLogControl &outputLogCtrl, Bool usePccME)
+#endif
+#else
+#if PCC_RDO_EXT
+                           Bool isField, Bool isTff, const InputColourSpaceConversion snr_conversion, const TEncAnalyze::OutputLogControl &outputLogCtrl, Bool usePCCRDO )
 #else
                            Bool isField, Bool isTff, const InputColourSpaceConversion snr_conversion, const TEncAnalyze::OutputLogControl &outputLogCtrl )
+#endif
 #endif
 {
   // TODO: Split this function up.
@@ -1808,6 +1816,93 @@ Void TEncGOP::compressGOP( Int iPOCLast, Int iNumPicRcvd, TComList<TComPic*>& rc
 			}
 		}
 #endif
+
+#if PCC_RDO_EXT
+    if (usePCCRDO)
+    {
+      Int picWidth = pcPic->getPicYuvRec()->getWidth(COMPONENT_Y);
+      Int picHeight = pcPic->getPicYuvRec()->getHeight(COMPONENT_Y);
+      Int currPOC = pcSlice->getPOC() / 2;           // One occupancy map for every two frames
+      long long offset = (long long)currPOC * picWidth * picHeight;
+      std::string occupancyMapFileName = m_pcEncTop->getOccupancyMapFileName();
+      FILE* occupancyMapFile = NULL;
+      occupancyMapFile = fopen(occupancyMapFileName.c_str(), "rb");
+      fseek(occupancyMapFile, offset * sizeof(Int), SEEK_SET);
+      Int* tempOccupancyMap = new Int[picWidth * picHeight];
+      size_t readSize = fread(tempOccupancyMap, sizeof(Int), picWidth * picHeight, occupancyMapFile);
+      if (readSize != picWidth * picHeight)
+      {
+        printf("error: Resolution does not match");
+      }
+      fclose(occupancyMapFile);
+
+      TComPicYuv* occupancyMap = pcPic->getOccupancyMapYuv();
+      Pel* lumaAddr = occupancyMap->getAddr(COMPONENT_Y);
+      Int lumaStride = occupancyMap->getStride(COMPONENT_Y);
+
+      // Luma
+      for (Int i = 0; i < picHeight; i++)
+      {
+        for (Int j = 0; j < picWidth; j++)
+        {
+          lumaAddr[i * lumaStride + j] = tempOccupancyMap[i * picWidth + j];
+        }
+      }
+
+      Pel* cbAddr = occupancyMap->getAddr(COMPONENT_Cb);
+      Pel* crAddr = occupancyMap->getAddr(COMPONENT_Cr);
+      Int chromaStride = occupancyMap->getStride(COMPONENT_Cb);
+      Int chromaHeight = occupancyMap->getHeight(COMPONENT_Cb);
+      Int chromaWidth = occupancyMap->getWidth(COMPONENT_Cb);
+
+      // chroma
+      for (Int i = 0; i < chromaHeight; i++)
+      {
+        for (Int j = 0; j < chromaWidth; j++)
+        {
+          cbAddr[i * chromaStride + j] = tempOccupancyMap[i * 2 * picWidth + j * 2];
+          crAddr[i * chromaStride + j] = tempOccupancyMap[i * 2 * picWidth + j * 2];
+        }
+      }
+      delete tempOccupancyMap;
+      tempOccupancyMap = NULL;
+    }
+    else
+    {
+      Int picWidth = pcPic->getPicYuvRec()->getWidth(COMPONENT_Y);
+      Int picHeight = pcPic->getPicYuvRec()->getHeight(COMPONENT_Y);
+
+      TComPicYuv* occupancyMap = pcPic->getOccupancyMapYuv();
+      Pel* lumaAddr = occupancyMap->getAddr(COMPONENT_Y);
+      Int lumaStride = occupancyMap->getStride(COMPONENT_Y);
+
+      // Luma
+      for (Int i = 0; i < picHeight; i++)
+      {
+        for (Int j = 0; j < picWidth; j++)
+        {
+          lumaAddr[i * lumaStride + j] = 1;
+        }
+      }
+
+      Pel* cbAddr = occupancyMap->getAddr(COMPONENT_Cb);
+      Pel* crAddr = occupancyMap->getAddr(COMPONENT_Cr);
+      Int chromaStride = occupancyMap->getStride(COMPONENT_Cb);
+      Int chromaHeight = occupancyMap->getHeight(COMPONENT_Cb);
+      Int chromaWidth = occupancyMap->getWidth(COMPONENT_Cb);
+
+      // chroma
+      for (Int i = 0; i < chromaHeight; i++)
+      {
+        for (Int j = 0; j < chromaWidth; j++)
+        {
+          cbAddr[i * chromaStride + j] = 1;
+          crAddr[i * chromaStride + j] = 1;
+        }
+      }
+    }
+#endif
+
         m_pcSliceEncoder->compressSlice   ( pcPic, false, false );
 
         const UInt curSliceSegmentEnd = pcSlice->getSliceSegmentCurEndCtuTsAddr();

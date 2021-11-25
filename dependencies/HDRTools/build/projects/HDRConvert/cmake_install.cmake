@@ -1,4 +1,4 @@
-# Install script for directory: /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert
+# Install script for directory: /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/HDRConvert
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

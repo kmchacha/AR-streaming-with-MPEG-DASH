@@ -1,7 +1,7 @@
 common/CMakeFiles/HDRLib.dir/src/TransferFunction.cpp.o: \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/src/TransferFunction.cpp \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/src/TransferFunction.cpp \
  /usr/include/stdc-predef.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -157,7 +157,7 @@ common/CMakeFiles/HDRLib.dir/src/TransferFunction.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Win32.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Win32.H \
  /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -170,9 +170,9 @@ common/CMakeFiles/HDRLib.dir/src/TransferFunction.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Defines.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TypeDefs.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IFunctions.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Defines.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TypeDefs.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IFunctions.H \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -181,42 +181,42 @@ common/CMakeFiles/HDRLib.dir/src/TransferFunction.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunction.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Parameters.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IOVideo.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/FrameFormat.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Frame.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunction.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Global.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Parameters.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/IOVideo.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/FrameFormat.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/Frame.H \
  /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_construct.h \
  /usr/include/c++/9/bits/stl_uninitialized.h \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/LookUpTable.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/LookUpTable.H \
  /usr/include/c++/9/functional /usr/include/c++/9/tuple \
  /usr/include/c++/9/utility /usr/include/c++/9/bits/stl_relops.h \
  /usr/include/c++/9/array /usr/include/c++/9/bits/uses_allocator.h \
  /usr/include/c++/9/bits/invoke.h /usr/include/c++/9/bits/refwrap.h \
  /usr/include/c++/9/bits/std_function.h \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionNull.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunction.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionPQ.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionAPQ.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionAPH.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionAPQScaled.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionMPQ.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionAMPQ.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionPH.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionOHG.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionHLG.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionNormalize.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionPower.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionSRGB.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionBiasedMPQ.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionHPQ.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionHPQ2.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionAsRGB.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionBT709.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionST240.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionDPXLog.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionCineonLog.H \
- /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionXYB.H
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionNull.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunction.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionPQ.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionAPQ.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionAPH.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionAPQScaled.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionMPQ.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionAMPQ.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionPH.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionOHG.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionHLG.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionNormalize.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionPower.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionSRGB.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionBiasedMPQ.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionHPQ.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionHPQ2.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionAsRGB.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionBT709.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionST240.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionDPXLog.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionCineonLog.H \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/common/./inc/TransferFunctionXYB.H

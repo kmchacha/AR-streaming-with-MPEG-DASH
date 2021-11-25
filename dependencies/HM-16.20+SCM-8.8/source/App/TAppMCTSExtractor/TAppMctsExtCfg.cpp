@@ -39,7 +39,6 @@
 #include <string>
 #include "TAppMctsExtCfg.h"
 #include "TAppCommon/program_options_lite.h"
-namespace pcc_hm {
 
 #ifdef WIN32
 #define strdup _strdup
@@ -98,6 +97,3 @@ Bool TAppMctsExtCfg::parseCfg(Int argc, TChar* argv[])
 #endif
 
 //! \}
-
-
-} // namespace pcc_hm

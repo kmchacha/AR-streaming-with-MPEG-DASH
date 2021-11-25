@@ -53,10 +53,10 @@ RM = /home/mcnl/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools
+CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build
+CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build
 
 # Include any dependencies generated for this target.
 include projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/depend.make
@@ -72,44 +72,44 @@ include projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/flags.make
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o: projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/flags.make
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o: ../projects/ChromaConvert/src/ChromaConvert.cpp
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o: projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o -MF CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o.d -o CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ChromaConvert.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o -MF CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o.d -o CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ChromaConvert.cpp
 
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ChromaConvert.cpp > CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ChromaConvert.cpp > CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.i
 
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ChromaConvert.cpp -o CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ChromaConvert.cpp -o CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.s
 
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o: projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/flags.make
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o: ../projects/ChromaConvert/src/ChromaConvertYUV.cpp
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o: projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o -MF CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o.d -o CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ChromaConvertYUV.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o -MF CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o.d -o CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ChromaConvertYUV.cpp
 
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ChromaConvertYUV.cpp > CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ChromaConvertYUV.cpp > CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.i
 
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ChromaConvertYUV.cpp -o CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ChromaConvertYUV.cpp -o CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.s
 
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o: projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/flags.make
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o: ../projects/ChromaConvert/src/ProjectParameters.cpp
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o: projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o -MF CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o.d -o CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o -c /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ProjectParameters.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o -MF CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o.d -o CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o -c /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ProjectParameters.cpp
 
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.i"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ProjectParameters.cpp > CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ProjectParameters.cpp > CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.i
 
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.s"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ProjectParameters.cpp -o CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert/src/ProjectParameters.cpp -o CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.s
 
 # Object files for target ChromaConvert
 ChromaConvert_OBJECTS = \
@@ -126,18 +126,18 @@ bin/ChromaConvert: projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/Proje
 bin/ChromaConvert: projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make
 bin/ChromaConvert: lib/libHDRLib.a
 bin/ChromaConvert: projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../../bin/ChromaConvert"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChromaConvert.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../../bin/ChromaConvert"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChromaConvert.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build: bin/ChromaConvert
 .PHONY : projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build
 
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/clean:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && $(CMAKE_COMMAND) -P CMakeFiles/ChromaConvert.dir/cmake_clean.cmake
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert && $(CMAKE_COMMAND) -P CMakeFiles/ChromaConvert.dir/cmake_clean.cmake
 .PHONY : projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/clean
 
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/depend:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/projects/ChromaConvert /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/depend
 

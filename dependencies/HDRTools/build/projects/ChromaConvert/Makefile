@@ -57,10 +57,10 @@ RM = /home/mcnl/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools
+CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build
+CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert//CMakeFiles/progress.marks
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/ChromaConvert/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/ChromaConvert//CMakeFiles/progress.marks
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/ChromaConvert/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/ChromaConvert/clean
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/ChromaConvert/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/ChromaConvert/preinstall
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/ChromaConvert/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/ChromaConvert/preinstall
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/ChromaConvert/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/rule:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/rule
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/rule
 .PHONY : projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ ChromaConvert: projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/rule
 
 # fast build rule for target.
 ChromaConvert/fast:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build
 .PHONY : ChromaConvert/fast
 
 src/ChromaConvert.o: src/ChromaConvert.cpp.o
@@ -135,7 +135,7 @@ src/ChromaConvert.o: src/ChromaConvert.cpp.o
 
 # target to build an object file
 src/ChromaConvert.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.o
 .PHONY : src/ChromaConvert.cpp.o
 
 src/ChromaConvert.i: src/ChromaConvert.cpp.i
@@ -143,7 +143,7 @@ src/ChromaConvert.i: src/ChromaConvert.cpp.i
 
 # target to preprocess a source file
 src/ChromaConvert.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.i
 .PHONY : src/ChromaConvert.cpp.i
 
 src/ChromaConvert.s: src/ChromaConvert.cpp.s
@@ -151,7 +151,7 @@ src/ChromaConvert.s: src/ChromaConvert.cpp.s
 
 # target to generate assembly for a file
 src/ChromaConvert.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvert.cpp.s
 .PHONY : src/ChromaConvert.cpp.s
 
 src/ChromaConvertYUV.o: src/ChromaConvertYUV.cpp.o
@@ -159,7 +159,7 @@ src/ChromaConvertYUV.o: src/ChromaConvertYUV.cpp.o
 
 # target to build an object file
 src/ChromaConvertYUV.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.o
 .PHONY : src/ChromaConvertYUV.cpp.o
 
 src/ChromaConvertYUV.i: src/ChromaConvertYUV.cpp.i
@@ -167,7 +167,7 @@ src/ChromaConvertYUV.i: src/ChromaConvertYUV.cpp.i
 
 # target to preprocess a source file
 src/ChromaConvertYUV.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.i
 .PHONY : src/ChromaConvertYUV.cpp.i
 
 src/ChromaConvertYUV.s: src/ChromaConvertYUV.cpp.s
@@ -175,7 +175,7 @@ src/ChromaConvertYUV.s: src/ChromaConvertYUV.cpp.s
 
 # target to generate assembly for a file
 src/ChromaConvertYUV.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ChromaConvertYUV.cpp.s
 .PHONY : src/ChromaConvertYUV.cpp.s
 
 src/ProjectParameters.o: src/ProjectParameters.cpp.o
@@ -183,7 +183,7 @@ src/ProjectParameters.o: src/ProjectParameters.cpp.o
 
 # target to build an object file
 src/ProjectParameters.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.o
 .PHONY : src/ProjectParameters.cpp.o
 
 src/ProjectParameters.i: src/ProjectParameters.cpp.i
@@ -191,7 +191,7 @@ src/ProjectParameters.i: src/ProjectParameters.cpp.i
 
 # target to preprocess a source file
 src/ProjectParameters.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.i
 .PHONY : src/ProjectParameters.cpp.i
 
 src/ProjectParameters.s: src/ProjectParameters.cpp.s
@@ -199,7 +199,7 @@ src/ProjectParameters.s: src/ProjectParameters.cpp.s
 
 # target to generate assembly for a file
 src/ProjectParameters.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/build.make projects/ChromaConvert/CMakeFiles/ChromaConvert.dir/src/ProjectParameters.cpp.s
 .PHONY : src/ProjectParameters.cpp.s
 
 # Help Target
@@ -231,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

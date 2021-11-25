@@ -57,10 +57,10 @@ RM = /home/mcnl/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools
+CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build
+CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMontage//CMakeFiles/progress.marks
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRMontage/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/projects/HDRMontage//CMakeFiles/progress.marks
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRMontage/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRMontage/clean
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRMontage/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRMontage/preinstall
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRMontage/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRMontage/preinstall
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRMontage/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 projects/HDRMontage/CMakeFiles/HDRMontage.dir/rule:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRMontage/CMakeFiles/HDRMontage.dir/rule
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 projects/HDRMontage/CMakeFiles/HDRMontage.dir/rule
 .PHONY : projects/HDRMontage/CMakeFiles/HDRMontage.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ HDRMontage: projects/HDRMontage/CMakeFiles/HDRMontage.dir/rule
 
 # fast build rule for target.
 HDRMontage/fast:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/build
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/build
 .PHONY : HDRMontage/fast
 
 src/HDRMontage.o: src/HDRMontage.cpp.o
@@ -135,7 +135,7 @@ src/HDRMontage.o: src/HDRMontage.cpp.o
 
 # target to build an object file
 src/HDRMontage.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/HDRMontage.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/HDRMontage.cpp.o
 .PHONY : src/HDRMontage.cpp.o
 
 src/HDRMontage.i: src/HDRMontage.cpp.i
@@ -143,7 +143,7 @@ src/HDRMontage.i: src/HDRMontage.cpp.i
 
 # target to preprocess a source file
 src/HDRMontage.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/HDRMontage.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/HDRMontage.cpp.i
 .PHONY : src/HDRMontage.cpp.i
 
 src/HDRMontage.s: src/HDRMontage.cpp.s
@@ -151,7 +151,7 @@ src/HDRMontage.s: src/HDRMontage.cpp.s
 
 # target to generate assembly for a file
 src/HDRMontage.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/HDRMontage.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/HDRMontage.cpp.s
 .PHONY : src/HDRMontage.cpp.s
 
 src/HDRMontageFrame.o: src/HDRMontageFrame.cpp.o
@@ -159,7 +159,7 @@ src/HDRMontageFrame.o: src/HDRMontageFrame.cpp.o
 
 # target to build an object file
 src/HDRMontageFrame.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/HDRMontageFrame.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/HDRMontageFrame.cpp.o
 .PHONY : src/HDRMontageFrame.cpp.o
 
 src/HDRMontageFrame.i: src/HDRMontageFrame.cpp.i
@@ -167,7 +167,7 @@ src/HDRMontageFrame.i: src/HDRMontageFrame.cpp.i
 
 # target to preprocess a source file
 src/HDRMontageFrame.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/HDRMontageFrame.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/HDRMontageFrame.cpp.i
 .PHONY : src/HDRMontageFrame.cpp.i
 
 src/HDRMontageFrame.s: src/HDRMontageFrame.cpp.s
@@ -175,7 +175,7 @@ src/HDRMontageFrame.s: src/HDRMontageFrame.cpp.s
 
 # target to generate assembly for a file
 src/HDRMontageFrame.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/HDRMontageFrame.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/HDRMontageFrame.cpp.s
 .PHONY : src/HDRMontageFrame.cpp.s
 
 src/ProjectParameters.o: src/ProjectParameters.cpp.o
@@ -183,7 +183,7 @@ src/ProjectParameters.o: src/ProjectParameters.cpp.o
 
 # target to build an object file
 src/ProjectParameters.cpp.o:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/ProjectParameters.cpp.o
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/ProjectParameters.cpp.o
 .PHONY : src/ProjectParameters.cpp.o
 
 src/ProjectParameters.i: src/ProjectParameters.cpp.i
@@ -191,7 +191,7 @@ src/ProjectParameters.i: src/ProjectParameters.cpp.i
 
 # target to preprocess a source file
 src/ProjectParameters.cpp.i:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/ProjectParameters.cpp.i
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/ProjectParameters.cpp.i
 .PHONY : src/ProjectParameters.cpp.i
 
 src/ProjectParameters.s: src/ProjectParameters.cpp.s
@@ -199,7 +199,7 @@ src/ProjectParameters.s: src/ProjectParameters.cpp.s
 
 # target to generate assembly for a file
 src/ProjectParameters.cpp.s:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/ProjectParameters.cpp.s
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(MAKE) $(MAKESILENT) -f projects/HDRMontage/CMakeFiles/HDRMontage.dir/build.make projects/HDRMontage/CMakeFiles/HDRMontage.dir/src/ProjectParameters.cpp.s
 .PHONY : src/ProjectParameters.cpp.s
 
 # Help Target
@@ -231,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HDRTools/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

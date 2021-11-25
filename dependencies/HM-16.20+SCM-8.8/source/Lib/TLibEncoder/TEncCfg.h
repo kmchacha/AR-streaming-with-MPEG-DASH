@@ -138,6 +138,12 @@ protected:
 	Bool        m_usePCCExt;
 	//std::string m_patchInfoFileName;
 #endif
+#if PCC_RDO_EXT
+  Bool        m_usePCCRDOExt;
+#endif
+#if PCC_RDO_EXT && !PCC_ME_EXT
+  std::string m_occupancyFileName;
+#endif
   //==== File I/O ========
   Int       m_iFrameRate;
   Int       m_FrameSkip;
@@ -575,6 +581,16 @@ public:
 
   Void setUsePCCExt(Bool value) { m_usePCCExt = value; }
   Bool getUsePCCExt()         const { return m_usePCCExt; }
+#endif
+
+#if PCC_RDO_EXT
+  Void setUsePCCRDOExt(Bool value) { m_usePCCRDOExt = value; }
+  Bool getUsePCCRDOExt()      const { return m_usePCCRDOExt; }
+#endif
+
+#if PCC_RDO_EXT && !PCC_ME_EXT
+  Void setOccupancyMapFileName(std::string occupancyMapFileName) { m_occupancyFileName = occupancyMapFileName; }
+  std::string getOccupancyMapFileName() { return m_occupancyFileName; }
 #endif
 
   Void setProfile(Profile::Name profile) { m_profile = profile; }

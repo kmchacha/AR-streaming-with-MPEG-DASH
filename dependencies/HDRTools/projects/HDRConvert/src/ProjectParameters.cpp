@@ -140,6 +140,7 @@ hdrtoolslib::IntegerParameter intParameterList[] = {
   { "NumberOfFrames",          &pParams->m_numberOfFrames,                                                   1,                        1,                         INT_INF,    "Number of Frames to process"              },
   { "InputFileHeader",         &pParams->m_inputFile.m_fileHeader,                                           0,                        0,                         INT_INF,    "Source Header (bytes)"                    },
   { "StartFrame",              &pParams->m_inputFile.m_startFrame,                                           0,                        0,                         INT_INF,    "Source Start Frame"                       },
+  { "OutputStartFrame",        &pParams->m_outputFile.m_startFrame,                                          0,                        0,                         INT_INF,    "Output Start Frame"                       },
   { "FrameSkip",               &pParams->m_frameSkip,                                                        0,                        0,                         INT_INF,    "Source Frame Skipping"                    },
 
   { "ScalingMode",             (int *) &fsp->m_mode,                                  hdrtoolslib::SC_BILINEAR,       hdrtoolslib::SC_NN,       hdrtoolslib::SC_TOTAL - 1,    "Scaling Filter Mode"                      },

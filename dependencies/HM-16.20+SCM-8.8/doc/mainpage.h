@@ -1,5 +1,4 @@
 #include "TLibCommon/CommonDef.h"
-namespace pcc_hm {
 
 /**
  * \file mainpage.h
@@ -64,4 +63,3 @@ namespace pcc_hm {
  *  \defgroup TAppEncoder  TAppEncoder - Encoder application
  *  \defgroup TAppDecoder  TAppDecoder - Decoder application
  */
-

@@ -1,4 +1,4 @@
-#define TMC2_VERSION_MAJOR 12
+#define TMC2_VERSION_MAJOR 15
 #define TMC2_VERSION_MINOR 0
 
 /* Define to 1 if getrusage(2) is present */

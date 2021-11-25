@@ -76,6 +76,9 @@ Void TEncCu::create(UChar uhTotalDepth, UInt uiMaxWidth, UInt uiMaxHeight, Chrom
   m_ppcRecoYuvTemp = new TComYuv*[m_uhTotalDepth-1];
   m_ppcOrigYuv     = new TComYuv*[m_uhTotalDepth-1];
   m_ppcNoCorrYuv   = new TComYuv*[m_uhTotalDepth-1];
+#if PCC_RDO_EXT
+  m_ppcOccupancyYuv = new TComYuv*[m_uhTotalDepth - 1];
+#endif
 
   UInt uiNumPartitions;
   for( i=0 ; i<m_uhTotalDepth-1 ; i++)
@@ -97,6 +100,9 @@ Void TEncCu::create(UChar uhTotalDepth, UInt uiMaxWidth, UInt uiMaxHeight, Chrom
 
     m_ppcOrigYuv    [i] = new TComYuv; m_ppcOrigYuv    [i]->create(uiWidth, uiHeight, chromaFormat);
     m_ppcNoCorrYuv  [i] = new TComYuv; m_ppcNoCorrYuv  [i]->create(uiWidth, uiHeight, chromaFormat);
+#if PCC_RDO_EXT
+    m_ppcOccupancyYuv[i] = new TComYuv; m_ppcOccupancyYuv[i]->create(uiWidth, uiHeight, chromaFormat);
+#endif
   }
 
   m_bEncodeDQP                     = false;
@@ -159,6 +165,12 @@ Void TEncCu::destroy()
     {
       m_ppcNoCorrYuv[i]->destroy();   delete m_ppcNoCorrYuv[i];   m_ppcNoCorrYuv[i] = NULL;
     }
+#if PCC_RDO_EXT
+    if (m_ppcOccupancyYuv[i])
+    {
+      m_ppcOccupancyYuv[i]->destroy(); delete m_ppcOccupancyYuv[i]; m_ppcOccupancyYuv[i] = NULL;
+    }
+#endif
   }
   if(m_ppcBestCU)
   {
@@ -211,6 +223,13 @@ Void TEncCu::destroy()
     delete [] m_ppcNoCorrYuv;
     m_ppcNoCorrYuv = NULL;
   }
+#if PCC_RDO_EXT
+  if (m_ppcOccupancyYuv)
+  {
+    delete[] m_ppcOccupancyYuv;
+    m_ppcOccupancyYuv = NULL;
+  }
+#endif
 }
 
 /** \param    pcEncTop      pointer of encoder class
@@ -500,6 +519,9 @@ Void TEncCu::xCompressCU( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, const 
 
   // get Original YUV data from picture
   m_ppcOrigYuv[uiDepth]->copyFromPicYuv( pcPic->getPicYuvOrg(), rpcBestCU->getCtuRsAddr(), rpcBestCU->getZorderIdxInCtu() );
+#if PCC_RDO_EXT
+  m_ppcOccupancyYuv[uiDepth]->copyFromPicYuv(pcPic->getOccupancyMapYuv(), rpcBestCU->getCtuRsAddr(), rpcBestCU->getZorderIdxInCtu());
+#endif
 
   // variable for Cbf fast mode PU decision
   Bool    doNotBlockPu = true;
@@ -1896,7 +1918,11 @@ Void TEncCu::xCheckRDCostMerge2Nx2N( TComDataCU*& rpcBestCU, TComDataCU*& rpcTem
                                                          (uiNoResidual != 0),
                                                          m_ppcNoCorrYuv  [uhDepth],
                                                          (bColourTrans? ACT_TRAN_CLR: ACT_ORG_CLR)
-                                                         DEBUG_STRING_PASS_INTO(tmpStr) );
+                                                         DEBUG_STRING_PASS_INTO(tmpStr)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[uhDepth]
+#endif
+                                                        );
             }
             else
             {
@@ -1909,7 +1935,11 @@ Void TEncCu::xCheckRDCostMerge2Nx2N( TComDataCU*& rpcBestCU, TComDataCU*& rpcTem
                                                          (uiNoResidual != 0),
                                                          m_ppcNoCorrYuv  [uhDepth],
                                                          ACT_TWO_CLR
-                                                         DEBUG_STRING_PASS_INTO(tmpStr) );
+                                                         DEBUG_STRING_PASS_INTO(tmpStr)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[uhDepth]
+#endif
+                                                        );
             }
           }
           else
@@ -1923,7 +1953,12 @@ Void TEncCu::xCheckRDCostMerge2Nx2N( TComDataCU*& rpcBestCU, TComDataCU*& rpcTem
                                                        (uiNoResidual != 0),
                                                        m_ppcNoCorrYuv  [uhDepth],
                                                        ACT_ORG_CLR
+#if PCC_RDO_EXT
+                                                       DEBUG_STRING_PASS_INTO(tmpStr),
+                                                       m_ppcOccupancyYuv[uhDepth]);
+#else
                                                        DEBUG_STRING_PASS_INTO(tmpStr) );
+#endif
           }
           rpcTempCU->setSkipFlagSubParts( rpcTempCU->getQtRootCbf(0) == 0, 0, uhDepth );
 
@@ -1982,7 +2017,11 @@ Void TEncCu::xCheckRDCostMerge2Nx2N( TComDataCU*& rpcBestCU, TComDataCU*& rpcTem
                                                        (uiNoResidual != 0),
                                                        m_ppcNoCorrYuv  [uhDepth],
                                                        (bColourTrans? ACT_TRAN_CLR: ACT_ORG_CLR)
-                                                       DEBUG_STRING_PASS_INTO(tmpStr) );
+                                                       DEBUG_STRING_PASS_INTO(tmpStr)
+#if PCC_RDO_EXT
+                                                     , m_ppcOccupancyYuv[uhDepth]
+#endif
+                                                      );
             rpcTempCU->setSkipFlagSubParts( rpcTempCU->getQtRootCbf(0) == 0, 0, uhDepth );
             Double rdCost = rpcTempCU->getTotalCost();
             if(rdCost < m_ppcBestCU[uhDepth]->getTmpInterRDCost() )
@@ -2120,16 +2159,28 @@ Void TEncCu::xCheckRDCostInter( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, 
       {
         if ( !getEnableInterTUACT() )
         {
-          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], (colourTransform? ACT_TRAN_CLR: ACT_ORG_CLR) DEBUG_STRING_PASS_INTO(sTest) );
+          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], (colourTransform? ACT_TRAN_CLR: ACT_ORG_CLR) DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[uhDepth]
+#endif
+                                                    );
         }
         else
         {
-          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_TWO_CLR DEBUG_STRING_PASS_INTO(sTest) );
+          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_TWO_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[uhDepth]
+#endif
+                                                    );
         }
       }
       else
       {
-        m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest) );
+#if PCC_RDO_EXT
+        m_pcPredSearch->encodeResAndCalcRdInterCU(rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest), m_ppcOccupancyYuv[uhDepth]);
+#else
+        m_pcPredSearch->encodeResAndCalcRdInterCU(rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest));
+#endif
       }
     }
     else
@@ -2138,22 +2189,38 @@ Void TEncCu::xCheckRDCostInter( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, 
       {
         if ( !getEnableInterTUACT() )
         {
-          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest) );
+          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[uhDepth]
+#endif
+                                                    );
         }
         else
         {
-          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest) );
+          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[uhDepth]
+#endif
+                                                    );
         }
       }
       else
       {
         if ( !getEnableInterTUACT() )
         {
-          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest) );
+          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[uhDepth]
+#endif
+                                                    );
         }
         else
         {
-          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest) );
+          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[uhDepth], pcTmpPredYuv, m_ppcResiYuvTemp[uhDepth], m_ppcResiYuvBest[uhDepth], m_ppcRecoYuvTemp[uhDepth], false, m_ppcNoCorrYuv[uhDepth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[uhDepth]
+#endif
+                                                    );
         }
       }
     }
@@ -2254,11 +2321,19 @@ Void TEncCu::xCheckRDCostIntra( TComDataCU *&rpcBestCU,
 
   if( bRGBIntraModeReuse )
   {
-    m_pcPredSearch->estIntraPredLumaQTWithModeReuse( rpcTempCU, m_ppcOrigYuv[uiDepth], m_ppcPredYuvTemp[uiDepth], m_ppcResiYuvTemp[uiDepth], m_ppcRecoYuvTemp[uiDepth], resiLuma );
+    m_pcPredSearch->estIntraPredLumaQTWithModeReuse( rpcTempCU, m_ppcOrigYuv[uiDepth], m_ppcPredYuvTemp[uiDepth], m_ppcResiYuvTemp[uiDepth], m_ppcRecoYuvTemp[uiDepth], resiLuma
+#if PCC_RDO_EXT
+                                                    , m_ppcOccupancyYuv[uiDepth]
+#endif
+                                                    );
   }
   else
   {
-    m_pcPredSearch->estIntraPredLumaQT( rpcTempCU, m_ppcOrigYuv[uiDepth], m_ppcPredYuvTemp[uiDepth], m_ppcResiYuvTemp[uiDepth], m_ppcRecoYuvTemp[uiDepth], resiLuma DEBUG_STRING_PASS_INTO(sTest) );
+#if PCC_RDO_EXT
+    m_pcPredSearch->estIntraPredLumaQT(rpcTempCU, m_ppcOrigYuv[uiDepth], m_ppcOccupancyYuv[uiDepth], m_ppcPredYuvTemp[uiDepth], m_ppcResiYuvTemp[uiDepth], m_ppcRecoYuvTemp[uiDepth], resiLuma DEBUG_STRING_PASS_INTO(sTest));
+#else
+    m_pcPredSearch->estIntraPredLumaQT(rpcTempCU, m_ppcOrigYuv[uiDepth], m_ppcPredYuvTemp[uiDepth], m_ppcResiYuvTemp[uiDepth], m_ppcRecoYuvTemp[uiDepth], resiLuma DEBUG_STRING_PASS_INTO(sTest));
+#endif
   }
 
   m_ppcRecoYuvTemp[uiDepth]->copyToPicComponent(COMPONENT_Y, rpcTempCU->getPic()->getPicYuvRec(), rpcTempCU->getCtuRsAddr(), rpcTempCU->getZorderIdxInCtu() );
@@ -2267,11 +2342,19 @@ Void TEncCu::xCheckRDCostIntra( TComDataCU *&rpcBestCU,
   {
     if( bRGBIntraModeReuse )
     {
-      m_pcPredSearch->estIntraPredChromaQTWithModeReuse( rpcTempCU, m_ppcOrigYuv[uiDepth], m_ppcPredYuvTemp[uiDepth], m_ppcResiYuvTemp[uiDepth], m_ppcRecoYuvTemp[uiDepth], resiLuma );
+      m_pcPredSearch->estIntraPredChromaQTWithModeReuse( rpcTempCU, m_ppcOrigYuv[uiDepth], m_ppcPredYuvTemp[uiDepth], m_ppcResiYuvTemp[uiDepth], m_ppcRecoYuvTemp[uiDepth], resiLuma
+#if PCC_RDO_EXT
+                                                        , m_ppcOccupancyYuv[uiDepth]
+#endif
+                                                        );
     }
     else
     {
-      m_pcPredSearch->estIntraPredChromaQT( rpcTempCU, m_ppcOrigYuv[uiDepth], m_ppcPredYuvTemp[uiDepth], m_ppcResiYuvTemp[uiDepth], m_ppcRecoYuvTemp[uiDepth], resiLuma DEBUG_STRING_PASS_INTO(sTest) );
+#if PCC_RDO_EXT
+      m_pcPredSearch->estIntraPredChromaQT(rpcTempCU, m_ppcOrigYuv[uiDepth], m_ppcOccupancyYuv[uiDepth], m_ppcPredYuvTemp[uiDepth], m_ppcResiYuvTemp[uiDepth], m_ppcRecoYuvTemp[uiDepth], resiLuma DEBUG_STRING_PASS_INTO(sTest));
+#else
+      m_pcPredSearch->estIntraPredChromaQT(rpcTempCU, m_ppcOrigYuv[uiDepth], m_ppcPredYuvTemp[uiDepth], m_ppcResiYuvTemp[uiDepth], m_ppcRecoYuvTemp[uiDepth], resiLuma DEBUG_STRING_PASS_INTO(sTest));
+#endif
     }
   }
 
@@ -2793,7 +2876,11 @@ Void TEncCu::xCheckRDCostIntraBCMerge2Nx2N( TComDataCU*& rpcBestCU, TComDataCU*&
                                                          (noResidual != 0),
                                                          m_ppcNoCorrYuv  [depth],
                                                          (bColourTrans? ACT_TRAN_CLR: ACT_ORG_CLR)
-                                                         DEBUG_STRING_PASS_INTO(tmpStr) );
+                                                         DEBUG_STRING_PASS_INTO(tmpStr)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                        );
             }
             else
             {
@@ -2806,11 +2893,28 @@ Void TEncCu::xCheckRDCostIntraBCMerge2Nx2N( TComDataCU*& rpcBestCU, TComDataCU*&
                                                          (noResidual != 0),
                                                          m_ppcNoCorrYuv  [depth],
                                                          ACT_TWO_CLR
-                                                         DEBUG_STRING_PASS_INTO(tmpStr) );
+                                                         DEBUG_STRING_PASS_INTO(tmpStr)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                        );
             }
           }
           else
           {
+#if PCC_RDO_EXT
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU,
+                                                       m_ppcOrigYuv    [depth],
+                                                       pcTmpPredYuv           ,
+                                                       m_ppcResiYuvTemp[depth],
+                                                       m_ppcResiYuvBest[depth],
+                                                       m_ppcRecoYuvTemp[depth],
+                                                       (noResidual != 0),
+                                                       m_ppcNoCorrYuv  [depth],
+                                                       ACT_ORG_CLR
+                                                       DEBUG_STRING_PASS_INTO(tmpStr),
+                                                       m_ppcOccupancyYuv[depth]);
+#else
             m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU,
                                                        m_ppcOrigYuv    [depth],
                                                        pcTmpPredYuv           ,
@@ -2821,6 +2925,7 @@ Void TEncCu::xCheckRDCostIntraBCMerge2Nx2N( TComDataCU*& rpcBestCU, TComDataCU*&
                                                        m_ppcNoCorrYuv  [depth],
                                                        ACT_ORG_CLR
                                                        DEBUG_STRING_PASS_INTO(tmpStr) );
+#endif
           }
 
           if ((noResidual == 0) && (rpcTempCU->getQtRootCbf(0) == 0))
@@ -2859,7 +2964,11 @@ Void TEncCu::xCheckRDCostIntraBCMerge2Nx2N( TComDataCU*& rpcBestCU, TComDataCU*&
                                                        (noResidual != 0),
                                                        m_ppcNoCorrYuv  [depth],
                                                        (bColourTrans? ACT_TRAN_CLR: ACT_ORG_CLR)
-                                                       DEBUG_STRING_PASS_INTO(tmpStr) );
+                                                       DEBUG_STRING_PASS_INTO(tmpStr)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
             rpcTempCU->setSkipFlagSubParts( rpcTempCU->getQtRootCbf(0) == 0, 0, depth );
             //Double rdCost = rpcTempCU->getTotalCost();
 
@@ -2898,7 +3007,11 @@ Void TEncCu::xCheckRDCostIntraCSC( TComDataCU     *&rpcBestCU,
   rpcTempCU->setPredModeSubParts( MODE_INTRA, 0, depth );
   rpcTempCU->setChromaQpAdjSubParts( rpcTempCU->getCUTransquantBypass(0) ? 0 : m_cuChromaQpOffsetIdxPlus1, 0, depth );
 
-  m_pcPredSearch->estIntraPredQTCT( rpcTempCU, m_ppcOrigYuv[depth], m_ppcPredYuvTemp[depth], m_ppcResiYuvTemp[depth], m_ppcRecoYuvTemp[depth], eACTRDTestType, bReuseIntraMode DEBUG_STRING_PASS_INTO(sTest) );
+  m_pcPredSearch->estIntraPredQTCT( rpcTempCU, m_ppcOrigYuv[depth], m_ppcPredYuvTemp[depth], m_ppcResiYuvTemp[depth], m_ppcRecoYuvTemp[depth], eACTRDTestType, bReuseIntraMode DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                              , m_ppcOccupancyYuv[depth]
+#endif
+                                   );
 
   m_pcRDGoOnSbacCoder->load(m_pppcRDSbacCoder[depth][CI_CURR_BEST]);
   m_pcEntropyCoder->resetBits();
@@ -3032,16 +3145,28 @@ Void TEncCu::xCheckRDCostIntraBC( TComDataCU *&rpcBestCU,
         {
           if ( !getEnableIBCTUACT() )
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], (colourTransform? ACT_TRAN_CLR: ACT_ORG_CLR) DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], (colourTransform? ACT_TRAN_CLR: ACT_ORG_CLR) DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                      , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
           else
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TWO_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TWO_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                      , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
         }
         else
         {
+#if PCC_RDO_EXT
+          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest), m_ppcOccupancyYuv[depth] );
+#else
           m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest) );
+#endif
         }
       }
       else
@@ -3050,22 +3175,38 @@ Void TEncCu::xCheckRDCostIntraBC( TComDataCU *&rpcBestCU,
         {
           if ( !getEnableIBCTUACT() )
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
           else
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
         }
         else
         {
           if ( !getEnableIBCTUACT() )
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
           else
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
         }
       }
@@ -3205,16 +3346,28 @@ Void TEncCu::xCheckRDCostIntraBCMixed( TComDataCU *&rpcBestCU,
         {
           if ( !getEnableInterTUACT() )
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], (colourTransform? ACT_TRAN_CLR: ACT_ORG_CLR) DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], (colourTransform? ACT_TRAN_CLR: ACT_ORG_CLR) DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
           else
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TWO_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TWO_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
         }
         else
         {
-          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest) );
+          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+              , m_ppcOccupancyYuv[depth]
+#endif
+              );
         }
       }
       else
@@ -3223,22 +3376,38 @@ Void TEncCu::xCheckRDCostIntraBCMixed( TComDataCU *&rpcBestCU,
         {
           if ( !getEnableInterTUACT() )
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
           else
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
         }
         else
         {
           if ( !getEnableInterTUACT() )
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
           else
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
         }
       }
@@ -3346,16 +3515,28 @@ Void TEncCu::xCheckRDCostHashInter( TComDataCU*& rpcBestCU, TComDataCU*& rpcTemp
         {
           if ( !getEnableInterTUACT() )
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], (colourTransform? ACT_TRAN_CLR: ACT_ORG_CLR) DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], (colourTransform? ACT_TRAN_CLR: ACT_ORG_CLR) DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
           else
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TWO_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TWO_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
         }
         else
         {
-          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest) );
+          m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                    );
         }
       }
       else
@@ -3364,22 +3545,38 @@ Void TEncCu::xCheckRDCostHashInter( TComDataCU*& rpcBestCU, TComDataCU*& rpcTemp
         {
           if ( !getEnableInterTUACT() )
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
           else
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
         }
         else
         {
           if ( !getEnableInterTUACT() )
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_TRAN_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
           else
           {
-            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest) );
+            m_pcPredSearch->encodeResAndCalcRdInterCU( rpcTempCU, m_ppcOrigYuv[depth], pcTmpPredYuv, m_ppcResiYuvTemp[depth], m_ppcResiYuvBest[depth], m_ppcRecoYuvTemp[depth], false, m_ppcNoCorrYuv[depth], ACT_ORG_CLR DEBUG_STRING_PASS_INTO(sTest)
+#if PCC_RDO_EXT
+                                                       , m_ppcOccupancyYuv[depth]
+#endif
+                                                      );
           }
         }
       }
@@ -3453,8 +3650,13 @@ UInt TEncCu::xCheckPaletteMode(TComDataCU *&rpcBestCU, TComDataCU *&rpcTempCU, B
   rpcTempCU->setPaletteModeFlagSubParts(true, 0, rpcTempCU->getDepth(0));
   rpcTempCU->setChromaQpAdjSubParts( rpcTempCU->getCUTransquantBypass(0) ? 0 : m_cuChromaQpOffsetIdxPlus1, 0, depth );
 
+#if PCC_RDO_EXT
+  UInt testedModes=m_pcPredSearch->paletteSearch(rpcTempCU, m_ppcOrigYuv[depth], m_ppcPredYuvTemp[depth], m_ppcResiYuvTemp[depth],
+                                                 m_ppcRecoYuvTemp[depth], forcePalettePrediction, iterNumber, paletteSize, m_ppcOccupancyYuv[depth]);
+#else
   UInt testedModes=m_pcPredSearch->paletteSearch(rpcTempCU, m_ppcOrigYuv[depth], m_ppcPredYuvTemp[depth], m_ppcResiYuvTemp[depth],
                                                  m_ppcRecoYuvTemp[depth], forcePalettePrediction, iterNumber, paletteSize);
+#endif
 
   xCheckDQP( rpcTempCU );
   DEBUG_STRING_NEW(a)

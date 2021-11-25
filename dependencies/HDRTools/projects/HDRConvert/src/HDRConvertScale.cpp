@@ -40,7 +40,8 @@
  * \file HDRConvertScale.cpp
  *
  * \brief
- *    HDRConvertScale class source files for performing YUV scaling
+ *    HDRConvertScale class source files for performing YUV scaling 
+ *    or Bitdepth conversion
  *
  * \author
  *     - Alexis Michael Tourapis         <atourapis@apple.com>
@@ -56,6 +57,8 @@ HDRConvertScale::HDRConvertScale(ProjectParameters *inputParams) {
   m_oFrameStore       = NULL;
   m_iFrameStore       = NULL;
   
+  m_convertFrameStore      =  NULL;
+  m_convertBitDepth        =  NULL;
   m_inputFrame             =  NULL;
   m_outputFrame            =  NULL;
   m_scaledFrame            =  NULL;
@@ -93,6 +96,16 @@ void HDRConvertScale::destroy() {
   if (m_frameScale != NULL) {
     delete m_frameScale;
     m_frameScale = NULL;
+  }
+  
+   if (m_convertFrameStore != NULL) {
+    delete m_convertFrameStore;
+    m_convertFrameStore = NULL;
+  }
+  
+  if (m_convertBitDepth != NULL) {
+    delete m_convertBitDepth;
+    m_convertBitDepth = NULL;
   }
   
   // Cropped frame store
@@ -151,6 +164,10 @@ void HDRConvertScale::init (ProjectParameters *inputParams) {
   m_iFrameStore  = new Frame(m_inputFrame->m_width[Y_COMP], m_inputFrame->m_height[Y_COMP], m_inputFrame->m_isFloat, m_inputFrame->m_colorSpace, m_inputFrame->m_colorPrimaries, m_inputFrame->m_chromaFormat, m_inputFrame->m_sampleRange, m_inputFrame->m_bitDepthComp[Y_COMP], m_inputFrame->m_isInterlaced, m_inputFrame->m_transferFunction, m_inputFrame->m_systemGamma);
   m_iFrameStore->clear();
   
+  // Here we may convert to the output's format type (e.g. from integer to float).
+  m_convertFrameStore  = new Frame(m_inputFrame->m_width[Y_COMP], m_inputFrame->m_height[Y_COMP], false, m_inputFrame->m_colorSpace, m_inputFrame->m_colorPrimaries, m_inputFrame->m_chromaFormat, output->m_sampleRange, output->m_bitDepthComp[Y_COMP], output->m_isInterlaced, m_inputFrame->m_transferFunction, m_inputFrame->m_systemGamma);
+  m_convertFrameStore->clear();
+    
   if (m_cropOffsetLeft != 0 || m_cropOffsetTop != 0 || m_cropOffsetRight != 0 || m_cropOffsetBottom != 0) {
     m_cropWidth = m_width  = m_inputFrame->m_width[Y_COMP]  - m_cropOffsetLeft + m_cropOffsetRight;
     m_cropHeight = m_height = m_inputFrame->m_height[Y_COMP] - m_cropOffsetTop  + m_cropOffsetBottom;
@@ -161,7 +178,6 @@ void HDRConvertScale::init (ProjectParameters *inputParams) {
     m_cropWidth = m_width  = m_inputFrame->m_width[Y_COMP];
     m_cropHeight = m_height = m_inputFrame->m_height[Y_COMP];
   }
-
 
   // Output (transfer function or denormalization). Since we don't support scaling, lets reset the width and height here.
   //m_outputFile->m_format.m_height[Y_COMP] = output->m_height[Y_COMP] = m_height;
@@ -177,14 +193,15 @@ void HDRConvertScale::init (ProjectParameters *inputParams) {
   m_oFrameStore  = new Frame(output->m_width[Y_COMP], output->m_height[Y_COMP], output->m_isFloat, output->m_colorSpace, output->m_colorPrimaries, output->m_chromaFormat, output->m_sampleRange, output->m_bitDepthComp[Y_COMP], output->m_isInterlaced, output->m_transferFunction, output->m_systemGamma);
   m_oFrameStore->clear();
   
-  
   // initiate the color transform process. Maybe we can move this in the process section though.
   // This does not currently handle YCbCr to YCbCr conversion cleanly (goes first to RGB which is not correct). Needs to be fixed.
   using ::hdrtoolslib::CM_YCbCr;
   using ::hdrtoolslib::ColorTransform;
+  using ::hdrtoolslib::Convert;
   using ::hdrtoolslib::CM_RGB;
   inputParams->m_ctParams.m_max = inputParams->m_outNormalScale;
-  
+    
+  m_convertBitDepth = Convert::create(&m_iFrameStore->m_format, &m_convertFrameStore->m_format, &inputParams->m_cvParams);
     
   m_frameScale   = hdrtoolslib::FrameScale::create(m_width, m_height, output->m_width[Y_COMP], output->m_height[Y_COMP], &inputParams->m_fsParams, inputParams->m_chromaDownsampleFilter, output->m_chromaLocation[hdrtoolslib::FP_FRAME], inputParams->m_useMinMax);
   
@@ -244,6 +261,10 @@ void HDRConvertScale::process( ProjectParameters *inputParams ) {
 
       currentFrame = m_croppedFrameStore;
     }
+    
+    // Convert to different bitdept if needed 
+    m_convertBitDepth->process(m_convertFrameStore, currentFrame);
+    currentFrame = m_convertFrameStore;
 
     m_frameScale->process(m_scaledFrame, currentFrame);
 

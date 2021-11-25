@@ -365,9 +365,18 @@ Void TEncTop::encode( Bool flush, TComPicYuv* pcPicYuvOrg, TComPicYuv* pcPicYuvT
   // compress GOP
 #if PCC_ME_EXT
   if (m_usePCCExt) printf("\n\tPCC ME GOP #1 ACTIVE\n");
+#if PCC_RDO_EXT
+  if (m_usePCCRDOExt) printf("\n\tPCC RDO GOP #1 ACTIVE\n");
+  m_cGOPEncoder.compressGOP(m_iPOCLast, m_iNumPicRcvd, m_cListPic, rcListPicYuvRecOut, accessUnitsOut, false, false, snrCSC, getOutputLogControl(), m_usePCCExt, m_usePCCRDOExt);
+#else
   m_cGOPEncoder.compressGOP(m_iPOCLast, m_iNumPicRcvd, m_cListPic, rcListPicYuvRecOut, accessUnitsOut, false, false, snrCSC, getOutputLogControl(), m_usePCCExt);
+#endif
+#else
+#if PCC_RDO_EXT
+  m_cGOPEncoder.compressGOP(m_iPOCLast, m_iNumPicRcvd, m_cListPic, rcListPicYuvRecOut, accessUnitsOut, false, false, snrCSC, getOutputLogControl(), m_usePCCRDOExt);
 #else
   m_cGOPEncoder.compressGOP(m_iPOCLast, m_iNumPicRcvd, m_cListPic, rcListPicYuvRecOut, accessUnitsOut, false, false, snrCSC, getOutputLogControl());
+#endif
 #endif
 
   if ( m_RCEnableRateControl )
@@ -474,9 +483,18 @@ Void TEncTop::encode(Bool flush, TComPicYuv* pcPicYuvOrg, TComPicYuv* pcPicYuvTr
       // compress GOP
 #if PCC_ME_EXT
       if (m_usePCCExt) printf("\n\tPCC ME GOP #2 ACTIVE\n");
-	  m_cGOPEncoder.compressGOP(m_iPOCLast, m_iNumPicRcvd, m_cListPic, rcListPicYuvRecOut, accessUnitsOut, false, false, snrCSC, getOutputLogControl(), m_usePCCExt);
+#if PCC_RDO_EXT
+      if (m_usePCCRDOExt) printf("\n\tPCC RDO GOP #2 ACTIVE\n");
+      m_cGOPEncoder.compressGOP(m_iPOCLast, m_iNumPicRcvd, m_cListPic, rcListPicYuvRecOut, accessUnitsOut, false, false, snrCSC, getOutputLogControl(), m_usePCCExt, m_usePCCRDOExt);
+#else
+      m_cGOPEncoder.compressGOP(m_iPOCLast, m_iNumPicRcvd, m_cListPic, rcListPicYuvRecOut, accessUnitsOut, false, false, snrCSC, getOutputLogControl(), m_usePCCExt);
+#endif
+#else
+#if PCC_RDO_EXT
+      m_cGOPEncoder.compressGOP(m_iPOCLast, m_iNumPicRcvd, m_cListPic, rcListPicYuvRecOut, accessUnitsOut, true, isTff, snrCSC, getOutputLogControl(), m_usePCCRDOExt);
 #else
       m_cGOPEncoder.compressGOP(m_iPOCLast, m_iNumPicRcvd, m_cListPic, rcListPicYuvRecOut, accessUnitsOut, true, isTff, snrCSC, getOutputLogControl());
+#endif
 #endif
       iNumEncoded += m_iNumPicRcvd;
       m_uiNumAllPicCoded += m_iNumPicRcvd;

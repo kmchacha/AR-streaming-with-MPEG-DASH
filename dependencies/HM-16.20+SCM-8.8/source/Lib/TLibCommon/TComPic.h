@@ -75,6 +75,9 @@ private:
   long long*            m_blockToPatch;
   Int*                  m_occupancyMap;
 #endif
+#if PCC_RDO_EXT
+  TComPicYuv*           m_occupancyMapYuv;
+#endif
   Bool                  m_bReconstructed;
   Bool                  m_bNeededForOutput;
   UInt                  m_uiCurrSliceIdx;         // Index of current slice
@@ -100,7 +103,9 @@ public:
   long long*    getBlockToPatch() const { return m_blockToPatch; }
   Int*          getOccupancyMap() const { return m_occupancyMap; }
 #endif
-
+#if PCC_RDO_EXT
+  TComPicYuv*   getOccupancyMapYuv() const { return m_occupancyMapYuv; }
+#endif
 #if REDUCED_ENCODER_MEMORY
   Void          create( const TComSPS &sps, const TComPPS &pps, const Bool bCreateEncoderSourcePicYuv, const Bool bCreateForImmediateReconstruction );
   Void          prepareForEncoderSourcePicYuv();

@@ -53,10 +53,10 @@ RM = /home/mcnl/.local/lib/python3.8/site-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies
+CMAKE_SOURCE_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build
+CMAKE_BINARY_DIR = /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build
 
 # Utility rule file for tbb_def_files.
 
@@ -70,12 +70,12 @@ tbb/CMakeFiles/tbb_def_files: tbb/tbb.def
 tbb/CMakeFiles/tbb_def_files: tbb/tbbmalloc.def
 
 tbb/tbb.def: ../tbb/src/tbb/lin64-tbb-export.def
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Preprocessing tbb.def"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/tbb && /usr/bin/c++ -xc++ -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/tbb/src/tbb/lin64-tbb-export.def -I /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/tbb/include -o tbb.def
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Preprocessing tbb.def"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/tbb && /usr/bin/c++ -xc++ -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/tbb/src/tbb/lin64-tbb-export.def -I /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/tbb/include -o tbb.def
 
 tbb/tbbmalloc.def: ../tbb/src/tbbmalloc/lin64-tbbmalloc-export.def
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Preprocessing tbbmalloc.def"
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/tbb && /usr/bin/c++ -xc++ -E /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/tbb/src/tbbmalloc/lin64-tbbmalloc-export.def -I /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/tbb/include -o tbbmalloc.def
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Preprocessing tbbmalloc.def"
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/tbb && /usr/bin/c++ -xc++ -E /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/tbb/src/tbbmalloc/lin64-tbbmalloc-export.def -I /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/tbb/include -o tbbmalloc.def
 
 tbb_def_files: tbb/CMakeFiles/tbb_def_files
 tbb_def_files: tbb/tbb.def
@@ -88,10 +88,10 @@ tbb/CMakeFiles/tbb_def_files.dir/build: tbb_def_files
 .PHONY : tbb/CMakeFiles/tbb_def_files.dir/build
 
 tbb/CMakeFiles/tbb_def_files.dir/clean:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/tbb && $(CMAKE_COMMAND) -P CMakeFiles/tbb_def_files.dir/cmake_clean.cmake
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/tbb && $(CMAKE_COMMAND) -P CMakeFiles/tbb_def_files.dir/cmake_clean.cmake
 .PHONY : tbb/CMakeFiles/tbb_def_files.dir/clean
 
 tbb/CMakeFiles/tbb_def_files.dir/depend:
-	cd /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/tbb /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/tbb /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/tbb/CMakeFiles/tbb_def_files.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/tbb /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/tbb /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/tbb/CMakeFiles/tbb_def_files.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tbb/CMakeFiles/tbb_def_files.dir/depend
 

@@ -53,7 +53,7 @@
 
 #include <stdint.h>
 
-#define VERSION "0.22"
+#define VERSION "0.23"
 #define UNDEFINED 0x7fffffff
 #define INT_INF 0x7fffffff
 #define FLT_INF 1e30F

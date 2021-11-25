@@ -74,6 +74,7 @@ Convert *Convert::create(const FrameFormat *iFormat, const FrameFormat *oFormat,
   // Ideally this function should examine the input and output formats, and make appropriate decisions
   // of what processing to perform based on that, and possibly additional setup parameters that unify
   // all conversion functions. To be decided/done at a later stage maybe.
+  
   if (iFormat->m_isFloat == oFormat->m_isFloat && iFormat->m_isFloat == TRUE) {
     result = new ConvertNull();
   }

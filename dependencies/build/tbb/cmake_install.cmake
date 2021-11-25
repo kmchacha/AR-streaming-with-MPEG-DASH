@@ -1,4 +1,4 @@
-# Install script for directory: /home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/tbb
+# Install script for directory: /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/tbb
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,10 +43,10 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/build/tbb/libtbb_static.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/build/tbb/libtbb_static.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/mcnl/mcnl/project/mpeg-vpcc/mpeg-pcc-tmc2/dependencies/tbb/include/tbb")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/tbb/include/tbb")
 endif()
 

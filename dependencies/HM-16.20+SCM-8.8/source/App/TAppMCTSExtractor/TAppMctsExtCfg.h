@@ -43,7 +43,6 @@
 
 #include "TLibCommon/CommonDef.h"
 #include <vector>
-namespace pcc_hm {
 
 #if MCTS_EXTRACTION
 
@@ -80,6 +79,4 @@ public:
 
 #endif
 
-} // namespace pcc_hm
 #endif
-

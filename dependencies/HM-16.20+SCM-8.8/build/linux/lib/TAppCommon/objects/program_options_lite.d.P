@@ -1,0 +1,5 @@
+objects/program_options_lite.d.o: \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TAppCommon/../../../../source/Lib/TAppCommon/program_options_lite.cpp \
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TAppCommon/../../../../source/Lib/TAppCommon/program_options_lite.h
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TAppCommon/../../../../source/Lib/TAppCommon/program_options_lite.cpp :
+ /home/mcnl/mcnl/project/test/mpeg-pcc-tmc2/dependencies/HM-16.20+SCM-8.8/build/linux/lib/TAppCommon/../../../../source/Lib/TAppCommon/program_options_lite.h :

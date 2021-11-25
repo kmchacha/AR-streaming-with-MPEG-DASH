@@ -70,8 +70,14 @@ class DistParam
 public:
   const Pel*            pOrg;
   const Pel*            pCur;
+#if PCC_RDO_EXT
+  const Pel*            pOccupancy;
+#endif
   Int                   iStrideOrg;
   Int                   iStrideCur;
+#if PCC_RDO_EXT
+  Int                   iStrideOccupancy;
+#endif
   Int                   iRows;
   Int                   iCols;
   Int                   iStep;
@@ -92,8 +98,14 @@ public:
   DistParam()
    : pOrg(NULL),
      pCur(NULL),
+#if PCC_RDO_EXT
+     pOccupancy(NULL),
+#endif
      iStrideOrg(0),
      iStrideCur(0),
+#if PCC_RDO_EXT
+     iStrideOccupancy(0),
+#endif
      iRows(0),
      iCols(0),
      iStep(1),
@@ -276,8 +288,11 @@ private:
                                       );
 
 public:
-
-  Distortion   getDistPart(Int bitDepth, const Pel* piCur, Int iCurStride, const Pel* piOrg, Int iOrgStride, UInt uiBlkWidth, UInt uiBlkHeight, const ComponentID compID, DFunc eDFunc = DF_SSE );
+#if PCC_RDO_EXT
+  Distortion   getDistPart(Int bitDepth, const Pel* piCur, Int iCurStride, const Pel* piOrg, Int iOrgStride, UInt uiBlkWidth, UInt uiBlkHeight, const ComponentID compID, DFunc eDFunc = DF_SSE, const Pel* piOccupancy = NULL, Int iOccupancyStride = 0);
+#else
+  Distortion   getDistPart(Int bitDepth, const Pel* piCur, Int iCurStride, const Pel* piOrg, Int iOrgStride, UInt uiBlkWidth, UInt uiBlkHeight, const ComponentID compID, DFunc eDFunc = DF_SSE);
+#endif
 
 };// END CLASS DEFINITION TComRdCost
 

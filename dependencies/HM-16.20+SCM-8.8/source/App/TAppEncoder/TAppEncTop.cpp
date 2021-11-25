@@ -96,6 +96,12 @@ Void TAppEncTop::xInitLibCfg()
 	//m_cTencTop.setPatchInfoFileName                                 ( m_patchInfoFileName );
   }
 #endif
+#if PCC_RDO_EXT
+  m_cTEncTop.setUsePCCRDOExt(m_usePCCRDO);
+#endif
+#if PCC_RDO_EXT && !PCC_ME_EXT
+  m_cTEncTop.setOccupancyMapFileName(m_occupancyMapFileName);
+#endif
 
   m_cTEncTop.setProfile                                           ( m_profile);
   m_cTEncTop.setLevel                                             ( m_levelTier, m_level);
