@@ -47,7 +47,7 @@ string PATH;
 const int WIDTH = 1024;
 const int HEIGHT = 1024;
 const int PLY_COUNT_PER_BIN = 10; // 10 15 30 = frame
-const int PLY_PER_DIRECTORY = 10; // 10 or 15
+const int PLY_PER_DIRECTORY = 5; // 10 or 15
 const int BIN_COUNT = 10; // 10 Fix
 
 const Eigen::Vector3f CENTER_OFFSET(0.0f, 0.0f, -3.0f);
@@ -279,7 +279,7 @@ libdash_thread(void *ptr)
 	vector<string> binaryFile;
 	char highfile[128], midfile[128], lowfile[128];	
 	int serv_sock;
-	char ret[BUF_SIZE] = "High";
+	char ret[BUF_SIZE] = "Low";
 	int str_len;
 	socklen_t clnt_adr_sz;
 	struct sockaddr_in serv_adr, clnt_adr;
